@@ -45,6 +45,7 @@
         border-radius: 50%;
         overflow: hidden;
     }
+
     .comment_reply {
         margin-left: 30px;
         padding-left: 16px;
@@ -183,10 +184,25 @@
         }
     }
 
+    &.style-3 {
+        .cate_name {
+            border-radius: 0px;
+            min-width: 140px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
     @include res(xl, min) {
         &.style-2 {
             .cate_name {
                 padding: 12px 40px;
+            }
+        }
+
+        &.style-3 {
+            .cate_name {
+                padding: 12px 16px;
             }
         }
     }
@@ -265,6 +281,78 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
+    }
+}
+
+.category-v06 {
+    position: relative;
+
+    .cate-content {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        padding: 12px 20px;
+        border-radius: 8px;
+        background: var(--white);
+    }
+
+    .cate_name {
+        margin-bottom: 4px;
+    }
+
+    .cate-image {
+        display: flex;
+        overflow: hidden;
+        border-radius: 16px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &.style-2 {
+        .cate-content {
+            right: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            @include transition3;
+
+            &:hover {
+                background: var(--text);
+
+                .cate_name {
+                    color: var(--white);
+                }
+
+                .cate_quantity {
+                    color: var(--line);
+                }
+            }
+        }
+
+        .cate_name {
+            margin-bottom: 0px;
+            @include transition3;
+        }
+
+        .cate_quantity {
+            color: var(--text-2);
+            @include transition3;
+        }
+    }
+
+    @include res(xl, min) {
+        &.style-2 {
+            .cate-content {
+                left: 16px;
+                right: 16px;
+                bottom: 19px;
+            }
+        }
     }
 }
 
@@ -935,6 +1023,78 @@
                 }
             }
         }
+
+        &15 {
+            .bn-content {
+                top: 60px;
+                left: 15px;
+                right: 15px;
+                text-align: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+    &.style-top-left {
+        position: relative;
+
+        .bn-content {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+        }
+
+        .bn-image {
+            img {
+                min-height: 300px;
+            }
+        }
+    }
+
+    &.style-left-center {
+        position: relative;
+
+        .bn-content {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            inset: 20px;
+        }
+
+        .bn-image {
+            img {
+                min-height: 300px;
+            }
+        }
+    }
+
+    &.style-bottom {
+        position: relative;
+
+        .bn-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+        }
+
+        .bn-image {
+            img {
+                min-height: 400px;
+            }
+        }
+
+        &.bt-center {
+            .bn-content {
+                display: grid;
+                place-items: center;
+                text-align: center;
+            }
+        }
     }
 
     @include res(xl, min) {
@@ -1080,6 +1240,48 @@
                     }
                 }
             }
+        }
+
+        &.style-top-left {
+            .bn-content {
+                top: 32px;
+                left: 32px;
+                right: 32px;
+            }
+
+            &.tl-2 {
+                .bn-content {
+                    top: 28px;
+                    left: 28px;
+                    right: 28px;
+                }
+            }
+
+            &.tl-3 {
+                .bn-content {
+                    top: 48px;
+                    left: 48px;
+                    right: 48px;
+                }
+            }
+
+            &.tl-4 {
+                .bn-content {
+                    top: 36px;
+                    left: 36px;
+                    right: 36px;
+                }
+            }
+        }
+
+        &.style-bottom {
+            .bn-content {
+                bottom: 40px;
+                left: 40px;
+                right: 40px;
+            }
+
+            &.bt-center {}
         }
     }
 
@@ -1891,6 +2093,7 @@
 
     @include res(xl, min) {
         padding: 48px;
+
         .invoice-social {
             gap: 58px;
         }

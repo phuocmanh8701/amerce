@@ -38,83 +38,35 @@
     <!-- /Scroll Top -->
 
     <!-- Preload -->
-    <!-- <div class="preload preload-container" id="preload">
+    <div class="preload preload-container" id="preload">
         <div class="preload-logo">
             <div class="spinner"></div>
         </div>
-    </div> -->
+    </div>
     <!-- /Preload -->
 
     <main id="wrapper">
 
         <!-- Topbar -->
-        <div class="tf-topbar topbar-s3 bg-dark tf-btn-swiper-main">
-            <div class="container-full">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 d-none d-lg-block">
-                        <div class="tf-list list-currenci">
-                            <div class="tf-currencies d-none d-xl-block">
-                                <select class="tf-dropdown-select style-default color-white type-currencies">
-                                    <option selected data-thumbnail="assets/images/country/us.png">United States (USD $)
-                                    </option>
-                                    <option data-thumbnail="assets/images/country/vn.png">Viet Nam (VND ₫)</option>
-                                </select>
+        <div class="tf-topbar bg-dark">
+            <div class="container">
+                <div class="text-center">
+                    <div dir="ltr" class="swiper tf-swiper swiper-topbar" data-direction="vertical" data-auto="true"
+                        data-loop="true" data-speed="1000">
+                        <div class="swiper-wrapper">
+                            <!-- slide 1 -->
+                            <div class="swiper-slide">
+                                <p class="text-white text-line-clamp-1">
+                                    Midseason Sale: 20% Off - A uto Applied at
+                                    Checkout - Limited Time Only
+                                </p>
                             </div>
-                            <div class="tf-currencies d-xl-none">
-                                <select class="tf-dropdown-select style-default color-white type-currencies">
-                                    <option selected data-thumbnail="assets/images/country/us.png">(USD $)</option>
-                                    <option data-thumbnail="assets/images/country/vn.png">(VND ₫)</option>
-                                </select>
+                            <!-- slide 2 -->
+                            <div class="swiper-slide">
+                                <p class="text-white text-line-clamp-1">
+                                    20% Off - Auto Applied at Checkout - Limited Time Only
+                                </p>
                             </div>
-                            <div class="tf-languages">
-                                <select class="tf-dropdown-select style-default color-white type-languages">
-                                    <option>English</option>
-                                    <option>العربية</option>
-                                    <option>简体中文</option>
-                                    <option>اردو</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-1 d-none d-xl-block">
-                        <div class="nav-prev-swiper d-flex text-white link">
-                            <i class="icon icon-CaretLeft"></i>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="text-center">
-                            <div dir="ltr" class="swiper tf-swiper" data-auto="true" data-loop="true" data-speed="1500"
-                                data-delay="1500">
-                                <div class="swiper-wrapper">
-                                    <!-- slide 1 -->
-                                    <div class="swiper-slide">
-                                        <p class="text-white text-line-clamp-1">
-                                            Midseason Sale: 20% Off - A uto Applied at
-                                            Checkout - Limited Time Only
-                                        </p>
-                                    </div>
-                                    <!-- slide 2 -->
-                                    <div class="swiper-slide">
-                                        <p class="text-white text-line-clamp-1">
-                                            20% Off - Auto Applied at Checkout - Limited Time Only
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-1 d-none d-xl-block">
-                        <div class="nav-next-swiper d-flex text-white link justify-content-end">
-                            <i class="icon icon-CaretRightThin"></i>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 d-none d-lg-block">
-                        <div class="d-flex align-items-center justify-content-end gap-20">
-                            <a href="#" class="d-flex"><i class="fs-20 text-white link icon icon-FacebookLogo"></i></a>
-                            <a href="#" class="d-flex"><i class="fs-20 text-white link icon icon-XLogo"></i></a>
-                            <a href="#" class="d-flex"><i class="fs-20 text-white link icon icon-InstagramLogo"></i></a>
-                            <a href="#" class="d-flex"><i class="fs-20 text-white link icon icon-TiktokLogo"></i></a>
-                            <a href="#" class="d-flex"><i class="fs-20 text-white link icon icon-SnapchatLogo"></i></a>
                         </div>
                     </div>
                 </div>
@@ -122,22 +74,24 @@
         </div>
         <!-- /Topbar -->
         <!-- Header -->
-        <header class="tf-header header-s7 hds7-type-2 header-abs-2 scr-box-shadow">
+        <header class="tf-header">
+            <div class="br-line fake-class bottom-0"></div>
             <div class="container-full">
                 <div class="header-inner">
                     <div class="box-open-menu-mobile d-xl-none">
-                        <a href="#mobileMenu" data-bs-toggle="offcanvas" class="btn-open-menu text-white">
+                        <a href="#mobileMenu" data-bs-toggle="offcanvas" class="btn-open-menu">
                             <i class="icon icon-List"></i>
                         </a>
                     </div>
-                    <div class="header-left d-none d-xl-flex">
+                    <div class="header-left">
                         <a href="index.html" class="logo-site">
-                            <img loading="lazy" width="150" height="30" src="assets/images/logo/logo-white.svg"
-                                alt="Image">
+                            <img loading="lazy" width="150" height="30" src="assets/images/logo/logo.svg" alt="Image">
                         </a>
-                        <nav class="box-navigation style-white-2">
+                    </div>
+                    <div class="header-center d-none d-xl-block">
+                        <nav class="box-navigation">
                             <ul class="box-nav-menu">
-                                <li class="menu-item hv-text-dark">
+                                <li class="menu-item">
                                     <a href="#" class="item-link">
                                         <span class="text cus-text">
                                             Home
@@ -908,32 +862,25 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="header-center d-xl-none">
-                        <a href="index.html" class="logo-site">
-                            <img loading="lazy" width="150" height="30" src="assets/images/logo/logo-white.svg"
-                                alt="Image">
-                        </a>
-                    </div>
-                    <div class="header-right align-items-center">
-                        <a href="#search" data-bs-toggle="modal" class="btn-open-search d-none d-xxl-flex">
-                            Search Products
-                            <i class="icon icon-MagnifyingGlass"></i>
-                        </a>
-                        <div class="br-line type-vertical h-24 d-none d-xxl-flex"></div>
+                    <div class="header-right">
                         <ul class="nav-icon-list">
+                            <li class="d-none d-sm-block">
+                                <a href="#search" data-bs-toggle="modal" class="nav-icon-item link">
+                                    <i class="icon icon-MagnifyingGlass"></i>
+                                </a>
+                            </li>
                             <li>
-                                <a href="#sign" data-bs-toggle="modal" class="nav-icon-item text-white link-dark">
+                                <a href="#sign" data-bs-toggle="modal" class="nav-icon-item link">
                                     <i class="icon icon-User"></i>
                                 </a>
                             </li>
                             <li class="d-none d-sm-block">
-                                <a href="wishlist.html" class="nav-icon-item text-white link-dark">
+                                <a href="wishlist.html" class="nav-icon-item link">
                                     <i class="icon icon-HeartStraight"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#shoppingCart" data-bs-toggle="offcanvas"
-                                    class="nav-icon-item text-white link-dark shop-cart">
+                                <a href="#shoppingCart" data-bs-toggle="offcanvas" class="nav-icon-item link shop-cart">
                                     <i class="icon icon-Handbag"></i>
                                     <span class="count">
                                         12
@@ -946,407 +893,319 @@
             </div>
         </header>
         <!-- /Header -->
-        <div class="" style="height: 816px; background: #C4713E;"></div>
-        <!-- Today -->
-        <section class="flat-spacing">
+        <!-- Page Title -->
+        <section class="section-page-title text-center flat-spacing-2 pb-0">
             <div class="container">
-                <div class="sect-heading type-2 text-center wow fadeInUp">
-                    <h3 class="s-title">
-                        Today’s Best Choices
-                    </h3>
-                    <p class="s-desc text-body-1 cl-text-2">
-                        Discover today’s standout sportswear picks.
-                    </p>
-                </div>
-                <div dir="ltr" class="swiper tf-swiper wrap-sw-over" data-preview="4" data-tablet="3" data-mobile-sm="2"
-                    data-mobile="2" data-space-lg="30" data-space-md="20" data-space="10" data-pagination="2"
-                    data-pagination-sm="2" data-pagination-md="3" data-pagination-lg="4">
-                    <div class="swiper-wrapper">
-                        <!-- slide 1 -->
-                        <div class="swiper-slide wow fadeInUp">
-                            <div class="card-product">
-                                <div class="card-product_wrapper">
-                                    <a href="product-detail.html" class="product-img">
-                                        <img class="img-product" loading="lazy" width="330" height="440"
-                                            src="assets/images/product/product-1.jpg" alt="Product">
-                                        <img class="img-hover" loading="lazy" width="330" height="440"
-                                            src="assets/images/product/product-1_2.jpg" alt="Product">
-                                    </a>
-                                    <ul class="product-action_list">
-                                        <li class="wishlist">
-                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-heart"></span>
-                                                <span class="tooltip">Add to Wishlist</span>
-                                            </a>
-                                        </li>
-                                        <li class="compare">
-                                            <a href="#compare" data-bs-toggle="offcanvas"
-                                                class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-ArrowsLeftRight"></span>
-                                                <span class="tooltip">Compare</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#quickView" data-bs-toggle="offcanvas"
-                                                class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-Eye"></span>
-                                                <span class="tooltip">Quick view</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <ul class="product-badge_list">
-                                        <li class="product-badge_item text-caption-01 new">NEW</li>
-                                    </ul>
-                                    <div class="product-action_bot">
-                                        <a href="#quickAdd" data-bs-toggle="modal"
-                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
-                                            Quick Add
-                                            <i class="icon icon-view"></i>
-                                        </a>
-                                    </div>
-                                    <div class="product-marquee_sale">
-                                        <div class="marquee-wrapper">
-                                            <div class="initial-child-container">
-                                                <!-- 1 -->
-                                                <div class="marquee-child-item">
-                                                    HOT SALE 25% OFF
-                                                </div>
-                                                <i class="icon icon-Star2"></i>
-                                                <!-- 2 -->
-                                                <div class="marquee-child-item">
-                                                    HOT SALE 25% OFF
-                                                </div>
-                                                <i class="icon icon-Star2"></i>
-                                                <!-- 3 -->
-                                                <div class="marquee-child-item">
-                                                    HOT SALE 25% OFF
-                                                </div>
-                                                <i class="icon icon-Star2"></i>
-                                                <!-- 4 -->
-                                                <div class="marquee-child-item">
-                                                    HOT SALE 25% OFF
-                                                </div>
-                                                <i class="icon icon-Star2"></i>
-                                                <!-- 5 -->
-                                                <div class="marquee-child-item">
-                                                    HOT SALE 25% OFF
-                                                </div>
-                                                <i class="icon icon-Star2"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-product_info">
-                                    <a href="product-detail.html"
-                                        class="name-product lh-24 fw-medium link link-underline">
-                                        Lyocell wrap top
-                                    </a>
-                                    <div class="star-wrap d-flex align-items-center">
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price-new text-primary fw-semibold">$69,99</span>
-                                        <span class="price-old text-caption-01 cl-text-3">$99,99</span>
-                                    </div>
-                                    <ul class="product-color_list">
-                                        <li class="product-color-item color-swatch hover-tooltip tooltip-bot active">
-                                            <span class="tooltip color-filter">Brown</span>
-                                            <span class="swatch-value bg-warm-beige"></span>
-                                            <img src="assets/images/product/product-1.jpg"
-                                                data-src="assets/images/product/product-1.jpg" alt="Image">
-                                        </li>
-                                        <li class="product-color-item color-swatch hover-tooltip tooltip-bot">
-                                            <span class="tooltip color-filter">Dark Blue</span>
-                                            <span class="swatch-value bg-midnight-blue"></span>
-                                            <img src="assets/images/product/product-1_3.jpg"
-                                                data-src="assets/images/product/product-1_3.jpg" alt="Image">
-                                        </li>
-                                        <li class="product-color-item color-swatch hover-tooltip tooltip-bot">
-                                            <span class="tooltip color-filter">White</span>
-                                            <span class="swatch-value bg-white"></span>
-                                            <img src="assets/images/product/product-1_4.jpg"
-                                                data-src="assets/images/product/product-1_4.jpg" alt="Image">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- slide 2 -->
-                        <div class="swiper-slide wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="card-product has-size">
-                                <div class="card-product_wrapper">
-                                    <a href="product-detail.html" class="product-img">
-                                        <img class="img-product" loading="lazy" width="330" height="440"
-                                            src="assets/images/product/product-2.jpg" alt="Product">
-                                        <img class="img-hover" loading="lazy" width="330" height="440"
-                                            src="assets/images/product/product-2_2.jpg" alt="Product">
-                                    </a>
-                                    <ul class="product-action_list">
-                                        <li class="wishlist">
-                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-heart"></span>
-                                                <span class="tooltip">Add to Wishlist</span>
-                                            </a>
-                                        </li>
-                                        <li class="compare">
-                                            <a href="#compare" data-bs-toggle="offcanvas"
-                                                class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-ArrowsLeftRight"></span>
-                                                <span class="tooltip">Compare</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#quickView" data-bs-toggle="offcanvas"
-                                                class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-Eye"></span>
-                                                <span class="tooltip">Quick view</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <ul class="product-badge_list">
-                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
-                                    </ul>
-                                    <div class="variant-box">
-                                        <ul class="product-size_list">
-                                            <li class="size-item text-caption-01">XS</li>
-                                            <li class="size-item text-caption-01">S</li>
-                                            <li class="size-item text-caption-01">M</li>
-                                        </ul>
-                                    </div>
-                                    <div class="product-action_bot">
-                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
-                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
-                                            Add to cart
-                                            <i class="icon icon-view"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-product_info">
-                                    <a href="product-detail.html"
-                                        class="name-product lh-24 fw-medium link link-underline">
-                                        Buttons cotton top
-                                    </a>
-                                    <div class="star-wrap d-flex align-items-center">
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price-new text-primary fw-semibold">$29,99</span>
-                                        <span class="price-old text-caption-01 cl-text-3">$49,99</span>
-                                    </div>
-                                    <ul class="product-color_list">
-                                        <li class="product-color-item color-swatch hover-tooltip tooltip-bot active">
-                                            <span class="tooltip color-filter">Brown</span>
-                                            <span class="swatch-value bg-warm-brown"></span>
-                                            <img src="assets/images/product/product-2.jpg"
-                                                data-src="assets/images/product/product-2.jpg" alt="Image">
-                                        </li>
-                                        <li class="product-color-item color-swatch hover-tooltip tooltip-bot">
-                                            <span class="tooltip color-filter">Beige</span>
-                                            <span class="swatch-value bg-beige"></span>
-                                            <img src="assets/images/product/product-2_3.jpg"
-                                                data-src="assets/images/product/product-2_3.jpg" alt="Image">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- slide 3 -->
-                        <div class="swiper-slide wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="card-product">
-                                <div class="card-product_wrapper">
-                                    <a href="product-detail.html" class="product-img">
-                                        <img class="img-product" loading="lazy" width="330" height="440"
-                                            src="assets/images/product/product-3.jpg" alt="Product">
-                                        <img class="img-hover" loading="lazy" width="330" height="440"
-                                            src="assets/images/product/product-3_2.jpg" alt="Product">
-                                    </a>
-                                    <ul class="product-action_list">
-                                        <li class="wishlist">
-                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-heart"></span>
-                                                <span class="tooltip">Add to Wishlist</span>
-                                            </a>
-                                        </li>
-                                        <li class="compare">
-                                            <a href="#compare" data-bs-toggle="offcanvas"
-                                                class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-ArrowsLeftRight"></span>
-                                                <span class="tooltip">Compare</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#quickView" data-bs-toggle="offcanvas"
-                                                class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-Eye"></span>
-                                                <span class="tooltip">Quick view</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <ul class="product-badge_list">
-                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
-                                    </ul>
-                                    <div class="product-action_bot">
-                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
-                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
-                                            Add to cart
-                                            <i class="icon icon-view"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-product_info">
-                                    <a href="product-detail.html"
-                                        class="name-product lh-24 fw-medium link link-underline">
-                                        Wool Midi Coat
-                                    </a>
-                                    <div class="star-wrap d-flex align-items-center">
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price-new text-primary fw-semibold">$15,99</span>
-                                        <span class="price-old text-caption-01 cl-text-3">$25,99</span>
-                                    </div>
-                                    <ul class="product-color_list">
-                                        <li class="product-color-item color-swatch hover-tooltip tooltip-bot active">
-                                            <span class="tooltip color-filter">Brown</span>
-                                            <span class="swatch-value bg-olive-brown"></span>
-                                            <img src="assets/images/product/product-3.jpg"
-                                                data-src="assets/images/product/product-3.jpg" alt="Image">
-                                        </li>
-                                        <li class="product-color-item color-swatch hover-tooltip tooltip-bot">
-                                            <span class="tooltip color-filter">Blue</span>
-                                            <span class="swatch-value bg-dark-blue"></span>
-                                            <img src="assets/images/product/product-3_3.jpg"
-                                                data-src="assets/images/product/product-3_3.jpg" alt="Image">
-                                        </li>
-                                        <li class="product-color-item color-swatch hover-tooltip tooltip-bot">
-                                            <span class="tooltip color-filter">Light</span>
-                                            <span class="swatch-value bg-warm-beige"></span>
-                                            <img src="assets/images/product/product-3_4.jpg"
-                                                data-src="assets/images/product/product-3_4.jpg" alt="Image">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- slide 4 -->
-                        <div class="swiper-slide wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="card-product">
-                                <div class="card-product_wrapper">
-                                    <a href="product-detail.html" class="product-img">
-                                        <img class="img-product" loading="lazy" width="330" height="440"
-                                            src="assets/images/product/product-4.jpg" alt="Product">
-                                        <img class="img-hover" loading="lazy" width="330" height="440"
-                                            src="assets/images/product/product-4_2.jpg" alt="Product">
-                                    </a>
-                                    <ul class="product-action_list">
-                                        <li class="wishlist">
-                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-heart"></span>
-                                                <span class="tooltip">Add to Wishlist</span>
-                                            </a>
-                                        </li>
-                                        <li class="compare">
-                                            <a href="#compare" data-bs-toggle="offcanvas"
-                                                class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-ArrowsLeftRight"></span>
-                                                <span class="tooltip">Compare</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#quickView" data-bs-toggle="offcanvas"
-                                                class="hover-tooltip tooltip-left box-icon">
-                                                <span class="icon icon-Eye"></span>
-                                                <span class="tooltip">Quick view</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="product-action_bot">
-                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
-                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
-                                            Add to cart
-                                            <i class="icon icon-view"></i>
-                                        </a>
-                                    </div>
-                                    <div class="product-countdown">
-                                        <div class="js-countdown cd-has-zero" data-timer="1093120"
-                                            data-labels="D : ,H : ,M : ,S">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-product_info">
-                                    <a href="product-detail.html"
-                                        class="name-product lh-24 fw-medium link link-underline">
-                                        linen slim-fit shirt
-                                    </a>
-                                    <div class="star-wrap d-flex align-items-center">
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                        <i class="icon icon-Star"></i>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price-new text-primary fw-semibold">$45,99</span>
-                                        <span class="price-old text-caption-01 cl-text-3">$79,99</span>
-                                    </div>
-                                    <ul class="product-color_list">
-                                        <li class="product-color-item color-swatch hover-tooltip tooltip-bot active">
-                                            <span class="tooltip color-filter">Blue</span>
-                                            <span class="swatch-value bg-dark-blue-2"></span>
-                                            <img src="assets/images/product/product-4.jpg"
-                                                data-src="assets/images/product/product-4.jpg" alt="Image">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                <div class="main-page-title">
+                    <div class="breadcrumbs">
+                        <a href="#" class="text-caption-01 cl-text-3 link">Home</a>
+                        <i class="icon icon-CaretRightThin cl-text-3"></i>
+                        <P class="text-caption-01">
+                            Widget GD 2
+                        </P>
                     </div>
-                    <div class="sw-dot-default tf-sw-pagination"></div>
-                </div>
-            </div>
-        </section>
-        <!-- /Today -->
-        <!-- Category -->
-        <section class="flat-spacing bg-main-2">
-            <div class="container">
-                <div class="sect-heading type-2 text-center wow fadeInUp">
-                    <h3 class="s-title">
-                        Shop By Categories
+                    <h3>
+                        Widget GD 2
                     </h3>
-                    <p class="s-desc text-body-1 cl-text-2">
-                        Explore essential activewear collections for every workout style.
+                    <p class="text-body-1 cl-text-2">
+                        Explore our store locations, experience our collections in person, and easily find
+                        <br class="d-none d-lg-block">
+                        the one that’s closest to you.
                     </p>
                 </div>
             </div>
-            <div class="px-10">
-                <div dir="ltr" class="swiper tf-swiper" data-preview="5" data-tablet="4" data-mobile-sm="3"
-                    data-mobile="2" data-space="10" data-pagination="2" data-pagination-sm="3" data-pagination-md="4"
-                    data-pagination-lg="5">
-                    <div class="swiper-wrapper">
-                        <!-- slide 1 -->
-                        <div class="swiper-slide"></div>
-                        <!-- slide 2 -->
-                        <div class="swiper-slide"></div>
-                        <!-- slide 3 -->
-                        <div class="swiper-slide"></div>
+        </section>
+        <!-- /Page Title -->
+        <div style="height: 50px;"></div>
+        <div class="container-full">
+            <div class="banner-v03 parallaxie"
+                style='background-image: url("https://placehold.co/1770x440/657290/fff?text=2")'>
+                <div class="bn_image">
+                    <img class="opacity-0" loading="lazy" width="1770" height="440"
+                        src="https://placehold.co/1770x440/657290/fff?text=2" alt="Image">
+                </div>
+                <div class="bn_content">
+                    <div class="container">
+                        <div class="wrap">
+                            <h6 class="desc text-white">
+                                DESIGNED FOR MODERN LIVING
+                            </h6>
+                            <h2 class="title text-white">
+                                Furniture Crafted For <br class="d-none d-md-block">
+                                Everyday Comfort & Style
+                            </h2>
+                            <a href="shop-default.html" class="tf-btn btn-white animate-btn animate-dark">
+                                Discover Our Designs
+                            </a>
+                        </div>
                     </div>
-                    <!-- <div class="sw-dot-default tf-sw-pagination"></div> -->
                 </div>
             </div>
-        </section>
-        <!-- /Category -->
+        </div>
+        <div style="height: 50px;"></div>
+        <div class="banner-v02 parallaxie"
+            style='background-image: url("https://placehold.co/1920x620/A6AD95/fff?text=1")'>
+            <div class="bn_image">
+                <img class="opacity-0" loading="lazy" width="1920" height="620"
+                    src="https://placehold.co/1920x620/A6AD95/fff?text=1" alt="Image">
+            </div>
+            <div class="bn_content">
+                <div class="wrap">
+                    <h3 class="title">
+                        Nurture A Home Filled With <br class="d-none d-md-block">
+                        Calm Green Beauty
+                    </h3>
+                    <p class="desc text-body-1">
+                        Experience thoughtfully crafted pieces that refresh your space <br class="d-none d-md-block">
+                        and elevate your everyday living.
+                    </p>
+                    <a href="#" class="tf-btn animate-btn">
+                        View All Products
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="height: 50px;"></div>
+        <div class="banner-v01">
+            <div class="bn_image">
+                <img loading="lazy" width="1920" height="620" src="https://placehold.co/1920x620/949EA8/fff?text=1"
+                    alt="Image">
+            </div>
+            <div class="bn_content">
+                <div class="container">
+                    <h1 class="title text-white mb-12">
+                        Elevate Your <br>
+                        Workout Style
+                    </h1>
+                    <p class="desc text-white mb-32">
+                        Premium activewear crafted for comfort, <br>
+                        performance, and confidence.
+                    </p>
+                    <a href="#" class="tf-btn btn-white animate-btn animate-dark">
+                        Shop Styles
+                    </a>
+                </div>
+            </div>
+            <div class="infiniteSlide-text wow fadeInUp">
+                <div class="infiniteSlide infiniteSlide-wrapper" data-clone="5">
+                    <p class="text h1 fw-semibold">NEW SEASON PICKS</p>
+                    <p class="text h1 fw-semibold">TRENDING STYLES</p>
+                    <p class="text h1 fw-semibold">LIMITED DROPS</p>
+                </div>
+            </div>
+        </div>
+        <div style="height: 50px;"></div>
+        <!-- category -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="category-v06 style-2 hover-img4" style="max-width: 400px;">
+                        <a href="shop-default.html" class="cate-image img-style4">
+                            <img loading="lazy" width="800" height="1066" src="https://placehold.co/800x1066"
+                                alt="Image">
+                        </a>
+                        <a href="shop-default.html" class="cate-content">
+                            <h6 class="cate_name">
+                                Clothing
+                            </h6>
+                            <p class="cate_quantity">
+                                78 items
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="category-v06 hover-img4" style="max-width: 338px;">
+                        <a href="shop-default.html" class="cate-image img-style4">
+                            <img loading="lazy" width="338" height="445" src="https://placehold.co/338x445" alt="Image">
+                        </a>
+                        <div class="cate-content">
+                            <a href="shop-default.html" class="cate_name h5 fw-medium link">
+                                Necklaces
+                            </a>
+                            <p class="cate_quantity cl-text-2">
+                                18 Products
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="category-v03 hover-img4 style-3" style="max-width: 372px;">
+                        <a href="#" class="cate-image img-style4">
+                            <img loading="lazy" width="372" height="623" src="https://placehold.co/372x623" alt="Image">
+                        </a>
+                        <div class="cate-content">
+                            <a href="#" class="cate_name h5 fw-medium">
+                                Leggings
+                                <i class="icon icon-ArrowUpRight1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /category -->
+        <div class="" style="height: 50px;"></div>
+        <div class="container-full">
+            <div class="tf-grid-layout xl-col-2 gap-10">
+                <div class="banner-image-text style-bottom bt-center">
+                    <a href="shop-default.html" class="bn-image img-style radius-20">
+                        <img loading="lazy" width="880" height="800"
+                            src="https://placehold.co/880x800/F5F5F5/F2E7D9?text=1" alt="Image">
+                    </a>
+                    <div class="bn-content">
+                        <h2 class="title mb-12">
+                            SALE OFF UP TO 50%
+                        </h2>
+                        <p class="desc text-body-1 mb-24">
+                            Grab top sport shoes at unbeatable deals — limited time.
+                        </p>
+                        <a href="shop-default.html" class="btn-action tf-btn btn-white animate-btn animate-dark">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tf-grid-layout xl-col-3 gap-20" style="padding: 0px 20px;">
+            <div class="banner-image-text style-left-center">
+                <a href="shop-default.html" class="bn-image img-style radius-20">
+                    <img loading="lazy" width="622" height="462" src="https://placehold.co/622x462/7AA2D4/F2E7D9?text=1"
+                        alt="Image">
+                </a>
+                <div class="bn-content">
+                    <h4 class="title text-white mb-8">
+                        Strength <br class="d-none d-sm-block">
+                        Training <br>
+                        Essentials
+                    </h4>
+                    <p class="desc text-white mb-24">
+                        Build power and control
+                    </p>
+                    <a href="shop-default.html" class="btn-action tf-btn small-2 btn-white animate-btn animate-dark">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="" style="height: 50px;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="banner-image-text style-top-left tl-4" style="max-width: 552px;">
+                        <a href="shop-default.html" class="bn-image img-style radius-12">
+                            <img loading="lazy" width="552" height="376"
+                                src="https://placehold.co/552x376/240E1A/F2E7D9?text=1" alt="Image">
+                        </a>
+                        <div class="bn-content">
+                            <h3 class="title text-white mb-8">
+                                Top Quality <br class="d-none d-sm-block">
+                                Accessories
+                            </h3>
+                            <p class="desc text-body-1 text-white mb-28">
+                                Discover Premium Parts to <br class="d-none d-sm-block">
+                                Enhance Performance.
+                            </p>
+                            <a href="shop-default.html" class="btn-action tf-btn btn-white animate-btn animate-dark">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+
+                    <div class="">
+                        <div class="banner-image-text style-top-left tl-3" style="max-width: 870px;">
+                            <a href="shop-default.html" class="bn-image img-style radius-20">
+                                <img loading="lazy" width="870" height="680"
+                                    src="https://placehold.co/870x680/F4F4F4/F2E7D9?text=1" alt="Image">
+                            </a>
+                            <div class="bn-content">
+                                <h2 class="title mb-8">
+                                    Shoes Designed For <br class="d-none d-sm-block">
+                                    Comfort And Style
+                                </h2>
+                                <p class="desc text-body-1 text-cl-2 mb-24">
+                                    Shoes Designed For Comfort And Style
+                                </p>
+                                <a href="shop-default.html" class="btn-action tf-btn animate-btn">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="banner-image-text style-top-left tl-2" style="max-width: 640px;">
+                        <a href="shop-default.html" class="bn-image img-style rounded-0">
+                            <img loading="lazy" width="640" height="954"
+                                src="https://placehold.co/640x954/D17E51/F2E7D9?text=1" alt="Image">
+                        </a>
+                        <div class="bn-content">
+                            <h2 class="title text-white mb-8">
+                                Indoor Plant Picks
+                            </h2>
+                            <p class="desc text-white mb-24">
+                                Lush, easy-care varieties for every corner
+                            </p>
+                            <a href="shop-default.html"
+                                class="btn-action tf-btn small-2 btn-white animate-btn animate-dark">
+                                <span class="text-caption-01">
+                                    Shop Now
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner-image-text style-top-left">
+                        <a href="shop-default.html" class="bn-image img-style">
+                            <img loading="lazy" width="690" height="400"
+                                src="https://placehold.co/690x400/EDE1D7/F2E7D9?text=1" alt="Image">
+                        </a>
+                        <div class="bn-content">
+                            <h2 class="title mb-8">
+                                Discover Your <br>
+                                New Green
+                            </h2>
+                            <p class="desc cl-text-2 mb-24">
+                                Handpicked selections perfect for <br>
+                                modern homes
+                            </p>
+                            <a href="shop-default.html" class="btn-action tf-btn small-2 animate-btn">
+                                <span class="text-caption-01">
+                                    Shop Now
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner-image-text type-abs style-15" style="max-width: 660px;">
+                        <a href="shop-default.html" class="bn-image img-style">
+                            <img loading="lazy" width="660" height="1184"
+                                src="https://placehold.co/660x1184/C79A97/F2E7D9?text=1" alt="Image">
+                        </a>
+                        <div class="bn-content">
+                            <p class="desc text-body-1 text-white mb-4">
+                                Built for every move.
+                            </p>
+                            <h1 class="title text-white mb-28">
+                                Gear Up For <br>
+                                Greatness
+                            </h1>
+                            <a href="shop-default.html" class="btn-action tf-btn btn-white animate-btn animate-dark">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="" style="height: 1000px;"></div>
         <!-- Footer -->
         <footer class="tf-footer position-relative">
             <div class="br-line fake-class top-0"></div>
@@ -3145,6 +3004,8 @@
     <script src="assets/js/plugin/swiper-bundle.min.js"></script>
     <script src="assets/js/plugin/bootstrap-select.min.js"></script>
     <script src="assets/js/plugin/count-down.js"></script>
+    <script src="assets/js/plugin/infinityslide.js"></script>
+    <script src="assets/js/plugin/parallaxie.js"></script>
 
 
     <script src="assets/js/carousel.js"></script>
