@@ -1,0 +1,45 @@
+$fontIcon: "icomoon";
+$font-main:"DM Sans",
+sans-serif;
+$font-2: "Urbanist",
+sans-serif;
+$font-outfit: "Outfit",
+sans-serif;
+$font-kumbh: "Kumbh Sans",
+sans-serif;
+$font-red_hat: "Red Hat Display",
+sans-serif;
+$font-plus_jakarta: "Plus Jakarta Sans",
+sans-serif;
+
+:root {
+    // color
+    --white: #ffffff;
+    --black: #000000;
+    --primary: #DC4646;
+    --secondary: #70857A;
+
+    --text: #101010;
+    --text-2: #696E73;
+    --text-3: #B1B2B7;
+
+    --bg: #F7F7F7;
+    --bg-2: #F6F4F3;
+    --bg-3: #2C2762;
+    --bg-4: #CD3E341A;
+    --bg-5: #FDF1E3;
+    --bg-6: #103C29;
+
+
+    --line: #E9E9E9;
+
+    --white-10: rgba(255, 255, 255, 0.1);
+
+
+    --yellow: #F0A750;
+    --pink: #EC749D;
+    --critical: #F03E3E;
+    --success: #3DAB25;
+    --on-surface: #0C2C48;
+    --surface: #F6F6F6;
+}

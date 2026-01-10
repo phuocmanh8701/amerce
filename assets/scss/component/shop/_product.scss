@@ -1,0 +1,14 @@
+@use "../../abstracts/index"as *;
+
+.stagger-wrap {
+    .stagger-item {
+        transition: 0.3s ease-in-out;
+        transform: scale(0.5) rotate(90deg) skew(15deg);
+        opacity: 0;
+
+        &.stagger-finished {
+            transform: scale(1) rotate(0deg) skew(0deg);
+            opacity: 1;
+        }
+    }
+}

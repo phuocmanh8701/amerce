@@ -1,0 +1,300 @@
+@use "../abstracts/index"as *;
+
+/* Typography
+============================================================== */
+
+/* Heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // font-family: $font-main;
+    text-rendering: optimizeLegibility;
+    font-weight: 500;
+    margin-bottom: 0;
+    letter-spacing: 0;
+    // color: #F9F9F9;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    // font-family: $font-main;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+    margin-bottom: 0;
+    letter-spacing: 0;
+    // color: var(--main);
+}
+
+h1,
+.h1 {
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: clamp(44px, 6vw, 68px);
+    letter-spacing: 0.05em;
+}
+
+h2,
+.h2 {
+    font-size: clamp(30px, 4.2vw, 44px);
+    line-height: clamp(38px, 5vw, 50px);
+    letter-spacing: 0.05em;
+}
+
+h3,
+.h3 {
+    font-size: clamp(28px, 3.8vw, 40px);
+    line-height: clamp(36px, 4.5vw, 48px);
+    letter-spacing: 0.05em;
+}
+
+h4,
+.h4 {
+    font-size: clamp(24px, 3.5vw, 30px);
+    line-height: clamp(32px, 4.2vw, 42px);
+    letter-spacing: 0.02em;
+}
+
+h5,
+.h5 {
+    font-size: clamp(22px, 3vw, 24px);
+    line-height: clamp(28px, 3.5vw, 30px);
+}
+
+h6,
+.h6 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.fw-7 {
+    font-weight: 700;
+}
+
+/* Font custom */
+.font-main {
+    font-family: $font-main;
+}
+
+.font-2 {
+    font-family: $font-2;
+}
+
+.font-outfit {
+    font-family: $font-outfit;
+}
+
+.font-kumbh {
+    font-family: $font-kumbh;
+}
+
+.font-red_hat {
+    font-family: $font-red_hat;
+}
+
+.font-plus_jakarta {
+    font-family: $font-plus_jakarta;
+}
+
+.text-display {
+    font-size: clamp(36px, 6vw, 80px);
+    line-height: clamp(40px, 6.5vw, 88px);
+    letter-spacing: 0.05em;
+}
+
+.text-body-1 {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.text-caption-01 {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.text-caption-02 {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.text-label {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.text-24 {
+    font-size: clamp(18px, 2vw, 24px);
+    line-height: clamp(18px, 2vw, 24px);
+}
+
+.text-64 {
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: clamp(36px, 5vw, 64px);
+}
+
+/* Font size */
+.fs-10 {
+    font-size: 10px !important;
+}
+
+.fs-12 {
+    font-size: 12px !important;
+}
+
+.fs-14 {
+    font-size: 14px !important;
+}
+
+.fs-16 {
+    font-size: 16px !important;
+}
+
+.fs-18 {
+    font-size: 18px !important;
+}
+
+.fs-20 {
+    font-size: 20px !important;
+}
+
+.fs-24 {
+    font-size: 24px !important;
+}
+
+.fs-28 {
+    font-size: 28px !important;
+}
+
+.fs-32 {
+    font-size: 32px !important;
+}
+
+.fs-35 {
+    font-size: 35px !important;
+}
+
+/* Line height */
+.lh-8 {
+    line-height: 8px !important;
+}
+
+.lh-10 {
+    line-height: 10px !important;
+}
+
+.lh-11 {
+    line-height: 11px !important;
+}
+
+.lh-13 {
+    line-height: 13px !important;
+}
+
+.lh-19 {
+    line-height: 19px !important;
+}
+
+.lh-20 {
+    line-height: 20px !important;
+}
+
+.lh-24 {
+    line-height: 24px !important;
+}
+
+.lh-26 {
+    line-height: 26px !important;
+}
+
+.lh-28 {
+    line-height: 28px !important;
+}
+
+.lh-30 {
+    line-height: 30px !important;
+}
+
+.lh-32 {
+    line-height: 32px !important;
+}
+
+/* Letter spacing */
+.letter-space-05 {
+    letter-spacing: 0.005em !important;
+}
+
+.letter-space-1 {
+    letter-spacing: 0.01em !important;
+}
+
+.letter-space-2 {
+    letter-spacing: 0.02em !important;
+}
+
+.letter-space-3 {
+    letter-spacing: 0.03em !important;
+}
+
+.letter-space-4 {
+    letter-spacing: 0.04em !important;
+}
+
+.letter-space-0 {
+    letter-spacing: 0px !important;
+}
+
+.letter-space--1 {
+    letter-spacing: -0.01em !important;
+}
+
+.letter-space--2 {
+    letter-spacing: -0.02em !important;
+}
+
+.letter-space--3 {
+    letter-spacing: -0.03em !important;
+}
+
+.letter-space--4 {
+    letter-spacing: -0.04em !important;
+}
+
+/* Responsive */
+@include res(xxl, min) {
+    .lh-xxl-11 {
+        line-height: 11px !important;
+    }
+
+    .lh-xxl-19 {
+        line-height: 19px !important;
+    }
+
+    .lh-xxl-22 {
+        line-height: 22px !important;
+    }
+
+    .lh-xxl-56 {
+        line-height: 56px !important;
+    }
+}
+
+@include res(xl, min) {
+    .lh-xl-54 {
+        line-height: 54px !important;
+    }
+
+    .lh-xl-36 {
+        line-height: 36px !important;
+    }
+}
+
+@include res(lg, min) {
+    .lh-lg-56 {
+        line-height: 56px !important;
+    }
+}

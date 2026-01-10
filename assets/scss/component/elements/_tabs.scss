@@ -1,0 +1,201 @@
+@use "../../abstracts/index"as *;
+
+
+.flat-animate-tab {
+    overflow: hidden;
+
+    .tab-content {
+        position: relative;
+    }
+
+    .tab-pane {
+        display: block;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        transform: translateY(30px);
+        transition-timing-function: ease-in;
+        transition-duration: 0.2s;
+
+        &.active {
+            pointer-events: auto;
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+            z-index: 2;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+            transition-timing-function: ease-out;
+            transition-duration: 0.3s;
+            transition-delay: 0.3s;
+        }
+    }
+}
+
+.flat-animate-tab-2 {
+    overflow: hidden;
+
+    .tab-content {
+        position: relative;
+    }
+
+    .tab-pane {
+        display: block;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition-timing-function: ease-in;
+        transition-duration: 0.2s;
+
+        &.active {
+            pointer-events: auto;
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+            z-index: 2;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+            transition-timing-function: ease-out;
+            transition-duration: 0.3s;
+            transition-delay: 0.3s;
+        }
+    }
+}
+
+.tab-btn-wrap-v1 {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    overflow: auto;
+    white-space: nowrap;
+    margin-bottom: 40px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: var(--line);
+    }
+
+    .tf-btn-tab {
+        padding-bottom: 14px;
+        border-bottom: 2px solid transparent;
+        display: flex;
+        position: relative;
+        z-index: 2;
+        color: var(--text-2);
+
+        &.active {
+            border-color: var(--text);
+            color: var(--text);
+        }
+
+        &:hover {
+            color: var(--text);
+        }
+    }
+
+    &.style-2 {
+
+        &::after {
+            display: none;
+        }
+
+        .tf-btn-tab {
+            padding-bottom: 2px;
+        }
+    }
+
+    @include res(xl, min) {
+        gap: 32px;
+    }
+}
+
+.tab-btn-wrap-v2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .tf-btn-tab {
+        padding: 7px 23px;
+        border-radius: 68px;
+        border: 1px solid var(--line);
+
+        &:hover,
+        &.active {
+            border-color: var(--primary);
+        }
+    }
+
+    &.style-2 {
+        .tf-btn-tab {
+            line-height: 24px;
+
+            &:hover,
+            &.active {
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+.tab-btn-wrap-v3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .spread {
+        color: var(--line);
+    }
+
+    .tf-btn-tab {
+        color: var(--text-2);
+        padding-top: 4px;
+        padding-bottom: 4px;
+        position: relative;
+        line-height: 24px;
+
+        &::after {
+            content: "";
+            bottom: 0;
+            left: auto;
+            right: 0;
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--text);
+            @include transition3;
+        }
+
+        &.active {
+            color: var(--text);
+
+            &::after {
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+        }
+
+        &:hover {
+            color: var(--text);
+        }
+    }
+}

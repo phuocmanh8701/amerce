@@ -1,0 +1,352 @@
+@use "../../abstracts/index"as *;
+
+.my-account-nav {
+    display: grid;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+
+    .link-account {
+        padding: 20px;
+        color: var(--text-2);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .icon {
+            font-size: 24px;
+        }
+
+        &:hover,
+        &.active {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--line);
+        }
+    }
+
+}
+
+.my-account-content {
+    .account-title {
+        margin-bottom: 20px;
+    }
+}
+
+.acount-order_stats {
+    margin-bottom: 20px;
+
+    .order-box {
+        border: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .order_icon {
+        font-size: 40px;
+    }
+
+
+    .info__label {
+        margin-bottom: 4px;
+    }
+
+    @include res(xxl, min) {
+        .order-box {
+            padding: 27px;
+        }
+    }
+}
+
+.account-my_recent {
+    padding: 27px 27px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+
+    .title-case {
+        margin-bottom: 20px;
+    }
+}
+
+.table-my_recent {
+    white-space: nowrap;
+
+    thead {
+        tr {
+            border-bottom: 1px solid var(--line);
+        }
+    }
+
+    th {
+        font-weight: 500;
+        padding-bottom: 5px;
+    }
+
+    td {
+        padding-top: 12px;
+        padding-bottom: 11px;
+    }
+
+    tr {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+
+        &:first-child {
+            td {
+                padding-top: 20px;
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--line);
+        }
+
+        &:last-child {
+            td {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    th,
+    td {
+        &:first-child {
+            width: 80px;
+        }
+
+        &:nth-child(2) {
+            width: 300px;
+        }
+
+        &:nth-child(3) {
+            width: 80px;
+        }
+
+        &:nth-child(4) {
+            width: 90px;
+        }
+    }
+
+    &.order_recent {
+
+        th,
+        td {
+            &:last-child {
+                width: unset;
+            }
+        }
+    }
+
+    @include res(xxl, min) {
+        table-layout: fixed;
+    }
+
+    @include res(xxl, min) {
+        td {
+            vertical-align: middle;
+        }
+    }
+}
+
+.tb-order_product {
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .prd_select {
+        display: flex;
+        gap: 8px;
+    }
+
+    .prd_name {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+    }
+
+    .img-prd {
+        max-width: 48px;
+        border-radius: 4px;
+        overflow: hidden;
+
+        img {
+            aspect-ratio: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    .prd_select {
+        display: flex;
+        align-items: center;
+        color: var(--text);
+    }
+}
+
+.tb-order_status {
+    min-width: 90px;
+    @include flex(center, center);
+    padding: 6px 15px;
+    font-weight: 600;
+    border-radius: 24px;
+
+    &.stt-completed {
+        background: #3DAB251A;
+        color: #3DAB25;
+    }
+
+    &.stt-pending {
+        background: #ECB0181A;
+        color: #F0A750;
+    }
+
+    &.stt-delivery {
+        background: #8684D41A;
+        color: #8684D4;
+    }
+
+    &.stt-canceled {
+        background: #DB44441A;
+        color: #DC4646;
+    }
+}
+
+.wg-my-order {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+
+    .order-heading {
+        padding: 19px 20px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .order_number,
+    .order_status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .order-content {
+        display: grid;
+        gap: 20px;
+        padding: 20px;
+        padding-top: 19px;
+    }
+
+    .order_prd_item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 19px;
+        border-bottom: 1px solid var(--line);
+
+        .prd__info {
+            flex: 1;
+        }
+
+        .prd__image {
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 100px;
+
+            img {
+                aspect-ratio: 1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .prd__info {
+            .name {
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                overflow: hidden;
+            }
+        }
+
+        .prd__price {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+    }
+
+    .group-btn {
+        display: flex;
+        gap: 12px;
+    }
+
+    @include res(xl, min) {
+        .action-order {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+}
+
+.account-my_order {
+    .tab-btn-wrap-v1 {
+        margin-bottom: 24px;
+    }
+}
+
+.account-my_address {
+    padding: 20px 15px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+
+    .btn-action-submit {
+        margin-top: 28px;
+    }
+
+    @include res(xl, min) {
+        padding: 27px;
+    }
+}
+
+.account-avatar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .avatarPreview {
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .upload-wrapper {
+        padding: 7px 11px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border-radius: 4px;
+        border: 1px solid var(--line);
+    }
+
+    .upload-btn {
+        padding: 4px 12px;
+        background: var(--line);
+    }
+}

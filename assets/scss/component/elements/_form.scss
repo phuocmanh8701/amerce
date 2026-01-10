@@ -1,0 +1,630 @@
+@use "../../abstracts/index"as *;
+
+form {
+    position: relative;
+    z-index: 30;
+
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"] {
+        outline: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        width: 100%;
+        padding: 11px 15px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        @include transition3;
+
+        &::placeholder {
+            color: var(--text-3);
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &:focus {
+            border-color: var(--black);
+        }
+
+        &.style-stroke-bottom {
+            border-radius: 0px;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            padding: 0px 30px 11px 0px;
+
+            &::placeholder {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        background-color: transparent;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    textarea {
+        height: 100px;
+        resize: none;
+    }
+
+    .form-content {
+        display: grid;
+        gap: 20px;
+    }
+
+    .tf-grid-layout {
+        gap: 20px;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.tf-check {
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--text-3);
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    @include transition3;
+    line-height: 1;
+    border-radius: 1px;
+
+    &:checked {
+        background: var(--black);
+        border-color: var(--black);
+
+        &::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &::before {
+        font-family: $fontIcon;
+        content: "\e90f";
+        position: absolute;
+        color: var(--white);
+        opacity: 0;
+        font-size: 12px;
+        transform: scale(0);
+        @include transition3;
+    }
+
+    &.style-2 {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+
+        &::before {
+            font-size: 14px;
+        }
+    }
+}
+
+.tf-check-rounded {
+    padding: 0 !important;
+    position: relative;
+    border: 1px solid #9a9a9a;
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    outline: 0;
+    height: 14px;
+    width: 14px;
+    @include flex(center, center);
+    background-color: var(--white);
+    -webkit-appearance: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        background-color: var(--text);
+        opacity: 0;
+        @include transition3;
+    }
+
+    &:checked {
+        border-color: var(--text);
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &.style-2 {
+        width: 22px;
+        height: 22px;
+
+        &::before {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.checkbox-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    input {
+        padding: 0;
+    }
+
+    label {
+        cursor: pointer;
+    }
+}
+
+.tf-field {
+    position: relative;
+    display: grid;
+    place-items: start;
+
+    .tf-lable {
+        margin-bottom: 6px;
+    }
+}
+
+.form-search-nav {
+    position: relative;
+    width: 100%;
+
+    .btn-action {
+        position: absolute;
+        font-size: 24px;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    fieldset {
+        input {
+            padding-left: 44px;
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+    }
+
+    &.style-2 {
+        .btn-action {
+            right: 16px;
+            left: auto;
+        }
+
+        fieldset {
+            input {
+                padding-left: 15px;
+                padding-right: 52px;
+            }
+        }
+    }
+
+    &.style-3 {
+        .btn-action {
+            right: 12px;
+            left: auto;
+        }
+
+        fieldset {
+            input {
+                padding-left: 12px;
+                padding-right: 48px;
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
+        }
+    }
+
+    &.style-4 {
+        min-width: 320px;
+
+        fieldset {
+            input {
+                background: transparent;
+                // color: var(--white);
+                padding-bottom: 7px;
+                padding-top: 8px;
+
+                &::placeholder {
+                    color: var(--white);
+                }
+            }
+        }
+
+        .btn-action {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+
+.form-sub {
+    position: relative;
+
+    fieldset {
+        input {
+            border-radius: 128px;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 50px;
+        }
+    }
+
+    .btn-action {
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        right: 4px;
+        aspect-ratio: 1;
+        @include flex(center, center);
+        background: var(--black);
+        border-radius: 50%;
+        color: var(--white);
+        font-size: 20px;
+
+        .icon {
+            @include transition3;
+        }
+
+        &:hover {
+            background: var(--primary);
+
+            .icon {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.form-search-blog {
+    position: relative;
+
+    .btn-action {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 24px;
+    }
+}
+
+.form-leave-comment {
+    textarea {
+        min-height: 248px;
+    }
+
+    .form-content {
+        margin-bottom: 24px;
+    }
+}
+
+
+.form_search-product {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 680px;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 999px;
+    background: var(--bg);
+
+    .tf-select-category {
+        white-space: nowrap;
+    }
+
+    .ipt {
+        border: 0;
+        background: transparent;
+        padding: 0;
+        width: 100%;
+    }
+
+    .btn-action {
+        font-size: 24px;
+    }
+
+    .fieldset-search {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    &.style-2 {
+        max-width: unset;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+select {
+    &.select-2 {
+        padding: 6px 56px 6px 11px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+    }
+
+    &.select-3 {
+        padding: 10px 19px;
+        padding-right: 39px;
+        border: 1px solid var(--line);
+        border-radius: 100px;
+
+        &:focus {
+            border-color: var(--text);
+            outline: unset !important;
+        }
+    }
+
+    @include res(xl, min) {
+        &.select-3 {
+            min-width: 200px;
+        }
+    }
+}
+
+
+.form-quick-login {
+    .tf-grid-layout {
+        margin-bottom: 12px;
+    }
+
+    @include res(xl, min) {
+        .action {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+}
+
+.select-wrap {
+    position: relative;
+    display: inline-flex;
+
+    .icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+    }
+}
+
+.tf-select {
+    position: relative;
+
+    select {
+        width: 100%;
+        padding: 11px 15px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        color: var(--text);
+        @include transition3;
+        -webkit-appearance: none;
+        appearance: none;
+        outline: 0 !important;
+        @include transition3;
+        font-weight: 500;
+
+        &:focus {
+            border-color: var(--text);
+        }
+    }
+
+    &::after {
+        font-family: $fontIcon;
+        position: absolute;
+        content: "\e908";
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        z-index: 1;
+        font-weight: 400;
+        color: var(--text);
+    }
+
+    &:hover {
+        select {
+            border-color: var(--text);
+        }
+    }
+
+    &.style-2 {
+        min-width: 100px;
+    }
+}
+
+.password-wrapper {
+    position: relative;
+
+    .toggle-pass {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+}
+
+.form-setting {
+    display: grid;
+    gap: 28px;
+}
+
+.form-log {
+    .form-content {
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .field-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .group-action {
+        display: grid;
+        gap: 16px;
+    }
+}
+
+.form-newsletter {
+    position: relative;
+
+    fieldset {
+        input {
+            border-radius: 100px;
+            padding: 15px 23px;
+            padding-right: 150px;
+        }
+    }
+
+    .btn-action {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        bottom: 8px;
+    }
+}
+
+.form-cta {
+    display: grid;
+    gap: 24px;
+    padding: 48px 48px 47px 48px;
+    border-radius: 16px;
+    background: var(--bg);
+
+    .heading {
+        display: grid;
+        gap: 7px;
+    }
+
+    fieldset {
+        input {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+    @include res(xl, min) {
+        textarea {
+            height: 200px;
+        }
+    }
+
+    @include res(md) {
+        padding: 20px;
+    }
+}
+
+.form-get {
+    textarea {
+        height: 128px;
+    }
+
+    .form-content {
+        margin-bottom: 24px;
+    }
+}
+
+.form-notice-stock {
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--text);
+
+    .title {
+        margin-bottom: 12px;
+    }
+
+    .desc {
+        margin-bottom: 28px;
+    }
+
+    @include res(lg) {
+        padding: 20px;
+    }
+}
+
+.form-tracking {
+    .form-content {
+        margin-bottom: 32px;
+    }
+}
+
+
+.btn-open-search {
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--white);
+    padding-top: 8px;
+    padding-bottom: 7px;
+    color: var(--white);
+
+    .icon {
+        font-size: 24px;
+    }
+
+    &.style-2 {
+        color: var(--text-2);
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 19px;
+
+
+        .icon {
+            color: var(--text);
+        }
+    }
+
+    @include res(xxl, min) {
+        &.style-2 {
+            width: 100%;
+            max-width: 690px;
+        }
+    }
+}
