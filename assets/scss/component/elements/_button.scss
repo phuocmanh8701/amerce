@@ -33,6 +33,11 @@
         }
     }
 
+    &.btn-stroke-2 {
+        border: 2px solid var(--white-10);
+        background: transparent;
+    }
+
     &.small {
         height: 42px;
         padding-left: 24px;

@@ -1649,3 +1649,440 @@
         }
     }
 }
+
+.banner-v04 {
+    // background-image: url("https://placehold.co/1410x460/F1E2DB/fff?text=2");
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+
+    .bn_image {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: calc(1410/450);
+            min-height: 330px;
+        }
+    }
+
+    .bn_content {
+        position: absolute;
+        left: 80px;
+        top: 20px;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+    @include res(xl) {
+        .bn_content {
+            left: 40px;
+        }
+    }
+
+    @include res(lg) {
+        .bn_content {
+            left: 20px;
+        }
+    }
+}
+
+.banner-v05 {
+    .bn_image {
+        position: relative;
+        padding-top: 68px;
+        padding-bottom: 168px;
+
+        .image {
+            position: absolute;
+            left: 40%;
+            top: 0;
+            bottom: 0;
+        }
+    }
+
+    .title {
+        margin-bottom: 16px;
+    }
+
+    .desc {
+        margin-bottom: 40px;
+    }
+
+    @include res(xl) {
+        .title {
+            margin-bottom: 12px;
+        }
+
+        .desc {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.banner-v06 {
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+
+    .bn_image {
+        display: flex;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .bn_content {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 10px 25px 0px #2B344A1F;
+        background: var(--white);
+    }
+
+    @include res(sm) {
+        .bn_content {
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            padding: 20px 15px;
+        }
+    }
+}
+
+.text-color-image {
+    font-size: clamp(36px, 8vw, 200px);
+    line-height: clamp(50px, 8vw, 120px);
+    font-weight: 700;
+    background-image: url("./../images/section/text-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.banner-collect-v01 {
+    background: var(--bg);
+    gap: 30px;
+    padding: 60px 30px;
+    border-radius: 20px;
+
+    .col-left {
+
+        display: flex;
+        flex-direction: column;
+
+        .heading {
+            margin-bottom: 30px;
+        }
+
+        .list-btn-tab-accordion {
+            margin-top: auto;
+        }
+    }
+
+    .tab-content {
+        height: 100%;
+
+        .tab-pane {
+            height: 100%;
+        }
+    }
+
+    .collect-image {
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &.style-2 {
+
+        .col-left {
+            gap: 48px;
+            align-items: start;
+            order: 1;
+        }
+
+        .col-right {
+            order: 0;
+        }
+
+        .heading {
+            margin: 0;
+        }
+
+        .list-btn-tab-accordion {
+            width: 100%;
+
+            li {
+                &:first-child {
+                    .accordion-title {
+                        padding-top: 0;
+                    }
+                }
+
+                &:last-child {
+                    .accordion-title {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include res(xxl, min) {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px;
+        gap: 60px;
+
+        .col-left {
+            max-width: 730px;
+            width: 100%;
+        }
+
+        .col-right {
+            max-width: 760px;
+            width: 100%;
+        }
+
+        &.style-2 {
+            padding: 0;
+            background: transparent;
+            gap: 80px;
+            align-items: center;
+
+            .col-left {
+                max-width: 705px;
+                width: 100%;
+            }
+        }
+    }
+
+    @include res(xxxl, min) {
+        gap: 120px;
+        padding: 80px;
+    }
+
+    @include res(xxl) {
+        &.style-2 {
+            .col-left {
+                gap: 30px;
+            }
+        }
+    }
+
+    @include res(md) {
+        padding: 60px 15px;
+    }
+}
+
+.list-btn-tab-accordion {
+    background: var(--white);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 12px;
+
+    .accordion-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 40px;
+        @include transition3;
+
+        .icon {
+            font-size: 40px;
+        }
+
+        &:not(.collapsed) {
+            padding-bottom: 8px;
+        }
+
+        &.collapsed {
+            color: var(--text-2);
+        }
+    }
+
+    .accordion-content {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 32px;
+    }
+
+    &.style-2 {
+        background: transparent;
+        padding: 0;
+
+        .accordion-title {
+            padding-top: 20px;
+            padding-left: 0px;
+            padding-right: 0px;
+
+            &.collapsed {
+                padding-bottom: 20px;
+            }
+        }
+
+        .accordion-content {
+            padding: 0px 0px 20px;
+        }
+    }
+
+    @include res(xl) {
+        .accordion-title {
+            padding: 20px;
+
+            .icon {
+                font-size: 24px;
+            }
+        }
+
+        .accordion-content {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.banner-collect-v02 {
+    background: var(--bg);
+    border-radius: 16px;
+    gap: 30px;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    .col-left {
+        display: flex;
+        flex-direction: column;
+
+        .bottom {
+            margin-top: auto;
+        }
+
+        .desc {
+            margin-bottom: 20px;
+        }
+    }
+
+    .tab-content {
+        height: 100%;
+
+        .tab-pane {
+            height: 100%;
+        }
+    }
+
+    .collect-image {
+        border-radius: 16px;
+        overflow: hidden;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .list-thumb-image {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    @include res(xxl, min) {
+        .col-left {
+            max-width: 560px;
+            width: 100%;
+        }
+
+        .col-right {
+            max-width: 805px;
+            width: 100%;
+        }
+    }
+
+    @include res(xxl) {
+        padding: 60px;
+
+        >* {
+            width: 50%;
+        }
+    }
+
+    @include res(xl) {
+        padding: 60px 20px;
+    }
+
+    @include res(lg) {
+        flex-wrap: wrap-reverse;
+        padding: 60px 15px;
+
+        >* {
+            width: 100%;
+        }
+
+        .tab-btn-wrap-v3 {
+            margin-bottom: 20px;
+        }
+
+        .tf-btn-tab {
+            span {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.banner-collect-v03 {
+    .tab-btn-wrap-v3 {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .col-left {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 44px;
+    }
+
+    @include res(xl, min) {
+        .col-left {
+            padding-right: 40px;
+        }
+
+        .col-right {
+            margin-left: -10px;
+        }
+    }
+
+    @include res(xl) {
+        .col-left {
+            gap: 24px;
+        }
+    }
+}

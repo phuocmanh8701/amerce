@@ -257,3 +257,21 @@
         left: -200%;
     }
 }
+
+@keyframes BackgroundAnimatedVertical {
+    0% {
+        background-position: 50% 0;
+    }
+
+    100% {
+        background-position: 50% 100%;
+    }
+}
+
+.clip-text-bg-vertical {
+    -webkit-animation: BackgroundAnimatedVertical 10s linear infinite;
+    -moz-animation: BackgroundAnimatedVertical 10s linear infinite;
+    -ms-animation: BackgroundAnimatedVertical 10s linear infinite;
+    -o-animation: BackgroundAnimatedVertical 10s linear infinite;
+    animation: BackgroundAnimatedVertical 10s linear infinite;
+}

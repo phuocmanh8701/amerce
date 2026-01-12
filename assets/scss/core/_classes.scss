@@ -573,6 +573,10 @@
 }
 
 @include res(lg) {
+    .lg-overflow-auto {
+        overflow: auto !important;
+    }
+
     .lg-mx-auto {
         margin-left: auto !important;
         margin-right: auto !important;

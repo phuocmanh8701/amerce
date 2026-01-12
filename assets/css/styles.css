@@ -818,7 +818,7 @@ h6,
 }
 
 .letter-space-0 {
-  letter-spacing: 0px !important;
+  letter-spacing: 0 !important;
 }
 
 .letter-space--1 {
@@ -1455,6 +1455,9 @@ h6,
   }
 }
 @media (max-width: 991px) {
+  .lg-overflow-auto {
+    overflow: auto !important;
+  }
   .lg-mx-auto {
     margin-left: auto !important;
     margin-right: auto !important;
@@ -3367,6 +3370,22 @@ header.header-sticky.header-s7.hds7-type-2 {
     left: -200%;
   }
 }
+@keyframes BackgroundAnimatedVertical {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+.clip-text-bg-vertical {
+  -webkit-animation: BackgroundAnimatedVertical 10s linear infinite;
+  -moz-animation: BackgroundAnimatedVertical 10s linear infinite;
+  -ms-animation: BackgroundAnimatedVertical 10s linear infinite;
+  -o-animation: BackgroundAnimatedVertical 10s linear infinite;
+  animation: BackgroundAnimatedVertical 10s linear infinite;
+}
+
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
     * Version: 1.0.0
@@ -5651,6 +5670,73 @@ header.header-sticky.header-s7.hds7-type-2 {
 .tab-btn-wrap-v3 .tf-btn-tab:hover {
   color: var(--text);
 }
+.tab-btn-wrap-v3.style-2 {
+  white-space: nowrap;
+  margin-bottom: 30px;
+}
+.tab-btn-wrap-v3.style-2 .tf-btn-tab {
+  padding: 0;
+}
+.tab-btn-wrap-v3.style-3 {
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+}
+.tab-btn-wrap-v3.style-3 .nav-tab-item {
+  width: 100%;
+}
+.tab-btn-wrap-v3.style-3 .tf-btn-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.tab-btn-wrap-v3.style-3 .tf-btn-tab .text {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box !important;
+  overflow: hidden;
+}
+.tab-btn-wrap-v3.style-3 .tf-btn-tab .icon {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tab-btn-wrap-v3.style-3 .tf-btn-tab:not(.active) {
+  color: var(--text-3);
+}
+.tab-btn-wrap-v3.style-3 .tf-btn-tab.active .icon {
+  transform: rotate(45deg);
+}
+@media (min-width: 992px) {
+  .tab-btn-wrap-v3.style-2 {
+    flex-direction: column;
+    gap: 28px;
+    align-items: start;
+  }
+  .tab-btn-wrap-v3.style-2 .tf-btn-tab {
+    padding: 0;
+    display: inline-flex;
+  }
+  .tab-btn-wrap-v3.style-3 .tf-btn-tab {
+    padding: 8px 0px;
+  }
+}
+@media (max-width: 1199px) {
+  .tab-btn-wrap-v3 {
+    margin-bottom: 24px;
+  }
+  .tab-btn-wrap-v3.style-2 {
+    gap: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .tab-btn-wrap-v3.style-3 {
+    gap: 12px;
+  }
+}
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
@@ -6329,6 +6415,10 @@ select.select-3:focus {
 .tf-btn.btn-stroke:not(:hover) {
   background: transparent;
   color: var(--text);
+}
+.tf-btn.btn-stroke-2 {
+  border: 2px solid var(--white-10);
+  background: transparent;
 }
 .tf-btn.small {
   height: 42px;
@@ -13306,6 +13396,59 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 
+.box-image_v05 {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.box-image_v05 .box-image_img {
+  display: flex;
+}
+.box-image_v05 .box-image_content {
+  top: 21px;
+  left: 24px;
+  right: 26px;
+}
+@media (max-width: 767px) {
+  .box-image_v05 .box-image_content {
+    top: 20px;
+    left: 15px;
+    right: 15px;
+  }
+}
+
+.box-image_v06 {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.box-image_v06 .box-image_content {
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+.box-image_v06 .box-image_img {
+  display: flex;
+}
+.box-image_v06 .box-image_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 300px;
+}
+@media (min-width: 1200px) {
+  .box-image_v06 .box-image_content {
+    left: 32px;
+    right: 32px;
+    bottom: 28px;
+  }
+  .box-image_v06.style-2 .box-image_content {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+  }
+}
+
 .gallery-item {
   position: relative;
   overflow: hidden;
@@ -15896,6 +16039,371 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 
+.banner-v04 {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.banner-v04 .bn_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3.1333333333;
+  min-height: 330px;
+}
+.banner-v04 .bn_content {
+  position: absolute;
+  left: 80px;
+  top: 20px;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+@media (max-width: 1199px) {
+  .banner-v04 .bn_content {
+    left: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .banner-v04 .bn_content {
+    left: 20px;
+  }
+}
+
+.banner-v05 .bn_image {
+  position: relative;
+  padding-top: 68px;
+  padding-bottom: 168px;
+}
+.banner-v05 .bn_image .image {
+  position: absolute;
+  left: 40%;
+  top: 0;
+  bottom: 0;
+}
+.banner-v05 .title {
+  margin-bottom: 16px;
+}
+.banner-v05 .desc {
+  margin-bottom: 40px;
+}
+@media (max-width: 1199px) {
+  .banner-v05 .title {
+    margin-bottom: 12px;
+  }
+  .banner-v05 .desc {
+    margin-bottom: 32px;
+  }
+}
+
+.banner-v06 {
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.banner-v06 .bn_image {
+  display: flex;
+}
+.banner-v06 .bn_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner-v06 .bn_content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.1215686275);
+  background: var(--white);
+}
+@media (max-width: 575px) {
+  .banner-v06 .bn_content {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    padding: 20px 15px;
+  }
+}
+
+.text-color-image {
+  font-size: clamp(36px, 8vw, 200px);
+  line-height: clamp(50px, 8vw, 120px);
+  font-weight: 700;
+  background-image: url("./../images/section/text-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.banner-collect-v01 {
+  background: var(--bg);
+  gap: 30px;
+  padding: 60px 30px;
+  border-radius: 20px;
+}
+.banner-collect-v01 .col-left {
+  display: flex;
+  flex-direction: column;
+}
+.banner-collect-v01 .col-left .heading {
+  margin-bottom: 30px;
+}
+.banner-collect-v01 .col-left .list-btn-tab-accordion {
+  margin-top: auto;
+}
+.banner-collect-v01 .tab-content {
+  height: 100%;
+}
+.banner-collect-v01 .tab-content .tab-pane {
+  height: 100%;
+}
+.banner-collect-v01 .collect-image {
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.banner-collect-v01 .collect-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner-collect-v01.style-2 .col-left {
+  gap: 48px;
+  align-items: start;
+  order: 1;
+}
+.banner-collect-v01.style-2 .col-right {
+  order: 0;
+}
+.banner-collect-v01.style-2 .heading {
+  margin: 0;
+}
+.banner-collect-v01.style-2 .list-btn-tab-accordion {
+  width: 100%;
+}
+.banner-collect-v01.style-2 .list-btn-tab-accordion li:first-child .accordion-title {
+  padding-top: 0;
+}
+.banner-collect-v01.style-2 .list-btn-tab-accordion li:last-child .accordion-title {
+  padding-bottom: 0;
+}
+@media (min-width: 1440px) {
+  .banner-collect-v01 {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 60px;
+  }
+  .banner-collect-v01 .col-left {
+    max-width: 730px;
+    width: 100%;
+  }
+  .banner-collect-v01 .col-right {
+    max-width: 760px;
+    width: 100%;
+  }
+  .banner-collect-v01.style-2 {
+    padding: 0;
+    background: transparent;
+    gap: 80px;
+    align-items: center;
+  }
+  .banner-collect-v01.style-2 .col-left {
+    max-width: 705px;
+    width: 100%;
+  }
+}
+@media (min-width: 1600px) {
+  .banner-collect-v01 {
+    gap: 120px;
+    padding: 80px;
+  }
+}
+@media (max-width: 1439px) {
+  .banner-collect-v01.style-2 .col-left {
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .banner-collect-v01 {
+    padding: 60px 15px;
+  }
+}
+
+.list-btn-tab-accordion {
+  background: var(--white);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 12px;
+}
+.list-btn-tab-accordion .accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 40px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.list-btn-tab-accordion .accordion-title .icon {
+  font-size: 40px;
+}
+.list-btn-tab-accordion .accordion-title:not(.collapsed) {
+  padding-bottom: 8px;
+}
+.list-btn-tab-accordion .accordion-title.collapsed {
+  color: var(--text-2);
+}
+.list-btn-tab-accordion .accordion-content {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 32px;
+}
+.list-btn-tab-accordion.style-2 {
+  background: transparent;
+  padding: 0;
+}
+.list-btn-tab-accordion.style-2 .accordion-title {
+  padding-top: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.list-btn-tab-accordion.style-2 .accordion-title.collapsed {
+  padding-bottom: 20px;
+}
+.list-btn-tab-accordion.style-2 .accordion-content {
+  padding: 0px 0px 20px;
+}
+@media (max-width: 1199px) {
+  .list-btn-tab-accordion .accordion-title {
+    padding: 20px;
+  }
+  .list-btn-tab-accordion .accordion-title .icon {
+    font-size: 24px;
+  }
+  .list-btn-tab-accordion .accordion-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.banner-collect-v02 {
+  background: var(--bg);
+  border-radius: 16px;
+  gap: 30px;
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.banner-collect-v02 .col-left {
+  display: flex;
+  flex-direction: column;
+}
+.banner-collect-v02 .col-left .bottom {
+  margin-top: auto;
+}
+.banner-collect-v02 .col-left .desc {
+  margin-bottom: 20px;
+}
+.banner-collect-v02 .tab-content {
+  height: 100%;
+}
+.banner-collect-v02 .tab-content .tab-pane {
+  height: 100%;
+}
+.banner-collect-v02 .collect-image {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+}
+.banner-collect-v02 .collect-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner-collect-v02 .list-thumb-image {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+@media (min-width: 1440px) {
+  .banner-collect-v02 .col-left {
+    max-width: 560px;
+    width: 100%;
+  }
+  .banner-collect-v02 .col-right {
+    max-width: 805px;
+    width: 100%;
+  }
+}
+@media (max-width: 1439px) {
+  .banner-collect-v02 {
+    padding: 60px;
+  }
+  .banner-collect-v02 > * {
+    width: 50%;
+  }
+}
+@media (max-width: 1199px) {
+  .banner-collect-v02 {
+    padding: 60px 20px;
+  }
+}
+@media (max-width: 991px) {
+  .banner-collect-v02 {
+    flex-wrap: wrap-reverse;
+    padding: 60px 15px;
+  }
+  .banner-collect-v02 > * {
+    width: 100%;
+  }
+  .banner-collect-v02 .tab-btn-wrap-v3 {
+    margin-bottom: 20px;
+  }
+  .banner-collect-v02 .tf-btn-tab span {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.banner-collect-v03 .tab-btn-wrap-v3 {
+  width: 100%;
+  margin-bottom: 0;
+}
+.banner-collect-v03 .col-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 44px;
+}
+@media (min-width: 1200px) {
+  .banner-collect-v03 .col-left {
+    padding-right: 40px;
+  }
+  .banner-collect-v03 .col-right {
+    margin-left: -10px;
+  }
+}
+@media (max-width: 1199px) {
+  .banner-collect-v03 .col-left {
+    gap: 24px;
+  }
+}
+
 /*------------ Footer ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
@@ -16332,6 +16840,25 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   height: 60%;
   background: linear-gradient(360deg, #101010 0%, rgba(16, 16, 16, 0) 100%);
   pointer-events: none;
+}
+
+/*------------ Landing ---------------- */
+/* ---------------------------------------------------------
+    * Name: Amerce - Multipurpose eCommerce HTML Template
+    * Version: 1.0.0
+    * Author: Themesflat
+    * Author URI: http://themesflat.com 
+
+	* Abstracts variable
+
+    * Core CSS
+
+    * Components
+
+ ------------------------------------------------------------------------------ */
+/*--------- Abstracts variable ---------- */
+.body-landing {
+  background: #0E0C0B;
 }
 
 /*# sourceMappingURL=styles.css.map */
