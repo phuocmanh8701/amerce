@@ -1282,6 +1282,47 @@
             });
         }
     };
+    /* Couter
+        -------------------------------------------------------------------------------------*/
+    var counter = function () {
+        $(".view-counter").each(function () {
+            $(this).data('counted', false);
+        });
+
+        var checkCounters = function () {
+            $(".view-counter").each(function () {
+                var $counter = $(this);
+
+                if ($counter.data('counted')) {
+                    return;
+                }
+
+                var counterTop = $counter.offset().top;
+                var counterBottom = counterTop + $counter.outerHeight();
+                var viewportTop = $(window).scrollTop();
+                var viewportBottom = viewportTop + $(window).height();
+                var isInViewport = counterTop < viewportBottom && counterBottom > viewportTop;
+
+                if (isInViewport) {
+                    if ($().countTo) {
+                        $counter.find(".number").each(function () {
+                            var to = $(this).data("to"),
+                                speed = $(this).data("speed");
+                            $(this).countTo({
+                                to: to,
+                                speed: speed,
+                            });
+                        });
+                    }
+                    $counter.data('counted', true);
+                }
+            });
+        };
+
+        checkCounters();
+
+        $(window).scroll(checkCounters);
+    };
 
     /* Update Bundle Total 
     -------------------------------------------------------------------------*/
@@ -1354,6 +1395,7 @@
         rateClick();
         checkOut();
         counterOdo();
+        counter();
         updateBundleTotal();
 
         if (document.readyState === "loading") {

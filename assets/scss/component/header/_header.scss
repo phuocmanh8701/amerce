@@ -34,6 +34,11 @@ header {
             background: rgb(114 114 114 / 60%);
             // backdrop-filter: blur(60px);
         }
+
+        &.tf-header-landing {
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.5);
+        }
     }
 
     @include res(xl, min) {

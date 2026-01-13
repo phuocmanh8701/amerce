@@ -223,6 +223,26 @@
     }
 }
 
+.flat-spacing-5 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    @include res(xxl) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @include res(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include res(ssm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
 /* Orther */
 .text-primary {
     color: var(--primary) !important;
@@ -234,6 +254,10 @@
 
 .text-white-50 {
     color: var(--white-50);
+}
+
+.text-white_60 {
+    color: var(--white-60);
 }
 
 .cl-text-yellow {
