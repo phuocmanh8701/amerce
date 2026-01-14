@@ -1,4 +1,4 @@
-@use "../../abstracts/index"as *;
+@use "../../abstracts/index" as *;
 
 .tf-pin-btn {
     cursor: pointer;
@@ -13,7 +13,6 @@
         background: transparent;
         border: 8px solid var(--white);
         @include transition3;
-
 
         &::before {
             position: absolute;
@@ -45,6 +44,24 @@
             animation: ripple-line 2s linear infinite;
         }
     }
+
+    &.number {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background-color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #E9E9E9;
+        &.show{
+            background-color: var(--text);
+            color: var(--white);
+        }
+    }
 }
 
 .banner-lookbook {
@@ -61,43 +78,43 @@
     }
 
     .position1 {
-        top: 39.5%; 
-        left: 28%; 
+        top: 39.5%;
+        left: 28%;
     }
 
     .position2 {
-        top: 38.8%; 
-        left: 83.6%; 
+        top: 38.8%;
+        left: 83.6%;
     }
 
     .position3 {
-        top: 46.8%; 
-        left: 50.7%; 
+        top: 46.8%;
+        left: 50.7%;
     }
 
     .position4 {
-        top: 61.2%; 
-        left: 32.5%; 
+        top: 61.2%;
+        left: 32.5%;
     }
 
     .position5 {
-        top: 39.8%; 
-        left: 69.7%; 
+        top: 39.8%;
+        left: 69.7%;
     }
 
     .position6 {
-        top: 44.4%; 
-        left: 33.5%; 
+        top: 44.4%;
+        left: 33.5%;
     }
 
     .position7 {
-        top: 63%; 
-        left: 21.5%; 
+        top: 63%;
+        left: 21.5%;
     }
 
     .position8 {
-        top: 61.7%; 
-        left: 53.9%; 
+        top: 61.7%;
+        left: 53.9%;
     }
 
     .position9 {
@@ -176,8 +193,6 @@
 
     @include res(xl) {
         height: 600px;
-
-
     }
 
     @include res(lg) {

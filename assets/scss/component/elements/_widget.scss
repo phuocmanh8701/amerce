@@ -1087,6 +1087,11 @@
         }
 
         &15 {
+            .bn-image{
+                @include res(lg){
+                    max-height: 600px;
+                }
+            }
             .bn-content {
                 top: 60px;
                 left: 15px;
