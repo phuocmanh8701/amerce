@@ -243,6 +243,17 @@
         }
     }
 
+    &.style-6{
+        flex-direction: column;
+        gap: 24px;
+
+        .star-wrap{
+            i{
+                color: var(--text);
+            }
+        }
+    }
+
     @include res(sm, min) {
         &.style-1 {
             .tes-image {
