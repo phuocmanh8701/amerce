@@ -247,6 +247,31 @@
         }
     }
 
+    &.style-white {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+
+        .tf-btn-tab {
+            color: var(--white-20);
+            padding-top: 0;
+
+            &.active {
+                color: var(--white);
+            }
+
+            &::after {
+                background: var(--white);
+            }
+        }
+    }
+
+    @include res(xl, min) {
+        &.style-white {
+            gap: 48px;
+        }
+    }
+
     @include res(lg, min) {
         &.style-2 {
             flex-direction: column;

@@ -595,7 +595,8 @@
     }
 
     .bundle-hover-item {
-        @include transition3();
+        @include transition3;
+        opacity: 1;
 
         &.no-hover {
             opacity: 0.3;
