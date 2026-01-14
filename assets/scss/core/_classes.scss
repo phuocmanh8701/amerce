@@ -256,6 +256,10 @@
     color: var(--white-50);
 }
 
+.text-white_20 {
+    color: var(--white-20);
+}
+
 .text-white_60 {
     color: var(--white-60);
 }
@@ -552,6 +556,18 @@
     --bs-gutter-y: 2rem;
 }
 
+.g-20,
+.gy-20 {
+    --bs-gutter-y: 20px;
+}
+
+
+@include res(ssm, min) {
+    .d-ssm-flex {
+        display: flex !important;
+    }
+}
+
 @include res(md, min) {
     .h-md-100 {
         height: 100% !important;
@@ -578,7 +594,13 @@
     }
 }
 
-@include res(xxl, min) {}
+@include res(xxl, min) {
+
+    .g-xxl_40,
+    .gy-xxl_40 {
+        --bs-gutter-y: 40px;
+    }
+}
 
 @include res(xxl) {
     .xxl-mt-10 {

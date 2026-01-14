@@ -1349,6 +1349,29 @@
             updateBundleTotal();
         });
     };
+
+    /* filterIsotope
+    -------------------------------------------------------------------------------------*/
+    var filterIsotope = function () {
+        if ($().isotope) {
+            var $container = $('.demo-filter');
+            $container.imagesLoaded(function () {
+                $container.isotope({
+                    itemSelector: '.item',
+                    transitionDuration: '1s'
+                });
+            });
+            $(".posttype-filter a").on("click", function () {
+                var selector = $(this).attr("data-filter");
+                $(".posttype-filter a").removeClass("active");
+                $(this).addClass("active");
+                $container.isotope({ filter: selector });
+                return false;
+            });
+        };
+    };
+
+
     /* Preloader
     -------------------------------------------------------------------------*/
     function preloader() {
@@ -1397,6 +1420,7 @@
         counterOdo();
         counter();
         updateBundleTotal();
+        filterIsotope();
 
         if (document.readyState === "loading") {
             document.addEventListener("DOMContentLoaded", function () {
