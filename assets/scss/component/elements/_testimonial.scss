@@ -424,3 +424,15 @@
         }
     }
 }
+
+.testimonial-v02 {
+    padding: 27px 31px;
+    border-radius: 16px;
+    border: 1px solid var(--white-10);
+    display: grid;
+    gap: 24px;
+
+    @include res(lg) {
+        padding: 20px;
+    }
+}
