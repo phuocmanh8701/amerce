@@ -592,6 +592,27 @@
             object-fit: cover;
         }
     }
+
+    &.style-2 {
+        border-radius: 20px;
+        position: relative;
+        .img-viewer-compare-wrap {
+            > span {
+                display: none;
+            }
+        }
+
+        .wrap-content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 28px;
+            padding-left: 32px;
+            padding-right: 32px;
+            z-index: 10;
+            pointer-events: none;
+        }
+    }
 }
 
 .tf-lookbook-hover {
@@ -1102,6 +1123,16 @@
         }
     }
 
+    &.style-4 {
+        @include res(xl, min) {
+            .tf-product-media-thumbs {
+                .swiper-slide {
+                    max-height: 80px;
+                }
+            }
+        }
+    }
+
     @include res(xl, min) {
         .btn-action-price {
             height: 58px;
@@ -1498,6 +1529,21 @@
     }
 }
 
+.section-banner-collection-v02 {
+    @include res(lg, min) {
+        .left {
+            margin-right: -7.5px;
+        }
+        .right {
+            margin-left: -7.5px;
+        }
+        .center {
+            margin-left: -2.5px;
+            margin-right: -2.5px;
+        }
+    }
+}
+
 .section-main-about {
     .hero-image {
         border-radius: 16px;
@@ -1544,6 +1590,25 @@
     }
 }
 
+.section-insights {
+    .article-blog {
+        &.style-list {
+            @include res(xl, min) {
+                gap: 40px;
+            }
+
+            .blog-image {
+                max-width: 300px;
+            }
+        }
+        &:not(:last-child){
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom:  1px solid var(--line);
+        }
+    }
+}
+
 .section-categories {
     .tf-sw-nav-2 {
         position: absolute;
@@ -1561,11 +1626,6 @@
     .nav-next-swiper {
         right: 12px;
         margin-right: 10px;
-    }
-
-    .cate_name {
-        min-width: 140px;
-        justify-content: center;
     }
 
     &:hover {

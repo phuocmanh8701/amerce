@@ -30,6 +30,21 @@
             border-radius: 8px;
         }
     }
+    &.style-2{
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        .blog-content{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 24px 28px;
+            background: #00000033;
+            backdrop-filter: blur(40px)
+
+        }
+    }
 
     @include res(xl, min) {
         gap: 24px;
