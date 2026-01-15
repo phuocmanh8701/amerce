@@ -4,6 +4,8 @@
 .tf-topbar {
     padding-top: 12px;
     padding-bottom: 12px;
+    position: relative;
+    z-index: 3;
 
     .br-line {
         &.fake-class {
