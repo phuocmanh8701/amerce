@@ -153,6 +153,14 @@
             background: var(--white);
         }
     }
+
+    &.style-large {
+        @include res(lg, min) {
+            width: 60px;
+            height: 60px;
+            font-size: 28px;
+        }
+    }
 }
 
 .slider_effect_fade {
@@ -199,6 +207,9 @@
 
         &.fade-item-4 {
             transition-delay: 0.8s;
+        }
+        &.fade-item-5 {
+            transition-delay: 1s;
         }
     }
 
@@ -314,6 +325,33 @@
         z-index: 2;
     }
 
+    &.style-2 {
+        .slider-wrap {
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .sld_image {
+            background-color: var(--text);
+            img {
+                opacity: 0.8;
+            }
+        }
+
+        .tf-sw-nav-2 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 4;
+        }
+        .nav-next-swiper {
+            right: 40px;
+        }
+        .nav-prev-swiper {
+            left: 40px;
+        }
+    }
+
     @include res(md, min) {
         .sw-line-default {
             &.pst-2 {
@@ -361,26 +399,6 @@
     @include res(sm) {
         .slideshow-wrap {
             height: 450px;
-        }
-    }
-
-    &.style-2 {
-        .slider-wrap {
-            overflow: hidden;
-            border-radius: 20px;
-        }
-
-        .tf-sw-nav-2{
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 4;
-        }
-        .nav-next-swiper{
-            right: 40px;
-        }
-        .nav-prev-swiper{
-            left: 40px;
         }
     }
 }
@@ -472,11 +490,21 @@
     }
 
     &.type-3 {
-        left: 45px;
+        left: 0;
+        right: 0;
         top: unset;
         bottom: 45px;
         transform: translateY(0);
-        max-width: 500px;
+        padding-left: 15px;
+
+        .content-sld_wrap {
+            max-width: 500px;
+        }
+
+        @include res(lg, min) {
+            padding-left: 48px;
+            padding-right: 15px;
+        }
     }
 
     @include res(lg, min) {
