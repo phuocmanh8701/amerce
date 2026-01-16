@@ -460,6 +460,20 @@
     }
 }
 
+.infiniteSlide-text-v02 {
+    padding: 41px 0;
+    background-color: #f6f4f3;
+
+    .infiniteSlide {
+        gap: 40px;
+
+        i {
+            font-size: 32px;
+            color: var(--primary);
+        }
+    }
+}
+
 .banner-sale {
     display: flex;
     align-items: center;
@@ -598,7 +612,9 @@
         position: relative;
         .img-viewer-compare-wrap {
             > span {
-                display: none;
+                @include res(md, min) {
+                    display: none;
+                }
             }
         }
 
@@ -611,6 +627,10 @@
             padding-right: 32px;
             z-index: 10;
             pointer-events: none;
+
+            @include res(md) {
+                display: none !important;
+            }
         }
     }
 }
@@ -1133,6 +1153,47 @@
         }
     }
 
+    &.style-5 {
+        .left,
+        .right,
+        .center {
+            width: calc((100% / 3) - 10px);
+        }
+
+        .left {
+            padding: 40px;
+            background-color: #f7f7f7;
+            border-radius: 12px;
+        }
+
+        .tf-product-info-wrap .tf-product-extra-link {
+            gap: 27px;
+        }
+
+        .product-thumbs-slider {
+            .tf-product-media-main {
+                border: unset;
+            }
+
+            .flat-wrap-media-product {
+                width: calc(100%);
+                border: unset;
+            }
+        }
+        .tf-product-media-wrap {
+            padding-right: 0;
+        }
+
+        .tf-product-info-wrap {
+            padding-left: 0;
+        }
+
+        .box-img{
+            border-radius: 16px;
+            overflow: hidden;
+        }
+    }
+
     @include res(xl, min) {
         .btn-action-price {
             height: 58px;
@@ -1530,6 +1591,19 @@
 }
 
 .section-banner-collection-v02 {
+    .row {
+        row-gap: 20px;
+    }
+
+    @include res(lg) {
+        .left {
+            margin-left: -7.5px;
+        }
+        .right {
+            margin-right: -7.5px;
+        }
+    }
+
     @include res(lg, min) {
         .left {
             margin-right: -7.5px;
@@ -1591,20 +1665,29 @@
 }
 
 .section-insights {
+    .row {
+        row-gap: 40px;
+    }
     .article-blog {
         &.style-list {
             @include res(xl, min) {
-                gap: 40px;
+                gap: 30px;
             }
 
             .blog-image {
-                max-width: 300px;
+                @include res(lg, min) {
+                    max-width: 300px;
+                }
+            }
+
+            .entry-desc {
+                margin-bottom: 0;
             }
         }
-        &:not(:last-child){
+        &:not(:last-child) {
             padding-bottom: 20px;
             margin-bottom: 20px;
-            border-bottom:  1px solid var(--line);
+            border-bottom: 1px solid var(--line);
         }
     }
 }
@@ -1640,6 +1723,12 @@
         .nav-next-swiper {
             margin-right: 0;
         }
+    }
+}
+
+.section-top-pick {
+    .row {
+        row-gap: 40px;
     }
 }
 
@@ -1879,11 +1968,24 @@
         padding-top: 68px;
         padding-bottom: 168px;
 
+        @include res(xl) {
+            padding-bottom: 60px;
+        }
+
+        @include res(md) {
+            padding-bottom: 21px;
+        }
+
         .image {
             position: absolute;
             left: 40%;
             top: 0;
             bottom: 0;
+
+            @include res(lg) {
+                width: 40%;
+                top: 43px;
+            }
         }
     }
 
@@ -1947,14 +2049,34 @@
 }
 
 .text-color-image {
-    font-size: clamp(36px, 8vw, 200px);
-    line-height: clamp(50px, 8vw, 120px);
+    font-size: 200px;
+    line-height: 160px;
     font-weight: 700;
     background-image: url("./../images/section/text-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @include res(xxl) {
+        font-size: 188px;
+        line-height: 160px;
+    }
+
+    @include res(lg) {
+        font-size: 142px;
+        line-height: 150px;
+    }
+
+    @include res(md) {
+        font-size: 100px;
+        line-height: 108px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 68px;
+        line-height: 76px;
+    }
 }
 
 .banner-collect-v01 {
