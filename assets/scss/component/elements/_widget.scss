@@ -355,6 +355,13 @@
     }
 }
 
+.category-v07{
+    .cate-image{
+        border-radius: 16px;
+        
+    }
+}
+
 .box-image_img {
     display: inline-flex;
     width: 100%;
@@ -704,7 +711,7 @@
 
     &.type-abs {
         position: relative;
-
+        height: 100%;
         .bn-content {
             position: absolute;
             display: flex;
@@ -1102,6 +1109,7 @@
         }
 
         &16 {
+            max-height: 450px;
             .bn-content {
                 inset: 0;
                 padding: 21px 26px 21px 24px;
@@ -1110,8 +1118,14 @@
 
         &17 {
             .bn-content {
-                bottom: 24px;
-                left: 24px;
+
+                bottom: 10px;
+                left: 10px;
+
+                @include res(md, min) {
+                    bottom: 24px;
+                    left: 24px;
+                }
             }
             &.lagre {
                 .bn-content {

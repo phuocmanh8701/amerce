@@ -462,6 +462,15 @@
 
 .section-testimonials {
     padding: 108px 0;
+    
+    @include res(lg){
+        padding: 60px 0;
+    }
+
+    @include res(lg){
+        padding: 40px 0;
+    }
+
 
     .banner {
         position: absolute;
