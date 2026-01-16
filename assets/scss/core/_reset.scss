@@ -414,6 +414,10 @@ p {
     right: 0;
     margin: auto;
     animation: spin 1s infinite linear;
+
+    &.type-primary {
+        border-top-color: var(--primary);
+    }
 }
 
 @keyframes spin {

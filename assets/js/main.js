@@ -1381,7 +1381,71 @@
             });
         }, 300);
     }
+    /* Reveal
+    -------------------------------------------------------------------------*/
+    const reveal = () => {
+        const $reveals = $(".reveal");
 
+        if ($reveals.length === 0) {
+            console.log("Reveal is not working because no items found.");
+            return;
+        } else {
+            console.log("Reveal is working");
+        }
+
+        if ($(window).width() > 768) {
+            $(window).on("scroll", function () {
+                $reveals.each(function () {
+                    const $el = $(this);
+                    const windowHeight = $(window).height();
+                    const revealTop = this.getBoundingClientRect().top;
+                    const elHeight = $el.outerHeight();
+                    const revealPoint = 150;
+                    const posPoint = 20;
+
+                    // Parent styles
+                    $el.parent().css({
+                        perspective: "700px",
+                        transformStyle: "preserve-3d",
+                        perspectiveOrigin: "100% 0%",
+                    });
+
+                    // Node styles
+                    $el.css({
+                        transformOrigin: "50% 0",
+                        translate: "none",
+                        rotate: "none",
+                        scale: "none",
+                        transition: "all .35s ease",
+                    });
+
+                    if (revealTop > windowHeight - revealPoint) {
+                        $el.css({
+                            opacity: "0",
+                            transform: `rotateX(-${posPoint}deg)`,
+                        });
+                    }
+
+                    if (revealTop < windowHeight - revealPoint) {
+                        if (revealTop > -50) {
+                            const schemas = Math.abs(1 - revealTop / elHeight);
+                            const opacity = Math.min(Math.abs(1 - (revealTop - 350) / elHeight), 1);
+                            const rotate = Math.min(posPoint * schemas - (posPoint - 10), 0);
+
+                            $el.css({
+                                opacity: opacity,
+                                transform: `translate3d(0px,0px,0px) rotateX(${rotate}deg)`,
+                            });
+                        } else {
+                            $el.css({
+                                transform: `translate(0,0)`,
+                            });
+                        }
+                    }
+                });
+            });
+        }
+    };
 
     // Dom Ready
     $(function () {
@@ -1421,6 +1485,7 @@
         counter();
         updateBundleTotal();
         filterIsotope();
+        reveal();
 
         if (document.readyState === "loading") {
             document.addEventListener("DOMContentLoaded", function () {

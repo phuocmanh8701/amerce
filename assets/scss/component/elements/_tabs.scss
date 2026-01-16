@@ -258,9 +258,9 @@
     }
 
     &.style-white {
-        flex-direction: column;
+        // flex-direction: column;
         gap: 20px;
-        align-items: start;
+        // align-items: start;
 
         .tf-btn-tab {
             color: var(--white-20);
