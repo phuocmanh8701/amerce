@@ -1677,6 +1677,27 @@
     }
 }
 
+.countdown-v06 {
+    .countdown__timer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .countdown__item {
+        display: grid;
+        text-align: center;
+        padding: 12px;
+        background: #262423;
+        max-width: 90px;
+        width: 100%;
+    }
+
+    .countdown__value {
+        font-size: clamp(30px, 4.2vw, 44px);
+        line-height: clamp(38px, 5vw, 50px);
+    }
+}
+
 .wg-quantity {
     display: flex;
     justify-content: space-between;

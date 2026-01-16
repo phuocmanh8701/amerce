@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?sewhau');
-  src:  url('fonts/icomoon.eot?sewhau#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?sewhau') format('truetype'),
-    url('fonts/icomoon.woff?sewhau') format('woff'),
-    url('fonts/icomoon.svg?sewhau#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?5pwknv');
+  src:  url('fonts/icomoon.eot?5pwknv#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5pwknv') format('truetype'),
+    url('fonts/icomoon.woff?5pwknv') format('woff'),
+    url('fonts/icomoon.svg?5pwknv#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-CodeBlock:before {
+  content: "\e952";
+}
+.icon-Files:before {
+  content: "\e954";
+}
+.icon-Question1:before {
+  content: "\e95a";
+}
+.icon-Browsers:before {
+  content: "\e951";
+}
+.icon-Devices:before {
+  content: "\e953";
+}
+.icon-Layout:before {
+  content: "\e955";
+}
+.icon-ListDashes:before {
+  content: "\e956";
+}
+.icon-MouseScroll:before {
+  content: "\e957";
+}
+.icon-PictureInPicture:before {
+  content: "\e958";
+}
+.icon-PuzzlePiece:before {
+  content: "\e959";
+}
+.icon-Slideshow:before {
+  content: "\e95b";
+}
+.icon-TextAa:before {
+  content: "\e95c";
+}
+.icon-TextIndent:before {
+  content: "\e95d";
+}
 .icon-btn3d:before {
   content: "\e950";
 }

@@ -153,6 +153,10 @@
         column-gap: 30px; //
         row-gap: 40px; //
 
+        &.gap-xl-30 {
+            gap: 30px !important;
+        }
+
         &.cl-gap-xxl-40 {
             column-gap: 40px;
         }

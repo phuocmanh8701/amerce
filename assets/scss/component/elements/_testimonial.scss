@@ -1,4 +1,4 @@
-@use "../../abstracts/index" as *;
+@use "../../abstracts/index"as *;
 
 .sw-pg-thumb {
     display: flex;
@@ -162,7 +162,7 @@
             justify-content: center;
             gap: 16px;
 
-            > * {
+            >* {
                 margin: 0;
             }
         }
@@ -270,12 +270,13 @@
             margin-left: auto;
             margin-right: auto;
             background-color: var(--white);
+
             .product-image {
                 border-radius: 8px;
             }
         }
 
-      
+
     }
 
     @include res(sm, min) {
@@ -286,7 +287,7 @@
         }
 
         &.style-3 {
-            > * {
+            >* {
                 width: 50%;
             }
         }
@@ -420,7 +421,7 @@
         &.style-3 {
             flex-direction: column;
 
-            > * {
+            >* {
                 width: 100%;
             }
 
@@ -460,6 +461,18 @@
     }
 }
 
+.testimonial-v02 {
+    padding: 27px 31px;
+    border-radius: 16px;
+    border: 1px solid var(--white-10);
+    display: grid;
+    gap: 24px;
+
+    @include res(lg) {
+        padding: 20px;
+    }
+}
+
 .section-testimonials {
     padding: 108px 0;
     
@@ -478,6 +491,7 @@
         background-color: #150a12;
         border-radius: 20px;
         overflow: hidden;
+
         img {
             opacity: 40%;
             width: 100%;

@@ -302,3 +302,72 @@
         }
     }
 }
+
+.box-icon_V02 {
+    text-align: center;
+    padding: 31px;
+    border: 1px solid var(--white-10);
+    border-radius: 12px;
+    display: grid;
+    gap: 16px;
+
+    .icon {
+        font-size: 60px;
+        transition-duration: .5s;
+    }
+
+    &:hover {
+        .icon {
+            transform: scale(1.1);
+            transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36);
+        }
+    }
+
+    &.style-2 {}
+
+    @include res(xl) {
+        .icon {
+            font-style: 40px;
+        }
+    }
+
+    @include res(md) {
+        padding: 20px 15px;
+    }
+}
+
+.box-icon_V03 {
+    text-align: start;
+    place-items: start;
+    background: #FFFFFF0F;
+    border: 0;
+    padding: 20px;
+    border-radius: 8px;
+    display: grid;
+
+    .icon {
+        font-size: 60px;
+        transition-duration: .5s;
+    }
+
+    .ic-wrap {
+        margin-bottom: 20px;
+    }
+
+    .tf-btn-line-2 {
+        padding-bottom: 2px;
+    }
+
+    &:hover {
+        .icon {
+            transform: scale(1.1);
+            transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36);
+        }
+    }
+
+    @include res(xl) {
+        .icon {
+            font-style: 40px;
+        }
+    }
+}
