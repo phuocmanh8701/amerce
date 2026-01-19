@@ -1,4 +1,4 @@
-@use "../../abstracts/index" as *;
+@use "../../abstracts/index"as *;
 
 .tf-pin-btn {
     cursor: pointer;
@@ -57,7 +57,8 @@
         justify-content: center;
         align-items: center;
         border: 1px solid #E9E9E9;
-        &.show{
+
+        &.show {
             background-color: var(--text);
             color: var(--white);
         }
@@ -188,6 +189,12 @@
 
         .dropdown-menu {
             margin: 0px 10px 0px 10px !important;
+        }
+    }
+
+    @include res(xl, min) {
+        .dropdown-menu {
+            margin: 0px 25px 0px 25px !important;
         }
     }
 

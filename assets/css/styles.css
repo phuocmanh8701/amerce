@@ -10304,7 +10304,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   border-color: var(--text);
 }
 .product-color_list .product-color-item.active .swatch-value, .product-color_list .product-color-item:hover .swatch-value {
-  inset: 4px;
+  inset: 3px;
 }
 @media (min-width: 1200px) {
   .product-color_list {
@@ -13218,6 +13218,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     margin: 0px 10px 0px 10px !important;
   }
 }
+@media (min-width: 1200px) {
+  .banner-lookbook .dropdown-menu {
+    margin: 0px 25px 0px 25px !important;
+  }
+}
 @media (max-width: 1199px) {
   .banner-lookbook {
     height: 600px;
@@ -15375,6 +15380,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   margin-left: 20px;
   margin-right: 20px;
 }
+.infiniteSlide-cls .cls-wrap {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 .infiniteSlide-cls .img-cls {
   border-radius: 50%;
   overflow: hidden;
@@ -15383,6 +15393,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   .infiniteSlide-cls .infiniteSlide-wrapper > * {
     margin-left: 10px;
     margin-right: 10px;
+  }
+  .infiniteSlide-cls .cls-wrap {
+    gap: 20px;
   }
 }
 
