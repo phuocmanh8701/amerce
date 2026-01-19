@@ -72,7 +72,7 @@
         margin-bottom: 20px;
     }
 
-    @include res(md, min) {
+    @include res(lg, min) {
         max-width: 400px;
         margin-left: auto;
     }

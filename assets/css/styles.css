@@ -17164,7 +17164,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .footer-wrap-3 .footer-desc {
   margin-bottom: 20px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .footer-wrap-3 {
     max-width: 400px;
     margin-left: auto;
