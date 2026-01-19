@@ -118,6 +118,11 @@ button.animate-btn::after,
     background-image: linear-gradient(90deg, transparent, rgb(0 0 0 /0.25), transparent);
 }
 
+.animate-btn.animate-primary::after {
+    // --primary: rgb(220, 70, 70);
+    background-image: linear-gradient(90deg, transparent, rgb(220, 70, 70), transparent);
+}
+
 
 .tf-loading {
     // font-size: 14px;
