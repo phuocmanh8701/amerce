@@ -8,10 +8,7 @@
     cursor: pointer;
 }
 
-.tf-social-icon {
-    display: inline-flex;
-    gap: 16px;
-    // COLOR SOCIAL
+.social-color {
     --facebook-cl: rgb(59, 89, 152);
     --x-cl: rgb(85, 85, 85);
     --instagram-cl: linear-gradient(#8a3ab9, #e95950, #fccc63);
@@ -31,24 +28,12 @@
     --spotify-cl: rgb(30, 125, 96);
 
     a {
-        @include flex(center, center);
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        border: 1px solid;
-        border-color: var(--line);
         position: relative;
-
-        .icon {
-            display: inline-flex;
-            position: relative;
-            z-index: 1;
-            font-size: 16px;
-        }
+        overflow: hidden;
 
         &::after {
             content: "";
-            border-radius: 50%;
+            // border-radius: 50%;
             position: absolute;
             background: transparent;
             top: -1px;
@@ -58,14 +43,6 @@
             z-index: 0;
             @include transition3;
             @include hidden;
-        }
-
-    }
-
-    &.style-2 {
-        a {
-            border-color: var(--line-3);
-            color: var(--white);
         }
     }
 
@@ -164,13 +141,6 @@
             &::after {
                 @include visible;
             }
-        }
-    }
-
-    &.style-white {
-        a {
-            color: var(--white);
-            border-color: var(--line);
         }
     }
 }

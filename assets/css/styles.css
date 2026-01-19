@@ -196,7 +196,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (max-width: 1199px) {
   body {
-    padding-bottom: 80px;
+    padding-bottom: 70px;
   }
 }
 
@@ -1909,11 +1909,18 @@ header.header-sticky.tf-header-landing {
 
 .tf-header .box-open-menu-mobile {
   flex: 1;
+  display: flex;
 }
 @media (max-width: 1199px) {
   .tf-header {
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+  .tf-header .logo-site img {
+    max-width: 120px;
+  }
+  .tf-header .header-inner {
+    align-items: center;
   }
   .tf-header .header-inner .header-left {
     flex: unset;
@@ -2738,7 +2745,7 @@ header.header-sticky.tf-header-landing {
 /* -- Nav Mobile -- */
 .btn-open-menu {
   font-size: 24px;
-  display: flex;
+  display: inline-flex;
 }
 
 .canvas-mb .canvas-header {
@@ -3853,9 +3860,7 @@ header.header-sticky.tf-header-landing {
   cursor: pointer;
 }
 
-.tf-social-icon {
-  display: inline-flex;
-  gap: 16px;
+.social-color {
   --facebook-cl: rgb(59, 89, 152);
   --x-cl: rgb(85, 85, 85);
   --instagram-cl: linear-gradient(#8a3ab9, #e95950, #fccc63);
@@ -3874,26 +3879,12 @@ header.header-sticky.tf-header-landing {
   --line-cl: rgb(0, 195, 77);
   --spotify-cl: rgb(30, 125, 96);
 }
-.tf-social-icon a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid;
-  border-color: var(--line);
+.social-color a {
   position: relative;
+  overflow: hidden;
 }
-.tf-social-icon a .icon {
-  display: inline-flex;
-  position: relative;
-  z-index: 1;
-  font-size: 16px;
-}
-.tf-social-icon a::after {
+.social-color a::after {
   content: "";
-  border-radius: 50%;
   position: absolute;
   background: transparent;
   top: -1px;
@@ -3909,83 +3900,75 @@ header.header-sticky.tf-header-landing {
   opacity: 0;
   visibility: hidden;
 }
-.tf-social-icon.style-2 a {
-  border-color: var(--line-3);
-  color: var(--white);
-}
-.tf-social-icon .social-facebook::after {
+.social-color .social-facebook::after {
   background: var(--facebook-cl);
 }
-.tf-social-icon .social-facebook:hover {
+.social-color .social-facebook:hover {
   color: var(--white);
 }
-.tf-social-icon .social-facebook:hover::after {
+.social-color .social-facebook:hover::after {
   opacity: 1;
   visibility: visible;
 }
-.tf-social-icon .social-instagram::after {
+.social-color .social-instagram::after {
   background: var(--instagram-cl);
 }
-.tf-social-icon .social-instagram:hover {
+.social-color .social-instagram:hover {
   color: var(--white);
 }
-.tf-social-icon .social-instagram:hover::after {
+.social-color .social-instagram:hover::after {
   opacity: 1;
   visibility: visible;
 }
-.tf-social-icon .social-x::after {
+.social-color .social-x::after {
   background: var(--x-cl);
 }
-.tf-social-icon .social-x:hover {
+.social-color .social-x:hover {
   color: var(--white);
 }
-.tf-social-icon .social-x:hover::after {
+.social-color .social-x:hover::after {
   opacity: 1;
   visibility: visible;
 }
-.tf-social-icon .social-snapchat::after {
+.social-color .social-snapchat::after {
   background: var(--snapchat-cl);
 }
-.tf-social-icon .social-snapchat:hover {
+.social-color .social-snapchat:hover {
   color: var(--white);
 }
-.tf-social-icon .social-snapchat:hover::after {
+.social-color .social-snapchat:hover::after {
   opacity: 1;
   visibility: visible;
 }
-.tf-social-icon .social-pinterest::after {
+.social-color .social-pinterest::after {
   background: var(--pinterest-cl);
 }
-.tf-social-icon .social-pinterest:hover {
+.social-color .social-pinterest:hover {
   color: var(--white);
 }
-.tf-social-icon .social-pinterest:hover::after {
+.social-color .social-pinterest:hover::after {
   opacity: 1;
   visibility: visible;
 }
-.tf-social-icon .social-linkin::after {
+.social-color .social-linkin::after {
   background: var(--linked_in-cl);
 }
-.tf-social-icon .social-linkin:hover {
+.social-color .social-linkin:hover {
   color: var(--white);
 }
-.tf-social-icon .social-linkin:hover::after {
+.social-color .social-linkin:hover::after {
   opacity: 1;
   visibility: visible;
 }
-.tf-social-icon .social-tiktok::after {
+.social-color .social-tiktok::after {
   background: var(--tiktok-cl);
 }
-.tf-social-icon .social-tiktok:hover {
+.social-color .social-tiktok:hover {
   color: var(--white);
 }
-.tf-social-icon .social-tiktok:hover::after {
+.social-color .social-tiktok:hover::after {
   opacity: 1;
   visibility: visible;
-}
-.tf-social-icon.style-white a {
-  color: var(--white);
-  border-color: var(--line);
 }
 
 .tf-social-icon-2 {
@@ -4488,15 +4471,14 @@ header.header-sticky.tf-header-landing {
 
 .tf-toolbar-bottom {
   display: none;
-  padding: 21px 0px 12px;
+  padding: 15px 0px 15px;
   position: fixed;
   z-index: 200;
   bottom: 0;
   right: 0;
   left: 0;
-  border-top: 1px solid #eeeeee;
   background-color: var(--white);
-  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.0784313725);
+  box-shadow: 0px 5px 18px 5px rgba(64, 72, 87, 0.1490196078);
 }
 .tf-toolbar-bottom .toolbar-item {
   flex: 1 0 20%;
@@ -4504,14 +4486,14 @@ header.header-sticky.tf-header-landing {
 }
 .tf-toolbar-bottom a {
   width: 100%;
-  gap: 2px;
+  gap: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 .tf-toolbar-bottom .toolbar-icon {
-  font-size: 24px;
+  font-size: 20px;
   position: relative;
   display: flex;
 }
@@ -4531,9 +4513,8 @@ header.header-sticky.tf-header-landing {
   color: var(--white);
 }
 .tf-toolbar-bottom .toolbar-label {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 16px;
 }
 @media (max-width: 1199px) {
   .tf-toolbar-bottom {
