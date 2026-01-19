@@ -740,7 +740,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 30px 15px;
+        // padding: 30px 15px;
     }
 
     .sub {
@@ -754,6 +754,10 @@
 
     @include res(xl, min) {
         display: flex;
+
+        .banner-content {
+            padding: 30px 15px;
+        }
 
         .banner-image {
             width: 30.7291666667%;

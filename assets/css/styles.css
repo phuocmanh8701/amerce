@@ -1429,6 +1429,10 @@ h6,
   aspect-ratio: 1/1 !important;
 }
 
+.aspect-ratio-0_75 {
+  aspect-ratio: 0.75 !important;
+}
+
 .z-1 {
   z-index: 1;
 }
@@ -1536,6 +1540,9 @@ h6,
   .lg-mx-auto {
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+  .lg-justify-content-center {
+    justify-content: center !important;
   }
 }
 @media (max-width: 767px) {
@@ -14395,6 +14402,16 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 @media (max-width: 767px) {
+  .banner-image-text.style-2 .bn-content {
+    z-index: 1;
+  }
+  .banner-image-text.style-2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(270deg, rgba(6, 6, 11, 0.3) 50%, rgba(6, 6, 11, 0.7019607843) 80%);
+  }
   .banner-image-text.style-4 .bn-image img, .banner-image-text.style-6 .bn-image img, .banner-image-text.style-7 .bn-image img, .banner-image-text.style-13 .bn-image img {
     max-height: 400px;
   }
@@ -15770,7 +15787,6 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 15px;
 }
 .banner-countdown-v02 .sub {
   margin-bottom: 15px;
@@ -15782,6 +15798,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 @media (min-width: 1200px) {
   .banner-countdown-v02 {
     display: flex;
+  }
+  .banner-countdown-v02 .banner-content {
+    padding: 30px 15px;
   }
   .banner-countdown-v02 .banner-image {
     width: 30.7291666667%;

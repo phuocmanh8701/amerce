@@ -525,6 +525,10 @@
     aspect-ratio: 1/1 !important;
 }
 
+.aspect-ratio-0_75 {
+    aspect-ratio: 0.75 !important;
+}
+
 .z-1 {
     z-index: 1;
 }
@@ -645,10 +649,16 @@
         margin-left: auto !important;
         margin-right: auto !important;
     }
+
+    .lg-justify-content-center {
+        justify-content: center !important;
+    }
 }
 
 @include res(md) {
     .md-mb-12 {
         margin-bottom: 12px;
     }
+
+
 }
