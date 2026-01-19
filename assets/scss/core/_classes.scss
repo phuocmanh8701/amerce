@@ -558,7 +558,7 @@
 }
 
 .rounded-8 {
-   border-radius: 8px !important;
+    border-radius: 8px !important;
 }
 
 .rounded-top-20 {
@@ -576,6 +576,9 @@
     --bs-gutter-y: 20px;
 }
 
+.text-decoration-thickness {
+    text-decoration-thickness: 2px !important;
+}
 
 @include res(ssm, min) {
     .d-ssm-flex {

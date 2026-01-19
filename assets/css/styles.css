@@ -1480,6 +1480,10 @@ h6,
   --bs-gutter-y: 20px;
 }
 
+.text-decoration-thickness {
+  text-decoration-thickness: 2px !important;
+}
+
 @media (min-width: 426px) {
   .d-ssm-flex {
     display: flex !important;
@@ -8538,6 +8542,7 @@ button.animate-btn::after,
 }
 .tf-dropdown-select.type-languages > .dropdown-menu {
   width: 110px !important;
+  margin-left: -25px !important;
 }
 .tf-dropdown-select.color-white > .dropdown-toggle {
   color: var(--white);
