@@ -17108,6 +17108,25 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 
+.section-term-user .content {
+  display: grid;
+  gap: 40px;
+  max-width: 1008px;
+  width: 100%;
+  margin: 0px auto;
+}
+.section-term-user .term-title {
+  margin-bottom: 20px;
+}
+.section-term-user .term-text span {
+  font-weight: 500;
+  color: var(--text);
+}
+.section-term-user .text-wrap {
+  display: grid;
+  gap: 16px;
+}
+
 /*------------ Footer ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template

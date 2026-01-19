@@ -2404,3 +2404,29 @@
         }
     }
 }
+
+.section-term-user {
+    .content {
+        display: grid;
+        gap: 40px;
+        max-width: 1008px;
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .term-title {
+        margin-bottom: 20px;
+    }
+
+    .term-text {
+        span {
+            font-weight: 500;
+            color: var(--text);
+        }
+    }
+
+    .text-wrap {
+        display: grid;
+        gap: 16px;
+    }
+}
