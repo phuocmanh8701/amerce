@@ -1260,8 +1260,18 @@
         }
     }
 
+    @include res(lg) {
+        .btn-action {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
     @include res(ssm) {
         .btn-action {
+            padding-left: 10px;
+            padding-right: 10px;
+
             .text {
                 display: none;
             }

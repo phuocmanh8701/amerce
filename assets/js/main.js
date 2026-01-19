@@ -1140,13 +1140,26 @@
             var $customSelect = $this.next("div.tf-select-custom");
             $customSelect.text($this.children("option").eq(0).text());
             var $optionlist = $(
-                '<ul class="select-options" /><div class="header-select-option"><span>Select Categories</span><span class="close-option"><i class="icon-close"></i></div>'
+                '<ul class="select-options" /><div class="header-select-option"><span>Select Categories</span><span class="close-option"><i class="icon-X2"></i></div>'
             ).insertAfter($customSelect);
             for (var i = 0; i < selectOptions; i++) {
-                $("<li />", {
-                    text: $this.children("option").eq(i).text(),
-                    rel: $this.children("option").eq(i).val(),
-                }).appendTo($optionlist);
+                var value = $this.children("option").eq(i).val();
+                var text = $this.children("option").eq(i).text();
+
+                var link = (value === "all")
+                    ? "collection.html"
+                    : "shop-default.html";
+
+                var $li = $("<li />", {
+                    "data-value": value
+                });
+
+                var $a = $("<a />", {
+                    href: link,
+                    text: text
+                });
+
+                $li.append($a).appendTo($optionlist);
             }
             var $optionlistItems = $optionlist.children("li");
             $customSelect.click(function (e) {

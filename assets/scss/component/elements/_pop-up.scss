@@ -1079,6 +1079,13 @@
             max-width: 340px;
             direction: rtl;
         }
+
+        &.style-2 {
+            max-width: 468px !important;
+            .mini-quick-image {
+                display: none !important;
+            }
+        }
     }
 
     @include res(xl, min) {
