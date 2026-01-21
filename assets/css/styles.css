@@ -187,7 +187,7 @@ body {
   background: var(--white);
 }
 body::-webkit-scrollbar {
-  width: 0px;
+  width: 3px;
 }
 body::-webkit-scrollbar-thumb {
   cursor: grab;
@@ -11658,15 +11658,17 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   z-index: 5000;
 }
 
-.section-image-zoom .other-image-zoom {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.section-image-zoom.zoom-active .other-image-zoom {
-  opacity: 0.3;
+@media (min-width: 1200px) {
+  .section-image-zoom .other-image-zoom {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .section-image-zoom.zoom-active .other-image-zoom {
+    opacity: 0.3;
+  }
 }
 
 .pswp__bg {
