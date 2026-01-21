@@ -1252,7 +1252,7 @@
     -------------------------------------------------------------------------*/
     var checkOut = function () {
         $("#checkout-btn").on("click", function () {
-            if ($("#agree-term").is(":checked")) {
+            if ($("#checkOutAgree").is(":checked")) {
                 window.location.href = "checkout.html";
             } else {
                 alert("Please agree to the Terms and Conditions before continuing.");
