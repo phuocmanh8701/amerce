@@ -248,25 +248,28 @@
     -------------------------------------------------------------------------*/
     var variantPicker = function () {
         if ($(".variant-picker-item").length) {
-            $(".color-btn").on("click", function (e) {
+
+            $(".color-btn").on("click", function () {
+                var $wrapper = $(this).closest(".variant-picker-item");
                 var value = $(this).data("scroll");
                 var value2 = $(this).data("color");
 
-                $(".value-currentColor").text(value);
-                $(".value-currentColor").text(value2);
-
-                $(this).closest(".variant-picker-values").find(".color-btn").removeClass("active");
+                $wrapper.find(".value-currentColor").text(value2 || value);
+                $wrapper.find(".color-btn").removeClass("active");
                 $(this).addClass("active");
             });
-            $(".size-btn").on("click", function (e) {
-                var value = $(this).data("size");
-                $(".value-currentSize").text(value);
 
-                $(this).closest(".variant-picker-values").find(".size-btn").removeClass("active");
+            $(".size-btn").on("click", function () {
+                var $wrapper = $(this).closest(".variant-picker-item");
+                var value = $(this).data("size");
+
+                $wrapper.find(".value-currentSize").text(value);
+                $wrapper.find(".size-btn").removeClass("active");
                 $(this).addClass("active");
             });
         }
     };
+
 
     /* Sidebar Mobile
     -------------------------------------------------------------------------*/

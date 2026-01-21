@@ -573,6 +573,16 @@
         }
     }
 
+    @include res(md) {
+        &.type-2 {
+            .box-image_img {
+                img {
+                    max-height: 300px;
+                }
+            }
+        }
+    }
+
     @include res(sm) {
         .box-image_img {
             img {
