@@ -2890,21 +2890,25 @@
     <!-- Quick View -->
     <div class="offcanvas offcanvas-end canvas-quickview" id="quickView">
         <div class="mini-quick-image">
-            <div class="wrap-quick">
-                <div class="image">
+            <div class="wrap-quick wrapper-scroll-quickview">
+                <div class="image item-scroll-quickview" data-scroll-quickview="Green">
                     <img loading="lazy" width="340" height="444" src="assets/images/product/single/detail-1.jpg"
                         alt="Image">
                 </div>
-                <div class="image">
+                <div class="image item-scroll-quickview" data-scroll-quickview="Green">
                     <img loading="lazy" width="340" height="444" src="assets/images/product/single/detail-1_2.jpg"
                         alt="Image">
                 </div>
-                <div class="image">
+                <div class="image item-scroll-quickview" data-scroll-quickview="Green">
                     <img loading="lazy" width="340" height="444" src="assets/images/product/single/detail-1_3.jpg"
                         alt="Image">
                 </div>
-                <div class="image">
+                <div class="image item-scroll-quickview" data-scroll-quickview="Gray">
                     <img loading="lazy" width="340" height="444" src="assets/images/product/single/detail-1_4.jpg"
+                        alt="Image">
+                </div>
+                <div class="image item-scroll-quickview" data-scroll-quickview="Gray">
+                    <img loading="lazy" width="340" height="444" src="assets/images/product/single/detail-1_5.jpg"
                         alt="Image">
                 </div>
             </div>
@@ -2916,13 +2920,13 @@
                     <i class="icon icon-X2"></i>
                 </span>
             </div>
-            <div class="canvas-body ps-md-0 ">
-                <div class="tf-product-info-wrap m-0 p-0 tf-quick-view">
+            <div class="canvas-body ps-md-0">
+                <div class="tf-product-quick_view tf-pop-prd_variant">
                     <div class="tf-product-info-heading">
                         <p class="product-infor-cate text-caption-01 mb-4">
                             Clothing
                         </p>
-                        <h3 class="product-infor-name mb-12">
+                        <h3 class="product-infor-name mb-12 letter-space-0">
                             Lyocell wrap top
                         </h3>
                         <div class="product-infor-meta mb-20">
@@ -2980,22 +2984,29 @@
                                 </div>
                             </div>
                             <div class="variant-picker-values">
-                                <div class="hover-tooltip tooltip-bot color-btn style-image">
+
+                                <input class="d-none" id="values-green" type="radio" name="colorQuickAdd" checked>
+                                <label
+                                    class="hover-tooltip tooltip-bot color-btn style-image btn-scroll-quickview active"
+                                    for="values-green" data-color="Green" data-scroll-quickview="Green">
                                     <div class="img">
                                         <img loading="lazy" width="60" height="60"
                                             src="assets/images/product/single/detail-1_2.jpg"
                                             data-src="assets/images/product/single/detail-1_2.jpg" alt="img">
                                     </div>
                                     <span class="tooltip">Green</span>
-                                </div>
-                                <div class="hover-tooltip tooltip-bot color-btn style-image active">
+                                </label>
+
+                                <input class="d-none" id="values-gray" type="radio" name="colorQuickAdd">
+                                <label class="hover-tooltip tooltip-bot color-btn style-image btn-scroll-quickview"
+                                    for="values-gray" data-color="Gray" data-scroll-quickview="Gray">
                                     <div class="img">
                                         <img loading="lazy" width="60" height="60"
                                             src="assets/images/product/single/detail-1_5.jpg"
                                             data-src="assets/images/product/single/detail-1_5.jpg" alt="img">
                                     </div>
                                     <span class="tooltip">Gray</span>
-                                </div>
+                                </label>
                             </div>
                         </div>
                         <div class="variant-picker-item variant-size">
@@ -3005,10 +3016,12 @@
                                     <span
                                         class="variant-picker-label-value value-currentSize text-capitalize fw-medium">M</span>
                                 </div>
-                                <a href="#findSize" data-bs-toggle="modal"
-                                    class="tf-btn-line-2 style-primary text-caption-01 fw-semibold">
-                                    Size Guide
-                                </a>
+                                <div data-bs-dismiss="offcanvas">
+                                    <a href="#findSize" data-bs-toggle="modal"
+                                        class="tf-btn-line-2 style-primary text-caption-01 fw-semibold">
+                                        Size Guide
+                                    </a>
+                                </div>
                             </div>
                             <div class="variant-picker-values">
                                 <span class="size-btn" data-size="S" data-price="39.99">S</span>
@@ -3034,14 +3047,13 @@
                                 </div>
                                 <a href="#shoppingCart" data-bs-toggle="offcanvas"
                                     class="btn-action-price tf-btn type-xl animate-btn w-100">
-                                    Add to cart
+                                    Add to Cart
                                     <span class="d-none d-sm-block d-md-none d-lg-block">&nbsp;-&nbsp;</span>
                                     <span class="price-add d-none d-sm-block d-md-none d-lg-block">$79.99</span>
                                 </a>
                             </div>
-                            <a href="#shoppingCart" data-bs-toggle="offcanvas"
-                                class="tf-btn type-xl btn-primary animate-btn w-100">
-                                Buy it now
+                            <a href="checkout.html" class="tf-btn type-xl btn-primary animate-btn w-100">
+                                Buy It Now
                             </a>
                         </div>
                     </div>

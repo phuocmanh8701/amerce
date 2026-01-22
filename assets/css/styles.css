@@ -5221,55 +5221,59 @@ header.header-sticky.tf-header-landing {
   }
 }
 
-.tf-quick-view .tf-product-info-heading .product-infor-meta {
+.tf-product-quick_view {
+  display: grid;
+  gap: 24px;
+}
+.tf-product-quick_view .tf-product-info-heading .product-infor-meta {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px 12px;
 }
-.tf-quick-view .tf-product-info-heading .meta_rate,
-.tf-quick-view .tf-product-info-heading .meta_sold {
+.tf-product-quick_view .tf-product-info-heading .meta_rate,
+.tf-product-quick_view .tf-product-info-heading .meta_sold {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.tf-quick-view .tf-product-info-heading .br-line {
+.tf-product-quick_view .tf-product-info-heading .br-line {
   height: 12px;
 }
-.tf-quick-view .tf-product-info-heading .product-infor-reality {
+.tf-product-quick_view .tf-product-info-heading .product-infor-reality {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.tf-quick-view .product-infor-price {
+.tf-product-quick_view .product-infor-price {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.tf-quick-view .product-infor-price .badge-sale {
+.tf-product-quick_view .product-infor-price .badge-sale {
   margin-left: 8px;
 }
-.tf-quick-view .tf-product-variant {
+.tf-product-quick_view .tf-product-variant {
   display: grid;
   gap: 20px;
 }
-.tf-quick-view .tf-product-variant .variant-picker-label {
+.tf-product-quick_view .tf-product-variant .variant-picker-label {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 12px;
 }
-.tf-quick-view .tf-product-variant .variant-picker-values {
+.tf-product-quick_view .tf-product-variant .variant-picker-values {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.tf-quick-view .variant-color .variant-picker-values {
+.tf-product-quick_view .variant-color .variant-picker-values {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.tf-quick-view .variant-color .color-btn:not(.select-item) {
+.tf-product-quick_view .variant-color .color-btn:not(.select-item) {
   position: relative;
   width: 40px;
   height: 40px;
@@ -5287,7 +5291,7 @@ header.header-sticky.tf-header-landing {
   transition: all 0.3s ease;
   border-radius: 50%;
 }
-.tf-quick-view .variant-color .color-btn:not(.select-item) .check-color {
+.tf-product-quick_view .variant-color .color-btn:not(.select-item) .check-color {
   width: 32px;
   height: 32px;
   display: flex;
@@ -5300,63 +5304,59 @@ header.header-sticky.tf-header-landing {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.tf-quick-view .variant-color .color-btn:not(.select-item).active {
+.tf-product-quick_view .variant-color .color-btn:not(.select-item).active {
   border-color: var(--black);
 }
-.tf-quick-view .variant-color .color-btn.style-image {
+.tf-product-quick_view .variant-color .color-btn.style-image {
   width: 60px;
   height: 60px;
   border-radius: 4px;
   border: 1px solid transparent;
-}
-.tf-quick-view .variant-color .color-btn.style-image .img {
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
   overflow: hidden;
+}
+.tf-product-quick_view .variant-color .color-btn.style-image .img {
   display: flex;
-  aspect-ratio: 1;
+  align-items: center;
 }
-.tf-quick-view .variant-color .color-btn.style-image .img img {
+.tf-product-quick_view .variant-color .color-btn.style-image .img img {
   object-fit: cover;
-  aspect-ratio: 1;
 }
-.tf-quick-view .variant-color .color-btn.style-image.style-small {
+.tf-product-quick_view .variant-color .color-btn.style-image.style-small {
   width: 40px;
   height: 40px;
   padding: 4px;
 }
-.tf-quick-view .variant-color .color-btn.style-image-square {
+.tf-product-quick_view .variant-color .color-btn.style-image-square {
   width: 120px;
   height: 160px;
   padding: 7px;
   border: 1px solid var(--line);
   border-radius: 8px;
 }
-.tf-quick-view .variant-color .color-btn.style-image-square .img {
+.tf-product-quick_view .variant-color .color-btn.style-image-square .img {
   width: 100%;
   height: 100%;
   border-radius: 6px;
   overflow: hidden;
 }
-.tf-quick-view .variant-color .color-btn.style-image-square img {
+.tf-product-quick_view .variant-color .color-btn.style-image-square img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.tf-quick-view .variant-color .color-btn.style-image-square.active {
+.tf-product-quick_view .variant-color .color-btn.style-image-square.active {
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.0784313725);
 }
 @media (max-width: 1199px) {
-  .tf-quick-view .variant-color .color-btn.style-image-square {
+  .tf-product-quick_view .variant-color .color-btn.style-image-square {
     width: 80px;
     height: 120px;
   }
 }
-.tf-quick-view .variant-size .variant-picker-label {
+.tf-product-quick_view .variant-size .variant-picker-label {
   justify-content: space-between;
 }
-.tf-quick-view .variant-size .size-btn {
+.tf-product-quick_view .variant-size .size-btn {
   width: 44px;
   height: 44px;
   display: flex;
@@ -5371,36 +5371,36 @@ header.header-sticky.tf-header-landing {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.tf-quick-view .variant-size .size-btn:hover {
+.tf-product-quick_view .variant-size .size-btn:hover {
   border-color: var(--text);
 }
-.tf-quick-view .variant-size .size-btn.active {
+.tf-product-quick_view .variant-size .size-btn.active {
   background: var(--text);
   color: var(--white);
   border-color: var(--text);
 }
-.tf-quick-view .variant-size .size-btn.disabled {
+.tf-product-quick_view .variant-size .size-btn.disabled {
   opacity: 0.3;
   pointer-events: none;
 }
-.tf-quick-view .tf-product-total-quantity {
+.tf-product-quick_view .tf-product-total-quantity {
   display: grid;
   gap: 12px;
 }
-.tf-quick-view .tf-product-total-quantity .group-action {
+.tf-product-quick_view .tf-product-total-quantity .group-action {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.tf-quick-view .tf-product-total-quantity .btn-action-price {
+.tf-product-quick_view .tf-product-total-quantity .btn-action-price {
   gap: 0;
 }
 @media (max-width: 767px) {
-  .tf-quick-view .tf-product-total-quantity .group-action {
+  .tf-product-quick_view .tf-product-total-quantity .group-action {
     flex-wrap: wrap;
     gap: 12px;
   }
-  .tf-quick-view .tf-product-total-quantity .group-action .wg-quantity {
+  .tf-product-quick_view .tf-product-total-quantity .group-action .wg-quantity {
     width: 100%;
   }
 }

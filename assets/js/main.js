@@ -1578,9 +1578,162 @@
             }
         });
     };
+    /* Offcanvas Quick View
+    -------------------------------------------------------------------------*/
+    var offcanvasQuickView = () => {
+        var scrollContainer = $(".canvas-quickview .wrapper-scroll-quickview");
+        var activescrollBtn = null;
+        var offsetTolerance = 100;
+
+        function getTargetScroll(target, isHorizontal) {
+            if (isHorizontal) {
+                return (
+                    target.offset().left -
+                    scrollContainer.offset().left +
+                    scrollContainer.scrollLeft()
+                );
+            } else {
+                return (
+                    target.offset().top -
+                    scrollContainer.offset().top +
+                    scrollContainer.scrollTop()
+                );
+            }
+        }
+
+        function isHorizontalMode() {
+            return window.innerWidth < 767;
+        }
+
+        $(".btn-scroll-quickview").on("click", function () {
+            var scroll = $(this).data("scroll-quickview");
+            var target = $(
+                `.item-scroll-quickview[data-scroll-quickview='${scroll}']`
+            );
+
+            if (target.length > 0) {
+                var isHorizontal = isHorizontalMode();
+                var targetScroll = getTargetScroll(target, isHorizontal);
+
+                if (isHorizontal) {
+                    scrollContainer.animate({ scrollLeft: targetScroll }, 600);
+                } else {
+                    scrollContainer.animate({ scrollTop: targetScroll }, 600);
+                }
+
+                $(".btn-scroll-quickview").removeClass("active");
+                $(this).addClass("active");
+                activescrollBtn = $(this);
+            } else {
+                console.error("Target not found for scroll:", scroll);
+            }
+        });
+
+        scrollContainer.on("scroll", function () {
+            var isHorizontal = isHorizontalMode();
+
+            $(".item-scroll-quickview").each(function () {
+                var targetStart =
+                    getTargetScroll($(this), isHorizontal) - offsetTolerance;
+                var targetEnd =
+                    targetStart +
+                    (isHorizontal
+                        ? $(this).outerWidth()
+                        : $(this).outerHeight()) +
+                    offsetTolerance;
+
+                var currentScroll = isHorizontal
+                    ? scrollContainer.scrollLeft()
+                    : scrollContainer.scrollTop();
+
+                if (currentScroll >= targetStart && currentScroll < targetEnd) {
+                    var scroll = $(this).data("scroll-quickview");
+
+                    $(".btn-scroll-quickview").removeClass("active");
+                    $(
+                        `.btn-scroll-quickview[data-scroll-quickview='${scroll}']`
+                    ).addClass("active");
+                }
+            });
+        });
+    }
+    /* Popup Product Action
+    -------------------------------------------------------------------------*/
+    var popupProductVariant = () => {
+        if ($(".tf-pop-prd_variant").length === 0) return;
+        $(".tf-pop-prd_variant").each(function () {
+            var $wrap = $(this);
+            var $activeSize = $wrap.find(".size-btn.active");
+            var basePrice = $activeSize.length
+                ? parseFloat($activeSize.data("price"))
+                : parseFloat(
+                    $wrap.find(".price-on-sale").text()
+                        .replace("$", "")
+                        .replace(/,/g, "")
+                );
+
+            $wrap.data("basePrice", basePrice);
+            $wrap.find(".color-swatch").on("click mouseover", function () {
+                var $swatch = $(this);
+                var swatchColor = $swatch.find("img").attr("src");
+                var colorLabel = $swatch.find(".color__label").text().trim();
+
+                $wrap.find(".img-product").attr("src", swatchColor);
+                $wrap.find(".picker_color .variant__value").text(colorLabel);
+
+                $wrap.find(".color-swatch.active").removeClass("active");
+                $swatch.addClass("active");
+            });
+
+            $wrap.find(".size-btn:not(.disabled)").on("click", function () {
+                var $btn = $(this);
+                var size = $btn.data("size");
+                var price = parseFloat($btn.data("price"));
+
+                $wrap.find(".size-btn.active").removeClass("active");
+                $btn.addClass("active");
+
+                $wrap.find(".picker_size .variant__value").text(size);
+
+                $wrap.find(".quantity-product").val(1);
+
+                $wrap.data("basePrice", price);
+
+                updatePrice();
+            });
+
+            $wrap.find(".btn-increase").on("click", function () {
+                var $qty = $wrap.find(".quantity-product");
+                var qty = parseInt($qty.val()) || 1;
+
+                $qty.val(qty + 1);
+                updatePrice();
+            });
+
+            $wrap.find(".btn-decrease").on("click", function () {
+                var $qty = $wrap.find(".quantity-product");
+                var qty = parseInt($qty.val()) || 1;
+
+                if (qty > 1) {
+                    $qty.val(qty - 1);
+                    updatePrice();
+                }
+            });
+            function updatePrice() {
+                var basePrice = $wrap.data("basePrice");
+                var qty = parseInt($wrap.find(".quantity-product").val()) || 1;
+                var total = basePrice * qty;
+
+                $wrap.find(".price-on-sale").text("$" + total.toFixed(2));
+                $wrap.find(".price-add").text("$" + total.toFixed(2));
+            }
+        });
+    }
 
     // Dom Ready
     $(function () {
+        popupProductVariant();
+        offcanvasQuickView();
         modalQuickAdd();
         headerSticky();
         dropdownSelect();
