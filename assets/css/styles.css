@@ -2576,6 +2576,12 @@ header.header-sticky.tf-header-landing {
   align-items: center;
   gap: 8px;
 }
+.sub-menu_link.type-pri:hover {
+  color: var(--primary);
+}
+.sub-menu_link.type-pri .cus-text::after {
+  background: var(--primary);
+}
 
 .demo-label {
   font-size: 10px;
@@ -2923,6 +2929,87 @@ header.header-sticky.tf-header-landing {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
+}
+
+.nav-account {
+  position: relative;
+}
+.nav-account .dropdown-account {
+  pointer-events: none;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 200px;
+  z-index: 999;
+  visibility: hidden;
+  text-align: left;
+  top: calc(100% + 28px);
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 8px;
+  transform: translateX(0px) translateY(15px);
+  box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  left: -100px;
+  padding: 8px 28px;
+}
+.nav-account .dropdown-account .list-menu-item li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.nav-account .dropdown-account .list-menu-item li:not(:last-child) a {
+  border-bottom: 1px solid var(--line);
+}
+.nav-account .dropdown-account .list-menu-item a {
+  padding: 8px 0px;
+  display: block;
+}
+.nav-account:hover .dropdown-account {
+  pointer-events: all;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0px) translateY(0px);
+}
+.nav-account:hover .nav-icon-item::after {
+  display: block;
+}
+.nav-account .dropdown-login {
+  left: -200px;
+  min-width: 290px;
+  padding: 24px;
+}
+.nav-account .dropdown-login .tf-btn {
+  border-radius: 4px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.nav-account .dropdown-login .sub-top {
+  display: grid;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.nav-account .dropdown-login .sub-bot {
+  padding: 16px 0px;
+}
+.nav-account .nav-icon-item {
+  position: relative;
+}
+.nav-account .nav-icon-item::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 82px;
+  display: none;
 }
 
 /* ---------------------------------------------------------
@@ -5680,6 +5767,83 @@ header.header-sticky.tf-header-landing {
   }
   .modal-find_size .tf-page-size-chart-content > div:last-child {
     text-align: center;
+  }
+}
+
+.pop-notice-sale {
+  position: fixed;
+  right: 40px;
+  top: 160px;
+  z-index: 22;
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: var(--white);
+  border-radius: 8px;
+  min-width: 340px;
+  box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.1215686275);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  transform: translateX(20px);
+}
+.pop-notice-sale .pns-thumb {
+  position: relative;
+  max-width: 63px;
+  width: 100%;
+}
+.pop-notice-sale .pns-content {
+  width: 100%;
+  display: grid;
+}
+.pop-notice-sale .image {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.pop-notice-sale .purchase {
+  padding: 6px;
+  background: var(--primary);
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pop-notice-sale .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pop-notice-sale .pns_date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.pop-notice-sale .btn-cl-pop {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+.pop-notice-sale.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+@media (max-width: 1199px) {
+  .pop-notice-sale {
+    top: 120px;
+    right: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .pop-notice-sale {
+    display: none;
   }
 }
 

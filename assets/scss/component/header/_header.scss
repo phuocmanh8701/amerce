@@ -854,6 +854,18 @@ header {
         align-items: center;
         gap: 8px;
     }
+
+    &.type-pri {
+        &:hover {
+            color: var(--primary);
+        }
+
+        .cus-text {
+            &::after {
+                background: var(--primary);
+            }
+        }
+    }
 }
 
 .demo-label {
@@ -1240,4 +1252,102 @@ header {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 24px;
+}
+
+
+.nav-account {
+    position: relative;
+
+    .dropdown-account {
+        pointer-events: none;
+        position: absolute;
+        background-color: var(--white);
+        min-width: 200px;
+        z-index: 999;
+        visibility: hidden;
+        text-align: left;
+        top: calc(100% + 28px);
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 8px;
+        transform: translateX(0px) translateY(15px);
+        box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
+        @include transition3;
+        left: -100px;
+        padding: 8px 28px;
+
+        .list-menu-item {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+
+                    a {
+                        border-bottom: 1px solid var(--line);
+                    }
+                }
+            }
+
+            a {
+                padding: 8px 0px;
+                display: block;
+            }
+        }
+    }
+
+    &:hover {
+        .dropdown-account {
+            pointer-events: all;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0px) translateY(0px);
+        }
+
+        .nav-icon-item {
+            &::after {
+                display: block;
+            }
+        }
+    }
+
+    .dropdown-login {
+        left: -200px;
+        min-width: 290px;
+        padding: 24px;
+
+        .tf-btn {
+            border-radius: 4px;
+            width: 100%;
+            font-size: 12px;
+            line-height: 20px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+
+        .sub-top {
+            display: grid;
+            gap: 12px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .sub-bot {
+            padding: 16px 0px;
+        }
+    }
+
+    .nav-icon-item {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 82px;
+            display: none;
+        }
+    }
 }

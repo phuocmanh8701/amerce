@@ -1463,6 +1463,49 @@
         }
     };
 
+    const noticePop = () => {
+        var $popup = $(".pop-notice-sale");
+        var $closeBtn = $(".btn-cl-pop");
+
+        if (!$popup.length) return;
+
+        var showTime = 10000;
+        var hideTime = 2000;
+        var timerShow, timerHide;
+        var stopped = false;
+
+        function showPopup() {
+            if (stopped) return;
+
+            $popup.addClass("active");
+
+            timerShow = setTimeout(function () {
+                hidePopup();
+            }, showTime);
+        }
+
+        function hidePopup() {
+            if (stopped) return;
+
+            $popup.removeClass("active");
+
+            timerHide = setTimeout(function () {
+                showPopup();
+            }, hideTime);
+        }
+
+        $closeBtn.on("click", function () {
+            stopped = true;
+            clearTimeout(timerShow);
+            clearTimeout(timerHide);
+            $popup.removeClass("active");
+        });
+
+        setTimeout(function () {
+            showPopup();
+        }, hideTime);
+    }
+
     // Dom Ready
     $(function () {
         headerSticky();
@@ -1502,6 +1545,7 @@
         updateBundleTotal();
         filterIsotope();
         reveal();
+        noticePop();
 
         if (document.readyState === "loading") {
             document.addEventListener("DOMContentLoaded", function () {
