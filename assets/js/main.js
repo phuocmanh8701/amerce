@@ -1463,6 +1463,58 @@
         }
     };
 
+    var handleHoverLookBook = () => {
+        var $pins = $('.section-lookbook-hover-v03 .tf-pin-btn');
+        var $productWrap = $('.section-lookbook-hover-v03 .wrap-product');
+        var $products = $productWrap.find('.card-product');
+
+        if ($pins.length === 0 || $productWrap.length === 0 || $products.length === 0) return;
+
+        function isInView($container, $el) {
+            var c = $container[0].getBoundingClientRect();
+            var e = $el[0].getBoundingClientRect();
+            return e.top >= c.top && e.bottom <= c.bottom;
+        }
+
+        function resetProducts() {
+            $products.removeClass('is-active is-dim');
+        }
+
+        function activateById(selector) {
+            var $target = $(selector);
+            if ($target.length === 0) return;
+
+            $products.each(function() {
+                var $p = $(this);
+                if ($p.is($target)) {
+                    $p.addClass('is-active').removeClass('is-dim');
+                } else {
+                    $p.removeClass('is-active').addClass('is-dim');
+                }
+            });
+
+            if (!isInView($productWrap, $target)) {
+                $target[0].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
+            }
+        }
+
+        $pins.each(function() {
+            var $pin = $(this);
+            var targetSelector = $pin.data('target');
+
+            $pin.on('mouseenter', function() {
+                activateById(targetSelector);
+            });
+
+            $pin.on('mouseleave', function() {
+                resetProducts();
+            });
+        });
+    }
+
     // Dom Ready
     $(function () {
         headerSticky();
@@ -1502,6 +1554,7 @@
         updateBundleTotal();
         filterIsotope();
         reveal();
+        handleHoverLookBook();
 
         if (document.readyState === "loading") {
             document.addEventListener("DOMContentLoaded", function () {
