@@ -454,6 +454,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transform: translateX(20px);
+            @include transition3;
+            transition-delay: 0.1s;
         }
     }
 
@@ -462,10 +465,25 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        transform: translateX(-20px);
+        @include transition3;
+        transition-delay: 0.1s;
     }
 
     .desc-pop {
         margin-bottom: 28px;
+    }
+
+    &.show {
+        .image-left {
+            img {
+                transform: translateX(0px);
+            }
+        }
+
+        .content-right {
+            transform: translateX(0px);
+        }
     }
 
     @include res(md, min) {
@@ -620,7 +638,6 @@
 .popup-shopping-cart {
     flex-direction: row;
 
-
     .popup-header {
         padding: 24px 24px 20px;
     }
@@ -708,6 +725,22 @@
     @include res(sm, min) {
         max-width: 740px;
         width: 100% !important;
+    }
+
+    @include res(md, min) {
+        background: transparent;
+        pointer-events: none;
+
+        .tf-minicart-recommendations,
+        .canvas-wrapper {
+            background: var(--white);
+            pointer-events: all;
+        }
+
+        .canvas-wrapper {
+            max-width: 480px;
+            margin-left: auto;
+        }
     }
 
     @include res(md) {
@@ -1120,7 +1153,10 @@
     }
 }
 
-.tf-quick-view {
+.tf-product-quick_view {
+    display: grid;
+    gap: 24px;
+
     .tf-product-info-heading {
 
         .product-infor-meta {
@@ -1217,18 +1253,14 @@
             height: 60px;
             border-radius: 4px;
             border: 1px solid transparent;
+            overflow: hidden;
 
             .img {
-                width: 100%;
-                height: 100%;
-                border-radius: 4px;
-                overflow: hidden;
                 display: flex;
-                aspect-ratio: 1;
+                align-items: center;
 
                 img {
                     object-fit: cover;
-                    aspect-ratio: 1;
                 }
             }
 
@@ -1340,7 +1372,19 @@
         border-radius: 16px;
     }
 
-    .tf-product-mini-view {
+
+    @include res(md) {
+        .modal-content {
+            padding: 20px 15px;
+        }
+    }
+}
+
+.tf-product-quick_add {
+    display: grid;
+    gap: 20px;
+
+    .product-mini-view {
         display: flex;
         align-items: center;
         gap: 12px;
@@ -1349,17 +1393,10 @@
             display: grid;
             gap: 4px;
         }
-    }
 
-    .tf-product-info-wrap {
-        .tf-product-info-list {
-            gap: 20px;
-        }
-    }
-
-    .variant-size {
-        .variant-picker-label {
-            justify-content: space-between;
+        .prd-image {
+            border-radius: 8px;
+            overflow: hidden;
         }
     }
 
@@ -1370,19 +1407,25 @@
     .btn-action-price {
         padding-left: 15px;
         padding-right: 15px;
+        gap: 0px;
+    }
+
+    .product-total-quantity {
+        display: grid;
+        gap: 12px;
+    }
+
+    .group-action {
+        gap: 10px;
+        display: flex;
     }
 
     @include res(md) {
-        .modal-content {
-            padding: 20px 15px;
-        }
-
         .wg-quantity {
             min-width: 120px;
         }
     }
 }
-
 
 .box-text_empty {
     &.type-shop_cart {
@@ -1420,6 +1463,7 @@
             display: grid;
             gap: 12px;
         }
+
 
         @include res(md) {
             .shop-empty_top {
@@ -1771,6 +1815,151 @@
 
             >div:last-child {
                 text-align: center;
+            }
+        }
+    }
+}
+
+.pop-notice-sale {
+    position: fixed;
+    right: 40px;
+    top: 160px;
+    z-index: 22;
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background: var(--white);
+    border-radius: 8px;
+    min-width: 340px;
+    box-shadow: 0px 10px 25px 0px #2B344A1F;
+    @include hidden;
+    @include transition3;
+    transform: translateX(20px);
+
+    .pns-thumb {
+        position: relative;
+        max-width: 63px;
+        width: 100%;
+    }
+
+    .pns-content {
+        width: 100%;
+        display: grid;
+    }
+
+    .image {
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .purchase {
+        padding: 6px;
+        background: var(--primary);
+        position: absolute;
+        left: -8px;
+        top: -8px;
+        border-radius: 50%;
+        @include flex(center, center);
+    }
+
+    .bottom {
+        @include flex(center, space-between);
+    }
+
+    .pns_date {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .btn-cl-pop {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+    }
+
+    &.active {
+        @include visible;
+        transform: translateX(0);
+    }
+
+    @include res(xl) {
+        top: 120px;
+        right: 15px;
+    }
+
+    @include res(lg) {
+        display: none;
+    }
+}
+
+.quickadd-variant-picker {
+    .variant-picker_values {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &.picker_color {
+        .color-swatch {
+            .img {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                border-radius: 4px;
+                border: 1px solid transparent;
+                @include transition3;
+
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            &.active {
+                .img {
+                    border-color: var(--text);
+                }
+            }
+        }
+    }
+
+    &.picker_size {
+        .variant-picker_values {
+            gap: 12px;
+        }
+
+        .variant-picker_label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .size-btn {
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--line);
+            @include flex(center, center);
+            border-radius: 4px;
+            @include transition3;
+            cursor: pointer;
+
+            &:hover {
+                border-color: var(--text);
+            }
+
+            &.active {
+                border-color: var(--text);
+                background: var(--text);
+                color: var(--white);
+            }
+
+            &.disabled {
+                border-color: var(--bg);
+                background: var(--bg);
+                pointer-events: none;
+                color: var(--line);
             }
         }
     }

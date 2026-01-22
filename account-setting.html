@@ -38,11 +38,11 @@
     <!-- /Scroll Top -->
 
     <!-- Preload -->
-    <div class="preload preload-container" id="preload">
+    <!-- <div class="preload preload-container" id="preload">
         <div class="preload-logo">
             <div class="spinner"></div>
         </div>
-    </div>
+    </div> -->
     <!-- /Preload -->
     <!-- Button Sidebar -->
     <div class="btn-sidebar-mb d-lg-none left">
@@ -51,6 +51,7 @@
         </button>
     </div>
     <!-- /Button Sidebar -->
+
     <main id="wrapper">
 
         <!-- Topbar -->
@@ -854,6 +855,20 @@
                                                     </span>
                                                 </a>
                                             </li>
+                                            <li>
+                                                <a href="view-cart.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        View Cart
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="compare.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Compare
+                                                    </span>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -870,15 +885,54 @@
                     </div>
                     <div class="header-right">
                         <ul class="nav-icon-list">
-                            <li class="d-none d-sm-block">
+                            <li>
                                 <a href="#search" data-bs-toggle="modal" class="nav-icon-item link">
                                     <i class="icon icon-MagnifyingGlass"></i>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#sign" data-bs-toggle="modal" class="nav-icon-item link">
+                            <li class="nav-account d-none d-sm-block">
+                                <a href="#" class="nav-icon-item link">
                                     <i class="icon icon-User"></i>
                                 </a>
+                                <div class="dropdown-account">
+                                    <ul class="list-menu-item">
+                                        <li>
+                                            <a href="account-page.html" class="sub-menu_link type-pri">
+                                                <span class="cus-text">
+                                                    My Account
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="account-orders.html" class="sub-menu_link type-pri">
+                                                <span class="cus-text">
+                                                    Your Order
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="account-addresses.html" class="sub-menu_link type-pri">
+                                                <span class="cus-text">
+                                                    My Address
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="track-order.html" class="sub-menu_link type-pri">
+                                                <span class="cus-text">
+                                                    Tracking
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="account-setting.html" class="sub-menu_link type-pri">
+                                                <span class="cus-text">
+                                                    Setting
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="d-none d-sm-block">
                                 <a href="wishlist.html" class="nav-icon-item link">
@@ -952,8 +1006,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-1 d-none d-xl-block"></div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 ms-auto">
                         <div class="my-account-content">
                             <h4 class="account-title">Setting</h4>
                             <div class="account-my_address setting">
@@ -1661,101 +1714,90 @@
                         <i class="icon icon-X2 fs-24"></i>
                     </span>
                 </div>
-                <div class="tf-product-info-wrap p-0 m-0">
-                    <div class="tf-product-info-inner tf-product-info-list mb-0">
-                        <div class="tf-product-mini-view">
-                            <a href="product-detail.html" class="prd-image">
-                                <img width="80" height="107" src="assets/images/product/product-2.jpg"
-                                    alt="Image Product">
+                <div class="tf-product-quick_add">
+                    <div class="product-mini-view">
+                        <a href="product-detail.html" class="prd-image">
+                            <img class="img-product" width="80" height="107"
+                                src="assets/images/product/single/detail-1_2.jpg" alt="Image Product">
+                        </a>
+                        <div class="prd-content">
+                            <a href="product-detail.html"
+                                class="prd-name fw-medium link-underline link text-capitalize">
+                                linen slim-fit shirt
                             </a>
-                            <div class="prd-content">
-                                <a href="product-detail.html" class="prd-name fw-medium link-underline">
-                                    linen slim-fit shirt
-                                </a>
-                                <div class="price-wrap">
-                                    <span class="price-new text-primary fw-semibold price-on-sale">$29,99</span>
-                                    <span class="price-old text-caption-01 cl-text-3">$49,99</span>
-                                </div>
+                            <div class="price-wrap">
+                                <span class="price-new text-primary fw-semibold price-on-sale">$29,99</span>
+                                <span class="price-old text-caption-01 cl-text-3">$49,99</span>
                             </div>
                         </div>
-                        <div class="tf-product-variant">
-                            <div class="variant-picker-item variant-color">
-                                <div class="variant-picker-label">
-                                    <div>
-                                        Colors:
-                                        <span
-                                            class="variant-picker-label-value value-currentColor text-capitalize fw-medium">Gray</span>
-                                    </div>
-                                </div>
-                                <div class="variant-picker-values">
-                                    <div class="hover-tooltip tooltip-bot color-btn style-image" data-color="green">
-                                        <!-- <span class="check-color bg-blue-1"></span> -->
-                                        <div class="img">
-                                            <img loading="lazy" width="60" height="60"
-                                                src="assets/images/product/single/detail-1_2.jpg"
-                                                data-src="assets/images/product/single/detail-1_2.jpg" alt="img">
-                                        </div>
-                                        <span class="tooltip">Green</span>
-                                    </div>
-                                    <div class="hover-tooltip tooltip-bot color-btn style-image active"
-                                        data-color="gray">
-                                        <!-- <span class="check-color bg-caramel"></span> -->
-                                        <div class="img">
-                                            <img loading="lazy" width="60" height="60"
-                                                src="assets/images/product/single/detail-1_5.jpg"
-                                                data-src="assets/images/product/single/detail-1_5.jpg" alt="img">
-                                        </div>
-                                        <span class="tooltip">Gray</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="variant-picker-item variant-size">
-                                <div class="variant-picker-label">
-                                    <div>
-                                        Size:
-                                        <span
-                                            class="variant-picker-label-value value-currentSize text-capitalize fw-medium">M</span>
-                                    </div>
-                                    <a href="#findSize" data-bs-toggle="modal"
-                                        class="tf-btn-line-2 style-primary text-caption-01 fw-semibold">
-                                        Size Guide
-                                    </a>
-                                </div>
-                                <div class="variant-picker-values">
-                                    <span class="size-btn" data-size="S" data-price="39.99">S</span>
-                                    <span class="size-btn active" data-size="M" data-price="59.99">M</span>
-                                    <span class="size-btn" data-size="L" data-price="79.99">L</span>
-                                    <span class="size-btn" data-size="XL" data-price="89.99">XL</span>
-                                    <span class="size-btn disabled" data-size="XX" data-price="99.99">XXL</span>
-                                </div>
+                    </div>
+                    <div class="quickadd-variant-picker picker_color">
+                        <div class="variant-picker_label mb-12">
+                            <div>
+                                Colors:
+                                <span class="variant__value text-capitalize fw-medium">Gray</span>
                             </div>
                         </div>
-                        <div class="tf-product-total-quantity">
-                            <p class="">
-                                Quantity:
-                            </p>
-                            <div class="group-action">
-                                <div class="wg-quantity">
-                                    <button class="btn-quantity btn-decrease">
-                                        <i class="icon icon-minus"></i>
-                                    </button>
-                                    <input class="quantity-product" type="text" name="number" value="1">
-                                    <button class="btn-quantity btn-increase">
-                                        <i class="icon icon-plus"></i>
-                                    </button>
+                        <div class="variant-picker_values">
+                            <div class="hover-tooltip tooltip-bot color-swatch style-image active">
+                                <div class="img">
+                                    <img loading="lazy" width="60" height="60"
+                                        src="assets/images/product/single/detail-1_2.jpg" alt="img">
                                 </div>
-                                <a href="#shoppingCart" data-bs-toggle="offcanvas"
-                                    class="btn-action-price tf-btn type-xl animate-btn w-100">
-                                    Add to cart
-                                    <span class="d-none d-sm-block d-md-none d-lg-block">&nbsp;-&nbsp;</span>
-                                    <span class="price-add d-none d-sm-block d-md-none d-lg-block">$79.99</span>
-                                </a>
+                                <span class="tooltip color__label">Green</span>
+                            </div>
+                            <div class="hover-tooltip tooltip-bot color-swatch style-image">
+                                <div class="img">
+                                    <img loading="lazy" width="60" height="60"
+                                        src="assets/images/product/single/detail-1_5.jpg" alt="img">
+                                </div>
+                                <span class="tooltip color__label">Gray</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quickadd-variant-picker picker_size">
+                        <div class="variant-picker_label mb-12">
+                            <div>
+                                Size:
+                                <span class="variant__value text-capitalize fw-medium">M</span>
+                            </div>
+                            <a href="#findSize" data-bs-toggle="modal"
+                                class="tf-btn-line-2 style-primary text-caption-01 fw-semibold">
+                                Size Guide
+                            </a>
+                        </div>
+                        <div class="variant-picker_values">
+                            <span class="size-btn" data-size="S" data-price="39.99">S</span>
+                            <span class="size-btn active" data-size="M" data-price="59.99">M</span>
+                            <span class="size-btn" data-size="L" data-price="79.99">L</span>
+                            <span class="size-btn" data-size="XL" data-price="89.99">XL</span>
+                            <span class="size-btn disabled" data-size="XX" data-price="99.99">XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-total-quantity">
+                        <p class="">
+                            Quantity:
+                        </p>
+                        <div class="group-action">
+                            <div class="wg-quantity">
+                                <button class="btn-quantity btn-decrease">
+                                    <i class="icon icon-minus"></i>
+                                </button>
+                                <input class="quantity-product" type="text" name="number" value="1">
+                                <button class="btn-quantity btn-increase">
+                                    <i class="icon icon-plus"></i>
+                                </button>
                             </div>
                             <a href="#shoppingCart" data-bs-toggle="offcanvas"
-                                class="tf-btn type-xl btn-primary animate-btn w-100">
-                                Buy it now
+                                class="btn-action-price tf-btn type-xl animate-btn w-100">
+                                Add to Cart
+                                <span class="d-none d-sm-block d-md-none d-lg-block">&nbsp;-&nbsp;</span>
+                                <span class="price-add d-none d-sm-block d-md-none d-lg-block">$79.99</span>
                             </a>
                         </div>
+                        <a href="checkout.html" class="tf-btn type-xl btn-primary animate-btn w-100">
+                            Buy It Now
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1765,21 +1807,25 @@
     <!-- Quick View -->
     <div class="offcanvas offcanvas-end canvas-quickview" id="quickView">
         <div class="mini-quick-image">
-            <div class="wrap-quick">
-                <div class="image">
+            <div class="wrap-quick wrapper-scroll-quickview">
+                <div class="image item-scroll-quickview" data-scroll-quickview="Green">
                     <img loading="lazy" width="340" height="444" src="assets/images/product/single/detail-1.jpg"
                         alt="Image">
                 </div>
-                <div class="image">
+                <div class="image item-scroll-quickview" data-scroll-quickview="Green">
                     <img loading="lazy" width="340" height="444" src="assets/images/product/single/detail-1_2.jpg"
                         alt="Image">
                 </div>
-                <div class="image">
+                <div class="image item-scroll-quickview" data-scroll-quickview="Green">
                     <img loading="lazy" width="340" height="444" src="assets/images/product/single/detail-1_3.jpg"
                         alt="Image">
                 </div>
-                <div class="image">
+                <div class="image item-scroll-quickview" data-scroll-quickview="Gray">
                     <img loading="lazy" width="340" height="444" src="assets/images/product/single/detail-1_4.jpg"
+                        alt="Image">
+                </div>
+                <div class="image item-scroll-quickview" data-scroll-quickview="Gray">
+                    <img loading="lazy" width="340" height="444" src="assets/images/product/single/detail-1_5.jpg"
                         alt="Image">
                 </div>
             </div>
@@ -1791,13 +1837,13 @@
                     <i class="icon icon-X2"></i>
                 </span>
             </div>
-            <div class="canvas-body ps-md-0 ">
-                <div class="tf-product-info-wrap m-0 p-0 tf-quick-view">
+            <div class="canvas-body ps-md-0">
+                <div class="tf-product-quick_view tf-pop-prd_variant">
                     <div class="tf-product-info-heading">
                         <p class="product-infor-cate text-caption-01 mb-4">
                             Clothing
                         </p>
-                        <h3 class="product-infor-name mb-12">
+                        <h3 class="product-infor-name mb-12 letter-space-0">
                             Lyocell wrap top
                         </h3>
                         <div class="product-infor-meta mb-20">
@@ -1855,22 +1901,29 @@
                                 </div>
                             </div>
                             <div class="variant-picker-values">
-                                <div class="hover-tooltip tooltip-bot color-btn style-image">
+
+                                <input class="d-none" id="values-green" type="radio" name="colorQuickAdd" checked>
+                                <label
+                                    class="hover-tooltip tooltip-bot color-btn style-image btn-scroll-quickview active"
+                                    for="values-green" data-color="Green" data-scroll-quickview="Green">
                                     <div class="img">
                                         <img loading="lazy" width="60" height="60"
                                             src="assets/images/product/single/detail-1_2.jpg"
                                             data-src="assets/images/product/single/detail-1_2.jpg" alt="img">
                                     </div>
                                     <span class="tooltip">Green</span>
-                                </div>
-                                <div class="hover-tooltip tooltip-bot color-btn style-image active">
+                                </label>
+
+                                <input class="d-none" id="values-gray" type="radio" name="colorQuickAdd">
+                                <label class="hover-tooltip tooltip-bot color-btn style-image btn-scroll-quickview"
+                                    for="values-gray" data-color="Gray" data-scroll-quickview="Gray">
                                     <div class="img">
                                         <img loading="lazy" width="60" height="60"
                                             src="assets/images/product/single/detail-1_5.jpg"
                                             data-src="assets/images/product/single/detail-1_5.jpg" alt="img">
                                     </div>
                                     <span class="tooltip">Gray</span>
-                                </div>
+                                </label>
                             </div>
                         </div>
                         <div class="variant-picker-item variant-size">
@@ -1880,10 +1933,12 @@
                                     <span
                                         class="variant-picker-label-value value-currentSize text-capitalize fw-medium">M</span>
                                 </div>
-                                <a href="#findSize" data-bs-toggle="modal"
-                                    class="tf-btn-line-2 style-primary text-caption-01 fw-semibold">
-                                    Size Guide
-                                </a>
+                                <div data-bs-dismiss="offcanvas">
+                                    <a href="#findSize" data-bs-toggle="modal"
+                                        class="tf-btn-line-2 style-primary text-caption-01 fw-semibold">
+                                        Size Guide
+                                    </a>
+                                </div>
                             </div>
                             <div class="variant-picker-values">
                                 <span class="size-btn" data-size="S" data-price="39.99">S</span>
@@ -1909,14 +1964,13 @@
                                 </div>
                                 <a href="#shoppingCart" data-bs-toggle="offcanvas"
                                     class="btn-action-price tf-btn type-xl animate-btn w-100">
-                                    Add to cart
+                                    Add to Cart
                                     <span class="d-none d-sm-block d-md-none d-lg-block">&nbsp;-&nbsp;</span>
                                     <span class="price-add d-none d-sm-block d-md-none d-lg-block">$79.99</span>
                                 </a>
                             </div>
-                            <a href="#shoppingCart" data-bs-toggle="offcanvas"
-                                class="tf-btn type-xl btn-primary animate-btn w-100">
-                                Buy it now
+                            <a href="checkout.html" class="tf-btn type-xl btn-primary animate-btn w-100">
+                                Buy It Now
                             </a>
                         </div>
                     </div>
@@ -1932,8 +1986,11 @@
     <!-- /Quick View -->
     <!-- Shopping Cart -->
     <div class="offcanvas offcanvas-end popup-shopping-cart" id="shoppingCart">
-        <div class="tf-minicart-recommendations">
-            <h5 class="title">You Might Like</h5>
+        <div class="tf-minicart-recommendations file-delete">
+            <div class="title d-flex justify-content-between align-items-center">
+                <h5>You Might Like</h5>
+                <i class="icon icon-X2 link remove fs-24"></i>
+            </div>
             <div class="wrap-recommendations">
                 <div class="list-cart">
                     <div class="list-cart-item">
@@ -2394,18 +2451,21 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="d-flex align-items-center justify-content-between gap-10">
-                    <form class="form-search-nav style-2">
-                        <fieldset>
-                            <input type="text" placeholder="Searching..." required>
-                        </fieldset>
-                        <button type="submit" class="btn-action">
-                            <i class="icon icon-MagnifyingGlass"></i>
-                        </button>
-                    </form>
+                    <h3>
+                        Search
+                    </h3>
                     <span class="icon-close-popup flex-shrink-0" data-bs-dismiss="modal">
                         <i class="icon-X2"></i>
                     </span>
                 </div>
+                <form class="form-search-nav style-2">
+                    <fieldset>
+                        <input type="text" placeholder="Searching..." required>
+                    </fieldset>
+                    <button type="submit" class="btn-action">
+                        <i class="icon icon-MagnifyingGlass"></i>
+                    </button>
+                </form>
                 <div class="search-feature">
                     <h5 class="mb-16">Feature Keywords Today</h5>
                     <div class="tf-list-tag">
@@ -2457,7 +2517,7 @@
                                             <li class="product-badge_item text-caption-01 new">NEW</li>
                                         </ul>
                                         <div class="product-action_bot">
-                                            <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            <a href="#quickAdd" data-bs-toggle="modal"
                                                 class="tf-btn btn-white small animate-btn animate-dark w-100">
                                                 Quick Add
                                                 <i class="icon icon-view"></i>
@@ -2820,7 +2880,7 @@
                             </fieldset>
                         </div>
                         <div class="group-action">
-                            <button type="submit" class="tf-btn animate-btn w-100">
+                            <button type="submit" class="action-create-account tf-btn animate-btn w-100">
                                 Create Account
                             </button>
                             <a href="#sign" data-bs-toggle="modal" class="tf-btn btn-stroke">

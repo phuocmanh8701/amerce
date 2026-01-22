@@ -906,6 +906,20 @@
                                                     </span>
                                                 </a>
                                             </li>
+                                            <li>
+                                                <a href="view-cart.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        View Cart
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="compare.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Compare
+                                                    </span>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -1754,8 +1768,11 @@
     <!-- /Quick View -->
     <!-- Shopping Cart -->
     <div class="offcanvas offcanvas-end popup-shopping-cart" id="shoppingCart">
-        <div class="tf-minicart-recommendations">
-            <h5 class="title">You Might Like</h5>
+        <div class="tf-minicart-recommendations file-delete">
+            <div class="title d-flex justify-content-between align-items-center">
+                <h5>You Might Like</h5>
+                <i class="icon icon-X2 link remove fs-24"></i>
+            </div>
             <div class="wrap-recommendations">
                 <div class="list-cart">
                     <div class="list-cart-item">
@@ -2216,18 +2233,21 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="d-flex align-items-center justify-content-between gap-10">
-                    <form class="form-search-nav style-2">
-                        <fieldset>
-                            <input type="text" placeholder="Searching..." required>
-                        </fieldset>
-                        <button type="submit" class="btn-action">
-                            <i class="icon icon-MagnifyingGlass"></i>
-                        </button>
-                    </form>
+                    <h3>
+                        Search
+                    </h3>
                     <span class="icon-close-popup flex-shrink-0" data-bs-dismiss="modal">
                         <i class="icon-X2"></i>
                     </span>
                 </div>
+                <form class="form-search-nav style-2">
+                    <fieldset>
+                        <input type="text" placeholder="Searching..." required>
+                    </fieldset>
+                    <button type="submit" class="btn-action">
+                        <i class="icon icon-MagnifyingGlass"></i>
+                    </button>
+                </form>
                 <div class="search-feature">
                     <h5 class="mb-16">Feature Keywords Today</h5>
                     <div class="tf-list-tag">
@@ -2279,7 +2299,7 @@
                                             <li class="product-badge_item text-caption-01 new">NEW</li>
                                         </ul>
                                         <div class="product-action_bot">
-                                            <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            <a href="#quickAdd" data-bs-toggle="modal"
                                                 class="tf-btn btn-white small animate-btn animate-dark w-100">
                                                 Quick Add
                                                 <i class="icon icon-view"></i>
@@ -2649,7 +2669,7 @@
                             </fieldset>
                         </div>
                         <div class="group-action">
-                            <button type="submit" class="tf-btn animate-btn w-100">
+                            <button type="submit" class="action-create-account tf-btn animate-btn w-100">
                                 Create Account
                             </button>
                             <a href="#sign" data-bs-toggle="modal" class="tf-btn btn-stroke">
