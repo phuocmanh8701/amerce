@@ -232,6 +232,13 @@ input[type=number]::-webkit-outer-spin-button {
             input {
                 padding-left: 15px;
                 padding-right: 52px;
+
+                &::placeholder {
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: var(--text-3);
+                    font-weight: normal;
+                }
             }
         }
     }
