@@ -638,7 +638,6 @@
 .popup-shopping-cart {
     flex-direction: row;
 
-
     .popup-header {
         padding: 24px 24px 20px;
     }
@@ -726,6 +725,22 @@
     @include res(sm, min) {
         max-width: 740px;
         width: 100% !important;
+    }
+
+    @include res(md, min) {
+        background: transparent;
+        pointer-events: none;
+
+        .tf-minicart-recommendations,
+        .canvas-wrapper {
+            background: var(--white);
+            pointer-events: all;
+        }
+
+        .canvas-wrapper {
+            max-width: 480px;
+            margin-left: auto;
+        }
     }
 
     @include res(md) {

@@ -4862,6 +4862,21 @@ header.header-sticky.tf-header-landing {
     width: 100% !important;
   }
 }
+@media (min-width: 768px) {
+  .popup-shopping-cart {
+    background: transparent;
+    pointer-events: none;
+  }
+  .popup-shopping-cart .tf-minicart-recommendations,
+  .popup-shopping-cart .canvas-wrapper {
+    background: var(--white);
+    pointer-events: all;
+  }
+  .popup-shopping-cart .canvas-wrapper {
+    max-width: 480px;
+    margin-left: auto;
+  }
+}
 @media (max-width: 767px) {
   .popup-shopping-cart {
     flex-direction: column;

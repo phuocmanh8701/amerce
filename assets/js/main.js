@@ -152,11 +152,19 @@
                 var $textEmpty = $listEmpty.find(".box-text_empty");
                 var $otherChildren = $listEmpty.find(".list-empty").children().not(".box-text_empty");
                 var $boxEmpty = $listEmpty.find(".box-empty_clear");
+                var $progress = $listEmpty
+                    .closest(".popup-shopping-cart")
+                    .find(".tf-progress-bar .value");
+
+
                 if ($otherChildren.length > 0) {
                     $textEmpty.hide();
                 } else {
                     $textEmpty.show();
                     $boxEmpty.hide();
+                    if ($textEmpty.is(":visible")) {
+                        $progress.css("width", "0%");
+                    }
                 }
             });
         }
