@@ -192,11 +192,7 @@
             }
         }
 
-        &:not(.type-2) {
-            .tes-image {
-                max-width: 234px;
-            }
-        }
+
 
         .tes-image {
             border-radius: 0;
@@ -289,6 +285,14 @@
         &.style-3 {
             >* {
                 width: 50%;
+            }
+        }
+
+        &.style-4 {
+            &:not(.type-2) {
+                .tes-image {
+                    max-width: 234px;
+                }
             }
         }
     }
@@ -417,7 +421,7 @@
         }
     }
 
-    @include res(lg, between, xl) {
+    @include res(md, between, xl) {
         &.style-3 {
             flex-direction: column;
 
@@ -450,7 +454,7 @@
             flex-direction: column;
 
             .tes-image {
-                max-width: 100%;
+                max-width: 100% !important;
 
                 img {
                     max-height: 350px;
@@ -475,12 +479,12 @@
 
 .section-testimonials {
     padding: 108px 0;
-    
-    @include res(lg){
+
+    @include res(lg) {
         padding: 60px 0;
     }
 
-    @include res(lg){
+    @include res(lg) {
         padding: 40px 0;
     }
 

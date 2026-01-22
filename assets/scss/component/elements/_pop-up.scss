@@ -239,6 +239,7 @@
     padding: 24px;
     position: relative;
     text-transform: capitalize;
+
     &::after {
         position: absolute;
         left: 24px;
@@ -384,15 +385,15 @@
 
 .tf-toolbar-bottom {
     display: none;
-    padding: 21px 0px 12px;
+    padding: 15px 0px 15px;
     position: fixed;
     z-index: 200;
     bottom: 0;
     right: 0;
     left: 0;
-    border-top: 1px solid #eeeeee;
+    // border-top: 1px solid #eeeeee;
     background-color: var(--white);
-    box-shadow: 0px 4px 16px 0px #00000014;
+    box-shadow: 0px 5px 18px 5px #40485726;
 
     .toolbar-item {
         flex: 1 0 20%;
@@ -401,14 +402,14 @@
 
     a {
         width: 100%;
-        gap: 2px;
+        gap: 4px;
         @include flex(center, center);
         flex-direction: column;
 
     }
 
     .toolbar-icon {
-        font-size: 24px;
+        font-size: 20px;
         position: relative;
         display: flex;
     }
@@ -428,9 +429,9 @@
     }
 
     .toolbar-label {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
+        // font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
     }
 
     @include res(xl) {
@@ -1078,6 +1079,14 @@
             max-width: 340px;
             direction: rtl;
         }
+
+        &.style-2 {
+            max-width: 468px !important;
+
+            .mini-quick-image {
+                display: none !important;
+            }
+        }
     }
 
     @include res(xl, min) {
@@ -1704,6 +1713,7 @@
 }
 
 .modal-find_size {
+    // z-index: 3001;
 
     .modal-dialog {
         max-width: 900px;

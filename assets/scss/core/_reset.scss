@@ -131,7 +131,7 @@ body {
     background: var(--white);
 
     &::-webkit-scrollbar {
-        width: 0px; //
+        width: 3px; //
         // height: 1px;
     }
 
@@ -142,7 +142,7 @@ body {
     }
 
     @include res(xl) {
-        padding-bottom: 80px;
+        padding-bottom: 70px;
     }
 }
 

@@ -1,4 +1,4 @@
-if ($(".product-thumbs-slider").length > 0) {
+$(".product-thumbs-slider").each(function () {
     var direction = $(".tf-product-media-thumbs").data("direction") || "horizontal";
     var preview = $(".tf-product-media-thumbs").data("preview");
     var space = $(".tf-product-media-thumbs").data("space") ?? 10;
@@ -124,7 +124,7 @@ if ($(".product-thumbs-slider").length > 0) {
         setupVariantButtonsThumbs(type);
         updateActiveButtonThumbs(type, main.activeIndex);
     });
-}
+});
 
 (function ($) {
     "use strict";

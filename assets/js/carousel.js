@@ -142,15 +142,15 @@ $(window).on("load", function () {
                 var slideIndex = $(this).data("slide");
                 swiperT.slideTo(slideIndex, 500, false);
 
-                $(".tf-swiper .card_product--V01.style_2").removeClass("active");
-                $(".tf-swiper .card_product--V01.style_2").eq(slideIndex).addClass("active");
+                $(".tf-swiper .card-product").removeClass("active");
+                $(".tf-swiper .card-product").eq(slideIndex).addClass("active");
             })
             .on("mouseleave", function () {
-                $(".tf-swiper .card_product--V01.style_2").removeClass("active");
+                $(".tf-swiper .card-product").removeClass("active");
             })
             .on("click", function () {
                 var slideIndex = $(this).data("slide");
-                $(".tf-swiper .card_product--V01.style_2").eq(slideIndex).toggleClass("clicked");
+                $(".tf-swiper .card-product").eq(slideIndex).toggleClass("clicked");
             });
     });
 });

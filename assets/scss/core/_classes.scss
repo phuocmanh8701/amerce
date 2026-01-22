@@ -525,6 +525,10 @@
     aspect-ratio: 1/1 !important;
 }
 
+.aspect-ratio-0_75 {
+    aspect-ratio: 0.75 !important;
+}
+
 .z-1 {
     z-index: 1;
 }
@@ -558,7 +562,7 @@
 }
 
 .rounded-8 {
-   border-radius: 8px !important;
+    border-radius: 8px !important;
 }
 
 .rounded-top-20 {
@@ -576,6 +580,9 @@
     --bs-gutter-y: 20px;
 }
 
+.text-decoration-thickness {
+    text-decoration-thickness: 2px !important;
+}
 
 @include res(ssm, min) {
     .d-ssm-flex {
@@ -642,10 +649,16 @@
         margin-left: auto !important;
         margin-right: auto !important;
     }
+
+    .lg-justify-content-center {
+        justify-content: center !important;
+    }
 }
 
 @include res(md) {
     .md-mb-12 {
         margin-bottom: 12px;
     }
+
+
 }

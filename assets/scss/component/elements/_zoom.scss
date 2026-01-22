@@ -107,12 +107,14 @@
 }
 
 .section-image-zoom {
-    .other-image-zoom {
-        @include transition3;
-    }
+    @include res(xl, min) {
+        .other-image-zoom {
+            @include transition3;
+        }
 
-    &.zoom-active .other-image-zoom {
-        opacity: 0.3;
+        &.zoom-active .other-image-zoom {
+            opacity: 0.3;
+        }
     }
 }
 

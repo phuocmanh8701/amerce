@@ -71,14 +71,21 @@ header {
 
     .box-open-menu-mobile {
         flex: 1;
+        display: flex;
     }
 
     @include res(xl) {
         padding-top: 15px;
         padding-bottom: 15px;
 
-        .header-inner {
+        .logo-site {
+            img {
+                max-width: 120px;
+            }
+        }
 
+        .header-inner {
+            align-items: center;
 
             .header-left {
                 flex: unset;
@@ -175,7 +182,8 @@ header {
 
 
 .header-abs-3 {
-    margin-bottom: -126px;;
+    margin-bottom: -126px;
+    ;
 
     @include res(xl) {
         margin-bottom: -60px;
@@ -512,7 +520,7 @@ header {
     }
 }
 
-.header-s10{
+.header-s10 {
     background-color: var(--white);
     margin-bottom: -130px;
 }
@@ -876,7 +884,7 @@ header {
 
     &.style-2 {
         .btn-nav-drop {
-            border-radius: 8px 8px 0px 0px;
+            // border-radius: 8px 8px 0px 0px;
             background: var(--primary);
         }
 
@@ -1039,7 +1047,7 @@ header {
 /* -- Nav Mobile -- */
 .btn-open-menu {
     font-size: 24px;
-    display: flex;
+    display: inline-flex;
 }
 
 .canvas-mb {
