@@ -5946,6 +5946,45 @@ header.header-sticky.tf-header-landing {
   color: var(--line);
 }
 
+.offcanvas-pickup .pickup-available-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.offcanvas-pickup .pickup-available-item .title {
+  margin-bottom: 8px;
+}
+.offcanvas-pickup .pickup-available-item .desc {
+  margin-bottom: 12px;
+}
+.offcanvas-pickup .pickup-available-item ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+.offcanvas-pickup .pickup-available-item a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.offcanvas-pickup .pickup-available-item a .icon {
+  font-size: 10px;
+}
+@media (min-width: 576px) {
+  .offcanvas-pickup {
+    width: 520px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .offcanvas-pickup .modal-inner {
+    padding: 40px 32px;
+  }
+  .offcanvas-pickup .pickup-available-list {
+    gap: 40px;
+  }
+}
+
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
     * Version: 1.0.0
@@ -11199,6 +11238,19 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     flex-direction: column;
   }
 }
+.tf-product-info-wrap .tf-product-pickup-available {
+  display: flex;
+  gap: 8px;
+}
+.tf-product-info-wrap .tf-product-pickup-available .icon {
+  margin-top: 4px;
+  font-size: 20px;
+  line-height: 1;
+}
+.tf-product-info-wrap .tf-product-pickup-available .content {
+  display: grid;
+  gap: 4px;
+}
 @media (min-width: 1200px) {
   .tf-product-info-wrap {
     padding-left: 15px;
@@ -11670,6 +11722,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .volume-discount-item .content {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 16px;
 }

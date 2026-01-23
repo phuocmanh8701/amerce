@@ -1840,12 +1840,90 @@
         }
     };
 
+    /* Scroll Grid Product
+------------------------------------------------------------------------------------- */
+    var scrollGridProduct = function () {
+        var scrollContainer = $(".wrapper-gallery-scroll");
+        var activescrollBtn = null;
+        var offsetTolerance = 20;
+
+        function isHorizontalMode() {
+            return window.innerWidth <= 767;
+        }
+
+        function getTargetScroll(target, isHorizontal) {
+            if (isHorizontal) {
+                return (
+                    target.offset().left -
+                    scrollContainer.offset().left +
+                    scrollContainer.scrollLeft()
+                );
+            } else {
+                return (
+                    target.offset().top -
+                    scrollContainer.offset().top +
+                    scrollContainer.scrollTop()
+                );
+            }
+        }
+
+        $(".btn-scroll-target").on("click", function () {
+            var scroll = $(this).data("scroll");
+            var target = $(".item-scroll-target[data-scroll='" + scroll + "']");
+
+            if (target.length > 0) {
+                var isHorizontal = isHorizontalMode();
+                var targetScroll = getTargetScroll(target, isHorizontal);
+
+                if (isHorizontal) {
+                    scrollContainer.animate({ scrollLeft: targetScroll }, 600);
+                } else {
+                    $("html, body").animate({ scrollTop: targetScroll }, 100);
+                }
+
+                $(".btn-scroll-target").removeClass("active");
+                $(this).addClass("active");
+                activescrollBtn = $(this);
+            }
+        });
+
+        $(window).on("scroll", function () {
+            var isHorizontal = isHorizontalMode();
+            $(".item-scroll-target").each(function () {
+                var target = $(this);
+                var targetScroll = getTargetScroll(target, isHorizontal);
+
+                if (isHorizontal) {
+                    if (
+                        $(window).scrollLeft() >= targetScroll - offsetTolerance &&
+                        $(window).scrollLeft() <= targetScroll + target.outerWidth()
+                    ) {
+                        $(".btn-scroll-target").removeClass("active");
+                        $(
+                            ".btn-scroll-target[data-scroll='" + target.data("scroll") + "']"
+                        ).addClass("active");
+                    }
+                } else {
+                    if (
+                        $(window).scrollTop() >= targetScroll - offsetTolerance &&
+                        $(window).scrollTop() <= targetScroll + target.outerHeight()
+                    ) {
+                        $(".btn-scroll-target").removeClass("active");
+                        $(
+                            ".btn-scroll-target[data-scroll='" + target.data("scroll") + "']"
+                        ).addClass("active");
+                    }
+                }
+            });
+        });
+    };
+
     // Dom Ready
     $(function () {
+        scrollGridProduct();
         writeReview();
         popupProductVariant();
         offcanvasQuickView();
-        // modalQuickAdd();
         headerSticky();
         dropdownSelect();
         btnQuantity();

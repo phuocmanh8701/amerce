@@ -254,7 +254,7 @@ if ($(".product-thumbs-slider").length > 0) {
 
                 if (modelViewer) {
                     modelViewer.cameraOrbit = "0deg 90deg auto";
-                    // modelViewer.fieldOfView = "45deg";
+                    // modelViewer.fieldOfView = "45deg"; 
                     modelViewer.updateFraming();
                 }
             });

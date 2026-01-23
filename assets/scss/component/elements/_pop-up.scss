@@ -1967,3 +1967,52 @@
         }
     }
 }
+
+.offcanvas-pickup {
+    .pickup-available-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .pickup-available-item {
+        .title {
+            margin-bottom: 8px;
+        }
+
+        .desc {
+            margin-bottom: 12px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-bottom: 12px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .icon {
+                font-size: 10px;
+            }
+        }
+    }
+
+    @include res(sm, min) {
+        width: 520px !important;
+    }
+
+    @include res(xl, min) {
+        .modal-inner {
+            padding: 40px 32px;
+        }
+
+        .pickup-available-list {
+            gap: 40px;
+        }
+    }
+}

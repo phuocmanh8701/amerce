@@ -1160,6 +1160,22 @@
         }
     }
 
+    .tf-product-pickup-available {
+        display: flex;
+        gap: 8px;
+
+        .icon {
+            margin-top: 4px;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .content {
+            display: grid;
+            gap: 4px;
+        }
+    }
+
     @include res(xl, min) {
         padding-left: 15px;
 
@@ -1679,6 +1695,7 @@
     .content {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 8px;
         margin-bottom: 16px;
     }
