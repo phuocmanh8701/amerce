@@ -10853,7 +10853,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     width: 80px;
   }
   .product-thumbs-slider.style-row .tf-product-media-thumbs .swiper-slide {
-    max-height: 110px;
+    max-height: 106px;
   }
   .product-thumbs-slider.style-row.row_left .flat-wrap-media-product {
     order: 1;
@@ -11233,21 +11233,26 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   padding: 2px 8px;
 }
 
-.product-style_mini_lis, .product-style_mini_list-v2 {
+.product-style_mini_lis,
+.product-style_mini_list-v2 {
   border: 1px solid var(--line);
   padding: 15px;
   border-radius: 12px;
 }
-.product-style_mini_lis .card-product_wrapper, .product-style_mini_list-v2 .card-product_wrapper {
+.product-style_mini_lis .card-product_wrapper,
+.product-style_mini_list-v2 .card-product_wrapper {
   aspect-ratio: 1;
 }
-.product-style_mini_lis .card-product_info, .product-style_mini_list-v2 .card-product_info {
+.product-style_mini_lis .card-product_info,
+.product-style_mini_list-v2 .card-product_info {
   justify-content: center;
 }
-.product-style_mini_lis .card-product_info .price-wrap, .product-style_mini_list-v2 .card-product_info .price-wrap {
+.product-style_mini_lis .card-product_info .price-wrap,
+.product-style_mini_list-v2 .card-product_info .price-wrap {
   margin-bottom: 12px;
 }
-.product-style_mini_lis .btn-action, .product-style_mini_list-v2 .btn-action {
+.product-style_mini_lis .btn-action,
+.product-style_mini_list-v2 .btn-action {
   align-items: center;
   display: inline-flex;
   height: 40px;
@@ -11262,10 +11267,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-.product-style_mini_lis .btn-action .icon, .product-style_mini_list-v2 .btn-action .icon {
+.product-style_mini_lis .btn-action .icon,
+.product-style_mini_list-v2 .btn-action .icon {
   font-size: 20px;
 }
-.product-style_mini_lis .btn-action .text, .product-style_mini_list-v2 .btn-action .text {
+.product-style_mini_lis .btn-action .text,
+.product-style_mini_list-v2 .btn-action .text {
   margin-left: 8px;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -11273,28 +11280,34 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-.product-style_mini_lis:hover, .product-style_mini_list-v2:hover {
+.product-style_mini_lis:hover,
+.product-style_mini_list-v2:hover {
   border-color: var(--text);
 }
 @media (min-width: 768px) {
-  .product-style_mini_lis, .product-style_mini_list-v2 {
+  .product-style_mini_lis,
+  .product-style_mini_list-v2 {
     flex-direction: row;
   }
-  .product-style_mini_lis .card-product_wrapper, .product-style_mini_list-v2 .card-product_wrapper {
+  .product-style_mini_lis .card-product_wrapper,
+  .product-style_mini_list-v2 .card-product_wrapper {
     max-width: 160px;
   }
 }
 @media (min-width: 1200px) {
-  .product-style_mini_lis, .product-style_mini_list-v2 {
+  .product-style_mini_lis,
+  .product-style_mini_list-v2 {
     gap: 24px;
   }
-  .product-style_mini_lis:not(:hover) .btn-action, .product-style_mini_list-v2:not(:hover) .btn-action {
+  .product-style_mini_lis:not(:hover) .btn-action,
+  .product-style_mini_list-v2:not(:hover) .btn-action {
     padding-left: 10px;
     padding-right: 10px;
     background: var(--bg);
     color: var(--text);
   }
-  .product-style_mini_lis:not(:hover) .btn-action .text, .product-style_mini_list-v2:not(:hover) .btn-action .text {
+  .product-style_mini_lis:not(:hover) .btn-action .text,
+  .product-style_mini_list-v2:not(:hover) .btn-action .text {
     font-size: 0;
     transform: scaleX(0);
     margin-left: 0;
@@ -11302,17 +11315,20 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 @media (max-width: 991px) {
-  .product-style_mini_lis .btn-action, .product-style_mini_list-v2 .btn-action {
+  .product-style_mini_lis .btn-action,
+  .product-style_mini_list-v2 .btn-action {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 @media (max-width: 425px) {
-  .product-style_mini_lis .btn-action, .product-style_mini_list-v2 .btn-action {
+  .product-style_mini_lis .btn-action,
+  .product-style_mini_list-v2 .btn-action {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .product-style_mini_lis .btn-action .text, .product-style_mini_list-v2 .btn-action .text {
+  .product-style_mini_lis .btn-action .text,
+  .product-style_mini_list-v2 .btn-action .text {
     display: none;
   }
 }

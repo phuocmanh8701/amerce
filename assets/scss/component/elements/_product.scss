@@ -756,7 +756,7 @@
                 width: 80px;
 
                 .swiper-slide {
-                    max-height: 110px;
+                    max-height: 106px;
                 }
             }
 
@@ -1199,7 +1199,8 @@
     padding: 2px 8px;
 }
 
-.product-style_mini_lis,.product-style_mini_list-v2 {
+.product-style_mini_lis,
+.product-style_mini_list-v2 {
     border: 1px solid var(--line);
     padding: 15px;
     border-radius: 12px;
@@ -1288,15 +1289,15 @@
     }
 }
 
-.product-style_mini_list-v2{
+.product-style_mini_list-v2 {
     border: unset;
     padding: 0;
     border-radius: 12px;
 
-    .tf-btn{
+    .tf-btn {
         height: 42px;
         padding: 0 32px;
-        font-size:14px;
+        font-size: 14px;
         line-height: 22px;
     }
 

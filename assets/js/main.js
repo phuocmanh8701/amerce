@@ -1492,7 +1492,7 @@
             var $target = $(selector);
             if ($target.length === 0) return;
 
-            $products.each(function() {
+            $products.each(function () {
                 var $p = $(this);
                 if ($p.is($target)) {
                     $p.addClass('is-active').removeClass('is-dim');
@@ -1509,22 +1509,78 @@
             }
         }
 
-        $pins.each(function() {
+        $pins.each(function () {
             var $pin = $(this);
             var targetSelector = $pin.data('target');
 
-            $pin.on('mouseenter', function() {
+            $pin.on('mouseenter', function () {
                 activateById(targetSelector);
             });
 
-            $pin.on('mouseleave', function() {
+            $pin.on('mouseleave', function () {
                 resetProducts();
             });
         });
     }
 
+    const noticePop = () => {
+        var $popup = $(".pop-notice-sale");
+        var $closeBtn = $(".btn-cl-pop");
+
+        if (!$popup.length) return;
+
+        var showTime = 10000;
+        var hideTime = 2000;
+        var timerShow, timerHide;
+        var stopped = false;
+
+        function showPopup() {
+            if (stopped) return;
+
+            $popup.addClass("active");
+
+            timerShow = setTimeout(function () {
+                hidePopup();
+            }, showTime);
+        }
+
+        function hidePopup() {
+            if (stopped) return;
+
+            $popup.removeClass("active");
+
+            timerHide = setTimeout(function () {
+                showPopup();
+            }, hideTime);
+        }
+
+        $closeBtn.on("click", function () {
+            stopped = true;
+            clearTimeout(timerShow);
+            clearTimeout(timerHide);
+            $popup.removeClass("active");
+        });
+
+        setTimeout(function () {
+            showPopup();
+        }, hideTime);
+    }
+    /* Modal Quick Add
+    -------------------------------------------------------------------------*/
+    var modalQuickAdd = () => {
+    };
+    /* Offcanvas Quick View
+    -------------------------------------------------------------------------*/
+    var offcanvasQuickView = () => {
+    }
+    /* Popup Product Action
+    -------------------------------------------------------------------------*/
+    var popupProductVariant = () => {
+    }
+
     // Dom Ready
     $(function () {
+        popupProductVariant();
         offcanvasQuickView();
         modalQuickAdd();
         headerSticky();
@@ -1565,6 +1621,7 @@
         filterIsotope();
         reveal();
         handleHoverLookBook();
+        noticePop();
 
         if (document.readyState === "loading") {
             document.addEventListener("DOMContentLoaded", function () {
