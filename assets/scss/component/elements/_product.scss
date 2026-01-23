@@ -796,7 +796,7 @@
     }
 
     @include res(xl, min) {
-        max-height: calc(108*4px);
+        max-height: calc(114*4px - 8px);
     }
 }
 
