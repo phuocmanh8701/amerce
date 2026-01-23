@@ -1,6 +1,6 @@
 // swiper product details
 if ($(".product-thumbs-slider").length > 0) {
-    var direction = $(".tf-product-media-thumbs").data("direction");
+    var direction = $(".tf-product-media-thumbs").data("direction") ?? "horizontal";
     var preview = $(".tf-product-media-thumbs").data("preview");
     var xl_preview = $(".tf-product-media-thumbs").data("xl-preview") ?? preview;
     var space = $(".tf-product-media-thumbs").data("space") || 8;

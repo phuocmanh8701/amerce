@@ -10929,9 +10929,6 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   .tf-product-media-thumbs {
     max-height: 432px;
   }
-  .tf-product-media-thumbs .swiper-slide {
-    max-width: 80px;
-  }
 }
 
 .tf-product-info-wrap {
@@ -11486,7 +11483,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 @media (max-width: 1199px) {
   .tf-sticky-btn-atc {
-    bottom: 79px;
+    bottom: 70px;
   }
 }
 @media (max-width: 767px) {
