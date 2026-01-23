@@ -1,30 +1,32 @@
-$(".product-thumbs-slider").each(function () {
-    var direction = $(".tf-product-media-thumbs").data("direction") || "horizontal";
+// swiper product details
+if ($(".product-thumbs-slider").length > 0) {
+    var direction = $(".tf-product-media-thumbs").data("direction");
     var preview = $(".tf-product-media-thumbs").data("preview");
-    var space = $(".tf-product-media-thumbs").data("space") ?? 10;
+    var space = $(".tf-product-media-thumbs").data("space") || 8;
 
     var thumbs = new Swiper(".tf-product-media-thumbs", {
         spaceBetween: space,
         slidesPerView: preview,
         freeMode: true,
-        direction: "vertical",
+        // direction: "vertical",
         watchSlidesProgress: true,
         observer: true,
         observeParents: true,
+
         breakpoints: {
             0: {
                 direction: "horizontal",
-                slidesPerView: preview,
+                slidesPerView: 5,
             },
             1200: {
                 direction: direction,
+                slidesPerView: preview,
             },
         },
     });
-    var spaceMain = $(".tf-product-media-main").data("spacing") ?? 15;
 
     var main = new Swiper(".tf-product-media-main", {
-        spaceBetween: spaceMain,
+        spaceBetween: 0,
         observer: true,
         observeParents: true,
         speed: 800,
@@ -32,15 +34,8 @@ $(".product-thumbs-slider").each(function () {
             nextEl: ".thumbs-next",
             prevEl: ".thumbs-prev",
         },
-        pagination: {
-            el: ".thumbs-pagination",
-            type: "fraction",
-            renderFraction: function (prev, next) {
-                return `<span class="${prev}"></span><span class="swiper-slice"></span> <span class="${next}"></span>`;
-            },
-        },
         thumbs: {
-            swiper: thumbs && thumbs.slides.length > 0 ? thumbs : null,
+            swiper: thumbs,
         },
     });
 
@@ -82,9 +77,7 @@ $(".product-thumbs-slider").each(function () {
         if (matchingSlides.length > 0) {
             var firstIndex = matchingSlides.first().index();
             main.slideTo(firstIndex, 1000, false);
-            if (thumbs && thumbs.slides.length > 0) {
-                thumbs.slideTo(firstIndex, 1000, false);
-            }
+            thumbs.slideTo(firstIndex, 1000, false);
         } else {
             var fallbackSlides = $(".tf-product-media-main .swiper-slide").filter(function () {
                 return $(this).attr(`data-${type}`) === value;
@@ -93,9 +86,7 @@ $(".product-thumbs-slider").each(function () {
             if (fallbackSlides.length > 0) {
                 var fallbackIndex = fallbackSlides.first().index();
                 main.slideTo(fallbackIndex, 1000, false);
-                if (thumbs && thumbs.slides.length > 0) {
-                    thumbs.slideTo(fallbackIndex, 1000, false);
-                }
+                thumbs.slideTo(fallbackIndex, 1000, false);
             }
         }
     }
@@ -124,10 +115,11 @@ $(".product-thumbs-slider").each(function () {
         setupVariantButtonsThumbs(type);
         updateActiveButtonThumbs(type, main.activeIndex);
     });
-});
+}
 
 (function ($) {
     "use strict";
+
     var section_zoom = function () {
         $(".tf-image-zoom").on("mouseover", function () {
             $(this).closest(".section-image-zoom").addClass("zoom-active");
@@ -136,8 +128,7 @@ $(".product-thumbs-slider").each(function () {
             $(this).closest(".section-image-zoom").removeClass("zoom-active");
         });
     };
-
-    var cus_zoom = function () {
+    var cusZoom = function () {
         var image_zoom = function () {
             var driftAll = document.querySelectorAll(".tf-image-zoom");
             var pane = document.querySelector(".tf-zoom-main");
@@ -205,7 +196,7 @@ $(".product-thumbs-slider").each(function () {
         });
     };
 
-    var lightboxswiper = function () {
+    var lightBoxSwiper = function () {
         const lightbox = new PhotoSwipeLightbox({
             gallery: "#gallery-swiper-started",
             children: "a",
@@ -236,7 +227,7 @@ $(".product-thumbs-slider").each(function () {
         });
     };
 
-    var lightbox = function () {
+    var lightBox = function () {
         const lightbox = new PhotoSwipeLightbox({
             gallery: "#gallery-started",
             children: "a",
@@ -263,6 +254,7 @@ $(".product-thumbs-slider").each(function () {
 
                 if (modelViewer) {
                     modelViewer.cameraOrbit = "0deg 90deg auto";
+                    // modelViewer.fieldOfView = "45deg";
                     modelViewer.updateFraming();
                 }
             });
@@ -272,11 +264,11 @@ $(".product-thumbs-slider").each(function () {
     // Dom Ready
     $(function () {
         section_zoom();
-        cus_zoom();
+        cusZoom();
         imageZoomMagnifier();
         imageZoomInner();
-        lightboxswiper();
-        lightbox();
+        lightBoxSwiper();
+        lightBox();
         modelViewer();
     });
 })(jQuery);
