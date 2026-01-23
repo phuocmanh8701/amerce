@@ -422,6 +422,11 @@
     width: 100%;
 }
 
+.img-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .gap-x-10 {
     column-gap: 10px !important;

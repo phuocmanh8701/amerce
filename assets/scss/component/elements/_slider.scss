@@ -352,6 +352,8 @@
         }
     }
 
+   
+
     @include res(md, min) {
         .sw-line-default {
             &.pst-2 {
@@ -487,6 +489,17 @@
 
     &.pst-3 {
         top: calc(50% + 40px);
+    }
+
+    &.pst-4 {
+
+        top: calc(50% + 52px);
+
+        @include res(xl,min){
+            .heading {
+                margin-bottom: 32px;
+            }
+        }
     }
 
     &.type-3 {
