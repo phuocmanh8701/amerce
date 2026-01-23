@@ -2958,7 +2958,7 @@
                         <i class="icon icon-X2 fs-24"></i>
                     </span>
                 </div>
-                <div class="tf-product-quick_add">
+                <div class="tf-product-quick_add tf-quick-prd_variant">
                     <div class="product-mini-view">
                         <a href="product-detail.html" class="prd-image">
                             <img class="img-product" width="80" height="107"
@@ -2975,7 +2975,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="quickadd-variant-picker picker_color">
+                    <div class="quick-variant-picker picker_color">
                         <div class="variant-picker_label mb-12">
                             <div>
                                 Colors:
@@ -2983,14 +2983,14 @@
                             </div>
                         </div>
                         <div class="variant-picker_values">
-                            <div class="hover-tooltip tooltip-bot color-swatch style-image active">
+                            <div class="hover-tooltip tooltip-bot color_btn style-image active">
                                 <div class="img">
                                     <img loading="lazy" width="60" height="60"
                                         src="assets/images/product/single/detail-1_2.jpg" alt="img">
                                 </div>
                                 <span class="tooltip color__label">Green</span>
                             </div>
-                            <div class="hover-tooltip tooltip-bot color-swatch style-image">
+                            <div class="hover-tooltip tooltip-bot color_btn style-image">
                                 <div class="img">
                                     <img loading="lazy" width="60" height="60"
                                         src="assets/images/product/single/detail-1_5.jpg" alt="img">
@@ -2999,7 +2999,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="quickadd-variant-picker picker_size">
+                    <div class="quick-variant-picker picker_size">
                         <div class="variant-picker_label mb-12">
                             <div>
                                 Size:
@@ -3011,11 +3011,11 @@
                             </a>
                         </div>
                         <div class="variant-picker_values">
-                            <span class="size-btn" data-size="S" data-price="39.99">S</span>
-                            <span class="size-btn active" data-size="M" data-price="59.99">M</span>
-                            <span class="size-btn" data-size="L" data-price="79.99">L</span>
-                            <span class="size-btn" data-size="XL" data-price="89.99">XL</span>
-                            <span class="size-btn disabled" data-size="XX" data-price="99.99">XXL</span>
+                            <span class="size_btn" data-quick-size="S" data-quick-price="39.99">S</span>
+                            <span class="size_btn active" data-quick-size="M" data-quick-price="59.99">M</span>
+                            <span class="size_btn" data-quick-size="L" data-quick-price="79.99">L</span>
+                            <span class="size_btn" data-quick-size="XL" data-quick-price="89.99">XL</span>
+                            <span class="size_btn disabled" data-quick-size="XX" data-quick-price="99.99">XXL</span>
                         </div>
                     </div>
                     <div class="product-total-quantity">
@@ -3082,7 +3082,7 @@
                 </span>
             </div>
             <div class="canvas-body ps-md-0">
-                <div class="tf-product-quick_view tf-pop-prd_variant">
+                <div class="tf-product-quick_view tf-quick-prd_variant">
                     <div class="tf-product-info-heading">
                         <p class="product-infor-cate text-caption-01 mb-4">
                             Clothing
@@ -3146,9 +3146,9 @@
                             </div>
                             <div class="variant-picker-values">
 
-                                <input class="d-none" id="values-green" type="radio" name="colorQuickAdd" checked>
+                                <input class="d-none" id="values-green" type="radio" name="colorQuickAdd">
                                 <label
-                                    class="hover-tooltip tooltip-bot color-btn style-image btn-scroll-quickview active"
+                                    class="hover-tooltip tooltip-bot color-btn_quick style-image btn-scroll-quickview"
                                     for="values-green" data-color="Green" data-scroll-quickview="Green">
                                     <div class="img">
                                         <img loading="lazy" width="60" height="60"
@@ -3159,7 +3159,8 @@
                                 </label>
 
                                 <input class="d-none" id="values-gray" type="radio" name="colorQuickAdd">
-                                <label class="hover-tooltip tooltip-bot color-btn style-image btn-scroll-quickview"
+                                <label
+                                    class="hover-tooltip tooltip-bot color-btn_quick style-image btn-scroll-quickview"
                                     for="values-gray" data-color="Gray" data-scroll-quickview="Gray">
                                     <div class="img">
                                         <img loading="lazy" width="60" height="60"
@@ -3170,28 +3171,27 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="variant-picker-item variant-size">
-                            <div class="variant-picker-label">
+
+                        <div class="quick-variant-picker picker_size">
+                            <div class="variant-picker_label mb-12">
                                 <div>
                                     Size:
-                                    <span
-                                        class="variant-picker-label-value value-currentSize text-capitalize fw-medium">M</span>
+                                    <span class="variant__value text-capitalize fw-medium">S</span>
                                 </div>
-                                <div data-bs-dismiss="offcanvas">
-                                    <a href="#findSize" data-bs-toggle="modal"
-                                        class="tf-btn-line-2 style-primary text-caption-01 fw-semibold">
-                                        Size Guide
-                                    </a>
-                                </div>
+                                <a href="#findSize" data-bs-toggle="modal"
+                                    class="tf-btn-line-2 style-primary text-caption-01 fw-semibold">
+                                    Size Guide
+                                </a>
                             </div>
-                            <div class="variant-picker-values">
-                                <span class="size-btn" data-size="S" data-price="39.99">S</span>
-                                <span class="size-btn active" data-size="M" data-price="59.99">M</span>
-                                <span class="size-btn" data-size="L" data-price="79.99">L</span>
-                                <span class="size-btn" data-size="XL" data-price="89.99">XL</span>
-                                <span class="size-btn disabled" data-size="XX" data-price="99.99">XXL</span>
+                            <div class="variant-picker_values">
+                                <span class="size_btn active" data-quick-size="S" data-quick-price="39.99">S</span>
+                                <span class="size_btn" data-quick-size="M" data-quick-price="59.99">M</span>
+                                <span class="size_btn" data-quick-size="L" data-quick-price="79.99">L</span>
+                                <span class="size_btn" data-quick-size="XL" data-quick-price="89.99">XL</span>
+                                <span class="size_btn disabled" data-quick-size="XX" data-quick-price="99.99">XXL</span>
                             </div>
                         </div>
+
                         <div class="tf-product-total-quantity">
                             <p class="">
                                 Quantity:

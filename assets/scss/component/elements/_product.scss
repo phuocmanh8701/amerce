@@ -1881,3 +1881,24 @@
         }
     }
 }
+
+.write-cancel-review-wrap {
+
+    .write-review-wrap,
+    .btn-cancel-review {
+        display: none;
+    }
+
+    &.write-review {
+
+        .cancel-review-wrap,
+        .btn-write-review {
+            display: none;
+        }
+
+        .write-review-wrap,
+        .btn-cancel-review {
+            display: block;
+        }
+    }
+}
