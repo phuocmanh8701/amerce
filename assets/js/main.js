@@ -1471,270 +1471,55 @@
         }
     };
 
-    const noticePop = () => {
-        var $popup = $(".pop-notice-sale");
-        var $closeBtn = $(".btn-cl-pop");
+    var handleHoverLookBook = () => {
+        var $pins = $('.section-lookbook-hover-v03 .tf-pin-btn');
+        var $productWrap = $('.section-lookbook-hover-v03 .wrap-product');
+        var $products = $productWrap.find('.card-product');
 
-        if (!$popup.length) return;
+        if ($pins.length === 0 || $productWrap.length === 0 || $products.length === 0) return;
 
-        var showTime = 10000;
-        var hideTime = 2000;
-        var timerShow, timerHide;
-        var stopped = false;
-
-        function showPopup() {
-            if (stopped) return;
-
-            $popup.addClass("active");
-
-            timerShow = setTimeout(function () {
-                hidePopup();
-            }, showTime);
+        function isInView($container, $el) {
+            var c = $container[0].getBoundingClientRect();
+            var e = $el[0].getBoundingClientRect();
+            return e.top >= c.top && e.bottom <= c.bottom;
         }
 
-        function hidePopup() {
-            if (stopped) return;
-
-            $popup.removeClass("active");
-
-            timerHide = setTimeout(function () {
-                showPopup();
-            }, hideTime);
+        function resetProducts() {
+            $products.removeClass('is-active is-dim');
         }
 
-        $closeBtn.on("click", function () {
-            stopped = true;
-            clearTimeout(timerShow);
-            clearTimeout(timerHide);
-            $popup.removeClass("active");
-        });
+        function activateById(selector) {
+            var $target = $(selector);
+            if ($target.length === 0) return;
 
-        setTimeout(function () {
-            showPopup();
-        }, hideTime);
-    }
-    /* Modal Quick Add
-    -------------------------------------------------------------------------*/
-    var modalQuickAdd = () => {
-        if ($(".tf-product-quick_add").length === 0) return;
-
-        $(".tf-product-quick_add").each(function () {
-            var $wrap = $(this);
-            var $activeSize = $wrap.find(".size-btn.active");
-            var basePrice = $activeSize.length
-                ? parseFloat($activeSize.data("price"))
-                : parseFloat(
-                    $wrap.find(".price-on-sale").text()
-                        .replace("$", "")
-                        .replace(/,/g, "")
-                );
-
-            $wrap.data("basePrice", basePrice);
-            $wrap.find(".color-swatch").on("click mouseover", function () {
-                var $swatch = $(this);
-                var swatchColor = $swatch.find("img").attr("src");
-                var colorLabel = $swatch.find(".color__label").text().trim();
-
-                $wrap.find(".img-product").attr("src", swatchColor);
-                $wrap.find(".picker_color .variant__value").text(colorLabel);
-
-                $wrap.find(".color-swatch.active").removeClass("active");
-                $swatch.addClass("active");
-            });
-
-            $wrap.find(".size-btn:not(.disabled)").on("click", function () {
-                var $btn = $(this);
-                var size = $btn.data("size");
-                var price = parseFloat($btn.data("price"));
-
-                $wrap.find(".size-btn.active").removeClass("active");
-                $btn.addClass("active");
-
-                $wrap.find(".picker_size .variant__value").text(size);
-
-                $wrap.find(".quantity-product").val(1);
-
-                $wrap.data("basePrice", price);
-
-                updatePrice();
-            });
-
-            $wrap.find(".btn-increase").on("click", function () {
-                var $qty = $wrap.find(".quantity-product");
-                var qty = parseInt($qty.val()) || 1;
-
-                $qty.val(qty + 1);
-                updatePrice();
-            });
-
-            $wrap.find(".btn-decrease").on("click", function () {
-                var $qty = $wrap.find(".quantity-product");
-                var qty = parseInt($qty.val()) || 1;
-
-                if (qty > 1) {
-                    $qty.val(qty - 1);
-                    updatePrice();
-                }
-            });
-            function updatePrice() {
-                var basePrice = $wrap.data("basePrice");
-                var qty = parseInt($wrap.find(".quantity-product").val()) || 1;
-                var total = basePrice * qty;
-
-                $wrap.find(".price-on-sale").text("$" + total.toFixed(2));
-                $wrap.find(".price-add").text("$" + total.toFixed(2));
-            }
-        });
-    };
-    /* Offcanvas Quick View
-    -------------------------------------------------------------------------*/
-    var offcanvasQuickView = () => {
-        var scrollContainer = $(".canvas-quickview .wrapper-scroll-quickview");
-        var activescrollBtn = null;
-        var offsetTolerance = 100;
-
-        function getTargetScroll(target, isHorizontal) {
-            if (isHorizontal) {
-                return (
-                    target.offset().left -
-                    scrollContainer.offset().left +
-                    scrollContainer.scrollLeft()
-                );
-            } else {
-                return (
-                    target.offset().top -
-                    scrollContainer.offset().top +
-                    scrollContainer.scrollTop()
-                );
-            }
-        }
-
-        function isHorizontalMode() {
-            return window.innerWidth < 767;
-        }
-
-        $(".btn-scroll-quickview").on("click", function () {
-            var scroll = $(this).data("scroll-quickview");
-            var target = $(
-                `.item-scroll-quickview[data-scroll-quickview='${scroll}']`
-            );
-
-            if (target.length > 0) {
-                var isHorizontal = isHorizontalMode();
-                var targetScroll = getTargetScroll(target, isHorizontal);
-
-                if (isHorizontal) {
-                    scrollContainer.animate({ scrollLeft: targetScroll }, 600);
+            $products.each(function() {
+                var $p = $(this);
+                if ($p.is($target)) {
+                    $p.addClass('is-active').removeClass('is-dim');
                 } else {
-                    scrollContainer.animate({ scrollTop: targetScroll }, 600);
+                    $p.removeClass('is-active').addClass('is-dim');
                 }
+            });
 
-                $(".btn-scroll-quickview").removeClass("active");
-                $(this).addClass("active");
-                activescrollBtn = $(this);
-            } else {
-                console.error("Target not found for scroll:", scroll);
+            if (!isInView($productWrap, $target)) {
+                $target[0].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
             }
-        });
+        }
 
-        scrollContainer.on("scroll", function () {
-            var isHorizontal = isHorizontalMode();
+        $pins.each(function() {
+            var $pin = $(this);
+            var targetSelector = $pin.data('target');
 
-            $(".item-scroll-quickview").each(function () {
-                var targetStart =
-                    getTargetScroll($(this), isHorizontal) - offsetTolerance;
-                var targetEnd =
-                    targetStart +
-                    (isHorizontal
-                        ? $(this).outerWidth()
-                        : $(this).outerHeight()) +
-                    offsetTolerance;
-
-                var currentScroll = isHorizontal
-                    ? scrollContainer.scrollLeft()
-                    : scrollContainer.scrollTop();
-
-                if (currentScroll >= targetStart && currentScroll < targetEnd) {
-                    var scroll = $(this).data("scroll-quickview");
-
-                    $(".btn-scroll-quickview").removeClass("active");
-                    $(
-                        `.btn-scroll-quickview[data-scroll-quickview='${scroll}']`
-                    ).addClass("active");
-                }
-            });
-        });
-    }
-    /* Popup Product Action
-    -------------------------------------------------------------------------*/
-    var popupProductVariant = () => {
-        if ($(".tf-pop-prd_variant").length === 0) return;
-        $(".tf-pop-prd_variant").each(function () {
-            var $wrap = $(this);
-            var $activeSize = $wrap.find(".size-btn.active");
-            var basePrice = $activeSize.length
-                ? parseFloat($activeSize.data("price"))
-                : parseFloat(
-                    $wrap.find(".price-on-sale").text()
-                        .replace("$", "")
-                        .replace(/,/g, "")
-                );
-
-            $wrap.data("basePrice", basePrice);
-            $wrap.find(".color-swatch").on("click mouseover", function () {
-                var $swatch = $(this);
-                var swatchColor = $swatch.find("img").attr("src");
-                var colorLabel = $swatch.find(".color__label").text().trim();
-
-                $wrap.find(".img-product").attr("src", swatchColor);
-                $wrap.find(".picker_color .variant__value").text(colorLabel);
-
-                $wrap.find(".color-swatch.active").removeClass("active");
-                $swatch.addClass("active");
+            $pin.on('mouseenter', function() {
+                activateById(targetSelector);
             });
 
-            $wrap.find(".size-btn:not(.disabled)").on("click", function () {
-                var $btn = $(this);
-                var size = $btn.data("size");
-                var price = parseFloat($btn.data("price"));
-
-                $wrap.find(".size-btn.active").removeClass("active");
-                $btn.addClass("active");
-
-                $wrap.find(".picker_size .variant__value").text(size);
-
-                $wrap.find(".quantity-product").val(1);
-
-                $wrap.data("basePrice", price);
-
-                updatePrice();
+            $pin.on('mouseleave', function() {
+                resetProducts();
             });
-
-            $wrap.find(".btn-increase").on("click", function () {
-                var $qty = $wrap.find(".quantity-product");
-                var qty = parseInt($qty.val()) || 1;
-
-                $qty.val(qty + 1);
-                updatePrice();
-            });
-
-            $wrap.find(".btn-decrease").on("click", function () {
-                var $qty = $wrap.find(".quantity-product");
-                var qty = parseInt($qty.val()) || 1;
-
-                if (qty > 1) {
-                    $qty.val(qty - 1);
-                    updatePrice();
-                }
-            });
-            function updatePrice() {
-                var basePrice = $wrap.data("basePrice");
-                var qty = parseInt($wrap.find(".quantity-product").val()) || 1;
-                var total = basePrice * qty;
-
-                $wrap.find(".price-on-sale").text("$" + total.toFixed(2));
-                $wrap.find(".price-add").text("$" + total.toFixed(2));
-            }
         });
     }
 
@@ -1780,7 +1565,7 @@
         updateBundleTotal();
         filterIsotope();
         reveal();
-        noticePop();
+        handleHoverLookBook();
 
         if (document.readyState === "loading") {
             document.addEventListener("DOMContentLoaded", function () {

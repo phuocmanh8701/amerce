@@ -1569,6 +1569,51 @@
     }
 }
 
+.section-lookbook-hover-v03{
+    .wrap-product{
+        max-height: 486px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: -30px;
+        margin-right: -30px;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 100%;
+            background-color: var(--line);
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            cursor: grab;
+            background-color: var(--text);
+            border-radius: 999px;
+        }
+    }
+
+    img{
+        border-radius: 12px;
+    }
+
+    .card-product {
+        transition: opacity 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+        margin-bottom: 20px;
+
+        &.is-dim {
+            filter: blur(5px);
+        }
+
+        &.is-active {
+            opacity: 1;
+            filter: none;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+    }
+
+    
+
+
+}
+
 .section-banner-favorite {
     @include res(lg, min) {
         .banner-image-text {
