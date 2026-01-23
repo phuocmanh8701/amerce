@@ -2,13 +2,13 @@
 if ($(".product-thumbs-slider").length > 0) {
     var direction = $(".tf-product-media-thumbs").data("direction");
     var preview = $(".tf-product-media-thumbs").data("preview");
+    var xl_preview = $(".tf-product-media-thumbs").data("xl-preview") ?? preview;
     var space = $(".tf-product-media-thumbs").data("space") || 8;
 
     var thumbs = new Swiper(".tf-product-media-thumbs", {
         spaceBetween: space,
         slidesPerView: preview,
         freeMode: true,
-        // direction: "vertical",
         watchSlidesProgress: true,
         observer: true,
         observeParents: true,
@@ -16,11 +16,15 @@ if ($(".product-thumbs-slider").length > 0) {
         breakpoints: {
             0: {
                 direction: "horizontal",
+                slidesPerView: 4,
+            },
+            575: {
+                direction: "horizontal",
                 slidesPerView: 5,
             },
             1200: {
                 direction: direction,
-                slidesPerView: preview,
+                slidesPerView: xl_preview,
             },
         },
     });

@@ -10848,7 +10848,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .product-thumbs-slider {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
 }
 .product-thumbs-slider .tf-product-media-thumbs .item {
   border-radius: 4px;
@@ -10885,6 +10885,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   height: auto !important;
 }
 @media (min-width: 1200px) {
+  .product-thumbs-slider {
+    gap: 20px;
+  }
   .product-thumbs-slider.style-row {
     flex-direction: row;
   }
@@ -10913,9 +10916,6 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   margin: 0;
   width: 100%;
 }
-.tf-product-media-thumbs .swiper-slide {
-  max-width: 80px;
-}
 .tf-product-media-thumbs .swiper-slide .item {
   width: 100%;
   height: 100%;
@@ -10924,6 +10924,14 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (min-width: 1200px) {
+  .tf-product-media-thumbs {
+    max-height: 432px;
+  }
+  .tf-product-media-thumbs .swiper-slide {
+    max-width: 80px;
+  }
 }
 
 .tf-product-info-wrap {
