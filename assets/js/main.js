@@ -1525,7 +1525,6 @@
 
     // Dom Ready
     $(function () {
-        popupProductVariant();
         offcanvasQuickView();
         modalQuickAdd();
         headerSticky();
