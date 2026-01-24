@@ -56,6 +56,10 @@
     margin-bottom: 28px !important;
 }
 
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
 .mb-32 {
     margin-bottom: 32px !important;
 }
@@ -178,7 +182,7 @@
 }
 
 .gap-30 {
-    gap: 30px;
+    gap: 30px !important;
 }
 
 .gap-40 {
@@ -349,6 +353,14 @@
 
     &:hover {
         color: var(--primary-2) !important;
+    }
+}
+
+.link-3 {
+    @include transition3;
+
+    &:hover {
+        color: var(--secondary) !important;
     }
 }
 
