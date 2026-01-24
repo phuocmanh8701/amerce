@@ -128,7 +128,7 @@ button.animate-btn::after,
     // line-height: 20px;
     // width: auto;
     // height: 42px;
-    min-width: 120px;
+    min-width: 150px;
     // padding: 10px;
 
     &.loadmore {
@@ -160,6 +160,10 @@ button.animate-btn::after,
                 @include transition3;
             }
         }
+    }
+
+    @include res(xl) {
+        min-width: 130px;
     }
 }
 

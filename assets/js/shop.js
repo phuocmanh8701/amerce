@@ -726,7 +726,7 @@
             const rect = $el[0].getBoundingClientRect();
             const vh = window.innerHeight || document.documentElement.clientHeight;
 
-            return rect.top <= vh * 0.6;
+            return rect.top <= vh * 0.95;
         }
 
 

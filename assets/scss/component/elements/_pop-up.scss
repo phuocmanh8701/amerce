@@ -287,10 +287,47 @@
     .canvas-body {
         >* {
             &:not(:last-child) {
-                margin-bottom: 28px;
+                margin-bottom: 20px;
             }
         }
     }
+
+    @include res(sm, min) {
+        width: 400px !important;
+
+        .canvas-header {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        .canvas-body {
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    @include res(xl, min) {
+        .canvas-body {
+            >* {
+                &:not(:last-child) {
+                    margin-bottom: 28px;
+                }
+            }
+        }
+
+        &.offcanvas {
+            .canvas-body {
+                >* {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 .sidebar-filter {

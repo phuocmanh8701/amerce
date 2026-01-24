@@ -338,6 +338,10 @@ p {
     z-index: 50;
     top: 15px;
     @include transition3;
+
+    &.no-offset {
+        top: 0;
+    }
 }
 
 .wmax {
