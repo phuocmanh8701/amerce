@@ -695,11 +695,11 @@
         } else if (layoutClassGrid.includes("tf-col-4")) {
             maxItems = 8; initItem = 4;
         } else if (layoutClassGrid.includes("tf-col-5")) {
-            maxItems = 10; initItem = 5;
+            maxItems = 15; initItem = 5;
         } else if (layoutClassGrid.includes("tf-col-6")) {
-            maxItems = 12; initItem = 6;
+            maxItems = 18; initItem = 6;
         } else if (layoutClassGrid.includes("tf-col-7")) {
-            maxItems = 14; initItem = 7;
+            maxItems = 21; initItem = 7;
         }
 
         function renderGrid() {

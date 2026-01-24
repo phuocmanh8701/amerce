@@ -10457,22 +10457,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 @media (min-width: 576px) {
   .card-product.style-2 .product-action_list {
-    bottom: 70px;
+    bottom: 12px;
   }
   .card-product.style-2.has-size .product-action_list {
-    bottom: 120px;
+    bottom: 66px;
   }
-}
-.card-product.style-4 .product-action_list {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  justify-content: center;
-  flex-direction: row;
-}
-.card-product.style-4 .product-action_list li {
-  transform: translateY(0px);
-  transition-delay: unset !important;
 }
 .card-product.style-5 {
   padding: 20px;
@@ -10515,6 +10504,17 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
   .card-product.style-4 .product-action_list li {
     transform: translateY(20px);
+  }
+  .card-product.style-4 .product-action_list {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    flex-direction: row;
+  }
+  .card-product.style-4 .product-action_list li {
+    transform: translateY(0px);
+    transition-delay: unset !important;
   }
   .card-product.style-4:hover .product-action_list li {
     transform: translateY(0px);
