@@ -722,9 +722,9 @@
         gap: 24px 20px;
     }
 
-    &.style-2{
+    &.style-2 {
         .content {
-            @include res(md){
+            @include res(md) {
                 text-align: center;
                 flex-direction: column;
             }
@@ -1064,6 +1064,19 @@
     }
 }
 
+.section-banner-cls-v02 {
+    display: flex;
+    gap: 10px;
+
+    .left {
+        flex: 20%;
+    }
+
+    .right {
+        flex: 52.707%;
+    }
+}
+
 .banner-product-single {
     .text-sale {
         padding: 2px 12px;
@@ -1174,25 +1187,25 @@
 
     &.style-5 {
 
-        
+
 
         .left {
 
-           
-            padding: 0px 15px 40px ;
+
+            padding: 0px 15px 40px;
             background-color: #f7f7f7;
             border-radius: 12px;
 
-            @include res(md ,min){
+            @include res(md, min) {
                 padding: 40px;
             }
         }
 
-        .tf-product-info-wrap{
+        .tf-product-info-wrap {
             .tf-product-extra-link {
                 gap: 27px;
             }
-        } 
+        }
 
         .product-thumbs-slider {
             .tf-product-media-main {
@@ -1208,13 +1221,16 @@
         .tf-product-media-wrap {
             padding-right: 0;
             width: 100%;
-            height:100%;
+            height: 100%;
 
         }
-        .tf-product-media-main,.flat-wrap-media-product,.product-thumbs-slider{
-            height:100%;
+
+        .tf-product-media-main,
+        .flat-wrap-media-product,
+        .product-thumbs-slider {
+            height: 100%;
         }
-        
+
         .tf-product-info-wrap {
             padding-left: 0;
         }
@@ -1224,7 +1240,8 @@
             width: 100%;
             border-radius: 16px;
             overflow: hidden;
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -1232,10 +1249,11 @@
         }
     }
 
-    @include res(lg,min){
+    @include res(lg, min) {
+
         .left,
         .center {
-          width: calc(100% / 2);
+            width: calc(100% / 2);
         }
     }
 
@@ -1315,7 +1333,7 @@
         .left,
         .right,
         .center {
-          width: calc(100% / 3);
+            width: calc(100% / 3);
         }
 
         .detail-sale,
@@ -1349,8 +1367,8 @@
                 flex-direction: column;
             }
 
-            .left{
-                order:1;
+            .left {
+                order: 1;
             }
         }
     }
@@ -1376,7 +1394,7 @@
 
     @media (max-width: 1599px) {
 
-       .btn-action-price span{
+        .btn-action-price span {
             display: none !important;
         }
     }
@@ -1625,25 +1643,25 @@
     }
 }
 
-.section-lookbook-hover-v03{
-    .row{
-        row-gap:40px
+.section-lookbook-hover-v03 {
+    .row {
+        row-gap: 40px
     }
 
-    .wrap-product{
+    .wrap-product {
 
-        @include res(xl,min){
+        @include res(xl, min) {
             max-height: 486px;
-            
+
         }
-        
+
 
         &::-webkit-scrollbar {
             width: 3px;
             height: 100%;
             background-color: var(--line);
         }
-    
+
         &::-webkit-scrollbar-thumb {
             cursor: grab;
             background-color: var(--text);
@@ -1651,11 +1669,11 @@
         }
     }
 
-    img{
+    img {
         border-radius: 12px;
     }
 
-    .heading{
+    .heading {
         margin-bottom: 25px !important;
     }
 
@@ -1673,7 +1691,7 @@
         }
     }
 
-    
+
 
 
 }
@@ -2544,51 +2562,54 @@
     }
 }
 
-.section-highlight{
+.section-highlight {
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    .wrap-content{
+
+    .wrap-content {
         position: absolute;
-        left:0;
-        right:0;
-        bottom:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 
-    img{
+    img {
         min-height: 550px;
-        @include res(sm){
+
+        @include res(sm) {
             min-height: 800px;
         }
     }
 
-    .item{
+    .item {
         padding: 24px 15px;
         background: #FFFFFF1A;
         backdrop-filter: blur(40px);
         @include transition3();
 
-        .title,p{
+        .title,
+        p {
             @include transition3();
         }
 
-        &:not(:last-child){
+        &:not(:last-child) {
             border-left: 1px solid #FFFFFF1A;
         }
 
-        @include res(md,min){
+        @include res(md, min) {
             padding: 32px 15px;
         }
 
-        @include res(xl,min){
+        @include res(xl, min) {
             padding: 32px;
         }
-        
 
-        &:hover{
+
+        &:hover {
             background: var(--bg-2);
 
-            .title{
+            .title {
                 color: var(--text) !important;
             }
 
