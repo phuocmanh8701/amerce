@@ -1563,6 +1563,11 @@ h6,
     margin-bottom: 12px;
   }
 }
+@media (max-width: 575px) {
+  .sm-d-none {
+    display: none !important;
+  }
+}
 /*------------ Component ---------------- */
 /*------------ Layout ---------------- */
 /* ---------------------------------------------------------
@@ -10912,6 +10917,27 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .product-action_bot > *:not(:last-child) {
   margin-bottom: 12px;
 }
+.product-action_bot .btn-icon-quick_view {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 20px;
+}
+@media (min-width: 576px) {
+  .product-action_bot.vertical {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .product-action_bot.vertical > * {
+    margin-bottom: 0;
+  }
+}
 @media (min-width: 1200px) {
   .product-action_bot {
     transform: translateY(20px);
@@ -10943,6 +10969,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
   .product-action_bot > *:not(:last-child) {
     margin-bottom: 8px;
+  }
+  .product-action_bot > *.small {
+    height: 36px;
   }
   .product-action_bot .icon {
     font-size: 16px;

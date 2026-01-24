@@ -693,6 +693,29 @@
         }
     }
 
+    .btn-icon-quick_view {
+        width: 42px;
+        height: 42px;
+        @include flex(center, center);
+        background: var(--white);
+        border-radius: 50%;
+        flex-shrink: 0;
+        font-size: 20px;
+    }
+
+    @include res(sm, min) {
+
+        &.vertical {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+
+            >* {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     @include res(xl, min) {
         transform: translateY(20px);
         @include hidden;
@@ -721,6 +744,10 @@
 
             &:not(:last-child) {
                 margin-bottom: 8px;
+            }
+
+            &.small {
+                height: 36px;
             }
         }
 
