@@ -292,7 +292,7 @@
                 if (showProduct) {
                     if (product.hasClass("grid")) {
                         visibleProductCountGrid++;
-                    } else if (product.hasClass("product-list")) {
+                    } else if (product.hasClass("product-style_list")) {
                         visibleProductCountList++;
                     }
                 }

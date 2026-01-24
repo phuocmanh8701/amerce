@@ -1796,7 +1796,6 @@ h6,
 }
 
 .container {
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
@@ -1806,7 +1805,6 @@ h6,
 }
 
 .container-2 {
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
@@ -1816,7 +1814,6 @@ h6,
 }
 
 .container-full {
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
@@ -1830,7 +1827,6 @@ h6,
   max-width: 100%;
   padding-left: 60px;
   padding-right: 60px;
-  position: relative;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2520,14 +2516,10 @@ header.header-sticky.tf-header-landing {
 
 .mega-menu {
   width: 100%;
-  max-width: 1410px;
   margin: auto;
   left: 0;
   right: 0;
   padding-bottom: 48px;
-}
-.mega-menu.full {
-  max-width: 100%;
 }
 
 .mega-menu-item .menu-heading {
@@ -11425,6 +11417,62 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   border-radius: 144px;
   background: var(--primary);
   padding: 2px 8px;
+}
+
+.product-style_list {
+  flex-direction: row;
+}
+.product-style_list .card-product_wrapper {
+  max-width: 330px;
+}
+.product-style_list .card-product_info {
+  position: relative;
+  z-index: 21;
+  gap: 12px;
+}
+.product-style_list .product-size_list {
+  padding: 0;
+}
+.product-style_list .product-action_list {
+  position: unset;
+  flex-direction: row;
+}
+.product-style_list .product-action_list li {
+  opacity: 1;
+  visibility: visible;
+  transform: unset;
+}
+@media (min-width: 1200px) {
+  .product-style_list {
+    gap: 30px;
+  }
+}
+@media (max-width: 1199px) {
+  .product-style_list .card-product_wrapper {
+    width: 35%;
+    max-width: unset;
+  }
+  .product-style_list .card-product_wrapper .product-img {
+    height: 100%;
+  }
+  .product-style_list .card-product_info {
+    width: 60%;
+  }
+}
+@media (max-width: 991px) {
+  .product-style_list .star-wrap {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .product-style_list .product-size_list {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .product-style_list .description {
+    display: none;
+  }
 }
 
 .product-style_mini_lis,

@@ -763,15 +763,10 @@ header {
 
 .mega-menu {
     width: 100%;
-    max-width: 1410px;
     margin: auto;
     left: 0;
     right: 0;
     padding-bottom: 48px;
-
-    &.full {
-        max-width: 100%;
-    }
 }
 
 .mega-menu-item {
