@@ -384,6 +384,7 @@
 
                         $("header").css("top", `-${navbarHeight}px`);
                         $(".sticky-top").css("top", "15px");
+                        $(".sticky-top.no-offset").css("top", "0");
 
                         if (S3) S3.hideHeaderBottom();
 
@@ -397,6 +398,8 @@
 
                         $("header").addClass("header-sticky");
                         $(".sticky-top").css("top", `${30 + navbarHeight}px`);
+                        $(".sticky-top.no-offset").css("top", `${0 + navbarHeight}px`);
+
 
                     }
 
@@ -405,6 +408,7 @@
                     $("header").css("top", "unset");
                     $("header").removeClass("header-sticky");
                     $(".sticky-top").css("top", "15px");
+                    $(".sticky-top.no-offset").css("top", "0");
 
                     if (S3) S3.showHeaderBottom();
                 }
@@ -1773,7 +1777,7 @@
             $wrap.data("basePrice", basePrice);
             $wrap.find(".color_btn").on("click mouseover", function () {
                 var $swatch = $(this);
-                var swatchColor = $swatch.find("img").attr("src");
+                var swatchColor = $swatch.find("img").data("src");
                 var colorLabel = $swatch.find(".color__label").text().trim();
 
                 $wrap.find(".img-product").attr("src", swatchColor);

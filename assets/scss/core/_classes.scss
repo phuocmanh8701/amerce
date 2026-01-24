@@ -434,7 +434,7 @@
     width: 100%;
 }
 
-.img-cover{
+.img-cover {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -680,6 +680,10 @@
     .md-mb-12 {
         margin-bottom: 12px;
     }
+}
 
-
+@include res(sm) {
+    .sm-d-none {
+        display: none !important;
+    }
 }

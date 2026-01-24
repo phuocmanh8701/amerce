@@ -96,6 +96,43 @@
     background: #d7b2b8;
 }
 
+/* -- Color Prd -- */
+.bg-muted-brown {
+    background: #927A56;
+}
+
+.bg-dark-blue-gray {
+    background: #242A36;
+}
+
+.bg-soft-gray {
+    background: #E2E2E2;
+}
+
+.bg-stone-beige {
+    background: #D4C7B6;
+}
+
+.bg-steel-gray {
+    background: #7B7F8B;
+}
+
+.bg-sand-brown {
+    background: #C4955D;
+}
+
+.bg-dusty-rose {
+    background: #D7BDB0;
+}
+
+.bg-soft-lavender {
+    background: #DFCEE0;
+}
+
+.bg-powder-pink {
+    background: #EEDDD5;
+}
+
 .stagger-wrap {
     .stagger-item {
         transition: 0.3s ease-in-out;
@@ -150,31 +187,18 @@
 
         @include res(sm, min) {
             .product-action_list {
-                bottom: 70px;
+                bottom: 12px;
             }
 
             &.has-size {
                 .product-action_list {
-                    bottom: 120px;
+                    bottom: 66px;
                 }
             }
         }
     }
 
-    &.style-4 {
-        .product-action_list {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            justify-content: center;
-            flex-direction: row;
-
-            li {
-                transform: translateY(0px);
-                transition-delay: unset !important;
-            }
-        }
-    }
+    &.style-4 {}
 
     &.style-5 {
         padding: 20px;
@@ -242,6 +266,19 @@
             .product-action_list {
                 li {
                     transform: translateY(20px);
+                }
+            }
+
+            .product-action_list {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                justify-content: center;
+                flex-direction: row;
+
+                li {
+                    transform: translateY(0px);
+                    transition-delay: unset !important;
                 }
             }
 
@@ -656,6 +693,29 @@
         }
     }
 
+    .btn-icon-quick_view {
+        width: 42px;
+        height: 42px;
+        @include flex(center, center);
+        background: var(--white);
+        border-radius: 50%;
+        flex-shrink: 0;
+        font-size: 20px;
+    }
+
+    @include res(sm, min) {
+
+        &.vertical {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+
+            >* {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     @include res(xl, min) {
         transform: translateY(20px);
         @include hidden;
@@ -684,6 +744,10 @@
 
             &:not(:last-child) {
                 margin-bottom: 8px;
+            }
+
+            &.small {
+                height: 36px;
             }
         }
 

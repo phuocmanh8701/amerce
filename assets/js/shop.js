@@ -292,7 +292,7 @@
                 if (showProduct) {
                     if (product.hasClass("grid")) {
                         visibleProductCountGrid++;
-                    } else if (product.hasClass("product-list")) {
+                    } else if (product.hasClass("product-style_list")) {
                         visibleProductCountList++;
                     }
                 }
@@ -695,11 +695,11 @@
         } else if (layoutClassGrid.includes("tf-col-4")) {
             maxItems = 8; initItem = 4;
         } else if (layoutClassGrid.includes("tf-col-5")) {
-            maxItems = 10; initItem = 5;
+            maxItems = 15; initItem = 5;
         } else if (layoutClassGrid.includes("tf-col-6")) {
-            maxItems = 12; initItem = 6;
+            maxItems = 18; initItem = 6;
         } else if (layoutClassGrid.includes("tf-col-7")) {
-            maxItems = 14; initItem = 7;
+            maxItems = 21; initItem = 7;
         }
 
         function renderGrid() {
@@ -726,7 +726,7 @@
             const rect = $el[0].getBoundingClientRect();
             const vh = window.innerHeight || document.documentElement.clientHeight;
 
-            return rect.top <= vh * 0.6;
+            return rect.top <= vh * 0.95;
         }
 
 

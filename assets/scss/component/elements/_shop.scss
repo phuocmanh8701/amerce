@@ -329,8 +329,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     align-items: center;
     justify-content: space-between;
     gap: 15px 8px;
-    margin-bottom: 24px;
+    margin-top: -8px;
+    margin-bottom: 16px;
     flex-wrap: wrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: var(--white);
 
     .tf-control-sorting {
         display: flex;
@@ -507,9 +511,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .filter-group-check {
     &.group-category {
-        .tf-check:checked+label {
-            color: var(--primary);
-        }
+        max-height: calc(38px * 7 - 12px);
+        overflow: auto;
     }
 
     .rate-list {
@@ -902,7 +905,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .meta-dropdown-filter {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
@@ -931,7 +934,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .filter-drawer-wrap {
 
     @include res(xl, min) {
-        max-width: 100% !important;
+        &.canvas-filter {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+
         position: absolute;
         z-index: 90;
         padding: 28px;
@@ -955,27 +962,27 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         }
 
         .widget-facet {
-            margin-bottom: 0;
+            margin-bottom: 0 !important;
             padding-bottom: 0;
             border: 0;
 
-            .collapse:not(.show) {
-                display: block;
-            }
+            // .collapse:not(.show) {
+            //     display: block;
+            // }
 
-            .collapsing {
-                height: auto;
-                transition: unset;
-            }
+            // .collapsing {
+            //     height: auto;
+            //     transition: unset;
+            // }
         }
 
         .facet-title {
             padding: 0px;
-            margin-bottom: 24px !important;
+            margin-bottom: 24px;
 
-            .icon {
-                display: none;
-            }
+            // .icon {
+            //     display: none;
+            // }
         }
 
         .filter-color-box {
