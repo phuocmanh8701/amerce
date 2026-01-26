@@ -1505,8 +1505,21 @@
     padding: 15px;
     border-radius: 16px;
 
+    &::before {
+        content: "";
+        border-radius: 15px;
+        position: absolute;
+        inset: 0;
+        border: 2px solid var(--text);
+        pointer-events: none;
+        @include transition3;
+        @include hidden;
+    }
+
     &:hover {
-        border-color: var(--text);
+        &::before {
+            @include visible;
+        }
     }
 }
 

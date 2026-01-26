@@ -213,6 +213,10 @@
     @include res(sm) {
         height: 400px;
 
+        .img-banner {
+            min-height: 400px;
+        }
+
         .lookbook-product {
             @include transition3;
             // transform: translateY(20px);
@@ -241,6 +245,10 @@
                 .lookbook-product {
                     // transform: translateY(0px);
                 }
+            }
+
+            &.pst-2 {
+                align-items: start;
             }
         }
     }

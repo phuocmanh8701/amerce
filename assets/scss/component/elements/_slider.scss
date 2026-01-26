@@ -973,7 +973,13 @@
     }
 
     @include res(lg) {
-        bottom: 20px;
-        right: 20px;
+        bottom: 8px;
+        right: 8px;
+        min-width: 180px;
+
+        .nav-pag_wrap>*,
+        .title {
+            padding: 6px;
+        }
     }
 }

@@ -2005,6 +2005,14 @@
                 pointer-events: none;
                 color: var(--line);
             }
+
+            &.style-2 {
+                width: auto;
+                padding-left: 20px;
+                padding-right: 20px;
+                // border: 1px solid var(--line);
+                border-radius: 40px;
+            }
         }
     }
 }
