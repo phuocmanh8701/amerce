@@ -1066,14 +1066,18 @@
 
 .section-banner-cls-v02 {
     display: flex;
+    flex-direction: column;
     gap: 10px;
 
-    .left {
-        flex: 20%;
-    }
-
-    .right {
-        flex: 52.707%;
+    @include res(lg,min){
+        flex-direction: row;
+        .left {
+            flex: 20%;
+        }
+    
+        .right {
+            flex: 52.707%;
+        }
     }
 }
 
@@ -1187,8 +1191,6 @@
 
     &.style-5 {
 
-
-
         .left {
 
 
@@ -1245,6 +1247,32 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+        }
+    }
+
+    &.style-6 {
+        background-color: var(--bg);
+
+        .variant-picker-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .variant-size-2 .size-btn {
+            border-radius: 4px;
+            height: 44px;
+        }
+
+        @include res(xl, min) {
+
+            .tf-product-media-wrap {
+                padding-right: 10px;
+            }
+            
+            .tf-product-info-wrap {
+                padding-left: 20px;
             }
         }
     }

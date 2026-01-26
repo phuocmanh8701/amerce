@@ -24,6 +24,10 @@
         background: var(--primary);
     }
 
+    &.btn-secondary {
+        background: var(--secondary);
+    }
+
     &.btn-stroke {
         border: 1px solid var(--text);
 

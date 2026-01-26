@@ -336,3 +336,23 @@
         padding-right: 15px;
     }
 }
+
+.container-full-4 {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include res(xxxl) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    @include res(xxl) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
