@@ -1150,8 +1150,10 @@
             height: unset;
             margin-bottom: 46px;
 
-            @include res(lg) {
-                margin-bottom: 30px;
+            @include res(md) {
+                img {
+                    min-height: 450px;
+                }
             }
 
             .bn-content {
@@ -1170,11 +1172,22 @@
 
             .bn-image {
                 border-radius: 0;
+
+                @include res(md) {
+
+                    img {
+                        min-height: 450px;
+                    }
+                }
             }
 
             .bn-content {
                 inset: 0;
                 padding: 28px;
+
+                @include res(md) {
+                    padding: 15px;
+                }
             }
         }
 
@@ -1185,6 +1198,9 @@
             .bn-image {
                 border-radius: 0;
 
+                img {
+                    min-height: 400px;
+                }
             }
 
             .bn-content {
@@ -1192,23 +1208,35 @@
                 padding: 28px;
                 display: flex;
                 justify-content: end;
+
+                @include res(md) {
+                    padding: 15px;
+                }
             }
         }
     }
 
     &.style-top-left {
         position: relative;
+        height: 100%;
 
         .bn-content {
             position: absolute;
             top: 20px;
             left: 20px;
             right: 20px;
+
         }
 
         .bn-image {
             img {
-                min-height: 300px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                @include res(lg) {
+                    max-height: 550px;
+                }
             }
         }
     }
@@ -2425,15 +2453,15 @@
         justify-content: space-between;
         background-color: var(--bg);
         gap: 24px;
+
         @include res(md) {
             padding: 24px 15px;
         }
     }
 
-    @include res(lg, min) {
-
+    @include res(sm, min) {
         .img-style4 {
-            flex: 36%;
+            flex: 20%;
         }
 
         .content {
@@ -2441,22 +2469,34 @@
         }
     }
 
-    @include res(sm){
+    @include res(xl, min) {
+
+        .img-style4 {
+            flex: 36%;
+        }
+
+        
+    }
+
+    @include res(sm) {
         flex-direction: column;
     }
 
     .tf-btn {
         max-width: max-content;
     }
+
     .item {
         position: absolute;
     }
+
     &.ips-1 {
         .item {
             right: -63px;
             top: -46px;
         }
     }
+
     &.ips-2 {
         .item {
             right: -11px;

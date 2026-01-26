@@ -477,6 +477,56 @@
     }
 }
 
+.testimonial-v03 {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+
+    .img-style4 {
+        position: relative;
+    }
+
+    .content {
+        text-align: center;
+        padding: 24px;
+
+        @include res(sm){
+            padding: 24px 15px;
+        }
+    }
+
+    .star-wrap {
+        justify-content: center;
+    }
+
+    .tes-action_list {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .tes_author {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .box-icon{
+        height: 40px;
+        width:40px;
+        border-radius: 50%;
+        background-color: var(--white);
+        font-style: 20px;
+        @include transition3();
+
+        &:hover{
+            background-color: var(--black);
+            color: var(--white);
+        }
+    }
+}
+
 .section-testimonials {
     padding: 108px 0;
 

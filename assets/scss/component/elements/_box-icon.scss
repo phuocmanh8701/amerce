@@ -225,6 +225,38 @@
         }
     }
 
+    &.has-line {
+
+        .icon{
+            font-size: 60px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80px;
+            width: 1px;
+            background-color: var(--line);
+        }
+
+
+        @include res(xl) {
+            &::after {
+                right: -16px;
+            }
+        }
+
+        @include res(md) {
+            &::after {
+                right: -6px;
+            }
+        }
+
+    }
+
     &.style-2 {
         .icon {
             margin-bottom: 16px;
@@ -260,17 +292,6 @@
 
     }
 
-    @include res(xl) {
-        &::after {
-            right: -16px;
-        }
-    }
-
-    @include res(md) {
-        &::after {
-            right: -6px;
-        }
-    }
 }
 
 .box-icon_V02 {

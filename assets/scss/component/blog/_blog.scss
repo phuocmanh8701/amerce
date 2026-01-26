@@ -22,12 +22,13 @@
         margin-bottom: 8px;
     }
 
-    .wrap-tags{
+    .wrap-tags {
         position: absolute;
         left: 12px;
         top: 12px;
         z-index: 3;
-        .tag{
+
+        .tag {
             padding: 4px 8px;
             background-color: var(--text);
             border-radius: 4px;
@@ -49,8 +50,8 @@
             }
         }
 
-        &.list-v2{
-            @include res(sm,min){
+        &.list-v2 {
+            @include res(sm, min) {
                 flex-direction: row;
             }
         }
@@ -76,6 +77,33 @@
 
             @include res(md) {
                 padding: 24px 15px;
+            }
+        }
+    }
+
+    &.style-3 {
+        .blog-image {
+            border-radius: 1000px 1000px 0 0;
+            position: relative;
+        }
+
+        .wrap-tags {
+            position: absolute;
+            left: 12px;
+            bottom: 12px;
+            top: unset;
+            z-index: 3;
+
+            .tag {
+                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 8px;
+                background-color: var(--text);
+                border-radius: 4px;
+                color: var(--white);
+                height: 30px;
             }
         }
     }
