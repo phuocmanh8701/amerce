@@ -4,8 +4,12 @@
     border: none !important;
     color: var(--black);
     z-index: 3000;
-    width: 320px !important;
     background-color: var(--white);
+
+    &.offcanvas-end,
+    &.offcanvas-start {
+        width: 320px;
+    }
 
     .icon-close-popup {
         @include transition3;
@@ -2050,6 +2054,35 @@
 
         .pickup-available-list {
             gap: 40px;
+        }
+    }
+}
+
+.canvas-lookbook {
+    &.offcanvas {
+        height: auto;
+    }
+
+    .canvas-body {
+        padding: 0;
+    }
+
+    .popup-look-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 12px;
+
+        .look-image {
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .look-content {
+            display: grid;
+            gap: 4px;
         }
     }
 }

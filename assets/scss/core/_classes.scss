@@ -680,6 +680,10 @@
     .md-mb-12 {
         margin-bottom: 12px;
     }
+
+    .md-d-none {
+        display: none !important;
+    }
 }
 
 @include res(sm) {

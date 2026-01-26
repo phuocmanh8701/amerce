@@ -367,9 +367,9 @@
             right: 0;
             bottom: 16px;
             z-index: 3;
-            
 
-            @include res(md,min){
+
+            @include res(md, min) {
                 width: 50%;
                 bottom: 32px;
             }
@@ -557,6 +557,10 @@
 
         &.pst-2 {
             top: calc(50% + 64px);
+        }
+
+        &.pst-5 {
+            top: calc(50% - 6px);
         }
     }
 
@@ -805,7 +809,7 @@
         width: 100%;
         min-height: 400px;
 
-        @include res(md,min){
+        @include res(md, min) {
             min-height: 542px;
         }
     }
@@ -817,7 +821,7 @@
             object-fit: cover;
         }
 
-        
+
     }
 
     .sld-content {
@@ -837,9 +841,10 @@
                 object-fit: cover;
             }
 
-            @include res(md){
+            @include res(md) {
                 background-color: #101010;
-                img{
+
+                img {
                     opacity: 0.8;
                 }
             }

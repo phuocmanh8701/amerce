@@ -1921,7 +1921,6 @@
             });
         });
     };
-
     // Dom Ready
     $(function () {
         scrollGridProduct();
