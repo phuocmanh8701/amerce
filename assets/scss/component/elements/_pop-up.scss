@@ -2094,3 +2094,77 @@
         }
     }
 }
+
+.modalDemo {
+    .demo-title {
+        margin-top: 40px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .modal-dialog {
+        max-width: 1540px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        // height: calc(100vh - 16px);
+    }
+
+    .modal-content {
+        padding: 0 40px 40px;
+        background-color: var(--white);
+        width: 100%;
+        border-radius: 20px;
+        margin: 0 30px;
+        max-height: calc(100vh - 60px);
+        border: 0;
+        cursor: default;
+        overflow: hidden;
+    }
+
+    .mega-menu {
+        padding: 0 20px;
+        overscroll-behavior-y: contain;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            background: var(--line);
+
+            &:hover {
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--text);
+            transition: all 0.3s ease;
+        }
+    }
+
+    .top {
+        position: relative;
+
+        .btn-close-popup {
+            position: absolute;
+            top: 18px;
+            right: 0;
+            font-size: 24px;
+        }
+    }
+
+    .row-demo {
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 32px;
+
+        .demo-img {
+            // aspect-ratio: 0;
+        }
+    }
+
+    @include res(xxl) {
+        .row-demo {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

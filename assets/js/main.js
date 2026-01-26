@@ -954,25 +954,46 @@
 
             const $subNav = $('<ul class="sub-nav-menu"></ul>');
             const $groups = submenu.find(".mega-menu-item.menu-lv-2");
-            const $homeDemos = submenu.find(".demo-item a.demo-name");
 
-            if ($homeDemos.length) {
+            const isHomeMenu = text.toLowerCase() === "home";
+            const $homeDemos = $("#modalDemo .demo-item a.demo-name");
+            if (isHomeMenu && $homeDemos.length) {
                 $homeDemos.each(function () {
                     const $a = $(this);
+                    const $demoItem = $a.closest(".demo-item");
                     const href = $a.attr("href") || "#";
-                    const text = $a.text().trim();
 
-                    if (text) {
-                        $subNav.append(`
-                <li>
-                    <a href="${href}" class="sub-nav-link">
-                        ${text}
-                    </a>
-                </li>
-            `);
+                    const isSoon = $demoItem.hasClass("soon");
+                    const soonClass = isSoon ? "soon" : "";
+
+                    const text = $a
+                        .clone()
+                        .children(".demo-label")
+                        .remove()
+                        .end()
+                        .text()
+                        .trim();
+
+                    const $label = $a.find(".demo-label").first();
+                    let labelHTML = "";
+
+                    if ($label.length) {
+                        const labelText = $label.text().trim();
+                        const labelClass = $label.attr("class").replace("demo-label", "").trim();
+                        labelHTML = `<span class="demo-label ${labelClass}">${labelText}</span>`;
                     }
+
+                    $subNav.append(`
+                    <li>
+                        <a href="${href}" class="sub-nav-link ${soonClass}">
+                            ${text}
+                            ${labelHTML}
+                        </a>
+                    </li>
+                `);
                 });
             }
+
 
             if ($groups.length) {
                 $groups.each(function (j) {
@@ -986,17 +1007,17 @@
                     const groupActiveClass = hasActiveChild ? "active" : "";
 
                     const $group = $(`
-    <li>
-      <a href="#${subId}" class="collapsed sub-nav-link ${groupActiveClass}"
-         data-bs-toggle="collapse" aria-expanded="false" aria-controls="${subId}">
-        <span>${heading}</span>
-        <span class="icon ${$iconArrow2}"></span>
-      </a>
-      <div id="${subId}" class="collapse">
-        <ul class="sub-nav-menu sub-menu-level-2"></ul>
-      </div>
-    </li>
-  `);
+                        <li>
+                        <a href="#${subId}" class="collapsed sub-nav-link ${groupActiveClass}"
+                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="${subId}">
+                            <span>${heading}</span>
+                            <span class="icon ${$iconArrow2}"></span>
+                        </a>
+                        <div id="${subId}" class="collapse">
+                            <ul class="sub-nav-menu sub-menu-level-2"></ul>
+                        </div>
+                        </li>
+                    `);
 
                     $groupWrap.find(".sub-menu_list > li > a.sub-menu_link").each(function () {
                         const $a = $(this);
