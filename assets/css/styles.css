@@ -3019,9 +3019,6 @@ header.header-sticky.tf-header-landing {
   display: flex;
   gap: 40px;
 }
-.mega-menu_home_v2.sub-menu {
-  left: 0;
-}
 .mega-menu_home_v2 .sub-menu_list {
   min-width: 200px;
 }
@@ -3036,6 +3033,9 @@ header.header-sticky.tf-header-landing {
 }
 .mega-menu_home_v2 .image-preview img {
   max-width: 300px;
+}
+.mega-menu_home_v2.home-type_2 {
+  left: -280px;
 }
 
 .nav-account {

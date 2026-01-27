@@ -751,6 +751,18 @@ header {
     @include hidden;
     pointer-events: none;
 
+    // &.center {
+    //     left: 0;
+    //     right: 0;
+    //     display: flex;
+    //     justify-content: center;
+    //     background: transparent;
+
+    //     > {
+    //         background: var(--white);
+    //     }
+    // }
+
     @include res(xxl) {
         min-width: 180px;
 
@@ -1294,10 +1306,6 @@ header {
     display: flex;
     gap: 40px;
 
-    &.sub-menu {
-        left: 0;
-    }
-
     .sub-menu_list {
         min-width: 200px;
 
@@ -1316,6 +1324,10 @@ header {
             max-width: 300px;
             // object-fit: cover;
         }
+    }
+
+    &.home-type_2 {
+        left: -280px;
     }
 }
 
