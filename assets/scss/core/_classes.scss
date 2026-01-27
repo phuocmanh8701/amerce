@@ -601,6 +601,11 @@
     --bs-gutter-y: 20px;
 }
 
+.g-30,
+.gy-30 {
+    --bs-gutter-y: 30px;
+}
+
 .text-decoration-thickness {
     text-decoration-thickness: 2px !important;
 }
@@ -625,8 +630,9 @@
     .h-lg-100 {
         height: 100% !important;
     }
-    .gap-lg-30{
-       gap: 30px !important;
+
+    .gap-lg-30 {
+        gap: 30px !important;
     }
 }
 

@@ -578,6 +578,10 @@
     &.new {
         background-color: #3dab25;
     }
+
+    &.trend {
+        background-color: var(--yellow);
+    }
 }
 
 .product-marquee_sale {

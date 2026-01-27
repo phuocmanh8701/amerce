@@ -1069,12 +1069,13 @@
     flex-direction: column;
     gap: 10px;
 
-    @include res(lg,min){
+    @include res(lg, min) {
         flex-direction: row;
+
         .left {
             flex: 20%;
         }
-    
+
         .right {
             flex: 52.707%;
         }
@@ -1270,7 +1271,7 @@
             .tf-product-media-wrap {
                 padding-right: 10px;
             }
-            
+
             .tf-product-info-wrap {
                 padding-left: 20px;
             }
@@ -2644,6 +2645,18 @@
             p {
                 color: var(--text-2) !important;
             }
+        }
+    }
+}
+
+.section-log {
+    @include res(xl, min) {
+        .col-left {
+            padding-right: 30px;
+        }
+
+        .col-right {
+            padding-left: 30px;
         }
     }
 }
