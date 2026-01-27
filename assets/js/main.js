@@ -1043,9 +1043,12 @@
                     const html = $a.html();
                     const isActive = $a.hasClass("active");
                     const activeClass = isActive ? "active" : "";
+                    const isSoon = $a.hasClass("soon");
+                    const soonClass = isSoon ? "soon" : "";
+                    console.log($a);
 
                     if (html && html.trim()) {
-                        $subNav.append(`<li><a href="${href}" class="sub-nav-link ${activeClass}">${html}</a></li>`);
+                        $subNav.append(`<li><a href="${href}" class="sub-nav-link ${activeClass} ${soonClass}">${html}</a></li>`);
                     }
                 });
             }
