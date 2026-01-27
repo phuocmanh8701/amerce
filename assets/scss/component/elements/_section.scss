@@ -480,6 +480,19 @@
     }
 }
 
+.infiniteSlide-text-v03 {
+    padding: 16px 0 15px;
+    border-bottom: 1px solid var(--line);
+
+    .infiniteSlide {
+        gap: 18px;
+
+        i {
+            font-size: 32px;
+        }
+    }
+}
+
 .banner-sale {
     display: flex;
     align-items: center;
@@ -1905,6 +1918,34 @@
 .section-top-pick {
     .row {
         row-gap: 40px;
+    }
+}
+
+.section-top-pick-v02 {
+    .wrap-prd {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .banner-image-text {
+        .bn-image {
+            img {}
+        }
+    }
+
+    @include res(llg, min) {
+        .wrap-prd {
+            flex-direction: row;
+        }
+
+        .col-prd-1 {
+            flex: 20%;
+        }
+
+        .col-prd-2 {
+            flex: 40.284%
+        }
     }
 }
 
