@@ -3037,6 +3037,16 @@ header.header-sticky.tf-header-landing {
 .mega-menu_home_v2.home-type_2 {
   left: -280px;
 }
+@media (max-width: 1599px) {
+  .mega-menu_home_v2.home-type_4 {
+    left: -180px;
+  }
+}
+@media (max-width: 1439px) {
+  .mega-menu_home_v2.home-type_3 {
+    left: -180px;
+  }
+}
 
 .nav-account {
   position: relative;

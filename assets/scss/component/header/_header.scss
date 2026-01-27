@@ -1329,6 +1329,18 @@ header {
     &.home-type_2 {
         left: -280px;
     }
+
+    @include res(xxxl) {
+        &.home-type_4 {
+            left: -180px;
+        }
+    }
+
+    @include res(xxl) {
+        &.home-type_3 {
+            left: -180px;
+        }
+    }
 }
 
 .nav-account {
