@@ -2689,3 +2689,15 @@
         }
     }
 }
+
+.section-log {
+    @include res(xl, min) {
+        .col-left {
+            padding-right: 30px;
+        }
+
+        .col-right {
+            padding-left: 30px;
+        }
+    }
+}

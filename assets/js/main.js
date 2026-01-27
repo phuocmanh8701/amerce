@@ -1043,9 +1043,12 @@
                     const html = $a.html();
                     const isActive = $a.hasClass("active");
                     const activeClass = isActive ? "active" : "";
+                    const isSoon = $a.hasClass("soon");
+                    const soonClass = isSoon ? "soon" : "";
+                    console.log($a);
 
                     if (html && html.trim()) {
-                        $subNav.append(`<li><a href="${href}" class="sub-nav-link ${activeClass}">${html}</a></li>`);
+                        $subNav.append(`<li><a href="${href}" class="sub-nav-link ${activeClass} ${soonClass}">${html}</a></li>`);
                     }
                 });
             }
@@ -1534,6 +1537,8 @@
         }
     };
 
+    /* Hover Lookbook
+    -------------------------------------------------------------------------*/
     var handleHoverLookBook = () => {
         var $pins = $('.section-lookbook-hover-v03 .tf-pin-btn');
         var $productWrap = $('.section-lookbook-hover-v03 .wrap-product');
@@ -1586,6 +1591,8 @@
         });
     }
 
+    /* Notice Popup
+    -------------------------------------------------------------------------*/
     const noticePop = () => {
         var $popup = $(".pop-notice-sale");
         var $closeBtn = $(".btn-cl-pop");
@@ -1628,79 +1635,7 @@
             showPopup();
         }, hideTime);
     }
-    /* Modal Quick Add
-    -------------------------------------------------------------------------*/
-    var modalQuickAdd = () => {
-        if ($(".tf-product-quick_add").length === 0) return;
 
-        $(".tf-product-quick_add").each(function () {
-            var $wrap = $(this);
-            var $activeSize = $wrap.find(".size-btn.active");
-            var basePrice = $activeSize.length
-                ? parseFloat($activeSize.data("price"))
-                : parseFloat(
-                    $wrap.find(".price-on-sale").text()
-                        .replace("$", "")
-                        .replace(/,/g, "")
-                );
-
-            $wrap.data("basePrice", basePrice);
-            $wrap.find(".color-swatch").on("click mouseover", function () {
-                var $swatch = $(this);
-                var swatchColor = $swatch.find("img").attr("src");
-                var colorLabel = $swatch.find(".color__label").text().trim();
-
-                $wrap.find(".img-product").attr("src", swatchColor);
-                $wrap.find(".picker_color .variant__value").text(colorLabel);
-
-                $wrap.find(".color-swatch.active").removeClass("active");
-                $swatch.addClass("active");
-            });
-
-            $wrap.find(".size-btn:not(.disabled)").on("click", function () {
-                var $btn = $(this);
-                var size = $btn.data("quick-size");
-                var price = parseFloat($btn.data("quick-price"));
-
-                $wrap.find(".size-btn.active").removeClass("active");
-                $btn.addClass("active");
-
-                $wrap.find(".picker_size .variant__value").text(size);
-
-                $wrap.find(".quantity-product").val(1);
-
-                $wrap.data("basePrice", price);
-
-                updatePrice();
-            });
-
-            $wrap.find(".btn-increase").on("click", function () {
-                var $qty = $wrap.find(".quantity-product");
-                var qty = parseInt($qty.val()) || 1;
-
-                $qty.val(qty + 1);
-                updatePrice();
-            });
-
-            $wrap.find(".btn-decrease").on("click", function () {
-                var $qty = $wrap.find(".quantity-product");
-                var qty = parseInt($qty.val()) || 1;
-
-                if (qty > 1) {
-                    $qty.val(qty - 1);
-                    updatePrice();
-                }
-            });
-            function updatePrice() {
-                var basePrice = $wrap.data("basePrice");
-                var qty = parseInt($wrap.find(".quantity-product").val()) || 1;
-                var total = basePrice * qty;
-
-                $wrap.find(".price-on-sale").text("$" + total.toFixed(2));
-                $wrap.find(".price-add").text("$" + total.toFixed(2));
-            }
-        });
-    };
     /* Offcanvas Quick View
     -------------------------------------------------------------------------*/
     var offcanvasQuickView = () => {
