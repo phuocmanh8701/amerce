@@ -392,6 +392,28 @@
         align-items: center;
     }
 
+    &.style-2 {
+        .box-image_img {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                aspect-ratio: calc(550/340);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+
     @include res(sm) {
         .box-image_img {
             img {
@@ -2475,7 +2497,7 @@
             flex: 36%;
         }
 
-        
+
     }
 
     @include res(sm) {
