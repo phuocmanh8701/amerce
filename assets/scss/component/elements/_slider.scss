@@ -516,7 +516,6 @@
     }
 
     &.pst-4 {
-
         top: calc(50% + 52px);
 
         @include res(xl, min) {
@@ -526,7 +525,7 @@
         }
     }
 
-    &.type-3 {
+    &.type-3,&.type-4 {
         left: 0;
         right: 0;
         top: unset;
@@ -540,6 +539,14 @@
 
         @include res(lg, min) {
             padding-left: 48px;
+            padding-right: 15px;
+        }
+    }
+
+    &.type-4{
+        @include res(lg, min) {
+            bottom: 60px;
+            padding-left: 60px;
             padding-right: 15px;
         }
     }
