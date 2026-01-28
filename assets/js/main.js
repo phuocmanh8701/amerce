@@ -1045,7 +1045,6 @@
                     const activeClass = isActive ? "active" : "";
                     const isSoon = $a.hasClass("soon");
                     const soonClass = isSoon ? "soon" : "";
-                    console.log($a);
 
                     if (html && html.trim()) {
                         $subNav.append(`<li><a href="${href}" class="sub-nav-link ${activeClass} ${soonClass}">${html}</a></li>`);
@@ -1877,8 +1876,35 @@
             });
         });
     };
+
+    /* Circle Text
+    -------------------------------------------------------------------------*/
+    var circleText = () => {
+
+        if ($(".wg-circular-text").length === 0) return;
+        const originalText = document.querySelector('.original-text');
+        const text = originalText.textContent.trim();
+        const container = document.getElementById('circularText');
+
+        const characters = text.split('');
+        const totalCharacters = characters.length;
+
+        const angleStep = 360 / totalCharacters;
+
+        characters.forEach((char, index) => {
+            const span = document.createElement('span');
+            span.textContent = char;
+
+            const angle = angleStep * index;
+            span.style.transform = `rotate(${angle}deg)`;
+
+            container.appendChild(span);
+        });
+    }
+
     // Dom Ready
     $(function () {
+        circleText();
         scrollGridProduct();
         writeReview();
         popupProductVariant();

@@ -597,7 +597,6 @@
         li {
             display: inline-block;
             width: 32.88%;
-            color: var(--gray);
             margin: 0;
             font-size: 14px;
             font-style: normal;
@@ -610,8 +609,12 @@
             overflow: hidden;
             text-overflow: ellipsis;
 
-            &:hover {
-                color: var(--primary);
+            a {
+                color: var(--text-2);
+
+                &:hover {
+                    color: var(--primary);
+                }
             }
         }
     }
@@ -627,6 +630,12 @@
         border-bottom: 1px solid #ededed;
         margin-bottom: 8px;
         color: var(--black);
+
+        // a {
+        //     &:hover {
+        //         color: var(--primary);
+        //     }
+        // }
     }
 }
 

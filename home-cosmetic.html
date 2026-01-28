@@ -1283,7 +1283,7 @@
                             </nav>
                         </div>
                         <div class="header-right">
-                            <form class="form-search-nav style-3 d-none d-xl-block">
+                            <form action="search-result.html" class="form-search-nav style-3 d-none d-xl-block">
                                 <fieldset>
                                     <input type="text" placeholder="Search Products" required="">
                                 </fieldset>
@@ -1292,6 +1292,11 @@
                                 </button>
                             </form>
                             <ul class="nav-icon-list">
+                                <li class="d-none d-sm-block d-xl-none">
+                                    <a href="#search" data-bs-toggle="modal" class="nav-icon-item link">
+                                        <i class="icon icon-MagnifyingGlass"></i>
+                                    </a>
+                                </li>
                                 <li>
                                     <a href="#sign" data-bs-toggle="modal" class="nav-icon-item link">
                                         <i class="icon icon-User"></i>
@@ -2216,8 +2221,8 @@
                                 <div class="tf-product-info-list other-image-zoom">
                                     <div class="single-heading">
                                         <p class="detail-tag text-body-1 cl-text-2 mb-4">Skin care</p>
-                                        <a href="#" class="detail-name h3 fw-medium mb-12">Hyggee Relief Chamomile
-                                            Mist
+                                        <a href="product-detail.html" class="detail-name h3 fw-medium link mb-12">Hyggee
+                                            Relief Chamomile Mist
                                         </a>
                                         <div class="d-flex align-items-center gap-4 mb-12">
                                             <div class="star-wrap normal d-flex align-items-center">
@@ -2295,7 +2300,7 @@
                                                     <span class="tooltip">Compare</span>
                                                 </a>
                                             </div>
-                                            <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            <a href="checkout.html"
                                                 class="btn-action-buy type-xl tf-btn btn-primary animate-btn w-100">
                                                 Buy It Now
                                             </a>
@@ -2686,7 +2691,8 @@
                                         (+01) 1234 8888
                                     </a>
                                     <br>
-                                    <a href="#" class="cl-text-2 link mb-4">
+                                    <a href="https://www.google.com/maps?q=600+N+Michigan+Ave+Chicago,+IL+60611+USA"
+                                        target="_blank" class="cl-text-2 link mb-4">
                                         600 N Michigan Ave, Chicago, IL 60611, USA
                                     </a>
                                     <br>
@@ -2694,12 +2700,16 @@
                                         themesflat@gmail.com
                                     </a>
                                     <div class="d-flex align-items-center gap-20">
-                                        <a href="#" class="d-flex"><i class="fs-20 link icon icon-FacebookLogo"></i></a>
-                                        <a href="#" class="d-flex"><i class="fs-20 link icon icon-XLogo"></i></a>
-                                        <a href="#" class="d-flex"><i
+                                        <a href="https://www.facebook.com/" target="_blank" class="d-flex"><i
+                                                class="fs-20 link icon icon-FacebookLogo"></i></a>
+                                        <a href="https://x.com/" target="_blank" class="d-flex"><i
+                                                class="fs-20 link icon icon-XLogo"></i></a>
+                                        <a href="https://www.instagram.com/" target="_blank" class="d-flex"><i
                                                 class="fs-20 link icon icon-InstagramLogo"></i></a>
-                                        <a href="#" class="d-flex"><i class="fs-20 link icon icon-TiktokLogo"></i></a>
-                                        <a href="#" class="d-flex"><i class="fs-20 link icon icon-SnapchatLogo"></i></a>
+                                        <a href="https://www.tiktok.com/" target="_blank" class="d-flex"><i
+                                                class="fs-20 link icon icon-TiktokLogo"></i></a>
+                                        <a href="https://www.snapchat.com/" target="_blank" class="d-flex"><i
+                                                class="fs-20 link icon icon-SnapchatLogo"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -2751,11 +2761,11 @@
                                     </form>
                                     <p class="text-remember cl-text-2">
                                         By clicking subcribe, you agree to the
-                                        <a href="#" class="link link-underline">
+                                        <a href="term-and-condition.html" class="link link-underline">
                                             Terms of Service
                                         </a>
                                         and
-                                        <a href="#" class="link link-underline">
+                                        <a href="privacy-policy.html" class="link link-underline">
                                             Privacy Policy
                                         </a>.
                                     </p>
@@ -2943,7 +2953,7 @@
                             <p class="orther-log text-center">
                                 Remember your password?
                                 <a href="#sign" data-bs-toggle="modal" class="text-primary text-decoration-underline">
-                                    Sign Up
+                                    Sign In
                                 </a>
                             </p>
                         </div>
@@ -3460,7 +3470,7 @@
         <div class="tf-minicart-recommendations file-delete">
             <div class="title d-flex justify-content-between align-items-center">
                 <h5>You Might Like</h5>
-                <i class="icon icon-X2 link remove fs-24"></i>
+                <i class="icon icon-X2 link remove fs-24 cs-pointer"></i>
             </div>
             <div class="wrap-recommendations">
                 <div class="list-cart">

@@ -600,6 +600,11 @@
     --bs-gutter-y: 2rem;
 }
 
+.g-12,
+.gy-12 {
+    --bs-gutter-y: 12px;
+}
+
 .g-20,
 .gy-20 {
     --bs-gutter-y: 20px;
@@ -637,6 +642,10 @@
 
     .gap-lg-30 {
         gap: 30px !important;
+    }
+
+    .opacity-lg-0 {
+        opacity: 0 !important;
     }
 }
 

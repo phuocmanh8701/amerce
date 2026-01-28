@@ -242,10 +242,16 @@
     .cate-image {
         flex-shrink: 0;
         max-width: 60px;
+        border-radius: 6px;
+        overflow: hidden;
     }
 
     .cate_name {
         margin-bottom: 4px;
+    }
+
+    .cate-icon {
+        font-size: 60px;
     }
 
     &.bg-v1 {
@@ -1832,6 +1838,26 @@
     }
 }
 
+.countdown-v07 {
+    .countdown__custom {
+        // display: block;
+
+        &::after,
+        &::before {
+            content: " ";
+        }
+    }
+
+    .countdown__item {
+        &:last-child {
+            .countdown__value {
+                display: inline-flex;
+                min-width: 78px;
+            }
+        }
+    }
+}
+
 .wg-quantity {
     display: flex;
     justify-content: space-between;
@@ -2524,5 +2550,39 @@
             right: -11px;
             bottom: -36px;
         }
+    }
+}
+
+
+.wg-circular-text {
+
+    .circular-text {
+        position: relative;
+        width: 140px;
+        height: 140px;
+        animation: rotate 15s linear infinite;
+    }
+
+    .circular-text span {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform-origin: 0 75px;
+        font-weight: 600;
+    }
+
+    .original-text {
+        display: none;
+    }
+}
+
+.section-parallax {
+    position: relative;
+
+    .wg-circular-text {
+        position: absolute;
+        right: 180px;
+        bottom: 0;
+        transform: translateY(50%);
     }
 }

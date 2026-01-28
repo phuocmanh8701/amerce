@@ -745,6 +745,18 @@
     }
 
     &.style-3 {
+        background: #F4F69166;
+        border: 1px dashed #F4F691;
+        border-radius: 12px;
+        overflow: hidden;
+        padding: 26px;
+
+        .content {
+            padding: 0;
+        }
+    }
+
+    &.style-4 {
         position: relative;
         padding: 34px 48px;
         border-radius: 16px;
@@ -1174,19 +1186,6 @@
         flex-shrink: 0;
     }
 
-    &.style-thumbs-position {
-        .tf-product-media-thumbs {
-            position: absolute;
-            z-index: 3;
-            top: 20px;
-            left: 20px;
-        }
-
-        .flat-wrap-media-product{
-            width: 100%;
-        }
-    }
-
     &.style-2 {
         .tf-product-total-quantity {
             place-items: start;
@@ -1328,8 +1327,6 @@
             }
         }
     }
-
-
 
     @include res(lg, min) {
 
