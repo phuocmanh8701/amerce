@@ -10849,7 +10849,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 @media (min-width: 576px) {
   .card-product.has-size .product-action_bot {
-    bottom: 66px;
+    bottom: 64px;
   }
 }
 @media (min-width: 1200px) {
@@ -11301,6 +11301,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   border-radius: 50%;
   flex-shrink: 0;
   font-size: 20px;
+}
+.product-action_bot .btn-icon-quick_view:hover {
+  background: var(--text);
+  color: var(--white);
 }
 @media (min-width: 576px) {
   .product-action_bot.vertical {
