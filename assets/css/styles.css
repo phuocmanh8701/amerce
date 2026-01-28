@@ -3170,6 +3170,7 @@ header.header-sticky.tf-header-landing {
 
 .topbar-s2 {
   position: relative;
+  z-index: 101;
 }
 .topbar-s2::after {
   content: "";
@@ -9543,7 +9544,6 @@ button.animate-btn::after,
 .select-category .select-options li {
   display: inline-block;
   width: 32.88%;
-  color: var(--gray);
   margin: 0;
   font-size: 14px;
   font-style: normal;
@@ -9560,7 +9560,10 @@ button.animate-btn::after,
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.select-category .select-options li:hover {
+.select-category .select-options li a {
+  color: var(--text-2);
+}
+.select-category .select-options li a:hover {
   color: var(--primary);
 }
 .select-category .header-select-option {
@@ -14551,6 +14554,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .category-v05 .cate-image {
   flex-shrink: 0;
   max-width: 60px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 .category-v05 .cate_name {
   margin-bottom: 4px;

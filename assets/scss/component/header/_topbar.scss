@@ -22,6 +22,7 @@
 
 .topbar-s2 {
     position: relative;
+    z-index: 101;
 
     &::after {
         content: "";

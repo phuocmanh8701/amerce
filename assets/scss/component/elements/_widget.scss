@@ -242,6 +242,8 @@
     .cate-image {
         flex-shrink: 0;
         max-width: 60px;
+        border-radius: 6px;
+        overflow: hidden;
     }
 
     .cate_name {
