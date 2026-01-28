@@ -3156,7 +3156,7 @@ header.header-sticky.tf-header-landing {
   padding-top: 12px;
   padding-bottom: 12px;
   position: relative;
-  z-index: 3;
+  z-index: 101;
 }
 .tf-topbar .br-line.fake-class {
   position: absolute;
@@ -3170,7 +3170,6 @@ header.header-sticky.tf-header-landing {
 
 .topbar-s2 {
   position: relative;
-  z-index: 101;
 }
 .topbar-s2::after {
   content: "";
@@ -14559,6 +14558,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .category-v05 .cate_name {
   margin-bottom: 4px;
+}
+.category-v05 .cate-icon {
+  font-size: 60px;
 }
 .category-v05.bg-v1 {
   background: #f3f5ea;
