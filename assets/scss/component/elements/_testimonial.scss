@@ -128,7 +128,7 @@
             max-width: 60px;
         }
 
-        &.type-2 {
+        &.type-2,&.type-3 {
             @include transition3;
 
             .star-wrap {
@@ -145,6 +145,8 @@
                 }
             }
         }
+
+       
     }
 
     &.style-3 {
@@ -332,7 +334,7 @@
                 margin-bottom: 28px;
             }
 
-            &.type-2 {
+            &.type-2,&.type-3 {
                 padding: 28px;
 
                 .star-wrap .icon,
@@ -354,6 +356,26 @@
                     .prd_price,
                     .prd_name {
                         color: var(--white) !important;
+                    }
+                }
+            }
+
+            &.type-3 {
+                &:hover {
+                    background: var(--third);
+
+                    .star-wrap .icon,
+                    .tes_text,
+                    .author-name,
+                    .author-verified .text,
+                    
+                    .prd_name {
+                        color: var(--text) !important;
+                    }
+
+                    .prd_price{
+                        color: var(--primary) !important;
+
                     }
                 }
             }

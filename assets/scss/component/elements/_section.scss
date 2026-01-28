@@ -743,6 +743,31 @@
             }
         }
     }
+
+    &.style-3 {
+        position: relative;
+        padding: 34px 48px;
+        border-radius: 16px;
+        overflow: hidden;
+
+        .banner-img {
+            position: absolute;
+            inset: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .countdown-v01 {
+            background: #FFFFFF33;
+            backdrop-filter: blur(40px);
+            padding: 20px 32px;
+            border-radius: 12px;
+        }
+
+    }
 }
 
 .banner-countdown-v02 {
@@ -1149,6 +1174,19 @@
         flex-shrink: 0;
     }
 
+    &.style-thumbs-position {
+        .tf-product-media-thumbs {
+            position: absolute;
+            z-index: 3;
+            top: 20px;
+            left: 20px;
+        }
+
+        .flat-wrap-media-product{
+            width: 100%;
+        }
+    }
+
     &.style-2 {
         .tf-product-total-quantity {
             place-items: start;
@@ -1290,6 +1328,8 @@
             }
         }
     }
+
+
 
     @include res(lg, min) {
 
@@ -1550,6 +1590,37 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    }
+
+    &.style-2 {
+        .content {
+            background-color: #FFEB8A;
+            padding: 48px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .heading {
+            display: grid;
+            gap: 16px;
+        }
+
+        .img-style4 {
+            border-radius: 12px;
+        }
+
+        .thumbs-prd {
+            @include res(xl, min) {
+                padding-right: 28px;
+            }
+
+            .btn-action {
+                border-radius: 8px;
+            }
         }
     }
 
