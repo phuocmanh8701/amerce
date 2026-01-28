@@ -743,6 +743,18 @@
             }
         }
     }
+
+    &.style-3 {
+        background: #F4F69166;
+        border: 1px dashed #F4F691;
+        border-radius: 12px;
+        overflow: hidden;
+        padding: 26px;
+
+        .content {
+            padding: 0;
+        }
+    }
 }
 
 .banner-countdown-v02 {
@@ -2529,6 +2541,11 @@
         display: flex;
         gap: 16px;
         margin-bottom: 20px;
+
+        .thumb-item {
+            border-radius: 8px;
+            overflow: hidden;
+        }
     }
 
     @include res(xxl, min) {
@@ -2699,5 +2716,20 @@
         .col-right {
             padding-left: 30px;
         }
+    }
+}
+
+.banner-image-parallax {
+    border-radius: 16px;
+    overflow: hidden;
+
+    .bn-image {}
+
+    img {
+        max-height: 560px;
+        min-height: 400px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }

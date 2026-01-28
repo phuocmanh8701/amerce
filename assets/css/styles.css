@@ -1511,6 +1511,11 @@ h6,
   --bs-gutter-y: 2rem;
 }
 
+.g-12,
+.gy-12 {
+  --bs-gutter-y: 12px;
+}
+
 .g-20,
 .gy-20 {
   --bs-gutter-y: 20px;
@@ -1544,6 +1549,9 @@ h6,
   }
   .gap-lg-30 {
     gap: 30px !important;
+  }
+  .opacity-lg-0 {
+    opacity: 0 !important;
   }
 }
 @media (min-width: 1200px) {
@@ -1973,14 +1981,23 @@ header.header-sticky.tf-header-landing {
   header.header-sticky.has-by-category:not(.header-s8) {
     background: transparent;
   }
+  header.header-sticky.has-by-category:not(.header-s8) .header-bottom_wrap {
+    border-bottom: 1px solid var(--line);
+  }
   header.header-sticky.has-by-category:not(.header-s8) .header-inner_wrap {
     background: var(--white);
   }
   header.header-sticky.has-by-category:not(.header-s8) .header-bottom_wrap {
     background: var(--white);
   }
+  header.header-sticky.has-by-category.header-s8 {
+    background: transparent;
+  }
   header.header-sticky.has-by-category.header-s8 .header-bottom_wrap {
     border-bottom: 1px solid var(--line);
+  }
+  header.header-sticky.has-by-category.header-s8 .header-bottom_wrap {
+    background: var(--white);
   }
 }
 
@@ -15764,6 +15781,14 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   line-height: clamp(38px, 5vw, 50px);
 }
 
+.countdown-v07 .countdown__custom::after, .countdown-v07 .countdown__custom::before {
+  content: " ";
+}
+.countdown-v07 .countdown__item:last-child .countdown__value {
+  display: inline-flex;
+  min-width: 78px;
+}
+
 .wg-quantity {
   display: flex;
   justify-content: space-between;
@@ -16393,6 +16418,33 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   bottom: -36px;
 }
 
+.wg-circular-text .circular-text {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  animation: rotate 15s linear infinite;
+}
+.wg-circular-text .circular-text span {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform-origin: 0 75px;
+  font-weight: 600;
+}
+.wg-circular-text .original-text {
+  display: none;
+}
+
+.section-parallax {
+  position: relative;
+}
+.section-parallax .wg-circular-text {
+  position: absolute;
+  right: 180px;
+  bottom: 0;
+  transform: translateY(50%);
+}
+
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
     * Version: 1.0.0
@@ -17001,6 +17053,16 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     text-align: center;
     flex-direction: column;
   }
+}
+.banner-countdown-v01.style-3 {
+  background: rgba(244, 246, 145, 0.4);
+  border: 1px dashed #F4F691;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 26px;
+}
+.banner-countdown-v01.style-3 .content {
+  padding: 0;
 }
 
 .banner-countdown-v02 {
@@ -18431,6 +18493,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   gap: 16px;
   margin-bottom: 20px;
 }
+.banner-collect-v02 .list-thumb-image .thumb-item {
+  border-radius: 8px;
+  overflow: hidden;
+}
 @media (min-width: 1440px) {
   .banner-collect-v02 .col-left {
     max-width: 560px;
@@ -18581,6 +18647,18 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   .section-log .col-right {
     padding-left: 30px;
   }
+}
+
+.banner-image-parallax {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.banner-image-parallax img {
+  max-height: 560px;
+  min-height: 400px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*------------ Footer ---------------- */

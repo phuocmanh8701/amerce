@@ -49,6 +49,10 @@ header {
                 &:not(.header-s8) {
                     background: transparent;
 
+                    .header-bottom_wrap {
+                        border-bottom: 1px solid var(--line);
+                    }
+
                     .header-inner_wrap {
                         background: var(--white);
                     }
@@ -59,8 +63,14 @@ header {
                 }
 
                 &.header-s8 {
+                    background: transparent;
+
                     .header-bottom_wrap {
                         border-bottom: 1px solid var(--line);
+                    }
+
+                    .header-bottom_wrap {
+                        background: var(--white);
                     }
                 }
             }
