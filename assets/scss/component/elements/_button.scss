@@ -28,6 +28,10 @@
         background: var(--secondary);
     }
 
+    &.btn-third {
+        background: var(--third);
+    }
+
     &.btn-stroke {
         border: 1px solid var(--text);
 

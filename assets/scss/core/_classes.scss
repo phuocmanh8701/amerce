@@ -16,6 +16,14 @@
     margin-bottom: 4px !important;
 }
 
+.mb-5 {
+    margin-bottom: 5px !important;
+}
+
+.mb-6 {
+    margin-bottom: 6px !important;
+}
+
 .mb-7 {
     margin-bottom: 7px !important;
 }
@@ -243,6 +251,26 @@
         padding-top: 80px;
         padding-bottom: 80px;
     }
+
+    @include res(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include res(ssm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.flat-spacing-6 {
+    padding-top: 71px;
+    padding-bottom: 80px;
+
+    // @include res(xxl) {
+    //     padding-top: 80px;
+    //     padding-bottom: 80px;
+    // }
 
     @include res(lg) {
         padding-top: 60px;
