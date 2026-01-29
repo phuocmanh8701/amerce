@@ -261,7 +261,7 @@
         .tes_product {
             padding-top: 0;
             border-top: unset;
-            padding: 12px;
+            padding: 16px 12px;
             border-radius: 8px;
             max-width: 339px;
             width: 100%;
@@ -587,7 +587,7 @@
 
     .tf-sw-pagination {
         @include res(lg, min) {
-            margin-top: 30px !important;
+            margin-top: 31px !important;
         }
     }
 }
