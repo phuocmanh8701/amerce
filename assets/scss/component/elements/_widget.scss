@@ -1164,12 +1164,16 @@
                 }
             }
 
-            &.lagre {
+            &.large {
                 .bn-content {
-                    bottom: 28px;
+                    bottom: 0;
                     left: 0;
                     right: 0;
                     padding: 28px 32px;
+
+                    @include res(md) {
+                        padding: 28px 15px;
+                    }
                 }
             }
         }
