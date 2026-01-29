@@ -490,7 +490,7 @@
         text-align: center;
         padding: 24px;
 
-        @include res(sm){
+        @include res(sm) {
             padding: 24px 15px;
         }
     }
@@ -512,18 +512,36 @@
         justify-content: center;
     }
 
-    .box-icon{
+    .box-icon {
         height: 40px;
-        width:40px;
+        width: 40px;
         border-radius: 50%;
         background-color: var(--white);
         font-style: 20px;
         @include transition3();
 
-        &:hover{
+        &:hover {
             background-color: var(--black);
             color: var(--white);
         }
+    }
+}
+
+.testimonial-v04 {
+    padding: 28px;
+    border-radius: 16px;
+    background: var(--white);
+
+    .tes_product {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .product-infor {
+        display: grid;
+        place-items: start;
+        gap: 8px;
     }
 }
 

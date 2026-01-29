@@ -664,6 +664,8 @@
         @include transition3;
         opacity: 1;
 
+
+
         &.no-hover {
             opacity: 0.3;
         }
@@ -719,6 +721,80 @@
         .col-right {
             border-radius: 0px 0px 20px 20px;
             padding: 20px 15px;
+        }
+    }
+}
+
+.lookbook-hover-v2 {
+    .img-banner {
+        border-radius: 16px;
+    }
+
+    .bundle-list {
+        margin-bottom: 20px;
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 32px;
+                padding-bottom: 32px;
+                border-bottom: 1px solid var(--line);
+            }
+        }
+    }
+
+    .bundle-hover-wrap {
+        &.has-hover {
+            .bundle-hover-item {
+                &:not(.no-hover) {
+                    .prd-order {
+                        background: var(--text);
+                        border-color: var(--text);
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+
+    @include res(lg, min) {
+        .banner-lookbook {
+            height: 100%;
+        }
+    }
+
+    @include res(xxl, min) {
+        .banner-lookbook {
+            padding-right: 25px;
+        }
+
+        .bundle-hover-wrap {
+            padding-left: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 30px;
+            height: 100%;
+
+            >* {
+                margin: 0;
+            }
+        }
+
+        .lookbook-product {
+            min-width: 380px;
+            padding: 16px;
+        }
+    }
+
+    @include res(lg) {
+        .bundle-list {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid var(--line);
+                }
+            }
         }
     }
 }
@@ -2731,5 +2807,12 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+.section-testimonial-v2 {
+    .wrap {
+        background: var(--bg-7);
+        border-radius: 20px;
     }
 }

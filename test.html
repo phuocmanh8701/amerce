@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Invert Text on Image</title>
+    <style>
+        body {
+            margin: 0;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            background: #111;
+        }
+
+        input {
+            margin-bottom: 12px;
+            padding: 8px 12px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="textInput" value="LOOKBOOK" />
+
+    <canvas id="c" width="800" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById("c");
+        const ctx = canvas.getContext("2d");
+        const input = document.getElementById("textInput");
+
+        // === LOAD ẢNH NỀN ===
+        const img = new Image();
+        img.crossOrigin = "anonymous"; // nếu ảnh ngoài domain
+        img.src = "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee";
+
+        img.onload = () => draw();
+
+        input.addEventListener("input", draw);
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // vẽ ảnh nền
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // bật chế độ invert (GIỐNG CURSOR WINDOWS)
+            ctx.globalCompositeOperation = "difference";
+
+            // vẽ chữ trắng
+            ctx.font = "800 80px Arial, sans-serif";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "#fff";
+            ctx.fillText(input.value, canvas.width / 2, canvas.height / 2);
+
+            // reset
+            ctx.globalCompositeOperation = "source-over";
+        }
+    </script>
+
+</body>
+
+</html>

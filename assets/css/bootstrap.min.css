@@ -9660,18 +9660,6 @@ fieldset:disabled .btn {
     text-underline-offset: 0.375em !important;
 }
 
-.link-underline-primary {
-    --bs-link-underline-opacity: 1;
-    -webkit-text-decoration-color: rgba(var(--bs-primary-rgb), var(--bs-link-underline-opacity)) !important;
-    text-decoration-color: rgba(var(--bs-primary-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
-.link-underline-secondary {
-    --bs-link-underline-opacity: 1;
-    -webkit-text-decoration-color: rgba(var(--bs-secondary-rgb), var(--bs-link-underline-opacity)) !important;
-    text-decoration-color: rgba(var(--bs-secondary-rgb), var(--bs-link-underline-opacity)) !important;
-}
-
 .link-underline-success {
     --bs-link-underline-opacity: 1;
     -webkit-text-decoration-color: rgba(var(--bs-success-rgb), var(--bs-link-underline-opacity)) !important;

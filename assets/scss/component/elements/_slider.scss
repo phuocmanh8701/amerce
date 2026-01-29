@@ -525,7 +525,8 @@
         }
     }
 
-    &.type-3,&.type-4 {
+    &.type-3,
+    &.type-4 {
         left: 0;
         right: 0;
         top: unset;
@@ -543,7 +544,7 @@
         }
     }
 
-    &.type-4{
+    &.type-4 {
         @include res(lg, min) {
             bottom: 60px;
             padding-left: 60px;
@@ -990,3 +991,11 @@
         }
     }
 }
+
+
+// .invert-layer {
+//     position: absolute;
+//     inset: 0;
+//     z-index: 3;
+//     pointer-events: none;
+// }

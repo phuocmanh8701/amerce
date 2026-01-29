@@ -50,7 +50,7 @@ header {
                     background: transparent;
 
                     .header-bottom_wrap {
-                        border-bottom: 1px solid var(--line);
+                        // border-bottom: 1px solid var(--line);
                     }
 
                     .header-inner_wrap {
@@ -761,17 +761,7 @@ header {
     @include hidden;
     pointer-events: none;
 
-    // &.center {
-    //     left: 0;
-    //     right: 0;
-    //     display: flex;
-    //     justify-content: center;
-    //     background: transparent;
 
-    //     > {
-    //         background: var(--white);
-    //     }
-    // }
 
     @include res(xxl) {
         min-width: 180px;
@@ -789,6 +779,19 @@ header {
     left: 0;
     right: 0;
     padding-bottom: 48px;
+
+    @include res(xxl) {
+        .card-product {
+            .card-product_wrapper {
+                &.square {
+                    .compare {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+
+    }
 }
 
 .mega-menu-item {

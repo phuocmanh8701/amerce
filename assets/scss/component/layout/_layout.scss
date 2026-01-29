@@ -356,3 +356,17 @@
         padding-right: 15px;
     }
 }
+
+.container-layout-right {
+    width: calc(100vw - (100vw - 1800px) / 2);
+    margin-right: unset;
+    max-width: 100%;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    >* {
+        // margin-left: -15px;
+        margin-right: -15px;
+    }
+}

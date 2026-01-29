@@ -390,6 +390,17 @@
     }
 }
 
+.link-underline-primary {
+    @include transition3;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+
+    &:hover {
+        color: var(--primary);
+        text-decoration-color: var(--primary);
+    }
+}
+
 .link-underline-white {
     @include transition3;
     text-decoration: underline;
@@ -646,6 +657,10 @@
 
     .opacity-lg-0 {
         opacity: 0 !important;
+    }
+
+    .mb-lg-20 {
+        margin-bottom: 20px !important;
     }
 }
 
