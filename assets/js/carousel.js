@@ -155,91 +155,17 @@ $(window).on("load", function () {
     });
 });
 
-if ($(".modal-quick-view").length > 0) {
-    var $modalRoot = $(".modal-quick-view");
-    var mainQV = new Swiper(".modal-quick-view .tf-single-slide", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        observer: true,
-        observeParents: true,
-        speed: 800,
-        navigation: {
-            nextEl: ".modal-quick-view .single-slide-next",
-            prevEl: ".modal-quick-view .single-slide-prev",
-        },
-    });
-
-    function updateModalActiveButton(type, activeIndex) {
-        var btnClass = `.${type}-btn`;
-        var dataAttr = `data-${type}`;
-        var currentClass = `.value-current${capitalizeFirstLetter(type)}`;
-        var selectClass = `.select-current${capitalizeFirstLetter(type)}`;
-        $modalRoot.find(btnClass).removeClass("active");
-
-        var currentSlide = $modalRoot.find(".tf-single-slide .swiper-slide").eq(activeIndex);
-        var currentValue = currentSlide.attr(dataAttr);
-
-        if (currentValue) {
-            $modalRoot.find(`${btnClass}[${dataAttr}='${currentValue}']`).addClass("active");
-            $modalRoot.find(currentClass).text(currentValue);
-            $modalRoot.find(selectClass).text(currentValue);
-        }
-    }
-
-    function scrollToModalSlide(type, value, color) {
-        if (!value || !color) return;
-
-        var matchingSlides = $modalRoot.find(".tf-single-slide .swiper-slide").filter(function () {
-            return $(this).attr(`data-${type}`) === value && $(this).attr("data-color") === color;
-        });
-
-        if (matchingSlides.length > 0) {
-            var firstIndex = matchingSlides.first().index();
-            mainQV.slideTo(firstIndex, 1000, false);
-        } else {
-            var fallbackSlides = $modalRoot.find(".tf-single-slide .swiper-slide").filter(function () {
-                return $(this).attr(`data-${type}`) === value;
-            });
-
-            if (fallbackSlides.length > 0) {
-                var fallbackIndex = fallbackSlides.first().index();
-                mainQV.slideTo(fallbackIndex, 1000, false);
-            }
-        }
-    }
-
-    function setupModalVariantButtons(type) {
-        $modalRoot.find(`.${type}-btn`).on("click", function (e) {
-            var value = $(this).data(type);
-            var color = $modalRoot.find(".value-currentColor").text();
-
-            $modalRoot.find(`.${type}-btn`).removeClass("active");
-            $(this).addClass("active");
-
-            scrollToModalSlide(type, value, color);
-        });
-    }
-
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
-    ["color"].forEach((type) => {
-        mainQV.on("slideChange", function () {
-            updateModalActiveButton(type, this.activeIndex);
-        });
-        setupModalVariantButtons(type);
-        updateModalActiveButton(type, mainQV.activeIndex);
-    });
-}
-
 if ($(".tf-sw-thumbs").length > 0) {
+    var $this = $(".tf-sw-thumbs");
+    var thumbEffect = $this.find(".sw-thumb").data("effect") || "slide";
+
     var thumbSwiper = new Swiper(".sw-thumb", {
         slidesPerView: 1,
         watchSlidesProgress: true,
         watchSlidesVisibility: true,
         speed: 800,
         centeredSlides: true,
+        effect: thumbEffect,
         navigation: {
             nextEl: ".group-action-nav_thumb .nav-next-swiper",
             prevEl: ".group-action-nav_thumb .nav-prev-swiper",
@@ -285,59 +211,3 @@ if ($(".slider-thumb-wrap").length > 0) {
     });
 }
 
-if ($(".tf-sw-lookbook").length > 0) {
-    var tfSwLb = $(".tf-sw-lookbook");
-    var preview = tfSwLb.data("preview");
-    var tablet = tfSwLb.data("tablet");
-    var mobile = tfSwLb.data("mobile");
-    var laptop = tfSwLb.data("laptop") || preview;
-    var spacingLg = tfSwLb.data("space-lg");
-    var spacingMd = tfSwLb.data("space-md");
-    var spacing = tfSwLb.data("space");
-    var perGroup = tfSwLb.data("pagination");
-    var perGroupMd = tfSwLb.data("pagination-md");
-    var perGroupLg = tfSwLb.data("pagination-lg");
-    var mobileSm = tfSwLb.data("mobile-sm") !== undefined ? tfSwLb.data("mobile-sm") : mobile;
-    var swiperLb = new Swiper(".tf-sw-lookbook", {
-        slidesPerView: mobile,
-        spaceBetween: spacing,
-        observer: true,
-        observeParents: true,
-        speed: 1000,
-        pagination: {
-            el: ".sw-pagination-lookbook",
-            clickable: true,
-        },
-        slidesPerGroup: perGroup,
-        navigation: {
-            clickable: true,
-            nextEl: ".nav-prev-lookbook",
-            prevEl: ".nav-next-lookbook",
-        },
-        breakpoints: {
-            575: {
-                slidesPerView: mobileSm,
-                spaceBetween: spacing,
-                slidesPerGroup: perGroup,
-            },
-            768: {
-                slidesPerView: tablet,
-                spaceBetween: spacingMd,
-                slidesPerGroup: perGroupMd,
-            },
-            1200: {
-                slidesPerView: laptop,
-                spaceBetween: spacingLg,
-                slidesPerGroup: perGroupLg,
-            },
-            1440: {
-                slidesPerView: preview,
-            }
-        },
-    });
-
-    $(".swiper-button").click(function () {
-        var slideIndex = $(this).data("slide");
-        swiperLb.slideTo(slideIndex, 500, false);
-    });
-}
