@@ -1,4 +1,4 @@
-@use "../../abstracts/index" as *;
+@use "../../abstracts/index"as *;
 
 .flat-animate-tab {
     overflow: hidden;
@@ -119,6 +119,13 @@
         .tf-btn-tab {
             padding-bottom: 2px;
         }
+    }
+
+    &.style-3 {
+        &::after {
+            display: none;
+        }
+
     }
 
     @include res(xl, min) {
@@ -276,9 +283,17 @@
         }
     }
 
+    &.style-4 {
+        gap: 28px;
+    }
+
     @include res(xl, min) {
         &.style-white {
             gap: 48px;
+        }
+
+        &.style-4 {
+            gap: 40px;
         }
     }
 
