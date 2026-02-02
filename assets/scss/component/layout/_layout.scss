@@ -379,20 +379,22 @@
     display: grid;
     gap: 15px;
 
-    .item1 {
-        grid-area: aa;
-    }
+    @include res(sm, min) {
+        .item1 {
+            grid-area: aa;
+        }
 
-    .item2 {
-        grid-area: bb;
-    }
+        .item2 {
+            grid-area: bb;
+        }
 
-    .item3 {
-        grid-area: cc;
-    }
+        .item3 {
+            grid-area: cc;
+        }
 
-    .item4 {
-        grid-area: dd;
+        .item4 {
+            grid-area: dd;
+        }
     }
 
     @include res(xl, min) {
@@ -413,5 +415,24 @@
             "aa bb"
             "aa cc";
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+.grid-cls-v3 {
+    gap: 10px;
+
+    @include res(sm, min) {
+        grid-template-areas:
+            "aa aa"
+            "bb cc";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include res(lg, min) {
+        grid-template-areas:
+            "aa aa bb"
+            "aa aa cc";
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
     }
 }

@@ -349,6 +349,18 @@
         }
     }
 
+    @include res(lg, min) {
+        &.style-3 {
+            .infiniteSlide-wrapper {
+                >* {
+                    margin-left: 48px;
+                    margin-right: 48px;
+                }
+            }
+        }
+
+    }
+
     @include res(lg) {
         .infiniteSlide-wrapper {
             >* {
@@ -2376,7 +2388,6 @@
 }
 
 .banner-v04 {
-    // background-image: url("https://placehold.co/1410x460/F1E2DB/fff?text=2");
     position: relative;
     border-radius: 20px;
     overflow: hidden;
@@ -2401,6 +2412,24 @@
         flex-direction: column;
         align-items: start;
         justify-content: center;
+    }
+
+    &.style-2 {
+        // border-radius: 0;
+
+        // .bn_image {
+        //     img {
+        //         aspect-ratio: 0;
+        //     }
+        // }
+    }
+
+    @include res(xl, min) {
+        &.style-2 {
+            .bn_content {
+                left: 100px;
+            }
+        }
     }
 
     @include res(xl) {

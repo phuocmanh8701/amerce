@@ -364,7 +364,43 @@
 .category-v07 {
     .cate-image {
         border-radius: 16px;
+    }
+}
 
+.category-v08 {
+    .cate-image {
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 16px;
+    }
+
+    .cate_name {
+        margin-bottom: 4px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--primary);
+        @include transition3;
+
+        .icon {
+            @include transition3
+        }
+    }
+
+    &:hover {
+        .cate_name {
+            .icon {}
+        }
+    }
+
+    &:not(:hover) {
+        .cate_name {
+            color: var(--text);
+
+            .icon {
+                font-size: 0px;
+            }
+        }
     }
 }
 
@@ -1307,7 +1343,15 @@
                 object-fit: cover;
 
                 @include res(lg) {
-                    max-height: 550px;
+                    max-height: 500px;
+                }
+            }
+        }
+
+        &.tl-3 {
+            .bn-image {
+                img {
+                    min-height: 300px;
                 }
             }
         }
@@ -1898,6 +1942,33 @@
                 display: inline-flex;
                 min-width: 78px;
             }
+        }
+    }
+}
+
+.countdown-v08 {
+    color: var(--critical);
+
+    .countdown__timer {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .countdown__item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        &:last-child {
+            min-width: 112px;
+        }
+    }
+
+    @include res(lg) {
+        .countdown__timer {
+            gap: 4px;
         }
     }
 }
@@ -2718,7 +2789,6 @@
     .cls-image {
         border-radius: 16px;
         overflow: hidden;
-        // height: 100%;
 
         img {
             width: 100%;
@@ -2746,9 +2816,17 @@
         }
     }
 
+    &.style-3 {}
+
     @include res(xxl, min) {
         .cls-content {
             left: 56px;
+        }
+
+        &.style-3 {
+            .cls-content {
+                left: 45px;
+            }
         }
     }
 
