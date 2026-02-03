@@ -502,7 +502,7 @@
 }
 
 .infiniteSlide-text-v03 {
-    padding: 16px 0 15px;
+    padding: 12px 0 11px;
     border-bottom: 1px solid var(--line);
 
     .infiniteSlide {
@@ -876,8 +876,18 @@
         .countdown-v01 {
             background: #FFFFFF33;
             backdrop-filter: blur(40px);
-            padding: 20px 32px;
+            padding: 20px 33px;
             border-radius: 12px;
+
+            .countdown__timer {
+                gap: 17px;
+            }
+
+            .countdown__label {
+                font-style: 14px;
+                line-height: 22px;
+                font-weight: 400;
+            }
         }
 
     }
@@ -1295,11 +1305,29 @@
                 top: 20px;
                 left: 20px;
             }
+
+            .tf-product-info-wrap {
+                padding-left: 50px;
+            }
+        }
+
+        .tf-product-info-list {
+            gap: 24px;
+            max-width:100%;
         }
 
         .flat-wrap-media-product {
             width: 100%;
         }
+
+        .btn-action-price {
+            height: 48px;
+        }
+
+        .wg-quantity {
+            padding: 12px 19px;
+        }
+
     }
 
     &.style-2 {
@@ -1467,6 +1495,10 @@
             height: 44px;
         }
 
+        .tf-product-info-list {
+            gap: 24px;
+        }
+
         @include res(xl, min) {
 
             .tf-product-media-wrap {
@@ -1475,6 +1507,14 @@
 
             .tf-product-info-wrap {
                 padding-left: 20px;
+            }
+
+            .btn-action-price {
+                height: 48px;
+            }
+
+            .wg-quantity {
+                padding: 12px 19px;
             }
         }
     }
@@ -1710,7 +1750,7 @@
         background: var(--white);
         border-radius: 12px;
         padding: 16px;
-        gap: 20px;
+        gap: 16px;
 
         .prd-info {
             flex: 1;

@@ -65,7 +65,7 @@
 }
 
 .mb-30 {
-    margin-bottom: 30px !important;
+    margin-bottom: 30px;
 }
 
 .mb-32 {
@@ -292,6 +292,38 @@
     }
 }
 
+.flat-spacing-7 {
+    padding-top: 80px;
+    padding-bottom: 77px;
+
+
+    @include res(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include res(ssm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.flat-spacing-8 {
+    padding-top: 80px;
+    padding-bottom: 120px;
+
+
+    @include res(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include res(ssm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
 /* Orther */
 .text-primary {
     color: var(--primary) !important;
@@ -490,6 +522,10 @@
 
 .gap-x-10 {
     column-gap: 10px !important;
+}
+
+.gap-x-40 {
+    row-gap: 40px;
 }
 
 .radius-3 {
