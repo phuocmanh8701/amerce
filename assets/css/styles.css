@@ -7866,6 +7866,14 @@ button.animate-btn::after,
 .sw-dot-default .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
   background-color: var(--text);
 }
+.sw-dot-default.style-2 .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+}
+.sw-dot-default.style-2 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)::before {
+  border: 1px solid var(--text);
+  background: transparent;
+}
 @media (min-width: 1200px) {
   .sw-dot-default {
     margin-top: 35px;
@@ -8946,6 +8954,18 @@ button.animate-btn::after,
 }
 .testimonial-v01.style-7 .tes_product .product-image {
   border-radius: 8px;
+}
+.testimonial-v01.style-8 {
+  gap: 0;
+}
+.testimonial-v01.style-8 .tes-image {
+  max-width: 234px;
+}
+.testimonial-v01.style-8 .tes-content {
+  padding: 16px 24px;
+}
+.testimonial-v01.style-8 .tes_product {
+  padding-top: 16px;
 }
 @media (min-width: 576px) {
   .testimonial-v01.style-1 .tes-image {
@@ -19499,6 +19519,30 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 @media (max-width: 425px) {
   .section-thumbs-v2 .col-left {
     padding: 40px 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner-product-single-v2 .tf-product-media-thumbs {
+    width: 100px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    bottom: 16px;
+    z-index: 2;
+  }
+  .banner-product-single-v2 .product-thumbs-slider.style-row .tf-product-media-thumbs {
+    width: 100px;
+  }
+  .banner-product-single-v2 .product-thumbs-slider.style-row .tf-product-media-thumbs .swiper-slide {
+    max-height: 100px;
+  }
+  .banner-product-single-v2 .product-thumbs-slider.style-row .flat-wrap-media-product {
+    max-width: 665px;
+    width: 100%;
+  }
+  .banner-product-single-v2 .tf-product-info-wrap {
+    padding-left: 25px;
   }
 }
 

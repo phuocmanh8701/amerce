@@ -3155,3 +3155,34 @@
         }
     }
 }
+
+.banner-product-single-v2 {
+
+    @include res(xl, min) {
+        .tf-product-media-thumbs {
+            width: 100px;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            bottom: 16px;
+            z-index: 2;
+        }
+
+        .product-thumbs-slider.style-row .tf-product-media-thumbs {
+            width: 100px;
+
+            .swiper-slide {
+                max-height: 100px;
+            }
+        }
+
+        .product-thumbs-slider.style-row .flat-wrap-media-product {
+            max-width: 665px;
+            width: 100%;
+        }
+
+        .tf-product-info-wrap {
+            padding-left: 25px;
+        }
+    }
+}
