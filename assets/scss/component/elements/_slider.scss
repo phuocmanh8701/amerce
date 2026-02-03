@@ -46,6 +46,20 @@
         }
     }
 
+    &.style-2 {
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+
+            &:not(.swiper-pagination-bullet-active) {
+                &::before {
+                    border: 1px solid var(--text);
+                    background: transparent;
+                }
+            }
+        }
+    }
+
     @include res(xl, min) {
         margin-top: 35px;
     }

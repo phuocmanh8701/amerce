@@ -274,8 +274,22 @@
                 border-radius: 8px;
             }
         }
+    }
 
+    &.style-8 {
+        gap: 0;
 
+        .tes-image {
+            max-width: 234px;
+        }
+
+        .tes-content {
+            padding: 16px 24px;
+        }
+
+        .tes_product {
+            padding-top: 16px;
+        }
     }
 
     @include res(sm, min) {
