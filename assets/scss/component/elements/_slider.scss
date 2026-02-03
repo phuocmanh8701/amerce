@@ -168,6 +168,16 @@
         }
     }
 
+    &.style-3 {
+        background: #FFFFFF1A;
+        border-color: transparent;
+        border-radius: 8px;
+
+        &:hover {
+            border-color: var(--white);
+        }
+    }
+
     &.style-large {
         @include res(lg, min) {
             width: 60px;
@@ -525,8 +535,16 @@
     z-index: 2;
     pointer-events: none;
 
-    .tf-sw-nav {
+    .tf-sw-nav,
+    .tf-sw-nav-2 {
         pointer-events: all;
+    }
+
+    &.pst-2 {
+        .gr-nav_wrap {
+            padding-left: 49px;
+            padding-right: 49px;
+        }
     }
 
     @include res(xxxl) {
@@ -568,6 +586,7 @@
         flex-wrap: wrap;
         gap: 12px;
     }
+
 
     &.pst-2 {
         top: calc(50% + 60px);

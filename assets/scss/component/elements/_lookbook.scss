@@ -176,6 +176,21 @@
         left: 42.5%;
     }
 
+    .position19 {
+        top: 29.2%;
+        left: 21.5%;
+    }
+
+    .position20 {
+        top: 73%;
+        left: 38%;
+    }
+
+    .position21 {
+        top: 76%;
+        left: 74%;
+    }
+
     .dropdown-menu {
         border: 0;
         border-radius: 0px;
@@ -232,6 +247,14 @@
     &.style-2 {
         .img-banner {
             min-height: 450px;
+        }
+    }
+
+    &.style-3 {
+        height: unset;
+
+        .img-banner {
+            min-height: 200px;
         }
     }
 

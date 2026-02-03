@@ -93,8 +93,22 @@
     margin-top: 14px !important;
 }
 
+.mt-20 {
+    margin-top: 20px !important;
+}
+
 .mt-30 {
     margin-top: 30px;
+}
+
+.mx-15 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.mx-20 {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* Padding */
@@ -708,6 +722,11 @@
 
     .mb-xl-32 {
         margin-bottom: 32px !important;
+    }
+
+    .mx-xl-20 {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
