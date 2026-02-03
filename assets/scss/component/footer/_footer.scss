@@ -348,6 +348,8 @@
         }
     }
 
+
+
     @include res(xl) {
         .footer-inner {
             flex-direction: column;
@@ -381,6 +383,22 @@
                 gap: 0;
             }
         }
+    }
+
+    &.v2 {
+
+        @include res(xxl, min) {
+            .col-right {
+                gap: 80px;
+            }
+        }
+
+        @media screen and (min-width: 1600px) {
+            .col-right {
+                gap: 140px;
+            }
+        }
+
     }
 }
 

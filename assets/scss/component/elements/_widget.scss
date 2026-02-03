@@ -1269,8 +1269,10 @@
                 padding: 32px;
             }
 
-            .tf-btn {
-                height: 48px;
+            &.v2 {
+                .bn-content {
+                    padding: 36px;
+                }
             }
         }
 
