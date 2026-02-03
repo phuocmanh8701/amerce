@@ -512,7 +512,7 @@
 
     .content {
         text-align: center;
-        padding: 24px;
+        padding: 26px 24px 22px;
 
         @include res(sm) {
             padding: 24px 15px;
@@ -521,6 +521,9 @@
 
     .star-wrap {
         justify-content: center;
+        i{
+
+        }
     }
 
     .tes-action_list {
@@ -534,6 +537,10 @@
         align-items: center;
         gap: 8px;
         justify-content: center;
+
+        i {
+            font-size: 13px;
+        }
     }
 
     .box-icon {
