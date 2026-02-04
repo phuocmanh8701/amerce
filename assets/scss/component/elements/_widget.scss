@@ -2782,6 +2782,12 @@
         bottom: 0;
         transform: translateY(50%);
     }
+
+    @include res(xxl, min) {
+        .wg-circular-text {
+            right: 250px;
+        }
+    }
 }
 
 .box-cls-v1 {

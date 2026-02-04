@@ -778,6 +778,12 @@
     }
 }
 
+@include res(xxxl) {
+    .xxxl-d-none {
+        display: none !important;
+    }
+}
+
 @include res(xxl) {
     .xxl-mt-10 {
         margin-top: 10px !important;

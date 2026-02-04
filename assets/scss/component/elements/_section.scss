@@ -3282,34 +3282,98 @@
         flex-shrink: 0;
     }
 
+    &.style-2 {
+        .feature_illus {
+            background: var(--primary);
+
+            .icon {
+                font-size: 52px;
+                color: var(--white);
+            }
+        }
+
+        .feature-image {
+            img {
+                aspect-ratio: 1;
+            }
+
+            &::before {
+                content: "";
+                border-radius: 50%;
+                background: var(--surface);
+                position: absolute;
+                inset: 50px;
+            }
+
+            &::after {
+                border-width: 1px;
+                border-color: var(--line);
+            }
+        }
+    }
+
     @include res(md, min) {
 
         .feature-detail {
             position: absolute;
             z-index: 2;
+            // gap: 28px;
 
             &.pst-s1 {
-                top: 13%;
-                right: 66%;
+                top: 18.9%;
+                right: 67.69%;
                 left: 0;
             }
 
             &.pst-s2 {
-                bottom: 13%;
-                right: 66%;
+                bottom: 19.5%;
+                right: 67.9%;
                 left: 0;
             }
 
             &.pst-s3 {
-                top: 13%;
-                left: 66%;
+                top: 18.6%;
+                left: 67.8%;
                 right: 0;
             }
 
             &.pst-s4 {
-                bottom: 13%;
-                left: 66%;
+                bottom: 19.5%;
+                left: 67.8%;
                 right: 0;
+            }
+        }
+
+        &.style-2 {
+            .feature-detail {}
+        }
+    }
+
+    @include res(xxl, min) {
+        &.style-2 {
+            .feature_illus {
+                width: 80px;
+                height: 80px;
+            }
+
+            .feature-image {
+                max-width: 860px;
+
+                &::before {
+                    width: 618px;
+                    height: 618px;
+                    inset: unset;
+                }
+            }
+        }
+    }
+
+    @include res(xxl) {
+        &.style-2 {
+            .feature-image {
+                img {
+                    aspect-ratio: 1;
+                }
             }
         }
     }
@@ -3325,6 +3389,18 @@
         .feature-image {
             margin-bottom: 30px;
             padding: 30px;
+        }
+
+
+    }
+
+    @include res(ssm) {
+        &.style-2 {
+            .feature-image {
+                &::before {
+                    inset: 20px;
+                }
+            }
         }
     }
 
@@ -3371,6 +3447,7 @@
 
     .bn_title {
         margin-bottom: 200px;
+        letter-spacing: 0.054em;
     }
 
     @include res(lg, min) {

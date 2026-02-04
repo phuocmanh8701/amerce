@@ -1718,18 +1718,26 @@
     -------------------------------------------------------------------------*/
     var popupProductVariant = () => {
         if ($(".tf-quick-prd_variant").length === 0) return;
+
         $(".tf-quick-prd_variant").each(function () {
             var $wrap = $(this);
+            var basePrice = 0;
             var $activeSize = $wrap.find(".size_btn.active");
-            var basePrice = $activeSize.length
-                ? parseFloat($activeSize.data("price"))
-                : parseFloat(
-                    $wrap.find(".price-on-sale").text()
-                        .replace("$", "")
-                        .replace(/,/g, "")
-                );
 
+            if ($activeSize.length) {
+                basePrice = parseFloat($activeSize.data("quick-price"));
+            } else {
+                var priceText = $wrap.find(".price-on-sale").text();
+                basePrice = parseFloat(
+                    priceText.replace(/[^0-9.]/g, "")
+                );
+            }
+
+            if (isNaN(basePrice)) basePrice = 0;
             $wrap.data("basePrice", basePrice);
+
+            $wrap.find(".price-add").text("$" + basePrice.toFixed(2));
+
             $wrap.find(".color_btn").on("click mouseover", function () {
                 var $swatch = $(this);
                 var swatchColor = $swatch.find("img").data("src");
@@ -1744,19 +1752,21 @@
 
             $wrap.find(".size_btn:not(.disabled)").on("click", function () {
                 var $btn = $(this);
-                var size = $btn.data("quick-size");
                 var price = parseFloat($btn.data("quick-price"));
+                var size = $btn.data("quick-size");
+
+                if (isNaN(price)) return;
 
                 $wrap.find(".size_btn.active").removeClass("active");
                 $btn.addClass("active");
 
                 $wrap.find(".picker_size .variant__value").text(size);
-
                 $wrap.find(".quantity-product").val(1);
-
                 $wrap.data("basePrice", price);
 
-                updatePrice();
+                $wrap.find(".price-on-sale").text("$" + price.toFixed(2));
+
+                updateAddPrice();
             });
 
             $wrap.find(".btn-increase").on("click", function () {
@@ -1764,7 +1774,7 @@
                 var qty = parseInt($qty.val()) || 1;
 
                 $qty.val(qty + 1);
-                updatePrice();
+                updateAddPrice();
             });
 
             $wrap.find(".btn-decrease").on("click", function () {
@@ -1773,19 +1783,19 @@
 
                 if (qty > 1) {
                     $qty.val(qty - 1);
-                    updatePrice();
+                    updateAddPrice();
                 }
             });
-            function updatePrice() {
-                var basePrice = $wrap.data("basePrice");
-                var qty = parseInt($wrap.find(".quantity-product").val()) || 1;
-                var total = basePrice * qty;
 
-                $wrap.find(".price-on-sale").text("$" + total.toFixed(2));
+            function updateAddPrice() {
+                var basePrice = parseFloat($wrap.data("basePrice")) || 0;
+                var qty = parseInt($wrap.find(".quantity-product").val()) || 1;
+
+                var total = basePrice * qty;
                 $wrap.find(".price-add").text("$" + total.toFixed(2));
             }
         });
-    }
+    };
 
     /* Write Review
     -------------------------------------------------------------------------*/
