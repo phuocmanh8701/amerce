@@ -535,9 +535,8 @@
 
     .star-wrap {
         justify-content: center;
-        i{
 
-        }
+        i {}
     }
 
     .tes-action_list {
@@ -609,6 +608,77 @@
 
         &.style-2 {
             padding: 24px;
+        }
+    }
+}
+
+.testimonial-v05 {
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+
+    .tes-image {
+        width: 50%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .tes-content {
+        padding: 32px;
+        background: var(--white);
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    @include res(xxl, min) {
+        .tes-image {
+            width: 100%;
+            max-width: 345px;
+            flex-shrink: 0;
+        }
+
+        .tes-content {
+            width: 100%;
+        }
+    }
+
+    @include res(md, between, xl) {
+        flex-direction: column;
+
+        .tes-image,
+        .tes-content {
+            width: 100%;
+        }
+
+        .tes-image {
+            img {
+                max-height: 300px;
+            }
+        }
+    }
+
+    @include res(sm) {
+        flex-direction: column;
+
+        .tes-image,
+        .tes-content {
+            width: 100%;
+        }
+
+        .tes-image {
+            img {
+                max-height: 300px;
+            }
+        }
+
+        .tes-content {
+            padding: 30px 20px;
         }
     }
 }

@@ -752,6 +752,10 @@
 }
 
 @include res(xl, min) {
+    .mt-xl-40 {
+        margin-top: 40px !important;
+    }
+
     .mt-xl-44 {
         margin-top: 44px !important;
     }

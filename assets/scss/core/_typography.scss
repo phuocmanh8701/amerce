@@ -137,6 +137,11 @@ h6,
     line-height: clamp(36px, 5vw, 64px);
 }
 
+.text-128 {
+    font-size: clamp(64px, 8vw, 128px);
+    line-height: clamp(64px, 8vw, 128px);
+}
+
 /* Font size */
 .fs-10 {
     font-size: 10px !important;

@@ -2850,3 +2850,79 @@
         }
     }
 }
+
+.wg-cate-text {
+    position: relative;
+
+    .cate-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        pointer-events: none;
+
+        img {
+            @include transition3;
+        }
+    }
+
+    .cate-text {
+        position: relative;
+        z-index: 1;
+        @include transition3;
+    }
+
+    &:not(:hover) {
+        .cate-image {
+            img {
+                transform: scale(0.8);
+                @include hidden;
+            }
+        }
+
+        .cate-text {
+            color: var(--text-3);
+        }
+    }
+
+    @include res(xl) {
+        .cate-image {
+            max-width: 150px;
+        }
+    }
+
+    @include res(lg) {
+        .cate-image {
+            max-width: 100px;
+        }
+    }
+}
+
+.cate-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    @include res(xl) {
+        gap: 30px;
+    }
+
+    @include res(md) {
+        gap: 20px;
+    }
+}
+
+.wg-benefit {
+    padding: 20px;
+    background: #FFFFFF1A;
+    backdrop-filter: blur(20px);
+    display: grid;
+    gap: 16px;
+
+    .icon {
+        font-size: 40px;
+    }
+}

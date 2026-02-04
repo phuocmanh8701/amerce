@@ -161,6 +161,23 @@
     background: #E59FB7;
 }
 
+.bg-soft-violet {
+    background: #7069B9;
+}
+
+// Gradient
+.soft-stone-gradient {
+    background: linear-gradient(270deg, #EEEEE4 0%, #C5CED5 100%);
+}
+
+.mist-gradient {
+    background: linear-gradient(90deg, #BA745A 0%, #AAC68A 100%);
+}
+
+.lagoon-gradient {
+    background: linear-gradient(90deg, #D9F0A9 0%, #0A83A1 100%);
+}
+
 .stagger-wrap {
     .stagger-item {
         transition: 0.3s ease-in-out;
@@ -2141,4 +2158,22 @@
 .video-product {
     aspect-ratio: calc(576/768);
     display: flex;
+}
+
+.card-product_v02 {
+    position: relative;
+
+    .card-product_info {
+        top: 20px;
+        left: 20px;
+        position: absolute;
+        z-index: 21;
+    }
+
+    .product-badge_list {
+        top: 20px;
+        right: 20px;
+        left: auto;
+        z-index: 21;
+    }
 }

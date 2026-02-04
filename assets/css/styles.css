@@ -723,6 +723,11 @@ h6,
   line-height: clamp(36px, 5vw, 64px);
 }
 
+.text-128 {
+  font-size: clamp(64px, 8vw, 128px);
+  line-height: clamp(64px, 8vw, 128px);
+}
+
 /* Font size */
 .fs-10 {
   font-size: 10px !important;
@@ -1663,6 +1668,9 @@ h6,
   }
 }
 @media (min-width: 1200px) {
+  .mt-xl-40 {
+    margin-top: 40px !important;
+  }
   .mt-xl-44 {
     margin-top: 44px !important;
   }
@@ -1863,6 +1871,9 @@ h6,
   .tf-grid-layout.cl-gap-xxl-40 {
     column-gap: 40px;
   }
+  .tf-grid-layout.row-xl-gap-38 {
+    row-gap: 38px;
+  }
   .tf-grid-layout.row-xl-gap-40 {
     row-gap: 40px;
   }
@@ -1984,6 +1995,9 @@ h6,
 }
 .container-full.full-v2 {
   width: 1760px;
+}
+.container-full.full-v3 {
+  width: 1830px;
 }
 
 .container-full-2 {
@@ -9370,6 +9384,65 @@ button.animate-btn::after,
   }
 }
 
+.testimonial-v05 {
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.testimonial-v05 .tes-image {
+  width: 50%;
+  height: 100%;
+}
+.testimonial-v05 .tes-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testimonial-v05 .tes-content {
+  padding: 32px;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+@media (min-width: 1440px) {
+  .testimonial-v05 .tes-image {
+    width: 100%;
+    max-width: 345px;
+    flex-shrink: 0;
+  }
+  .testimonial-v05 .tes-content {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .testimonial-v05 {
+    flex-direction: column;
+  }
+  .testimonial-v05 .tes-image,
+  .testimonial-v05 .tes-content {
+    width: 100%;
+  }
+  .testimonial-v05 .tes-image img {
+    max-height: 300px;
+  }
+}
+@media (max-width: 575px) {
+  .testimonial-v05 {
+    flex-direction: column;
+  }
+  .testimonial-v05 .tes-image,
+  .testimonial-v05 .tes-content {
+    width: 100%;
+  }
+  .testimonial-v05 .tes-image img {
+    max-height: 300px;
+  }
+  .testimonial-v05 .tes-content {
+    padding: 30px 20px;
+  }
+}
+
 .section-testimonials {
   padding: 108px 0;
 }
@@ -11246,6 +11319,22 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   background: #E59FB7;
 }
 
+.bg-soft-violet {
+  background: #7069B9;
+}
+
+.soft-stone-gradient {
+  background: linear-gradient(270deg, #EEEEE4 0%, #C5CED5 100%);
+}
+
+.mist-gradient {
+  background: linear-gradient(90deg, #BA745A 0%, #AAC68A 100%);
+}
+
+.lagoon-gradient {
+  background: linear-gradient(90deg, #D9F0A9 0%, #0A83A1 100%);
+}
+
 .stagger-wrap .stagger-item {
   transition: 0.3s ease-in-out;
   transform: scale(0.5) rotate(90deg) skew(15deg);
@@ -13014,6 +13103,22 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .video-product {
   aspect-ratio: 0.75;
   display: flex;
+}
+
+.card-product_v02 {
+  position: relative;
+}
+.card-product_v02 .card-product_info {
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  z-index: 21;
+}
+.card-product_v02 .product-badge_list {
+  top: 20px;
+  right: 20px;
+  left: auto;
+  z-index: 21;
 }
 
 /* ---------------------------------------------------------
@@ -17166,6 +17271,81 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 
+.wg-cate-text {
+  position: relative;
+}
+.wg-cate-text .cate-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+.wg-cate-text .cate-image img {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wg-cate-text .cate-text {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wg-cate-text:not(:hover) .cate-image img {
+  transform: scale(0.8);
+  opacity: 0;
+  visibility: hidden;
+}
+.wg-cate-text:not(:hover) .cate-text {
+  color: var(--text-3);
+}
+@media (max-width: 1199px) {
+  .wg-cate-text .cate-image {
+    max-width: 150px;
+  }
+}
+@media (max-width: 991px) {
+  .wg-cate-text .cate-image {
+    max-width: 100px;
+  }
+}
+
+.cate-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+@media (max-width: 1199px) {
+  .cate-list {
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .cate-list {
+    gap: 20px;
+  }
+}
+
+.wg-benefit {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1019607843);
+  backdrop-filter: blur(20px);
+  display: grid;
+  gap: 16px;
+}
+.wg-benefit .icon {
+  font-size: 40px;
+}
+
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
     * Version: 1.0.0
@@ -19847,6 +20027,42 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
+  }
+}
+
+.banner-v07 {
+  position: relative;
+}
+.banner-v07 .banner-image {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+.banner-v07 .banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner-v07 .banner-content {
+  position: relative;
+  z-index: 1;
+}
+.banner-v07 .bn_title {
+  margin-bottom: 200px;
+}
+@media (min-width: 992px) {
+  .banner-v07 .card-product_v02 {
+    max-width: 300px;
+  }
+}
+@media (max-width: 1439px) {
+  .banner-v07 .bn_title {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 991px) {
+  .banner-v07 .bn_title {
+    margin-bottom: 30px;
   }
 }
 

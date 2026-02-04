@@ -165,6 +165,10 @@
             column-gap: 40px;
         }
 
+        &.row-xl-gap-38 {
+            row-gap: 38px;
+        }
+
         &.row-xl-gap-40 {
             row-gap: 40px;
         }
@@ -312,6 +316,10 @@
 
     &.full-v2 {
         width: 1760px;
+    }
+
+    &.full-v3 {
+        width: 1830px;
     }
 }
 
