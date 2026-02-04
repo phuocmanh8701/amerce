@@ -452,6 +452,7 @@
 }
 
 .grid-cls-v4 {
+
     @include res(xxl, min) {
         grid-template-areas: "aa bb bb bb bb";
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
