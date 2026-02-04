@@ -165,8 +165,8 @@
             column-gap: 40px;
         }
 
-        &.row-xl-gap-38 {
-            row-gap: 38px;
+        &.cl-xl-gap-38 {
+            column-gap: 38px;
         }
 
         &.row-xl-gap-40 {
@@ -321,6 +321,10 @@
     &.full-v3 {
         width: 1830px;
     }
+
+    &.full-v4 {
+        width: 1870px;
+    }
 }
 
 .container-full-2 {
@@ -461,10 +465,7 @@
 
 .grid-cls-v4 {
 
-    @include res(xxl, min) {
-        grid-template-areas: "aa bb bb bb bb";
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
+
 
     @include res(xl, min) {
         gap: 26px;
@@ -480,5 +481,10 @@
         .item2 {
             grid-area: bb;
         }
+    }
+
+    @include res(xxl, min) {
+        grid-template-areas: "aa bb bb bb bb";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 }

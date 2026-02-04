@@ -788,6 +788,16 @@ header {
                     }
                 }
             }
+
+            &.has-size {
+                .variant-box {
+                    display: none;
+                }
+
+                .product-action_bot {
+                    bottom: 16px;
+                }
+            }
         }
 
     }
