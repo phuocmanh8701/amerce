@@ -279,6 +279,31 @@ input[type=number]::-webkit-outer-spin-button {
             left: auto;
         }
     }
+
+    &.style-5 {
+        position: relative;
+        width: auto;
+
+        input {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .btn-action-submit {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+        }
+    }
+
+    @include res(xxl, min) {
+        &.style-5 {
+            width: 100%;
+            max-width: 690px;
+        }
+    }
 }
 
 .form-sub {

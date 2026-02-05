@@ -322,9 +322,9 @@
             align-items: end;
             @include hidden;
             @include transition3;
+            background: rgba(0, 0, 0, 0.5);
 
             &.show {
-                background: rgba(0, 0, 0, 0.5);
                 @include visible;
             }
 
@@ -375,17 +375,24 @@
     @include res(lg) {
         min-width: 250px;
     }
+
+    @include res(sm) {
+        box-shadow: unset;
+        border: 1px solid var(--line);
+    }
 }
 
 .wrap-lookbook_hover {
-    .lookbook-item {
-        opacity: 1;
-        @include transition3;
-    }
+    @include res(sm, min) {
+        .lookbook-item {
+            opacity: 1;
+            @include transition3;
+        }
 
-    &:has(.lookbook-item:hover) {
-        .lookbook-item:not(:hover) {
-            opacity: 0.5;
+        &:has(.lookbook-item:hover) {
+            .lookbook-item:not(:hover) {
+                opacity: 0.5;
+            }
         }
     }
 }

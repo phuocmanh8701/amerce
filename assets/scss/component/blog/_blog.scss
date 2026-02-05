@@ -44,15 +44,15 @@
 
         .blog-image {
             border-radius: 8px;
-
-            @include res(sm, min) {
-                max-width: 300px;
-            }
         }
 
         &.list-v2 {
             @include res(sm, min) {
                 flex-direction: row;
+            }
+
+            @include res(sm, min) {
+                max-width: 300px;
             }
         }
     }

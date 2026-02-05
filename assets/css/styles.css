@@ -3489,13 +3489,13 @@ header.header-sticky.tf-header-landing {
   border-radius: 8px;
 }
 @media (min-width: 576px) {
-  .article-blog.style-list .blog-image {
-    max-width: 300px;
+  .article-blog.style-list.list-v2 {
+    flex-direction: row;
   }
 }
 @media (min-width: 576px) {
   .article-blog.style-list.list-v2 {
-    flex-direction: row;
+    max-width: 300px;
   }
 }
 .article-blog.style-2 {
@@ -7178,6 +7178,27 @@ input[type=number]::-webkit-outer-spin-button {
 .form-search-nav.style-4 .btn-action {
   right: 0;
   left: auto;
+}
+.form-search-nav.style-5 {
+  position: relative;
+  width: auto;
+}
+.form-search-nav.style-5 input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.form-search-nav.style-5 .btn-action-submit {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+}
+@media (min-width: 1440px) {
+  .form-search-nav.style-5 {
+    width: 100%;
+    max-width: 690px;
+  }
 }
 
 .form-sub {
@@ -14940,9 +14961,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
   }
   .banner-lookbook .dropdown-menu.show {
-    background: rgba(0, 0, 0, 0.5);
     opacity: 1;
     visibility: visible;
   }
@@ -14990,17 +15011,25 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     min-width: 250px;
   }
 }
-
-.wrap-lookbook_hover .lookbook-item {
-  opacity: 1;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+@media (max-width: 575px) {
+  .lookbook-product {
+    box-shadow: unset;
+    border: 1px solid var(--line);
+  }
 }
-.wrap-lookbook_hover:has(.lookbook-item:hover) .lookbook-item:not(:hover) {
-  opacity: 0.5;
+
+@media (min-width: 576px) {
+  .wrap-lookbook_hover .lookbook-item {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .wrap-lookbook_hover:has(.lookbook-item:hover) .lookbook-item:not(:hover) {
+    opacity: 0.5;
+  }
 }
 
 /* ---------------------------------------------------------
@@ -17415,7 +17444,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 .sect-heading {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 .sect-heading .s-title {
   margin-bottom: 8px;
