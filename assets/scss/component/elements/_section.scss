@@ -1891,12 +1891,11 @@
 
     .card-product_wrapper {
         aspect-ratio: unset;
-        max-width: 418px;
         margin-left: auto;
         margin-right: auto;
 
         @include res(lg, min) {
-            margin-bottom: 28px;
+            margin-bottom: 39px;
         }
     }
 
@@ -1912,7 +1911,7 @@
         background-color: #f7f7f7;
 
         @include res(xxl, min) {
-            padding: 60px 77px;
+            padding: 82px 77px 60px;
         }
     }
 
@@ -1924,9 +1923,15 @@
         }
     }
 
+    .dropdown-menu {
+        @include res(lg) {
+            display: none;
+        }
+    }
+
     .tf-sw-nav-2 {
         position: absolute;
-        top: 50%;
+        top: calc(50% - 11px);
         transform: translateY(-50%);
         z-index: 3;
     }
