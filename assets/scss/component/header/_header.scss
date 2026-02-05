@@ -33,8 +33,7 @@ header {
         }
 
         &.header-s7.hds7-type-2 {
-            background: rgb(114 114 114 / 60%);
-            // backdrop-filter: blur(60px);
+            background: var(--text)
         }
 
         &.tf-header-landing {
