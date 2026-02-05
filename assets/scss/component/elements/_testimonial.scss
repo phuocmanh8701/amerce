@@ -457,10 +457,22 @@
                 }
             }
         }
+
+        &.style-8 {
+            .tes-image {
+                max-width: 100%;
+            }
+
+            .tes-content {
+                padding: 20px 0px;
+            }
+        }
     }
 
     @include res(md, between, xl) {
-        &.style-3 {
+
+        &.style-3,
+        &.style-8 {
             flex-direction: column;
 
             >* {
@@ -471,6 +483,16 @@
                 img {
                     max-height: 350px;
                 }
+            }
+        }
+
+        &.style-8 {
+            .tes-image {
+                max-width: 100%;
+            }
+
+            .tes-content {
+                padding: 20px 0px;
             }
         }
     }

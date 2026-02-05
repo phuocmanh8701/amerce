@@ -9266,16 +9266,28 @@ button.animate-btn::after,
     max-height: 350px;
     object-position: center;
   }
+  .testimonial-v01.style-8 .tes-image {
+    max-width: 100%;
+  }
+  .testimonial-v01.style-8 .tes-content {
+    padding: 20px 0px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
-  .testimonial-v01.style-3 {
+  .testimonial-v01.style-3, .testimonial-v01.style-8 {
     flex-direction: column;
   }
-  .testimonial-v01.style-3 > * {
+  .testimonial-v01.style-3 > *, .testimonial-v01.style-8 > * {
     width: 100%;
   }
-  .testimonial-v01.style-3 .tes-image img {
+  .testimonial-v01.style-3 .tes-image img, .testimonial-v01.style-8 .tes-image img {
     max-height: 350px;
+  }
+  .testimonial-v01.style-8 .tes-image {
+    max-width: 100%;
+  }
+  .testimonial-v01.style-8 .tes-content {
+    padding: 20px 0px;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -14843,6 +14855,14 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   top: 76%;
   left: 74%;
 }
+.banner-lookbook .position22 {
+  top: 27.2%;
+  left: 39.5%;
+}
+.banner-lookbook .position23 {
+  top: 48.2%;
+  left: 34.5%;
+}
 .banner-lookbook .dropdown-menu {
   border: 0;
   border-radius: 0px;
@@ -17224,21 +17244,6 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .wg-circular-text .original-text {
   display: none;
-}
-
-.section-parallax {
-  position: relative;
-}
-.section-parallax .wg-circular-text {
-  position: absolute;
-  right: 180px;
-  bottom: 0;
-  transform: translateY(50%);
-}
-@media (min-width: 1440px) {
-  .section-parallax .wg-circular-text {
-    right: 250px;
-  }
 }
 
 .box-cls-v1 {
@@ -19984,6 +19989,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   display: flex;
   align-items: center;
   gap: 20px;
+  overflow: hidden;
 }
 .banner-feature .feature-detail .info__name {
   margin-bottom: 8px;
@@ -20129,6 +20135,29 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 @media (max-width: 991px) {
   .banner-v07 .bn_title {
     margin-bottom: 30px;
+  }
+}
+
+.section-parallax {
+  position: relative;
+}
+.section-parallax .wg-circular-text {
+  position: absolute;
+  right: 180px;
+  bottom: 0;
+  transform: translateY(50%);
+}
+@media (min-width: 1440px) {
+  .section-parallax .wg-circular-text {
+    right: 250px;
+  }
+}
+@media (max-width: 767px) {
+  .section-parallax .wg-circular-text {
+    transform: unset;
+    bottom: 20px;
+    right: auto;
+    left: 30px;
   }
 }
 

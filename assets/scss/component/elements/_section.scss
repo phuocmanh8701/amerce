@@ -3267,6 +3267,7 @@
         display: flex;
         align-items: center;
         gap: 20px;
+        overflow: hidden;
 
         .info__name {
             margin-bottom: 8px;
@@ -3465,6 +3466,32 @@
     @include res(lg) {
         .bn_title {
             margin-bottom: 30px;
+        }
+    }
+}
+
+.section-parallax {
+    position: relative;
+
+    .wg-circular-text {
+        position: absolute;
+        right: 180px;
+        bottom: 0;
+        transform: translateY(50%);
+    }
+
+    @include res(xxl, min) {
+        .wg-circular-text {
+            right: 250px;
+        }
+    }
+
+    @include res(md) {
+        .wg-circular-text {
+            transform: unset;
+            bottom: 20px;
+            right: auto;
+            left: 30px;
         }
     }
 }
