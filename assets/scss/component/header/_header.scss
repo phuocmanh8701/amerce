@@ -7,8 +7,6 @@
 header {
     position: sticky;
     z-index: 100;
-    // transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-
     @include transition3;
 
     &.header-sticky {
@@ -33,7 +31,7 @@ header {
         }
 
         &.header-s7.hds7-type-2 {
-            background: var(--text)
+            background: rgb(114 114 114 / 60%);
         }
 
         &.tf-header-landing {
@@ -47,10 +45,6 @@ header {
             &.has-by-category {
                 &:not(.header-s8) {
                     background: transparent;
-
-                    .header-bottom_wrap {
-                        // border-bottom: 1px solid var(--line);
-                    }
 
                     .header-inner_wrap {
                         background: var(--white);
@@ -930,7 +924,6 @@ header {
 
     &.style-2 {
         .btn-nav-drop {
-            // border-radius: 8px 8px 0px 0px;
             background: var(--primary);
         }
 
@@ -1315,12 +1308,6 @@ header {
     .row-demo {
         margin-bottom: 30px;
     }
-
-    @include res(xxl, min) {
-        .row-demo {
-            // padding: 0px 60px;
-        }
-    }
 }
 
 .mega-menu_home_v2 {
@@ -1343,7 +1330,6 @@ header {
 
         img {
             max-width: 300px;
-            // object-fit: cover;
         }
     }
 

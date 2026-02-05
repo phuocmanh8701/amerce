@@ -135,23 +135,6 @@ $breakpoints-min: ("ssm": 426px,
     "xxxl": 1600px,
     "full": 1921px);
 
-// @mixin res($size, $type: max) {
-//     $breakpoint: if($type==min, map.get($breakpoints-min, $size), map.get($breakpoints, $size));
-
-//     @if $breakpoint {
-//         @if $type==max {
-//             @media (max-width: $breakpoint) {
-//                 @content;
-//             }
-//         }
-
-//         @else if $type==min {
-//             @media (min-width: $breakpoint) {
-//                 @content;
-//             }
-//         }
-//     }
-// }
 @mixin res($size, $type: max, $size2: null) {
     @if $type==max {
         $breakpoint: map.get($breakpoints, $size);

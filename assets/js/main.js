@@ -1,4 +1,4 @@
-/**
+/** 45
  * Select Image
  * Button Quantity
  * Delete File
@@ -32,7 +32,17 @@
  * Rate Click
  * Check Box Transfer Checkout Page
  * Counter Odo
+ * Couter
  * Update Bundle Total
+ * Filter Isotope
+ * Reveal
+ * Hover Lookbook
+ * Notice Popup
+ * Offcanvas Quick View
+ * Popup Product Action
+ * Write Review
+ * Scroll Grid Product
+ * Circle Text
  * Preloader
  */
 
@@ -277,7 +287,6 @@
             });
         }
     };
-
 
     /* Sidebar Mobile
     -------------------------------------------------------------------------*/
@@ -601,6 +610,7 @@
             $(".sidebar-filter,.overlay-filter").removeClass("show");
         });
     };
+
     /* Estimate Shipping
     -------------------------------------------------------------------------*/
     var estimateShipping = function () {
@@ -1371,6 +1381,7 @@
             });
         }
     };
+
     /* Couter
         -------------------------------------------------------------------------------------*/
     var counter = function () {
@@ -1439,7 +1450,7 @@
         });
     };
 
-    /* filterIsotope
+    /* Filter Isotope
     -------------------------------------------------------------------------------------*/
     var filterIsotope = function () {
         if ($().isotope) {
@@ -1460,16 +1471,6 @@
         };
     };
 
-
-    /* Preloader
-    -------------------------------------------------------------------------*/
-    function preloader() {
-        setTimeout(function () {
-            $("#preload").fadeOut(300, function () {
-                $(this).remove();
-            });
-        }, 300);
-    }
     /* Reveal
     -------------------------------------------------------------------------*/
     const reveal = () => {
@@ -1714,6 +1715,7 @@
             });
         });
     }
+
     /* Popup Product Action
     -------------------------------------------------------------------------*/
     var popupProductVariant = () => {
@@ -1910,6 +1912,16 @@
 
             container.appendChild(span);
         });
+    }
+
+    /* Preloader
+    -------------------------------------------------------------------------*/
+    function preloader() {
+        setTimeout(function () {
+            $("#preload").fadeOut(300, function () {
+                $(this).remove();
+            });
+        }, 300);
     }
 
     // Dom Ready

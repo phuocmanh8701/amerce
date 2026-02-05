@@ -363,7 +363,6 @@
     }
 
     .img-product {
-        // clip-path: inset(0 0 0 0);
         z-index: 1;
         position: relative;
     }
@@ -380,10 +379,6 @@
             -webkit-transform: scale(1.05);
             transform: scale(1.05);
             opacity: 1;
-        }
-
-        .img-product {
-            // clip-path: inset(0 0 0 100%);
         }
     }
 
@@ -1045,7 +1040,6 @@
             &.style-image-circle {
                 width: 44px;
                 height: 44px;
-                // padding: 2px;
                 border: 1px solid var(--line);
                 border-radius: 50%;
 

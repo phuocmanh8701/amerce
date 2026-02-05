@@ -132,7 +132,6 @@ body {
 
     &::-webkit-scrollbar {
         width: 0px; //
-        // height: 1px;
     }
 
     &::-webkit-scrollbar-thumb {
@@ -170,26 +169,6 @@ table {
     border-collapse: collapse;
 }
 
-thead {
-    // background-color: var(--line-8);
-}
-
-tbody {
-    tr {
-        &:nth-child(even) {
-            // background-color: var(--line-8);
-        }
-    }
-}
-
-tr {
-    th {
-        &:not(:first-child) {
-            // border-left: 1px solid var(--white);
-        }
-    }
-}
-
 td,
 th {
     padding: 0px 0px 12px;
@@ -210,7 +189,6 @@ button {
 
 select,
 option {
-    // all: unset;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;

@@ -432,7 +432,6 @@
     bottom: 0;
     right: 0;
     left: 0;
-    // border-top: 1px solid #eeeeee;
     background-color: var(--white);
     box-shadow: 0px 5px 18px 5px #40485726;
 
@@ -470,7 +469,6 @@
     }
 
     .toolbar-label {
-        // font-weight: 500;
         font-size: 12px;
         line-height: 16px;
     }
@@ -1798,8 +1796,6 @@
 }
 
 .modal-find_size {
-    // z-index: 3001;
-
     .modal-dialog {
         max-width: 900px;
     }
@@ -2010,7 +2006,6 @@
                 width: auto;
                 padding-left: 20px;
                 padding-right: 20px;
-                // border: 1px solid var(--line);
                 border-radius: 40px;
             }
         }
@@ -2106,7 +2101,6 @@
         max-width: 1540px;
         margin-top: 8px;
         margin-bottom: 8px;
-        // height: calc(100vh - 16px);
     }
 
     .modal-content {
@@ -2156,10 +2150,6 @@
     .row-demo {
         grid-template-columns: repeat(5, 1fr);
         row-gap: 32px;
-
-        .demo-img {
-            // aspect-ratio: 0;
-        }
     }
 
     @include res(xxl) {

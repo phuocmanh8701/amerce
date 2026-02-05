@@ -67,7 +67,7 @@
 }
 
 .sect-heading {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 
     .s-title {
         margin-bottom: 8px;
@@ -910,7 +910,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // padding: 30px 15px;
     }
 
     .sub {
@@ -2459,16 +2458,6 @@
         justify-content: center;
     }
 
-    &.style-2 {
-        // border-radius: 0;
-
-        // .bn_image {
-        //     img {
-        //         aspect-ratio: 0;
-        //     }
-        // }
-    }
-
     @include res(xl, min) {
         &.style-2 {
             .bn_content {
@@ -3323,7 +3312,6 @@
         .feature-detail {
             position: absolute;
             z-index: 2;
-            // gap: 28px;
 
             &.pst-s1 {
                 top: 18.9%;

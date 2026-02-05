@@ -229,11 +229,6 @@
     padding-top: 80px;
     padding-bottom: 80px;
 
-    // @include res(xxl) {
-    //     padding-top: 80px;
-    //     padding-bottom: 80px;
-    // }
-
     @include res(lg) {
         padding-top: 60px;
         padding-bottom: 60px;
@@ -293,11 +288,6 @@
 .flat-spacing-6 {
     padding-top: 71px;
     padding-bottom: 80px;
-
-    // @include res(xxl) {
-    //     padding-top: 80px;
-    //     padding-bottom: 80px;
-    // }
 
     @include res(lg) {
         padding-top: 60px;

@@ -40,6 +40,7 @@ $(window).on("load", function () {
         var direction = $this.data("direction") || "horizontal";
         var centered = $this.data("center") ?? false;
         var init = $this.data("init") || 0;
+        var touch = $this.data("touch") ?? true;
 
 
         var isNumberType = $this.hasClass("swiper-type-number");
@@ -70,6 +71,7 @@ $(window).on("load", function () {
             loop: loop,
             effect: effect,
             initialSlide: init,
+            touchStartPreventDefault: touch,
             autoplay: atPlay
                 ? {
                     delay: delay,
