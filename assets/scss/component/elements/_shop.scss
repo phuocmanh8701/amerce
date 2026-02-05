@@ -806,91 +806,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     }
 }
 
-.tf-grid-layout {
-    &.tf-col-5 {
-
-        // .countdown__item {
-        //     font-size: 20px;
-        //     line-height: 27px;
-        // }
-
-        // .variant-box {
-        //     right: 15px;
-        //     left: 15px;
-
-        // }
-
-        // .product-size_list {
-        //     padding: 12px 24px;
-        //     gap: 6px;
-
-        //     .size-item {
-        //         &:not(:last-child) {
-        //             min-width: 32px;
-        //             padding-right: 6px;
-        //         }
-        //     }
-        // }
-
-        // .card-product {
-
-        //     &.style-2,
-        //     &.style-4 {
-        //         .hover-tooltip {
-        //             .tooltip {
-        //                 display: none;
-        //             }
-        //         }
-        //     }
-        // }
-    }
-
-    &.tf-col-6 {
-        // .product-countdown {
-        //     transform: unset;
-        //     left: 7px;
-        //     right: 7px;
-        //     bottom: 7px;
-        //     padding: 12px 16px;
-        // }
-
-        // .countdown__item {
-        //     font-size: 18px;
-        //     line-height: 24px;
-        // }
-
-        // .variant-box {
-        //     &:not(.bot) {
-        //         bottom: 7px;
-        //         right: 7px;
-        //         left: 7px;
-        //     }
-        // }
-
-        // .product-action_list,
-        // .product-action_bot {
-        //     display: none;
-        // }
-
-        // .product-size_list {
-        //     padding: 12px 16px;
-        //     gap: 6px;
-
-        //     .size-item {
-        //         min-width: 22px;
-
-        //         &:not(:last-child) {
-        //             min-width: 28px;
-        //             padding-right: 6px;
-        //         }
-        //     }
-        // }
-    }
-
-    &.tf-col-5,
-    &.tf-col-6 {}
-}
-
 .shop-sale-text {
     display: flex;
     align-items: center;
@@ -965,24 +880,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             margin-bottom: 0 !important;
             padding-bottom: 0;
             border: 0;
-
-            // .collapse:not(.show) {
-            //     display: block;
-            // }
-
-            // .collapsing {
-            //     height: auto;
-            //     transition: unset;
-            // }
         }
 
         .facet-title {
             padding: 0px;
             margin-bottom: 24px;
-
-            // .icon {
-            //     display: none;
-            // }
         }
 
         .filter-color-box {

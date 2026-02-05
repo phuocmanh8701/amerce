@@ -33,7 +33,6 @@
 
         &::after {
             content: "";
-            // border-radius: 50%;
             position: absolute;
             background: transparent;
             top: -1px;
@@ -208,7 +207,6 @@
 
     .icon {
         font-size: 40px;
-        // color: var(--black);
         margin-bottom: 20px;
         display: inline-flex;
         transition-duration: .5s;

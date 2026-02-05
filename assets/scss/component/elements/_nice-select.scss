@@ -504,10 +504,8 @@
     }
 
     .icon {
-        // font-size: 12px;
         display: inline-block;
         @include transition3;
-        // margin-top: 2px;
     }
 
     .text-value {
@@ -630,12 +628,6 @@
         border-bottom: 1px solid #ededed;
         margin-bottom: 8px;
         color: var(--black);
-
-        // a {
-        //     &:hover {
-        //         color: var(--primary);
-        //     }
-        // }
     }
 }
 
@@ -685,20 +677,13 @@
     .btn-select {
         @include flex(center, space-between);
         gap: 10px;
-
-        .icon {
-            // font-size: 7px;
-        }
     }
 
     .text-sort-value {
         text-wrap: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        // font-size: 14px;
-        // line-height: 20px;
         font-weight: 500;
-        // color: var(--rgba-dark-2);
         text-transform: capitalize;
     }
 
