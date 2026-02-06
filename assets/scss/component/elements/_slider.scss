@@ -553,8 +553,21 @@
         }
     }
 
+    &.pst-3 {
+        left: -75px;
+        right: -75px;
+    }
+
     @include res(xxxl) {
         display: none;
+    }
+}
+
+.pst-nav-action {
+    position: relative;
+
+    .group-nav-action {
+        justify-content: space-between;
     }
 }
 

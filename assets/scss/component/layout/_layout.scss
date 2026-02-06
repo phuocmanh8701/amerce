@@ -2,8 +2,8 @@
 
 .tf-grid-layout {
     display: grid;
-    column-gap: 24px;
-    row-gap: 32px;
+    column-gap: 16px;
+    row-gap: 24px;
 
     &.tf-col-1 {
         grid-template-columns: 1fr;
@@ -68,6 +68,9 @@
     }
 
     @include res(sm, min) {
+        column-gap: 24px;
+        row-gap: 32px;
+
         &.sm-col-2 {
             grid-template-columns: 1fr 1fr;
         }

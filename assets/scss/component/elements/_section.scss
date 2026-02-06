@@ -493,6 +493,8 @@
 
     .infiniteSlide {
         gap: 40px;
+        display: flex !important;
+        flex-wrap: nowrap !important;
 
         i {
             font-size: 32px;

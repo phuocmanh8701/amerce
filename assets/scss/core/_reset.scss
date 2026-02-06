@@ -517,11 +517,7 @@ p {
     }
 }
 
-@include res(xxxl, min) {
-    .d-xxxl-flex {
-        display: flex !important;
-    }
-}
+
 
 .w-maxcontent {
     width: max-content !important;

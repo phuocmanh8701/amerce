@@ -18,6 +18,15 @@
     &.btn-white {
         background: var(--white);
         color: var(--text);
+
+        &:hover {
+            background: var(--text);
+            color: var(--white);
+        }
+
+        &::after {
+            display: none;
+        }
     }
 
     &.btn-primary {
@@ -133,7 +142,7 @@ button.animate-btn::after,
 
 .tf-loading {
     min-width: 150px;
-    
+
     &.loadmore {
         .spinner-circle {
             display: none;

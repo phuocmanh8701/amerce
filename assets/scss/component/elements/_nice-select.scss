@@ -270,7 +270,7 @@
 
             img {
                 width: 20px;
-                height: 22px;
+                height: 15px;
             }
         }
 
@@ -279,7 +279,7 @@
             margin-top: 17px !important;
             margin-bottom: 17px !important;
             padding: 15px 20px;
-            border-radius: 0;
+            border-radius: 4px;
             border: 0;
             background-color: var(--white);
             box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 18px 0px;
@@ -289,14 +289,14 @@
 
                 .text {
                     @include flex(center, start);
-                    gap: 5px;
+                    gap: 8px;
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 20px;
 
                     img {
                         width: 20px;
-                        height: 20px;
+                        height: 15px;
                     }
                 }
 
