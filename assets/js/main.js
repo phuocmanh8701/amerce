@@ -1879,14 +1879,13 @@
     /* Write Review
     -------------------------------------------------------------------------*/
     var writeReview = function () {
-        if ($(".write-cancel-review-wrap").length > 0) {
-            $(".btn-comment-review").click(function () {
-                $(this)
-                    .closest(".write-cancel-review-wrap")
-                    .toggleClass("write-review");
-            });
-        }
+        $(".write-cancel-review-wrap").on("click", ".btn-comment-review", function () {
+            $(this)
+                .closest(".write-cancel-review-wrap")
+                .toggleClass("write-review");
+        });
     };
+
 
     /* Scroll Grid Product
 ------------------------------------------------------------------------------------- */

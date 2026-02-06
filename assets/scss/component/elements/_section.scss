@@ -891,6 +891,20 @@
         }
 
     }
+
+    @include res(sm) {
+        &.style-4 {
+            .countdown-v01 {
+                width: 100%;
+                padding: 20px 15px;
+
+                .countdown__timer {
+                    justify-content: space-between;
+                    gap: 10px;
+                }
+            }
+        }
+    }
 }
 
 .banner-countdown-v02 {
