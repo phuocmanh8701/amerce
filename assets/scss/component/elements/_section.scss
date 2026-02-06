@@ -1981,11 +1981,17 @@
 
     .wrap-product {
 
+
+        @include res(md, min) {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
         @include res(xl, min) {
             max-height: 486px;
 
         }
-
 
         &::-webkit-scrollbar {
             width: 3px;
@@ -2022,6 +2028,33 @@
         &.is-active {
             opacity: 1;
             filter: none;
+        }
+    }
+
+
+    .position1 {
+        top: 11.5%;
+        left: 28%;
+    }
+
+    .position2 {
+        top: 36.8%;
+        left: 64.6%;
+    }
+
+    .position3 {
+        top: 39.8%;
+        left: 17.7%;
+    }
+
+    .position4 {
+        top: 62.2%;
+        left: 75.5%;
+    }
+
+    .dropdown-menu {
+        @include res(md) {
+            display: none;
         }
     }
 
@@ -2070,32 +2103,68 @@
 }
 
 .section-banner-collection-v02 {
-    .row {
-        row-gap: 20px;
+
+    .wrap-banner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 316px);
+        gap: 20px;
+    }
+
+    .item-1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .item-2 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .item-3 {
+        grid-area: 1 / 2 / 3 / 4;
+    }
+
+    .item-4 {
+        grid-area: 1 / 4 / 2 / 5;
+    }
+
+    .item-5 {
+        grid-area: 2 / 4 / 3 / 5;
     }
 
     @include res(lg) {
-        .left {
-            margin-left: -7.5px;
+
+        .wrap-banner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 20px
         }
 
-        .right {
-            margin-right: -7.5px;
+        .item-1 {
+            grid-area: 3 / 1 / 4 / 2;
         }
+
+        .item-2 {
+            grid-area: 4 / 1 / 5 / 2;
+        }
+
+        .item-3 {
+            grid-area: 1 / 1 / 3 / 3;
+        }
+
+        .item-4 {
+            grid-area: 3 / 2 / 4 / 3;
+        }
+
+        .item-5 {
+            grid-area: 4 / 2 / 5 / 3;
+        }
+
     }
 
-    @include res(lg, min) {
-        .left {
-            margin-right: -7.5px;
-        }
-
-        .right {
-            margin-left: -7.5px;
-        }
-
-        .center {
-            margin-left: -2.5px;
-            margin-right: -2.5px;
+    @include res(md) {
+        .wrap-banner {
+            gap: 15px
         }
     }
 }
@@ -2966,11 +3035,7 @@
     }
 
     img {
-        min-height: 550px;
-
-        @include res(sm) {
-            min-height: 800px;
-        }
+        min-height: 350px;
     }
 
     .item {

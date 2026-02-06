@@ -51,9 +51,14 @@
                 flex-direction: row;
             }
 
-            @include res(sm, min) {
-                max-width: 300px;
+
+            .blog-image {
+                @include res(sm, min) {
+                    max-width: 300px;
+                    width: 100%;
+                }
             }
+           
         }
     }
 
