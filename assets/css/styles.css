@@ -2204,10 +2204,7 @@ header.header-sticky.header-abs .swip-text {
 }
 header.header-sticky.header-s7.hds7-type-2 {
   background: rgba(114, 114, 114, 0.6);
-<<<<<<< HEAD
   backdrop-filter: blur(12px);
-=======
->>>>>>> main
 }
 header.header-sticky.tf-header-landing {
   backdrop-filter: blur(10px);
