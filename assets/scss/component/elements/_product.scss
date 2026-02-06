@@ -1475,12 +1475,10 @@
         line-height: 22px;
     }
 
-    @include res(md, min) {
-
-        .card-product_wrapper {
-            max-width: 140px;
-        }
+    .card-product_wrapper {
+        max-width: 140px;
     }
+
 }
 
 .tf-sticky-btn-atc {

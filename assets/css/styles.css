@@ -2541,14 +2541,14 @@ header.header-sticky.tf-header-landing {
     position: relative;
     z-index: 1;
   }
-  .header-s8 .header-inner .header-left,
-  .header-s8 .header-inner .header-right {
-    flex: unset;
-  }
   .header-s8 .header-inner {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .header-s8 .header-inner .header-left,
+  .header-s8 .header-inner .header-right {
+    flex: unset;
   }
 }
 @media (min-width: 1440px) {
@@ -3132,11 +3132,11 @@ header.header-sticky.tf-header-landing {
   padding: 6px 0 7px;
 }
 
-.nav-ul-mb .nav-mb-item:not(:last-child) .mb-menu-link {
-  padding-bottom: 12px;
-}
 .nav-ul-mb .nav-mb-item:not(:last-child) {
   border-bottom: 1px solid var(--line);
+}
+.nav-ul-mb .nav-mb-item:not(:last-child) .mb-menu-link {
+  padding-bottom: 12px;
 }
 .nav-ul-mb .nav-mb-item:not(:first-child) .mb-menu-link {
   padding-top: 12px;
@@ -8399,6 +8399,11 @@ button.animate-btn::after,
 .tf-slideshow.style-2.v2 .sld_content {
   top: unset;
 }
+@media (max-width: 1599px) {
+  .tf-slideshow.style-2.v2 .slider-wrap {
+    border-radius: 0;
+  }
+}
 @media (min-width: 992px) {
   .tf-slideshow.style-2.v2 .tf-sw-nav-2 {
     height: 64px;
@@ -11138,10 +11143,6 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 @media (min-width: 1200px) {
-  .filter-drawer-wrap.canvas-filter {
-    max-width: 100% !important;
-    width: 100% !important;
-  }
   .filter-drawer-wrap {
     position: absolute;
     z-index: 90;
@@ -11153,6 +11154,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     visibility: hidden;
     box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
+  }
+  .filter-drawer-wrap.canvas-filter {
+    max-width: 100% !important;
+    width: 100% !important;
   }
   .filter-drawer-wrap .tf-group-filter {
     display: flex;
@@ -12582,10 +12587,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   font-size: 14px;
   line-height: 22px;
 }
-@media (min-width: 768px) {
-  .product-style_mini_list-v2 .card-product_wrapper {
-    max-width: 140px;
-  }
+.product-style_mini_list-v2 .card-product_wrapper {
+  max-width: 140px;
 }
 
 .tf-sticky-btn-atc {
@@ -13870,13 +13873,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   max-width: 220px;
   width: 100%;
 }
-.box-order-summary .ship-item:not(:last-child) {
-  margin-bottom: 8px;
-}
 .box-order-summary .ship-item {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.box-order-summary .ship-item:not(:last-child) {
+  margin-bottom: 8px;
 }
 .box-order-summary .ship-item label {
   display: flex;
@@ -14292,12 +14295,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .tf-table-compare tr th:nth-child(2) {
   border-top-left-radius: 8px;
 }
-.tf-table-compare tr td:last-child {
-  border-right: 1px solid var(--line);
-}
 .tf-table-compare tr td {
   border-left: 1px solid var(--line);
   border-top: 1px solid var(--line);
+}
+.tf-table-compare tr td:last-child {
+  border-right: 1px solid var(--line);
 }
 .tf-table-compare tr:first-child td:first-child {
   border-top-left-radius: 8px;
@@ -17186,11 +17189,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 
-.invoice-table thead {
-  background-color: var(--bg-2);
-}
 .invoice-table {
   color: var(--black);
+}
+.invoice-table thead {
+  background-color: var(--bg-2);
 }
 .invoice-table th {
   font-weight: 600;
@@ -19049,14 +19052,18 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .section-lookbook-hover-v03 .card-product {
   transition: opacity 0.25s ease, filter 0.25s ease;
-  margin-bottom: 20px;
 }
-.section-lookbook-hover-v03 .card-product.is-dim {
-  filter: blur(5px);
-}
-.section-lookbook-hover-v03 .card-product.is-active {
-  opacity: 1;
-  filter: none;
+@media (min-width: 768px) {
+  .section-lookbook-hover-v03 .card-product {
+    margin-bottom: 20px;
+  }
+  .section-lookbook-hover-v03 .card-product.is-dim {
+    filter: blur(5px);
+  }
+  .section-lookbook-hover-v03 .card-product.is-active {
+    opacity: 1;
+    filter: none;
+  }
 }
 .section-lookbook-hover-v03 .position1 {
   top: 11.5%;

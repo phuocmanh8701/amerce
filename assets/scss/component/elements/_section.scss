@@ -2021,16 +2021,21 @@
 
     .card-product {
         transition: opacity 0.25s ease, filter 0.25s ease;
-        margin-bottom: 20px;
 
-        &.is-dim {
-            filter: blur(5px);
+        @include res(md, min) {
+            margin-bottom: 20px;
+
+            &.is-dim {
+                filter: blur(5px);
+            }
+
+            &.is-active {
+                opacity: 1;
+                filter: none;
+            }
         }
 
-        &.is-active {
-            opacity: 1;
-            filter: none;
-        }
+
     }
 
 
