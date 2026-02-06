@@ -461,6 +461,14 @@
     }
 }
 
+.link-rotate {
+    @include transition3;
+
+    &:hover {
+        transform: rotate(180deg);
+    }
+}
+
 .link-underline {
     @include transition3;
     text-decoration: underline;
@@ -776,10 +784,21 @@
     }
 }
 
+@include res(xxxl, min) {
+    .d-xxxl-flex {
+        display: flex !important;
+    }
+
+    .d-xxxl-flex {
+        display: none !important;
+    }
+}
+
 @include res(xxxl) {
     .xxxl-d-none {
         display: none !important;
     }
+
 }
 
 @include res(xxl) {

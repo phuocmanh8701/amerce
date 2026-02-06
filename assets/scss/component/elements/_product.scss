@@ -1364,6 +1364,17 @@
     padding: 15px;
     border-radius: 12px;
 
+    &::after {
+        content: "";
+        position: absolute;
+        border-radius: 12px;
+        border: 2px solid var(--text);
+        inset: -1px;
+        @include transition3;
+        @include hidden;
+        pointer-events: none;
+    }
+
     .card-product_wrapper {
         aspect-ratio: 1;
     }
@@ -1398,7 +1409,10 @@
     }
 
     &:hover {
-        border-color: var(--text);
+
+        &::after {
+            @include visible;
+        }
     }
 
     @include res(md, min) {
@@ -1586,7 +1600,7 @@
         content: "";
         border-radius: 15px;
         position: absolute;
-        inset: 0;
+        inset: -1px;
         border: 2px solid var(--text);
         pointer-events: none;
         @include transition3;

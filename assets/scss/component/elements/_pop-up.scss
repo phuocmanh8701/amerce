@@ -73,6 +73,7 @@
         &:hover {
             background: var(--text);
             color: var(--white);
+            transform: rotate(180deg);
         }
 
         @include res(lg, min) {
