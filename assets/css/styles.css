@@ -17761,6 +17761,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .infiniteSlide-text-v02 .infiniteSlide {
   gap: 40px;
+  display: flex !important;
+  flex-wrap: nowrap !important;
 }
 .infiniteSlide-text-v02 .infiniteSlide i {
   font-size: 32px;
