@@ -389,19 +389,6 @@
             aspect-ratio: 1;
         }
     }
-
-    .tf-btn {
-        &.btn-white {
-            &:hover {
-                background: var(--text);
-                color: var(--white);
-            }
-
-            &::after {
-                display: none;
-            }
-        }
-    }
 }
 
 .product-action_remove {

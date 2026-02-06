@@ -1752,8 +1752,8 @@ h6,
 /*--------- Abstracts variable ---------- */
 .tf-grid-layout {
   display: grid;
-  column-gap: 24px;
-  row-gap: 32px;
+  column-gap: 16px;
+  row-gap: 24px;
 }
 .tf-grid-layout.tf-col-1 {
   grid-template-columns: 1fr;
@@ -1803,6 +1803,10 @@ h6,
   }
 }
 @media (min-width: 576px) {
+  .tf-grid-layout {
+    column-gap: 24px;
+    row-gap: 32px;
+  }
   .tf-grid-layout.sm-col-2 {
     grid-template-columns: 1fr 1fr;
   }
@@ -7557,6 +7561,13 @@ select.select-3:focus {
   background: var(--white);
   color: var(--text);
 }
+.tf-btn.btn-white:hover {
+  background: var(--text);
+  color: var(--white);
+}
+.tf-btn.btn-white::after {
+  display: none;
+}
 .tf-btn.btn-primary {
   background: var(--primary);
 }
@@ -11531,13 +11542,6 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .card-product_wrapper.square img {
   aspect-ratio: 1;
-}
-.card-product_wrapper .tf-btn.btn-white:hover {
-  background: var(--text);
-  color: var(--white);
-}
-.card-product_wrapper .tf-btn.btn-white::after {
-  display: none;
 }
 
 .product-action_remove {
