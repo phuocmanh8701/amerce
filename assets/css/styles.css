@@ -18092,6 +18092,16 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   line-height: 22px;
   font-weight: 400;
 }
+@media (max-width: 575px) {
+  .banner-countdown-v01.style-4 .countdown-v01 {
+    width: 100%;
+    padding: 20px 15px;
+  }
+  .banner-countdown-v01.style-4 .countdown-v01 .countdown__timer {
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
 
 .banner-countdown-v02 {
   display: grid;
