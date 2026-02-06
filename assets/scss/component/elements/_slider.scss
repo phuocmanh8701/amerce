@@ -416,6 +416,12 @@
                 top: unset;
             }
 
+            .slider-wrap {
+                @include res(xxxl) {
+                    border-radius: 0;
+                }
+            }
+
             .tf-sw-nav-2 {
                 @include res(lg, min) {
                     height: 64px;

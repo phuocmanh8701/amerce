@@ -226,6 +226,7 @@ if ($(".tf-sw-mobile").length > 0) {
             ) {
                 if (!swiperMb) {
                     var preview = $this.data("preview");
+                    var previewMd = $this.data("preview-md") || preview;
                     var spacing = $this.data("space");
 
                     swiperMb = new Swiper($this[0], {
@@ -240,6 +241,14 @@ if ($(".tf-sw-mobile").length > 0) {
                             nextEl: $this.find(".nav-prev-mb")[0],
                             prevEl: $this.find(".nav-next-mb")[0],
                         },
+
+                        breakpoints: {
+                            640: {
+                                slidesPerView: previewMd,
+                                spaceBetween: spacing,
+                            },
+                        },
+                        
                     });
                 }
             } else {
