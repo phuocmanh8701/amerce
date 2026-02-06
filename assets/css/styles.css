@@ -11532,6 +11532,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .card-product_wrapper.square img {
   aspect-ratio: 1;
 }
+.card-product_wrapper .tf-btn.btn-white:hover {
+  background: var(--text);
+  color: var(--white);
+}
+.card-product_wrapper .tf-btn.btn-white::after {
+  display: none;
+}
 
 .product-action_remove {
   position: absolute;
