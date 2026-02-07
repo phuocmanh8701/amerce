@@ -395,7 +395,17 @@
     padding-right: 15px;
 
     >* {
+        // margin-right: -15px;
+    }
+
+    .swiper {
         margin-right: -15px;
+        padding-right: 15px;
+        overflow: hidden;
+    }
+
+    .slider-right {
+        // margin-right: 0;
     }
 }
 

@@ -1440,6 +1440,14 @@ h6,
   text-decoration-color: var(--text);
 }
 
+.text-decoration-thickness {
+  text-decoration-thickness: 2px !important;
+}
+
+.text-decoration-thickness_3 {
+  text-decoration-thickness: 3px !important;
+}
+
 .text-vertical {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
@@ -1644,14 +1652,6 @@ h6,
 .g-30,
 .gy-30 {
   --bs-gutter-y: 30px;
-}
-
-.text-decoration-thickness {
-  text-decoration-thickness: 2px !important;
-}
-
-.text-decoration-thickness_3 {
-  text-decoration-thickness: 3px !important;
 }
 
 @media (min-width: 426px) {
@@ -2106,10 +2106,11 @@ h6,
   padding-left: 15px;
   padding-right: 15px;
 }
-.container-layout-right > * {
+.container-layout-right .swiper {
   margin-right: -15px;
+  padding-right: 15px;
+  overflow: hidden;
 }
-
 .grid-cls-layout {
   display: grid;
   gap: 15px;
@@ -11592,6 +11593,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   inset: 0;
   z-index: 2;
   opacity: 0;
+}
+.card-product_wrapper .tf-btn {
+  box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.1215686275);
 }
 .card-product_wrapper:hover .img-hover {
   -webkit-transform: scale(1.05);
