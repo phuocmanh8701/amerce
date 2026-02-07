@@ -12103,7 +12103,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 @media (min-width: 1200px) {
   .tf-product-media-thumbs {
-    max-height: 448px;
+    max-height: 764px;
   }
 }
 
