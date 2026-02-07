@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?3piv2p');
-  src:  url('fonts/icomoon.eot?3piv2p#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?3piv2p') format('truetype'),
-    url('fonts/icomoon.woff?3piv2p') format('woff'),
-    url('fonts/icomoon.svg?3piv2p#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ek2n1q');
+  src:  url('fonts/icomoon.eot?ek2n1q#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ek2n1q') format('truetype'),
+    url('fonts/icomoon.woff?ek2n1q') format('woff'),
+    url('fonts/icomoon.svg?ek2n1q#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -304,6 +304,9 @@
 .icon-Star:before {
   content: "\e92c";
 }
+.icon-Star-thin:before {
+  content: "\e965";
+}
 .icon-Tag:before {
   content: "\e92d";
 }
@@ -319,8 +322,12 @@
 .icon-User:before {
   content: "\e931";
 }
-.icon-Vector:before {
+.icon-CheckCircle1:before {
   content: "\e932";
+  color: #3dab25;
+}
+.icon-CheckCircle1:before {
+  content: "\e966";
   color: #3dab25;
 }
 .icon-X:before {

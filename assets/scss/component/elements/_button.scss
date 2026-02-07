@@ -32,6 +32,12 @@
         &::after {
             display: none;
         }
+
+        &.hv-primary {
+            &:hover {
+                background: var(--primary);
+            }
+        }
     }
 
     &.btn-primary {

@@ -534,6 +534,17 @@
     background: #cd3e3414;
     position: relative;
 
+    .bn-bg {
+        position: absolute;
+        inset: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
     .wrap-2 {
         display: grid;
         gap: 8px;
@@ -2095,13 +2106,13 @@
 
 .section-banner-favorite {
     @include res(lg, min) {
-        .banner-image-text {
+        .col-left {
             height: 100%;
         }
     }
 
     @include res(xl, min) {
-        .banner-image-text {
+        .col-left {
             padding-right: 30px;
         }
 

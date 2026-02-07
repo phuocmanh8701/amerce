@@ -7610,6 +7610,9 @@ select.select-3:focus {
 .tf-btn.btn-white::after {
   display: none;
 }
+.tf-btn.btn-white.hv-primary:hover {
+  background: var(--primary);
+}
 .tf-btn.btn-primary {
   background: var(--primary);
 }
@@ -9017,10 +9020,6 @@ button.animate-btn::after,
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.icon-Vector {
-  font-size: 13px;
 }
 
 .testimonial-v01 {
@@ -16011,7 +16010,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   position: absolute;
   inset: 0;
   background: var(--text);
-  opacity: 0.4;
+  opacity: 0.2;
 }
 .banner-image-text.style-10 .bn-content {
   inset: 20px;
@@ -17905,6 +17904,15 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   background: rgba(205, 62, 52, 0.0784313725);
   position: relative;
 }
+.banner-sale .bn-bg {
+  position: absolute;
+  inset: 0;
+}
+.banner-sale .bn-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .banner-sale .wrap-2 {
   display: grid;
   gap: 8px;
@@ -19159,12 +19167,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 @media (min-width: 992px) {
-  .section-banner-favorite .banner-image-text {
+  .section-banner-favorite .col-left {
     height: 100%;
   }
 }
 @media (min-width: 1200px) {
-  .section-banner-favorite .banner-image-text {
+  .section-banner-favorite .col-left {
     padding-right: 30px;
   }
   .section-banner-favorite .col-right {
