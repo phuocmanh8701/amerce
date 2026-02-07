@@ -1479,6 +1479,12 @@
         max-width: 140px;
     }
 
+    &::after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
 }
 
 .tf-sticky-btn-atc {

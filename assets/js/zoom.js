@@ -30,7 +30,7 @@ if ($(".product-thumbs-slider").length > 0) {
     });
 
     var main = new Swiper(".tf-product-media-main", {
-        spaceBetween: 0,
+        spaceBetween: 5,
         observer: true,
         observeParents: true,
         speed: 800,

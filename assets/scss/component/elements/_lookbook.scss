@@ -107,8 +107,8 @@
     }
 
     .position5 {
-        top: 39.8%;
-        left: 69.7%;
+        top: 51.8%;
+        left: 61.7%;
     }
 
     .position6 {
@@ -258,6 +258,13 @@
     &.style-2 {
         .img-banner {
             min-height: 450px;
+        }
+
+        @include res(sm) {
+            .lookbook-product {
+                margin: 15px;
+                border-radius: 8px;
+            }
         }
     }
 
