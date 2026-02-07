@@ -842,7 +842,7 @@
 
 .banner-countdown-v01 {
     padding-top: 29px;
-    padding-bottom: 29px;
+    padding-bottom: 27px;
 
     .content {
         display: flex;
@@ -1430,6 +1430,18 @@
             .btn-action-price {
                 height: 50px;
             }
+
+            .stagger-item {
+                width: 80px;
+                height: 80px;
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+
+
         }
 
         @include res(md, min) {
@@ -1469,6 +1481,7 @@
         .product-thumbs-slider {
             .tf-product-media-main {
                 border: unset;
+                border-radius: 12px;
             }
 
             .flat-wrap-media-product {
@@ -1497,7 +1510,7 @@
         .box-img {
             height: 100%;
             width: 100%;
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
 
             img {
@@ -1526,6 +1539,12 @@
         .variant-size-2 .size-btn {
             border-radius: 4px;
             height: 44px;
+
+            &:not(.active){
+                &:hover {
+                    background: var(--white);
+                }
+            }
         }
 
         .tf-product-info-list {
@@ -1940,6 +1959,7 @@
         aspect-ratio: unset;
         margin-left: auto;
         margin-right: auto;
+        max-width: 476px;
 
         @include res(lg, min) {
             margin-bottom: 39px;
