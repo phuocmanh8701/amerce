@@ -1074,7 +1074,7 @@
                     position: absolute;
                     inset: 0;
                     background: var(--text);
-                    opacity: 0.4;
+                    opacity: 0.2;
                 }
             }
 
@@ -2434,11 +2434,9 @@
     right: 20px;
     width: 38px;
     height: 38px;
+    border-radius: 50%;
     background: var(--white);
     color: var(--white);
-    font-size: 20px;
-    text-align: center;
-    line-height: 50px;
     cursor: pointer;
     border: none;
     opacity: 0;
@@ -2464,6 +2462,8 @@
         content: "";
         z-index: 1;
         @include transition3;
+
+        border-radius: 50%;
     }
 
     &.show {
@@ -2472,9 +2472,7 @@
     }
 
     .icon {
-        font-size: 14px;
         color: var(--text);
-        aspect-ratio: 1;
     }
 
     .ic-wrap {
@@ -2489,6 +2487,12 @@
 
     @include res(lg, min) {
         right: 40px;
+        width: 48px;
+        height: 48px;
+
+        .icon {
+            font-size: 24px;
+        }
     }
 
     @include res(xl) {

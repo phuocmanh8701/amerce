@@ -511,6 +511,13 @@
 }
 
 
+.text-decoration-thickness {
+    text-decoration-thickness: 2px !important;
+}
+
+.text-decoration-thickness_3 {
+    text-decoration-thickness: 3px !important;
+}
 
 .text-vertical {
     writing-mode: vertical-lr;
@@ -719,9 +726,6 @@
     --bs-gutter-y: 30px;
 }
 
-.text-decoration-thickness {
-    text-decoration-thickness: 2px !important;
-}
 
 @include res(ssm, min) {
     .d-ssm-flex {
