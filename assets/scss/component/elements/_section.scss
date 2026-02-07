@@ -136,6 +136,13 @@
             }
         }
     }
+
+    @include res(sm) {
+        .s-desc {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
 }
 
 .tab-content_desc {
@@ -743,7 +750,7 @@
 
         .col-right {
             border-radius: 0px 0px 20px 20px;
-            padding: 20px 15px;
+            padding: 40px 15px;
         }
     }
 }
@@ -1697,9 +1704,22 @@
         border-radius: 40px;
         cursor: pointer;
         @include transition3;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 40px;
+            border: 2px solid var(--text);
+            @include hidden;
+            @include transition3;
+        }
 
         &:hover {
-            border-color: var(--text);
+            &::after {
+                @include visible;
+            }
         }
 
         &.active {

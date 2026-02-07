@@ -723,6 +723,10 @@
     text-decoration-thickness: 2px !important;
 }
 
+.text-decoration-thickness_3 {
+    text-decoration-thickness: 3px !important;
+}
+
 @include res(ssm, min) {
     .d-ssm-flex {
         display: flex !important;

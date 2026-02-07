@@ -206,7 +206,6 @@
         border-radius: 0px;
         background-color: transparent;
         margin: 0px 0px 0px 10px !important;
-        z-index: 99;
     }
 
     .dropdown {
@@ -266,6 +265,12 @@
 
         .img-banner {
             min-height: 200px;
+        }
+    }
+
+    @include res(sm, min) {
+        .dropdown-menu {
+            z-index: 99;
         }
     }
 

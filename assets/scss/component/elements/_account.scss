@@ -4,6 +4,7 @@
     display: grid;
     border: 1px solid var(--line);
     border-radius: 12px;
+    overflow: hidden;
 
     .link-account {
         padding: 20px;
@@ -26,8 +27,15 @@
         &:not(:last-child) {
             border-bottom: 1px solid var(--line);
         }
-    }
 
+        &:first-child {
+            border-radius: 12px 12px 0px 0px;
+        }
+
+        &:last-child {
+            border-radius: 0px 0px 12px 12px;
+        }
+    }
 }
 
 .my-account-content {
