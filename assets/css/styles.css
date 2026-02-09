@@ -4303,11 +4303,11 @@ header.header-sticky.tf-header-landing {
   visibility: visible;
 }
 .hover-tooltip.tooltip-bot .tooltip {
-  top: calc(100% + 10px);
+  top: calc(100% + 9px);
   bottom: unset;
 }
 .hover-tooltip.tooltip-bot .tooltip::before {
-  top: -4px;
+  top: -5px;
 }
 .hover-tooltip.tooltip-left .tooltip {
   right: 100%;

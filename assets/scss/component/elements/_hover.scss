@@ -251,11 +251,11 @@
 
     &.tooltip-bot {
         .tooltip {
-            top: calc(100% + 10px);
+            top: calc(100% + 9px);
             bottom: unset;
 
             &::before {
-                top: -4px;
+                top: -5px;
             }
         }
     }
