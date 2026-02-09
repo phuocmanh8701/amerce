@@ -3332,10 +3332,8 @@ header.header-sticky.tf-header-landing {
 .mega-menu_home_v2.home-type_2 {
   left: -280px;
 }
-@media (max-width: 1599px) {
-  .mega-menu_home_v2.home-type_4 {
-    left: -180px;
-  }
+.mega-menu_home_v2.home-type_4 {
+  left: -180px;
 }
 @media (max-width: 1439px) {
   .mega-menu_home_v2.home-type_3 {
@@ -13110,6 +13108,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   width: max-content;
   color: var(--white);
 }
+.tf-product-pre-order.style-2 {
+  padding: 0px 12px;
+}
 
 .tf-product-image-upload {
   position: relative;
@@ -14981,6 +14982,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .banner-lookbook .position23 {
   top: 48.2%;
   left: 34.5%;
+}
+.banner-lookbook .position24 {
+  top: 37.8%;
+  left: 44.7%;
 }
 .banner-lookbook .dropdown-menu {
   border: 0;
@@ -18742,8 +18747,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   border-radius: 4px;
   height: 44px;
 }
-.banner-product-single.style-6 .variant-size-2 .size-btn:not(.active):hover {
-  background: var(--white);
+.banner-product-single.style-6 .variant-size-2 .size-btn::after {
+  border-radius: 4px;
 }
 .banner-product-single.style-6 .tf-product-info-list {
   gap: 24px;

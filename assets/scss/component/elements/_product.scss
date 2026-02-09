@@ -2027,6 +2027,10 @@
     border-radius: 99px;
     width: max-content;
     color: var(--white);
+
+    &.style-2 {
+        padding: 0px 12px;
+    }
 }
 
 .tf-product-image-upload {

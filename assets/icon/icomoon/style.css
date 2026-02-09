@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ek2n1q');
-  src:  url('fonts/icomoon.eot?ek2n1q#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ek2n1q') format('truetype'),
-    url('fonts/icomoon.woff?ek2n1q') format('woff'),
-    url('fonts/icomoon.svg?ek2n1q#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?bwkm1b');
+  src:  url('fonts/icomoon.eot?bwkm1b#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?bwkm1b') format('truetype'),
+    url('fonts/icomoon.woff?bwkm1b') format('woff'),
+    url('fonts/icomoon.svg?bwkm1b#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -319,10 +319,13 @@
 .icon-Truck:before {
   content: "\e930";
 }
+.icon-Truck2:before {
+  content: "\e967";
+}
 .icon-User:before {
   content: "\e931";
 }
-.icon-CheckCircle1:before {
+.icon-Vector:before {
   content: "\e932";
   color: #3dab25;
 }

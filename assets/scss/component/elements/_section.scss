@@ -1549,10 +1549,8 @@
             border-radius: 4px;
             height: 44px;
 
-            &:not(.active) {
-                &:hover {
-                    background: var(--white);
-                }
+            &::after {
+                border-radius: 4px;
             }
         }
 

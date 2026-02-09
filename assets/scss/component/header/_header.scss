@@ -1339,11 +1339,11 @@ header {
         left: -280px;
     }
 
-    @include res(xxxl) {
-        &.home-type_4 {
-            left: -180px;
-        }
+    &.home-type_4 {
+        left: -180px;
     }
+
+    @include res(xxxl) {}
 
     @include res(xxl) {
         &.home-type_3 {
