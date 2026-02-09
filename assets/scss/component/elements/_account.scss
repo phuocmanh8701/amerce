@@ -71,6 +71,10 @@
             padding: 27px;
         }
     }
+
+    @include res(md) {
+        margin-bottom: 30px;
+    }
 }
 
 .account-my_recent {
