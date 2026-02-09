@@ -12624,6 +12624,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .product-style_mini_list-v2 .card-product_wrapper {
   max-width: 140px;
 }
+.product-style_mini_list-v2::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
 
 .tf-sticky-btn-atc {
   position: fixed;
@@ -14899,8 +14904,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   left: 32.5%;
 }
 .banner-lookbook .position5 {
-  top: 39.8%;
-  left: 69.7%;
+  top: 51.8%;
+  left: 61.7%;
 }
 .banner-lookbook .position6 {
   top: 44.4%;
@@ -15011,6 +15016,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .banner-lookbook.style-2 .img-banner {
   min-height: 450px;
+}
+@media (max-width: 575px) {
+  .banner-lookbook.style-2 .lookbook-product {
+    margin: 15px;
+    border-radius: 8px;
+  }
 }
 .banner-lookbook.style-3 {
   height: unset;
@@ -18167,7 +18178,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 .banner-countdown-v01 {
   padding-top: 29px;
-  padding-bottom: 29px;
+  padding-bottom: 27px;
 }
 .banner-countdown-v01 .content {
   display: flex;
@@ -18640,6 +18651,14 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   .banner-product-single.style-4 .btn-action-price {
     height: 50px;
   }
+  .banner-product-single.style-4 .stagger-item {
+    width: 80px;
+    height: 80px;
+  }
+  .banner-product-single.style-4 .stagger-item img {
+    width: 80px;
+    height: 80px;
+  }
 }
 @media (min-width: 768px) {
   .banner-product-single.style-4 .wg-quantity {
@@ -18667,6 +18686,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .banner-product-single.style-5 .product-thumbs-slider .tf-product-media-main {
   border: unset;
+  border-radius: 12px;
 }
 .banner-product-single.style-5 .product-thumbs-slider .flat-wrap-media-product {
   width: 100%;
@@ -18688,7 +18708,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .banner-product-single.style-5 .box-img {
   height: 100%;
   width: 100%;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
 }
 .banner-product-single.style-5 .box-img img {
@@ -18712,6 +18732,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .banner-product-single.style-6 .variant-size-2 .size-btn {
   border-radius: 4px;
   height: 44px;
+}
+.banner-product-single.style-6 .variant-size-2 .size-btn:not(.active):hover {
+  background: var(--white);
 }
 .banner-product-single.style-6 .tf-product-info-list {
   gap: 24px;
@@ -19043,6 +19066,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   aspect-ratio: unset;
   margin-left: auto;
   margin-right: auto;
+  max-width: 476px;
 }
 @media (min-width: 992px) {
   .section-lookbook-hover-v02 .card-product_wrapper {
