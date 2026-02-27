@@ -327,7 +327,7 @@
             $(".tf-add-cart-success").removeClass("active");
         });
 
-        $(".btn-add-note, .btn-estimate-shipping, .btn-add-gift").on("click", function () {
+        $(".btn-add-note, .btn-estimate-shipping, .btn-add-gift").on("click", function (event) {
             var classList = {
                 "btn-add-note": ".add-note",
                 "btn-estimate-shipping": ".estimate-shipping",
@@ -378,7 +378,7 @@
         let navbarHeight = $("header").outerHeight();
         let didScroll = false;
 
-        $(window).scroll(function () {
+        $(window).on("scroll",function () {
             didScroll = true;
         });
 
@@ -1248,7 +1248,7 @@
                 $li.append($a).appendTo($optionlist);
             }
             var $optionlistItems = $optionlist.children("li");
-            $customSelect.click(function (e) {
+            $customSelect.on("click", function (e) {
                 e.stopPropagation();
                 $("div.tf-select-custom.active")
                     .not(this)
@@ -1257,17 +1257,17 @@
                     });
                 $(this).toggleClass("active").next("ul.select-options").slideToggle();
             });
-            $optionlistItems.click(function (e) {
+            $optionlistItems.on("click", function (e) {
                 e.stopPropagation();
                 $customSelect.text($(this).text()).removeClass("active");
                 $this.val($(this).attr("rel"));
                 $optionlist.hide();
             });
-            $(document).click(function () {
+            $(document).on("click", function () {
                 $customSelect.removeClass("active");
                 $optionlist.hide();
             });
-            $(".close-option").click(function () {
+            $(".close-option").on("click", function () {
                 $customSelect.removeClass("active");
                 $optionlist.hide();
             });
@@ -1421,7 +1421,7 @@
 
         checkCounters();
 
-        $(window).scroll(checkCounters);
+        $(window).on("scroll",checkCounters);
     };
 
     /* Update Bundle Total 
@@ -1543,130 +1543,130 @@
         var $pins = $('.section-lookbook-hover-v03 .tf-pin-btn');
         var $productWrap = $('.section-lookbook-hover-v03 .wrap-product');
         var $products = $productWrap.find('.card-product');
-      
+
         if ($pins.length === 0 || $productWrap.length === 0 || $products.length === 0) return;
-      
+
         var swiperEl = document.querySelector('.section-lookbook-hover-v03 .tf-sw-mobile.swiper');
         var swiper = swiperEl && swiperEl.swiper ? swiperEl.swiper : null;
-      
+
         function isInView($container, $el) {
-          var c = $container[0].getBoundingClientRect();
-          var e = $el[0].getBoundingClientRect();
-          return e.top >= c.top && e.bottom <= c.bottom;
+            var c = $container[0].getBoundingClientRect();
+            var e = $el[0].getBoundingClientRect();
+            return e.top >= c.top && e.bottom <= c.bottom;
         }
-      
+
         function setActiveProduct($target) {
-          if (!$target || $target.length === 0) return;
-      
-          $products.each(function () {
-            var $p = $(this);
-            if ($p.is($target)) {
-              $p.addClass('is-active').removeClass('is-dim');
-            } else {
-              $p.removeClass('is-active').addClass('is-dim');
-            }
-          });
-        }
-      
-        function getSlideIndexFromProduct($target) {
-          var $slide = $target.closest('.swiper-slide');
-          if ($slide.length === 0) return null;
-      
-          var realIndexAttr = $slide.attr('data-swiper-slide-index');
-          if (realIndexAttr != null && realIndexAttr !== '') {
-            var realIndex = parseInt(realIndexAttr, 10);
-            return Number.isFinite(realIndex) ? realIndex : null;
-          }
-      
-          var domIndex = $slide.index();
-          return Number.isFinite(domIndex) ? domIndex : null;
-        }
-      
-        function slideToProduct($target) {
-          if (!swiper) return;
-      
-          var idx = getSlideIndexFromProduct($target);
-          if (idx == null) return;
-      
-          if (swiper.params && swiper.params.loop && typeof swiper.slideToLoop === 'function') {
-            swiper.slideToLoop(idx, 300);
-          } else if (typeof swiper.slideTo === 'function') {
-            swiper.slideTo(idx, 300);
-          }
-        }
-      
-        function applyActiveFromSwiper() {
-          if (!swiper) return;
-      
-          var $activeSlide = $(swiper.slides).filter('.swiper-slide-active');
-          if ($activeSlide.length === 0) return;
-      
-          var $target = $activeSlide.find('.card-product').first();
-          if ($target.length === 0) return;
-      
-          setActiveProduct($target);
-        }
-      
-        function resetProducts() {
-          if (swiper) {
-            applyActiveFromSwiper();
-          } else {
-            $products.removeClass('is-active is-dim');
-          }
-        }
-      
-        function activateById(selector) {
-          var $target = $(selector);
-          if ($target.length === 0) return;
-      
-          setActiveProduct($target);
-      
-          if (swiper) {
-            slideToProduct($target);
-            return;
-          }
-      
-          if (!isInView($productWrap, $target)) {
-            $target[0].scrollIntoView({
-              behavior: 'smooth',
-              block: 'nearest'
+            if (!$target || $target.length === 0) return;
+
+            $products.each(function () {
+                var $p = $(this);
+                if ($p.is($target)) {
+                    $p.addClass('is-active').removeClass('is-dim');
+                } else {
+                    $p.removeClass('is-active').addClass('is-dim');
+                }
             });
-          }
         }
-      
+
+        function getSlideIndexFromProduct($target) {
+            var $slide = $target.closest('.swiper-slide');
+            if ($slide.length === 0) return null;
+
+            var realIndexAttr = $slide.attr('data-swiper-slide-index');
+            if (realIndexAttr != null && realIndexAttr !== '') {
+                var realIndex = parseInt(realIndexAttr, 10);
+                return Number.isFinite(realIndex) ? realIndex : null;
+            }
+
+            var domIndex = $slide.index();
+            return Number.isFinite(domIndex) ? domIndex : null;
+        }
+
+        function slideToProduct($target) {
+            if (!swiper) return;
+
+            var idx = getSlideIndexFromProduct($target);
+            if (idx == null) return;
+
+            if (swiper.params && swiper.params.loop && typeof swiper.slideToLoop === 'function') {
+                swiper.slideToLoop(idx, 300);
+            } else if (typeof swiper.slideTo === 'function') {
+                swiper.slideTo(idx, 300);
+            }
+        }
+
+        function applyActiveFromSwiper() {
+            if (!swiper) return;
+
+            var $activeSlide = $(swiper.slides).filter('.swiper-slide-active');
+            if ($activeSlide.length === 0) return;
+
+            var $target = $activeSlide.find('.card-product').first();
+            if ($target.length === 0) return;
+
+            setActiveProduct($target);
+        }
+
+        function resetProducts() {
+            if (swiper) {
+                applyActiveFromSwiper();
+            } else {
+                $products.removeClass('is-active is-dim');
+            }
+        }
+
+        function activateById(selector) {
+            var $target = $(selector);
+            if ($target.length === 0) return;
+
+            setActiveProduct($target);
+
+            if (swiper) {
+                slideToProduct($target);
+                return;
+            }
+
+            if (!isInView($productWrap, $target)) {
+                $target[0].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
+            }
+        }
+
         $pins.each(function () {
-          var $pin = $(this);
-          var targetSelector = $pin.data('target');
-      
-          $pin.off('mouseenter.lookbookPin mouseleave.lookbookPin');
-      
-          $pin.on('mouseenter.lookbookPin', function () {
-            activateById(targetSelector);
-          });
-      
-          $pin.on('mouseleave.lookbookPin', function () {
-            resetProducts();
-          });
+            var $pin = $(this);
+            var targetSelector = $pin.data('target');
+
+            $pin.off('mouseenter.lookbookPin mouseleave.lookbookPin');
+
+            $pin.on('mouseenter.lookbookPin', function () {
+                activateById(targetSelector);
+            });
+
+            $pin.on('mouseleave.lookbookPin', function () {
+                resetProducts();
+            });
         });
-      
+
         if (swiper && typeof swiper.on === 'function') {
-          if (swiper.__tfLookbookBound) {
+            if (swiper.__tfLookbookBound) {
+                applyActiveFromSwiper();
+                return;
+            }
+            swiper.__tfLookbookBound = true;
+
+            swiper.on('slideChange', function () {
+                applyActiveFromSwiper();
+            });
+            swiper.on('transitionEnd', function () {
+                applyActiveFromSwiper();
+            });
+
             applyActiveFromSwiper();
-            return;
-          }
-          swiper.__tfLookbookBound = true;
-      
-          swiper.on('slideChange', function () {
-            applyActiveFromSwiper();
-          });
-          swiper.on('transitionEnd', function () {
-            applyActiveFromSwiper();
-          });
-      
-          applyActiveFromSwiper();
         }
-      };
-      
+    };
+
 
     /* Notice Popup
     -------------------------------------------------------------------------*/

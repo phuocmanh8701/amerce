@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -46,7 +46,7 @@
 /*------------ Core CSS ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -187,7 +187,7 @@ body {
   background: var(--white);
 }
 body::-webkit-scrollbar {
-  width: 0px;
+  width: 3px;
 }
 body::-webkit-scrollbar-thumb {
   cursor: grab;
@@ -572,7 +572,7 @@ p {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -881,7 +881,7 @@ h6,
 }
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -1760,7 +1760,7 @@ h6,
 /*------------ Layout ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -2187,7 +2187,7 @@ h6,
 /*------------ Header ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -3424,7 +3424,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -3476,7 +3476,7 @@ header.header-sticky.tf-header-landing {
 /*------------ Blog ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -3852,7 +3852,7 @@ header.header-sticky.tf-header-landing {
 /*------------ Element ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -4073,7 +4073,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -4385,7 +4385,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -4687,7 +4687,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -6577,7 +6577,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -6910,7 +6910,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -7189,6 +7189,9 @@ input[type=number]::-webkit-outer-spin-button {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+}
+.form-search-nav .btn-action .icon {
+  color: var(--text);
 }
 .form-search-nav fieldset input {
   padding-left: 44px;
@@ -7567,7 +7570,7 @@ select.select-3:focus {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -8045,7 +8048,7 @@ button.animate-btn::after,
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -8981,7 +8984,7 @@ button.animate-btn::after,
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -9601,7 +9604,7 @@ button.animate-btn::after,
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -10338,7 +10341,7 @@ button.animate-btn::after,
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -11260,7 +11263,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -13188,6 +13191,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .product-style_list .card-product_wrapper {
   max-width: 330px;
+  width: 100%;
 }
 .product-style_list .card-product_info {
   position: relative;
@@ -13263,7 +13267,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -13406,7 +13410,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -13675,7 +13679,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -14476,7 +14480,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -14790,7 +14794,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -15172,7 +15176,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -17517,7 +17521,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -20436,10 +20440,19 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   object-fit: cover;
 }
 
+@media (max-width: 575px) {
+  .section-featured-product .tf-swiper .tf-list {
+    display: block;
+  }
+  .section-featured-product .tf-swiper .tf-list .card-product:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
 /*------------ Footer ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -20885,7 +20898,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 /*------------ Landing ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -20897,9 +20910,14 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
  ------------------------------------------------------------------------------ */
 /*--------- Abstracts variable ---------- */
 .body-landing {
-  background: #0E0C0B;
+  background: #0e0c0b;
   color: var(--white);
   padding: 0;
+}
+@media (max-width: 1199px) {
+  .body-landing #goTop {
+    bottom: 40px;
+  }
 }
 
 .tf-header-landing {
@@ -20926,12 +20944,17 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   padding-top: 26px;
   padding-bottom: 26px;
 }
+@media (max-width: 767px) {
+  .header-landing_inner .logo {
+    width: 130px;
+  }
+}
 
 .body-item {
   position: absolute;
   width: 480px;
   height: 480px;
-  background: #FF6242;
+  background: #ff6242;
   opacity: 0.3;
   filter: blur(175px);
   border-radius: 40px;
@@ -20954,7 +20977,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .bg-item-block span {
   width: 480px;
   height: 480px;
-  background: #FF6242;
+  background: #ff6242;
   opacity: 0.3;
   filter: blur(175px);
   border-radius: 40px;
@@ -21036,7 +21059,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   left: 10%;
   right: 10%;
   height: 80px;
-  background: linear-gradient(0deg, #FF6242, #FF6242);
+  background: linear-gradient(0deg, #ff6242, #ff6242);
   filter: blur(50px);
   opacity: 0.8;
   z-index: 0;
@@ -21074,7 +21097,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   gap: 16px;
 }
 .section-potent .col-right .text-fast {
-  background: #292A2D;
+  background: #292a2d;
   padding: 4px 8px;
   border-radius: 6px;
 }
@@ -21084,7 +21107,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   align-items: center;
   width: 100%;
   padding: 18px 48px;
-  background: #292A2D;
+  background: #292a2d;
   border-radius: 16px;
 }
 .section-potent .right-contact {
@@ -21092,7 +21115,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   align-items: center;
   gap: 16px;
   padding: 12px 20px;
-  background: #292A2D;
+  background: #292a2d;
   box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.1215686275);
   border-radius: 12px;
   position: absolute;
@@ -21107,7 +21130,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   align-items: center;
   gap: 16px;
   padding: 14px 18px;
-  background: #292A2D;
+  background: #292a2d;
   box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.1215686275);
   border-radius: 12px;
 }
@@ -21234,17 +21257,32 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .choose-grid .grid-item.item-3, .choose-grid .grid-item.item-4 {
   text-align: center;
 }
-@media (min-width: 1440px) {
-  .choose-grid .grid-item.item-3 {
-    gap: 60px;
+.choose-grid .grid-item .list-fe {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.choose-grid .grid-item .list-fe svg {
+  width: 68px;
+  height: auto;
+}
+@media (max-width: 767px) {
+  .choose-grid .grid-item .list-fe {
+    gap: 30px;
+  }
+}
+.choose-grid .grid-item.item-4 {
+  padding-bottom: 0;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .choose-grid .grid-item.item-4 {
+    padding-top: 40px;
   }
 }
 @media (max-width: 1439px) {
   .choose-grid .col-s1 .item_image {
-    max-width: 100px;
-  }
-  .choose-grid .grid-item.item-4 .item_image {
-    max-width: 120px;
+    max-width: 200px;
   }
 }
 @media (max-width: 991px) {
@@ -21304,7 +21342,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   visibility: hidden;
 }
 .tf-btn-landing .overlay_text.s1 {
-  background: linear-gradient(90deg, #FF9993, #81FBFF, #FF9993);
+  background: linear-gradient(90deg, #ff9993, #81fbff, #ff9993);
   background-size: 200% 100%;
   animation: gradientFlow 2s linear infinite;
   inset: 0;
@@ -21566,11 +21604,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .section-func::after {
   right: 0;
-  background: linear-gradient(90deg, rgba(14, 12, 11, 0) 0.29%, #0E0C0B 56.23%);
+  background: linear-gradient(90deg, rgba(14, 12, 11, 0) 0.29%, #0e0c0b 56.23%);
 }
 .section-func::before {
   left: 0;
-  background: linear-gradient(-90deg, rgba(14, 12, 11, 0) 0.29%, #0E0C0B 56.23%);
+  background: linear-gradient(-90deg, rgba(14, 12, 11, 0) 0.29%, #0e0c0b 56.23%);
 }
 @media (max-width: 1439px) {
   .section-func::after, .section-func::before {
@@ -21692,13 +21730,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   z-index: 2;
 }
 .banner-block-element .bn-image {
-  background: #0E0C0B;
   position: relative;
 }
 .banner-block-element .bn-image .overlay {
   position: absolute;
   inset: 0;
-  background: #0E0C0B;
+  background: #0e0c0b;
   opacity: 0.7;
   z-index: 1;
 }
@@ -21712,11 +21749,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .banner-block-element::before {
   top: 0;
-  background: linear-gradient(180deg, #0E0C0B 0.51%, rgba(14, 12, 11, 0) 100%);
+  background: linear-gradient(180deg, #0e0c0b 0.51%, rgba(14, 12, 11, 0) 100%);
 }
 .banner-block-element::after {
   bottom: 0;
-  background: linear-gradient(0deg, #0E0C0B 0.51%, rgba(14, 12, 11, 0) 100%);
+  background: linear-gradient(0deg, #0e0c0b 0.51%, rgba(14, 12, 11, 0) 100%);
 }
 @media (max-width: 1439px) {
   .banner-block-element .bn-image img {
@@ -21740,7 +21777,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   width: 548px;
   height: 548px;
   top: -51px;
-  background: #FF6242;
+  background: #ff6242;
   opacity: 0.1;
   filter: blur(175px);
   border-radius: 40px;
@@ -21796,7 +21833,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   height: 548px;
   left: -201px;
   bottom: -89px;
-  background: #FF6242;
+  background: #ff6242;
   opacity: 0.2;
   filter: blur(175px);
   border-radius: 40px;
@@ -21881,7 +21918,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   opacity: 0.6;
   border-radius: 40px;
   padding: 12px;
-  background: linear-gradient(0deg, #FF6242, #FF6242);
+  background: linear-gradient(0deg, #ff6242, #ff6242);
   filter: blur(50px);
 }
 
@@ -21986,8 +22023,30 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .section-launch {
   position: relative;
 }
-.section-launch .tab-btn-wrap-v3 {
-  margin-bottom: 40px;
+.section-launch .launch-image {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.section-launch .launch-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 992px) {
+  .section-launch .tab-btn-wrap-v3 {
+    flex-direction: column;
+  }
+  .section-launch .land-heading {
+    text-align: start;
+  }
+}
+@media (min-width: 1200px) {
+  .section-launch .col-left {
+    margin-right: -30px;
+  }
+  .section-launch .col-right {
+    padding-left: 70px;
+  }
 }
 
 .bg-img-item {
@@ -22005,6 +22064,263 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   display: flex;
   overflow: hidden;
   right: 0;
+}
+
+.wrapper-subscribe {
+  display: flex;
+  gap: 60px;
+}
+@media (max-width: 1199px) {
+  .wrapper-subscribe {
+    gap: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .wrapper-subscribe {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+@media (max-width: 575px) {
+  .wrapper-subscribe {
+    gap: 30px;
+  }
+}
+.wrapper-subscribe .box-left {
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapper-subscribe .box-left .box-btn {
+  margin-top: 48px;
+}
+@media (max-width: 1199px) {
+  .wrapper-subscribe .box-left .box-btn {
+    margin-top: 30px;
+  }
+}
+.wrapper-subscribe .banner-img {
+  position: relative;
+}
+.wrapper-subscribe .notice-sale {
+  position: absolute;
+  left: 3px;
+  display: flex;
+  bottom: 110px;
+  min-width: 290px;
+  right: auto;
+  top: auto;
+  padding: 12px;
+  gap: 10px;
+  background: #292a2d;
+  box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.1215686275);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+@media (max-width: 575px) {
+  .wrapper-subscribe .notice-sale {
+    display: none;
+  }
+}
+.wrapper-subscribe .notice-sale .pns-thumb {
+  max-width: 46px;
+  position: relative;
+  width: 100%;
+}
+.wrapper-subscribe .notice-sale .pns-thumb .image {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.wrapper-subscribe .notice-sale .purchase {
+  padding: 4px;
+  top: -6px;
+  left: -6px;
+  padding: 6px;
+  background: var(--primary);
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-subscribe .notice-sale .desc {
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--white-60);
+}
+.wrapper-subscribe .notice-sale .title {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+.wrapper-subscribe .notice-sale .text-caption-01 {
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--white-60);
+}
+.wrapper-subscribe .notice-sale .tf-btn-line-2.style-primary {
+  color: var(--white);
+  background: linear-gradient(to right, var(--primary) 50%, var(--white) 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.3s linear;
+  font-size: 12px;
+  line-height: 18px;
+}
+.wrapper-subscribe .notice-sale .tf-btn-line-2.style-primary::after {
+  background-color: var(--white);
+  height: 1px;
+}
+.wrapper-subscribe .notice-sale .tf-btn-line-2.style-primary::before {
+  height: 1px;
+}
+.wrapper-subscribe .notice-sale .tf-btn-line-2.style-primary:hover {
+  background-position: left;
+}
+.wrapper-subscribe .notice-sale .btn-cl-pop {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+}
+.wrapper-subscribe .notice-sale .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper-subscribe .notice-sale .pns-content {
+  width: 100%;
+}
+.wrapper-subscribe .note-cart {
+  position: absolute;
+  top: -25px;
+  left: 43px;
+}
+@media (max-width: 575px) {
+  .wrapper-subscribe .note-cart {
+    display: none;
+  }
+}
+
+.sib-form {
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+.form-content_fieldset {
+  display: flex;
+  gap: 12px;
+}
+@media (max-width: 575px) {
+  .form-content_fieldset {
+    flex-direction: column;
+  }
+}
+
+.form-get_email {
+  border-width: 1px;
+  border-style: solid;
+  background: transparent;
+  border: 0px solid var(--white-10);
+  border-image: initial;
+  padding: 0px;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 575px) {
+  .form-get_email {
+    border-radius: 10px;
+  }
+}
+.form-get_email .fiedset-button_submit {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+}
+.form-get_email .tf-btn {
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: var(--white);
+  color: var(--text);
+}
+.form-get_email .tf-btn:hover {
+  background-color: var(--text);
+  color: var(--white);
+}
+@media (max-width: 575px) {
+  .form-get_email .tf-btn {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.form-get_email .ip input {
+  backdrop-filter: blur(4px);
+  height: unset;
+  font-weight: 400;
+  font-size: 16px;
+  background: var(--white-10);
+  border: 1px solid transparent !important;
+  border-image: initial;
+  border-radius: 999px;
+  padding: 15px 23px !important;
+  padding-right: 145px !important;
+  width: 100%;
+}
+
+.form-get_email .ip input::placeholder {
+  font-size: 16px;
+}
+
+#sib-container {
+  background-color: transparent;
+  padding: 0;
+}
+
+.sib-form-block {
+  padding: 0;
+  width: 100%;
+}
+
+.sib-form-block .tf-btn {
+  width: 100%;
+}
+
+.fieldset-input_email {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sib-form .entry__specification {
+  margin: 0 !important;
+}
+
+.sib-form .entry__field {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+}
+
+.sib-form .entry__field:focus-within {
+  box-shadow: unset;
+}
+
+.section-form-subscribe .box-title {
+  margin-bottom: 32px;
+}
+
+.entry__error {
+  padding-left: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */

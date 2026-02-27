@@ -3646,3 +3646,19 @@
         object-fit: cover;
     }
 }
+
+.section-featured-product {
+    @include res(sm) {
+        .tf-swiper {
+            .tf-list {
+                display: block;
+
+                .card-product {
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -406,7 +406,7 @@
         }
         function bindProductEvents() {
             if ($(".card-product").length > 0) {
-                $(".color-swatch").on("click, mouseover", function () {
+                $(".color-swatch").on("click mouseover", function () {
                     var swatchColor = $(this).find("img").attr("src");
                     var imgProduct = $(this).closest(".card-product").find(".img-product");
                     imgProduct.attr("src", swatchColor);
@@ -414,10 +414,12 @@
                     $(this).addClass("active");
                 });
             }
-            $(".size-box").on("click", ".size-item", function () {
-                $(this).closest(".size-box").find(".size-item").removeClass("active");
-                $(this).addClass("active");
-            });
+            $(".size-box")
+                .off("click", ".size-item")
+                .on("click", ".size-item", function () {
+                    $(this).closest(".size-box").find(".size-item").removeClass("active");
+                    $(this).addClass("active");
+                });
         }
         bindProductEvents();
     };
@@ -641,8 +643,8 @@
     /* Handle Dropdown Filter 
     -------------------------------------------------------------------------------------*/
     var handleDropdownFilter = function () {
-        if (".wrapper-filter-dropdown".length > 0) {
-            $(".btn-filterDropdown").click(function (event) {
+        if ($(".wrapper-filter-dropdown").length > 0) {
+            $(".btn-filterDropdown").on("click", function (event) {
                 event.stopPropagation();
                 $(".filter-drawer-wrap").toggleClass("show");
                 $(this).toggleClass("active");
@@ -656,14 +658,14 @@
                     $(".overlay-filter").addClass("show");
                 }
             });
-            $(document).click(function (event) {
+            $(document).on("click", function (event) {
                 if (!$(event.target).closest(".wrapper-filter-dropdown").length) {
                     $(".filter-drawer-wrap").removeClass("show");
                     $(".btn-filterDropdown").removeClass("active");
                     $(".btn-filterDropdown .icon").removeClass("icon-X2").addClass("icon-filter");
                 }
             });
-            $(".close-filter ,.overlay-filter").click(function () {
+            $(".close-filter ,.overlay-filter").on("click", function () {
                 $(".filter-drawer-wrap").removeClass("show");
                 $(".btn-filterDropdown").removeClass("active");
                 $(".btn-filterDropdown .icon").removeClass("icon-X2").addClass("icon-filter");
